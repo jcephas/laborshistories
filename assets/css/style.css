@@ -2,7 +2,8 @@ body {
 	margin: 5% auto; 
 	background: #f2f2f2; 
 	color: #444444; 
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; 
+	font-family: "Cutive Mono", monospace; 
+	font-size: 16px; 
 	line-height: 1.8; 
 	text-shadow: 0 1px 0 #ffffff; 
 	max-width: 73%;
@@ -18,8 +19,9 @@ a:hover {
 	border-bottom: 0;
 }
 
-h1, h3 {
-	text-align: center;
+h3 {
+	color: grey;
+	
 }
 
 p {
@@ -32,9 +34,8 @@ img {
 
 .header {
 	padding-bottom: 40px;
-	text-align: center;
+	text-align: left;
 	line-height: 0; 
-
 }
 
 .center {
@@ -62,4 +63,42 @@ img {
 
 .buffer {
 	height: 60px;
+}
+
+/*------modal-------*/
+.modal {
+	display: none;
+	position:  fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: none;
+}
+
+.modal-content {
+	background-color: #fefefe;
+  	margin: 15% auto; /* 15% from the top and centered */
+  	padding: 40px;
+  	border: 1px solid #888;
+  	width: 60%;
+}
+
+.modal-list {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+ 	color: black;
+	cursor: pointer;
 }
