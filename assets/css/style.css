@@ -21,7 +21,10 @@ a:hover {
 
 h3 {
 	color: grey;
-	
+}
+
+h5 {
+	font-weight: bold;
 }
 
 p {
