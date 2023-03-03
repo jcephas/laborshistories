@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Play & Production</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js?"></script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            align-content: center;
+            z-index: 2;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            align-content: center;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        p {
+            line-height: 2em;
+            padding: 3em 3em 0em 3em;
+            text-align: justify;
+            font-family: serif;
+        }
+        .play {
+            line-height: 0;
+            font-family: sans-serif;
+            animation: colorswap, jump;
+            animation-duration: 3s, 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            display: inline-block;
+            transform: rotate(0);
+        }
+        @keyframes colorswap {
+            0% {color: magenta;}
+            25% {color: springgreen;}
+            50% {color: orange;}
+            75% {color: cyan;}
+            100% {color: magenta;}
+        }
+        @keyframes jump {
+            0% {vertical-align: 0; transform: rotate(0);}
+            25% {vertical-align: 2px; transform: rotate(10deg);}
+            50% {vertical-align: 0; transform: rotate(0);}
+            75% {vertical-align: 2px; transform: rotate(-10deg);}
+            100% {vertical-align: 0; transform: rotate(0);}
+        }
+    </style>
+</head>    
+    
+<body>
+    
+<script>
+    
+//based on code from Keith Peters
+//from https://p5js.org/examples/motion-bouncy-bubbles.html
+    
+let numBalls = 50;
+let numbBalls = 50;
+let spring = .03;
+let orbit = -.0001;
+let friction = -1;
+let balls = [];
+let bR = 0;
+let bG = 0;
+let bB = 0;
+    
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  for (let i = 0; i < numBalls; i++) {
+    balls[i] = new Ball(
+      random(width),
+      random(height),
+      random(30, 70),
+      i,
+      balls
+    );
+  }
+}
+
+function draw() {
+  background(255);  
+
+if(mouseIsPressed === true) {
+        mouseDiameter += 1;
+}else{
+        mouseDiameter = 100;
+};
+    let bR = mouseX / windowWidth * 255;
+    let bG = mouseY / windowHeight * 255;
+    let bB = 255 - mouseY / windowHeight * 255;
+    noStroke();
+    fill(bR/2,bG/2,bB/2);
+    let mouseBall = ellipse(mouseX, mouseY, mouseDiameter, mouseDiameter);
+    
+  balls.forEach(ball => {
+    ball.collide();
+    ball.mouseCollide();
+    ball.move();
+    ball.display();
+  });  
+}
+    
+class Ball {
+  constructor(xin, yin, din, idin, oin) {
+    this.x = xin;
+    this.y = yin;
+    this.vx = random(-2,2);
+    this.vy = random(-2,2);
+    this.diameter = din;
+    this.id = idin;
+    this.others = oin;
+  }
+
+  collide() {
+    for (let i = this.id + 1; i < numBalls; i++) {
+      // console.log(others[i]);
+      let dx = this.others[i].x - this.x;
+      let dy = this.others[i].y - this.y;
+      let distance = sqrt(dx * dx + dy * dy);
+      let minDist = this.others[i].diameter / 2 + this.diameter / 2;
+      //   console.log(distance);
+      //console.log(minDist);
+      if (distance < minDist) {
+        //console.log("2");
+        let angle = atan2(dy, dx);
+        let targetX = this.x + cos(angle) * minDist;
+        let targetY = this.y + sin(angle) * minDist;
+        let ax = (targetX - this.others[i].x) * spring;
+        let ay = (targetY - this.others[i].y) * spring;
+        this.vx -= ax;
+        this.vy -= ay;
+        this.others[i].vx += ax;
+        this.others[i].vy += ay;
+      }
+    }
+  }
+
+  mouseCollide() {
+    for (let i = this.id + 1; i < numBalls; i++) {
+      // console.log(others[i]);
+      let dmx = mouseX - this.x;
+      let dmy = mouseY - this.y;
+      let mouseDistance = sqrt(dmx * dmx + dmy * dmy);
+      let minMouseDist = mouseDiameter / 2 + this.diameter / 2;
+      //   console.log(distance);
+      //console.log(minDist);
+      if (mouseDistance < minMouseDist) {
+        //console.log("2");
+        let mouseAngle = atan2(dmy, dmx);
+        let targetMouseX = this.x + cos(mouseAngle) * minMouseDist;
+        let targetMouseY = this.y + sin(mouseAngle) * minMouseDist;
+        let amx = (targetMouseX - mouseX) * orbit;
+        let amy = (targetMouseY - mouseY) * orbit;
+        this.vx -= amx;
+        this.vy -= amy;
+      }
+    }
+  }    
+    
+  move() {
+    this.x += this.vx;
+    this.y += this.vy;
+    if (this.x + this.diameter / 2 > width) {
+      this.x = width - this.diameter / 2;
+      this.vx *= friction;
+    } else if (this.x - this.diameter / 2 < 0) {
+      this.x = this.diameter / 2;
+      this.vx *= friction;
+    }
+    if (this.y + this.diameter / 2 > height) {
+      this.y = height - this.diameter / 2;
+      this.vy *= friction;
+    } else if (this.y - this.diameter / 2 < 0) {
+      this.y = this.diameter / 2;
+      this.vy *= friction;
+    }
+  }
+    
+  display() {
+    let bR = this.x / windowWidth * 255;
+    let bG = this.y / windowHeight * 255;
+    let bB = 255 - this.y / windowHeight * 255;
+    noStroke();
+    fill(bR,bG,bB);
+    ellipse(this.x, this.y, this.diameter, this.diameter);
+      
+    
+        
+}
+}
+
+
+     
+</script>    
+
+<div id="container">
+    <p>
+    <span class="play">Play</span> is often opposed to work and labor as a form of activity which produces nothing beyond the momentary delight of the <span class="play">play</span>er—which could itself be considered a form of antidepressant labor or social reproduction. This separation between <span class="play">play</span> and production obscures the more complex and exploitative relationship between them. <span class="play">Play</span> is an instrumental force in the extraction of additional labor (e.g. the inclusion of <span class="play">play</span>ful benefits within corporate campuses) and in the reallocation of production to consumers (e.g. in platform economies and sandbox environments). In these cases, <span class="play">play</span> makes work more palatable, and therefore the inclusion of <span class="play">play</span> within workplaces or interfaces increases productivity and retention.<sup>[citation needed]</sup>
+</p>
+<p>
+    This research would also seek to better define the distinction between <span class="play">play</span> and productive processes. The two are not intrinsically opposed (e.g. in professional sports). <span class="play">Play</span> is essential in mental and creative work, where solving puzzles and entertaining tangents result in the necessary breakthroughs for the production of architectural designs, software code, and so on. At one time, this initial <span class="play">play</span> led into longer labor processes as the worker repeated it ad nauseam, but this changed in the age of mechanical reproduction, and continues to in the age of computational production. After the initial <span class="play">play</span> is complete and the crux resolved, the rote labor can be automated, leaving <span class="play">play</span> the only human involvement in the productive process.
+</p>
+    </div>
+    
+   
+    
+    
+    </body>
+    
+</html>
