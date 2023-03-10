@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>I am learning to code! </title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+	</head>
+
+	<style>
+		p {
+			color:lightpink;
+
+		}
+		#header {
+			background-color: aliceblue;
+			color: lightpink;
+
+		}
+		#main {
+			background-color: aliceblue;
+			color: mediumpurple;
+		}
+
+		.bright{
+			color:rebeccapurple;
+			background-color: #7ee5fc;
+
+		}
+	</style>
+
+	<body>
+
+	<script> 
+			function setup() {
+				createCanvas (600,600);
+			}
+
+			function draw(){
+			if (mouseIsPressed) {
+				fill (0);
+			} else {
+				fill(255);
+
+			}
+			ellipse (mouseX, mouseY, 80,80);
+			}
+		</script>
+
+
+			<div id="header" >
+				<h1> This is a title header</h1> 
+				<h2> This is a title header</h2>
+				<h3> This is a title header</h3>
+				<h4> This is a title header</h4>
+				<h5> This is a title header</h5>
+				<p>This is the body of my page.</p>
+				<!-- This is a comment. -->
+
+			<img src="img/Screen Shot 2023-02-24 at 11.20.27 AM Small.png">
+		<img src="img/868B79A2-9348-4000-82B5-7C1AA671BD4D Small.png">
+
+		<a href="https://www.w3schools.com/tags/ref_colornames.asp">
+		This is a link.</a>
+			
+			</div>
+
+		
+		
+		<div id="main" style="color: turquoise;">
+
+			<p> This is a new paragraph element.</p>
+
+			<ol>
+			<li> This is the first list element. </li>
+			<li> This is the second list element. </li>
+		</ol>
+
+		<ul>
+			<li> This is an unordered list element</li>
+			<li> This is another unordered list element</li>
+		</ul>
+
+		</div>
+		<div class="bright"> This is another element on my page 
+		</div>
+
+
+	</body>
+</html>
