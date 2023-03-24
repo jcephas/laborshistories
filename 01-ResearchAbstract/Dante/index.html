@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dante Furioso</title>
+		
+	</head>
+
+	<style>
+		p{
+			color:black;
+		}
+
+		body {
+				background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Palacio_de_Aldama_Habana_Cuba.png');
+			}
+
+			color:black;
+		}
+
+		#body{
+			color:black;
+		}
+
+		.bright{
+			color:darkorange;
+		}
+	</style>
+
+
+	<body>
+
+		<script>
+			function setup() {
+				createCanvas(500,400);
+			}
+
+			function draw() {
+				if (mouseIsPressed) {
+					fill(0);
+				}else {
+					fill(255);
+				}
+				ellipse(mouseX, mouseY, 80, 80);
+			}
+
+		</script>
+
+		<div id="header">
+
+			<h1>Research Abstract</h1>
+			<h3>Dante Furioso</h3>
+
+
+		</div>
+
+		<div id="body">
+
+			<p>This early-twentieth-century photo depicts one of Havana’s most iconic buildings, the Palacio de Aldama. Built for the Basque entrepreneur, don Domingo de Aldama, on October 9, 1841, a group of at least fifty enslaved Africans was at work at the building site when they staged a rebellion. Likely, they were working as masons on the load-bearing walls made of mampostería, or rubble stone and lime mortar, which was later covered with plaster on the interior and ashlar on the exterior.</p> 
+
+				<p>This project uses photographs of buildings like this one as canvases for layered, interactive, exploratory histories of labor grounded in the visible elements of the structure. Might a single click on an exterior wall reveal a frame of image and text describing the materials, people, and processes with which it was realized? Might hovering above the second story tell an anecdote on the building’s addition? Or, could a click on the railing say something about state of metalwork in 1840s Havana? This project will focus on a small set of buildings (three to five) tied to a site plan. The goal is to depict the multiple kinds of labor, distributed across time, necessary for a single building to be realized. Furthermore, the information assembled aims to disrupt the popular notion of the building as a unified, harmonious whole, instead probing material assemblies, design decisions, and aesthetic traces that encapsulate conflicts or tensions between the different social classes, genders, and races that would have benefitted or suffered as a result of the conception and construction of this structure. </p>
+			
+		</div>
+		
+		<!--This is a note to myself-->
+
+		<div id="main" style="color:blue">
+
+			<a href="https://en.wikipedia.org/wiki/Concrete">
+			This is the link</a>
+
+			<h4>Ordered List</h4>
+			<ol>
+				<li>First element.
+				<li>Second element.
+			</ol>
+
+			<h4>Unordered List</h4>
+			<ul>
+				<li>An element.
+				<li>An element.
+			</ul>
+
+		</div>
+		
+		</div>
+
+		<p> This is a new paragraph element.</p>
+
+		<div class="bright"> This is another new paragraph element.</div>
+		
+		
+	</body>
+</html>
