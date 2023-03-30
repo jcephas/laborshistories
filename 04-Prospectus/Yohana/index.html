@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+        <script src="processing.js"></script>
+    <title>Yohana Ansari-Thomas: Research Prospectus</title>
+    <style>
+        #foundPoem1-redacted {
+            width: 75%;
+            align-items: center;
+            padding: 50px 0;
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            margin-top: 20px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .justified {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 65%
+        }
+        .black {
+            background-color: black;
+            }
+    </style>
+
+    </head>
+    
+    <header class="h1, center">
+        <br><br><br>
+        Unraveling the Line
+        <br><br>
+        between<br>
+        Borderlands, Laws, and the Weaving Workers<br>
+        of 19th century Kashmir<br>
+        <br><br>
+        by Yohana Ansari-Thomas
+    </header>
+
+    <header class="black">
+        <img id="foundPoem1" src="img/arc550_foundpoem1.jpg" style="display: none;" class="center">
+        <img id="foundPoem1-redacted" src="img/arc550_foundpoem1_redacted.jpg" style="display: visible;" class="center"> 
+    </header>
+
+    <body>
+        
+    <br><br>
+
+
+    <p class="justified">The last article from the Treaty of Amritsar, written in 1846, offers a gift:
+        <br>
+        <br> 
+        "Maharajah Gulab Singh acknowledges the supremacy of the British Government and will in token of such supremacy present annually to the British Government one horse, twelve shawl goats of approved breed (six male and six female) and three pairs of Cashmere shawls."
+        <br>
+        <br>
+        Signed between the British East India Company and Maharaja Gulab Singh, the contract that ushered the Doghra’s rule over the princely state of Jammu and Kashmir drew lines across mountains and valleys, priced its territories, and subjected its people to a severance from autonomy. What few archives exist from this exchange reveal the critical role the production of kashmir goods played in producing a colonial interest in the valley of Kashmir. Prior to its conquest, the geographic terrain of the valley rendered Kashmir a self-sustaining collection of villages built upon an agrarian economic system. As such, the origins of shawl weaving in Kashmir began as a non-commodified domestic practice. Following the Mughal conquests of the 16th century, the onset of urbanization brought shawl weaving out of the homes and into the factories, known as <i>karkhanas</i>. What began as a vernacular and indigenous craft that honored heritage quickly transformed into a symbol of multiple empires at the cost of its workers’ autonomy. Wherever resistance emerged amongst the weave workers, known as <i>shaalbafs</i>, colonial legislation swiftly stifled revolutionary effort.
+        <br>
+        <br>
+        Focusing on the interplay between 19th century shaalbaf labor practices in Srinagar and the colonial literature which contributed to the exploitation of those practices, the project situates its analysis within the space where borderlands, laws, language, and labor intersect. How did resistance emerge amongst the shaalbafs, and how did they confront the legislative transformations through which the Kashmiri people were subjected to indentured labor exploitation as their homelands dissolved into contested borderlands? Little evidence exists in documenting the spatial conditions of both 19th century Kashmiri karkhanas and the peripheral hamlets in which the shaalbafs lived. Instead, the paper focuses its scope on the 1865 Zaldagar uprising as the event which links labor resistance in shawl weaving to the legal and narrative formations that produced colonial interest and refashioned Kashmir into a borderland. 
+        <br>
+        <br>
+        The project tells the story of Zaldagar as a found poem of primary sources (similar to the work of Tracy K. Smith and Charles Reznikoff). Travel accounts, legal documents, hagiographies, <i>tarikhs</i>, treaties, etc. will be presented as a redaction of words that weave together a story of stifled revolution that has never been acknowledged by the British nor Indian sovereignties. Users will be able to click on the documents and view the content in its entirety to understand how this relationship between labor and law and the schism between homeland and borderland is hidden in plain sight. The documents and narrative accounts emerging from Sikh, Persian, Kashmiri, and European writers during this period render Kashmir’s status as an occupied borderland inseparable from its transformation of the shaalbafs into labor capital. The effect of the found poem, a process of redaction, further establishes these violences as historically silenced. What is made evident in the space between silence leaves a mark on the land, and its material trace resides within the language of legislative documents, narratives, and written accounts. In its attempt, the project unravels the line that threads together borderlands, legislation, labor production, and anti-colonial revolution, revealing in its wake the violence of archival silence.</p>
+
+    <script>
+        // the code isn't working... need to reconfigure. For some reason p5.js nor processing loads, I think I need to reconfigure it from my terminal which will take some researching. For Jay: I'm trying to get it so that two images load on top of one another, and then when the mouse is pressed it toggles from one to the other, such that what I've redacted can be revealed. 
+
+        var img1;
+        var img2;
+        function setup() {
+            createCanvas(800, 600);
+            img1 = loadImage('img/arc550_foundpoem1.jpg')
+            img2 = loadImage('img/arc550_foundpoem1_redacted.jpg')
+        }
+        let value = img1;
+        function draw() {
+
+            image(img1, 0, 0); // this is wrong
+        }
+        function mousePressed() {
+             if (img1 === true) { // and I think this is wrong too
+                value = img2;
+            } else {
+                value = img1;
+            }
+        }
+        mousePressed([event])
+
+   
+    </script>
+
+    </body>
+
+    <br>
+
+    <footer class="justified">
+        Bibliography
+            <br>
+            <br>
+			<ol>Ahad, Abdul. Kashmir to Frankfurt : A Study of Arts and Crafts, with a Chapter on the Freedom Struggle of Kashmir. New Delhi, India: Rima Pub. House, 1987.</ol>
+            <ol>Ali, Tariq, ed. Kashmir: The Case for Freedom. New York, N.Y: Verso, 2011.</ol>
+            <ol>Gani, A., and M. A. Shah. “Child Labour in Carpet Industry of Kashmir.” Indian Journal of Industrial Relations 33, no. 3 (1998): 349–66.</ol>
+            <ol>Kaul, Nitasha. “Coloniality and/as Development in Kashmir: Econonationalism.” Feminist Review 128, no. 1 (July 1, 2021): 114–31. </ol>
+            <ol>Kumar, Amit. Precious Threads and Precarious Lives : Histories of Shawl and Silk Industries of Kashmir, 1846-1950. New York, NY: Routledge, Taylor & Francis Group, 2022.</ol>
+            <ol>Kumar, Amit, and Fayaz A Dar. “Marginality and Historiography: The Case of Kashmir’s History.” Economic and Political Weekly 50, no. 39 (2015): 37–44. </ol>
+            <ol>Maskiell, Michelle. “Consuming Kashmir: Shawls and Empires, 1500-2000.” Journal of World History 13, no. 1 (2002): 27–65.</ol>
+            <ol>Osuri, Goldie. “Imperialism, Colonialism and Sovereignty in the (Post)Colony: India and Kashmir.” Third World Quarterly 38, no. 11 (November 2, 2017): 2428–43.
+            </ol>
+            <ol>———. “Kashmir and Palestine: Itineraries of (Anti) Colonial Solidarity.” Identities 27, no. 3 (May 3, 2020): 339–56.</ol>
+            <ol>Patel, Shailja. Migritude. New York: Distributed by D.A.P./Distributed Art Publishers, 2010. </ol>
+            <ol>Rahman, Tariq. From Hindi to Urdu : A Social and Political History. Karachi: Oxford University Press, 2011.</ol>
+            <ol>Rai, Mridu. Hindu Rulers, Muslim Subjects: Islam, Rights and the History of Kashmir. Princeton, NJ: Princeton Univ. Press, 2004.</ol>
+            <ol>Ramsey-Kurz, Helga, and Geetha Ganapathy-Doré. Projections of Paradise: Ideal Elsewheres in Postcolonial Migrant Literature. BRILL, 2011. </ol>
+            <ol>Robinson, Cabeiri deBergh. Body of Victim, Body of Warrior: Refugee Families and the Making of Kashmiri Jihadists. Berkeley: University of California Press, 2013.</ol>
+            <ol>Sheikh, Tariq Ahmad. “Popular Unrest and State Response in Kashmir (1846-1947).” Proceedings of the Indian History Congress 74 (2013): 522–31.</ol>
+            <ol>Zutshi, Chitralekha. Kashmir’s Contested Pasts : Narratives, Sacred Geographies and the Historical Imagination. Oxford India paperbacks. New Delhi, India: Oxford University Press, 2018.</ol>
+            <ol>———. Languages of Belonging: Islam, Regional Identity, and the Making of Kashmir. New York: Oxford University Press, 2004.</ol>
+    </footer>
+
+    </html>
