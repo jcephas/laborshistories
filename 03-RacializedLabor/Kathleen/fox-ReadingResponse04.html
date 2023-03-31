@@ -2,34 +2,67 @@
 <html>
 	<head>
 		<title> Fox-ReadingResponse04 </title>
-	</head>
+	
 
 	<style>
 		.p {
+			font-family:"Courier New";
+			background-color:black;
+			color:blue;
+		}
+
+		.List1 {
+			font-family:"Courier New";
 			background-color:black;
 			color:white;
 		}
 
-		.List1 {
-			background-color:black;
-			color:lightpink;
-		}
-
 		.heading {
+			font-family:"Courier New";
 			background-color:black;
-			color:lightskyblue;
+			color:red;
 		}
 
 		.quotation {
+			font-family:"Courier New";
 			background-color: black;
 			color:lightcyan;
 		}
-	</style>
 
-	<body>
+		.card {
+			width:130px;
+			height:195px;
+			position: relative;
+			display:inline-block;
+		}
+
+		.card .img-top{
+			diplay:none;
+			position:absolute;
+			top:0;
+			left:0;
+			z-index: 99;
+		}
+
+		.card:hover .img-top{
+			display: inline;
+
+		}
+
+	</style>
+</head>
+
+	<body style="background-color:black">
 		<div class="heading">
 			<h1>ReadingResponse04</h1>
 		</div>
+
+		<div class="card">
+			<img src="https://www.bostonreview.net/wp-content/uploads/2022/10/cedric-robinson-why-black-marxism-robin-kelley.jpg" alt="https://greenroomblogorg.files.wordpress.com/2020/07/trotter-works-on-arrival_900x600.jpg">
+			<img src="https://greenroomblogorg.files.wordpress.com/2020/07/trotter-works-on-arrival_900x600.jpg" class="img-top" alt="https://www.bostonreview.net/wp-content/uploads/2022/10/cedric-robinson-why-black-marxism-robin-kelley.jpg">
+		</div>
+
+
 
 		<div class="heading">
 			<h3>
