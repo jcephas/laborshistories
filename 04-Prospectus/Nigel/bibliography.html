@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Designing Laborers
+	</title>
+	<style type="text/css">
+		@import url('https://fonts.cdnfonts.com/css/akzidenz-grotesk-next');
+		a { text-decoration: none; }
+		body{
+			margin: 25px;
+			text-align: left;
+			font-family: Helvetica, sans-serif;
+		}
+		img{
+			max-width: 100%;
+		}
+		a:link, a:visited {
+    		color: blue;
+		}
+
+		a:hover {
+   			 color: red;
+		}
+		footer{
+			color: red;
+		}
+		#title{
+		text-align: center;
+		font-family: "Akzidenz-Grotesk Next", sans-serif;	
+		font-size: 25px;
+		font-weight: 400;
+		margin-bottom: 50px;
+		color: blue;
+		}	
+
+		#section-title{
+			text-align: center;
+		font-family: 'Akzidenz-Grotesk Next', italic, 700, sans-serif;	
+		font-size: 20px;
+		margin-bottom: 10px;
+		color: red;
+		}
+		/* grid container */
+		.holy-grail-grid {
+		    display:grid;
+		    grid-template-areas:
+		        'header'
+		        'main-content'
+		        'left-sidebar'
+		        'right-sidebar'
+		        'footer';
+		}
+
+		/* general column padding */
+		.holy-grail-grid > * {
+		    padding:2rem;
+		    padding-top: 2rem;
+		}
+
+		/* assign columns to grid areas */
+		.holy-grail-grid > .header {
+		    grid-area:header;
+		}
+		.holy-grail-grid > .main-content {
+		    grid-area:main-content;
+		}
+		.holy-grail-grid > .left-sidebar {
+		    grid-area:left-sidebar;
+		}
+		.holy-grail-grid > .left-sidebar > .images{
+			width: 100%;
+		}
+		.holy-grail-grid > .right-sidebar {
+		    grid-area:right-sidebar;
+		}
+		.holy-grail-grid > .footer {
+		    grid-area:footer;
+		    font-size: 12px;
+		    text-align: right;
+		}
+
+		/* tablet breakpoint */
+		@media (min-width:768px) {
+		    .holy-grail-grid {
+		        grid-template-columns: 1fr 1fr;
+		        grid-template-areas:
+		            'header header'
+		            'main-content main-content'
+		            'left-sidebar right-sidebar'
+		            'footer footer';
+		    }
+		}
+
+		/* desktop breakpoint */
+		@media (min-width:1024px) {
+		    .holy-grail-grid {
+		        grid-template-columns: repeat(4, 1fr);
+		        grid-template-areas:
+		            'header header header header'
+		            'left-sidebar main-content main-content right-sidebar'
+		            'footer footer footer footer';
+		    }
+		}
+		.header-column{
+		 float: left;
+ 		 width: 25%;
+ 		 text-align: center;
+		}
+		.zoom{
+			transform-origin: left;
+  			transition: transform .5s; /* Animation */
+		}
+		.zoom:hover {
+  			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+
+		.zoom-big{
+			transform-origin: left;
+  			transition: transform .5s; /* Animation */
+		}
+		.zoom-big:hover {
+  			transform: scale(3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+
+
+		
+</style>
+</head>
+<body>
+	<div class="holy-grail-grid">
+    		<header class="header"><div id="title">
+    			Designing Laborers <br> Cross-examining Representations of Architectural Labor with Labor in the Built Environment  in the UK and Sweden since 2002 </div>
+    		<div class="header-column"><a href="index.html">home</a></div>
+    		<div class="header-column"><a href="abstract.html">abstract</a></div>
+    		<div class="header-column"><a href="dataset.html">dataset</a></div>
+    		<div class="header-column"><a href="bibliography.html">bibliography</a></div>
+			</header>
+    		<main class="main-content"><div id="section-title">
+	    		Bibliography
+	    		</div>
+	    		Code of Professional Conduct and Standard of Professional Performance. London: RIBA Publications, 2019. 
+	    		<br><br>
+				Bengtsson, Erik. “The Origins of the Swedish Wage Bargaining Model.” International Labor and Working-Class History, 2022, 1–17. doi:10.1017/S0147547922000047.
+				<br><br>
+				Cortright, Marisa. "Can This Be? Surely This Cannot Be?": Architectural Workers Organizing in Europe. Prague: VI PER Gallery, 2021. 
+				<br><br>
+				Cuff, Dana. Architecture: The Story of Practice. Cambridge, MA.: The MIT Press, 1995. 
+				<br><br>
+				Deamer, Peggy, and Jane Rendell. Architecture and Labor. New York, NY: Routledge, Taylor & Francis Group, 2020. 
+				<br><br>
+				Edgren, Lars, and Lars Olsson. “Swedish Working-Class History.” International Labor and Working-Class History, no. 35 (1989): 69–80. http://www.jstor.org/stable/27671806.
+				<br><br>
+				Jessel, Ella. “AJ Investigation: Architectural Assistants Break Silence on Poor Working Practices.” The Architects' Journal, May 27, 2022. https://www.architectsjournal.co.uk/news/aj-investigation-architectural-assistants-break-silence-on-poor-working-practices. 
+				<br><br>
+				Jessel, Ella. “Architecture Union Launches to Fight 'Toxic Culture' of Overwork.” The Architects' Journal, August 13, 2021. https://www.architectsjournal.co.uk/news/architecture-union-launches-to-fight-toxic-culture-of-overwork. 
+				<br><br>
+				“Optimism Is Fading: Industry Report 2022, Swedish Architects.” Sveriges Arkitekter, November 9, 2022. 
+				https://www.arkitekt.se/medlem/foretagare/branschrapporter/branschrapport-2022/#5-arkitektforetagens-vag-sedan-2002. 
+				<br><br>
+				Sample, Hilary. Maintenance Architecture. Cambridge, MA: MIT Press, 2018.  
+			</main>
+
+			
+    		<section class="left-sidebar"></section>
+   		 	<aside class="right-sidebar"></aside>
+   			<footer class="footer"> Written and designed by Nigel Van Ha for Jay Cephas's course ARC 550 Space and Subjectivity: Labor's Histories. &copy 2023</footer>
+		</div>
+    		
+
+</body>
+</html>
