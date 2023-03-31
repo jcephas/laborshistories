@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Processing-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>IT Prospectus Presentation</title>
+</head>
+
+<header>
+  <div class="container">
+     <nav class="nav">
+          <a href="index.html" id="home">*</a>
+
+          <ul class="nav-list">
+             <li class="active">
+               <a href="abstract.html" class="nav-link">Abstract</a>
+             </li>
+             <li>
+               <a href="proposal.html" class="nav-link">Proposal</a>
+             </li>
+             <li>
+               <a href="dataset.html" class="nav-link">Dataset</a>
+             </li>
+             <li>
+               <a href="bibliography.html" class="nav-link">Bibliography</a>
+             </li>
+          </ul>
+     </nav>
+  </div>
+</header>
+<body>
+    <div class='content'>
+      <section class='content-body'>
+        <p>In his last days in office, Trump issued a ban on imports of cotton products from the Xinjiang autonomous region, on the grounds of alleged forced and slave labor.  This move compelled large apparel companies and corporations to reorganize their global supply chains and issue public statements supporting an exit from the Xinjiang region. Amid heated contemporary discourse on human rights violations in Xinjiang, generally centered on the mass detention and policing of ethnic populations, largely Uyghur, the cotton ban brought into visibility (or heightened visibility), China’s contemporary environments of cotton extraction and labor—spaces of “original” accumulation—otherwise abstracted or obscured. However, the representations circulating through US- and largely Western media networks often coerce land and labor into legibility by way of a humanitarian concern fundamentally conditioned by a US-led capitalist global order, wherein the political good of redressing violence is subsumed under “Communist” ideology and authoritarian and totalitarian lessons rendered to maintain that rule.  Individual bodies, often gendered female and racialized or ethicized through clothing and head coverings like doppas, bear the burden of such representation. In this optics of visibility, both are forced to stand-in for an abstracted violence.<p><p>While this present moment is well-documented, the history of Xinjiang’s cotton production and construction has been far less examined in the US. Thus, its attendant implications for contemporary debates on environment and labor as well as its consequences for the study of architecture and the built environment has also been underexplored.</p>
+      </section>
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition); 
+        })
+</script>
+</html>
