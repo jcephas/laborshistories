@@ -1,2 +1,0 @@
-# Nigel's prospectus
- 

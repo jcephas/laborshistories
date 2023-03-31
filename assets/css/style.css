@@ -39,12 +39,6 @@ img {
 	width: 100%;
 }
 
-canvas {
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-}
-
 .header {
 	padding-bottom: 40px;
 	text-align: left;
