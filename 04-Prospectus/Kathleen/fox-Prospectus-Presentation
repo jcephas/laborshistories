@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title> Metabolisms of Meaning: An interpretation language and labour in Andrei Platonov's <em>Kotlovan</em> (1930) and its ideological context </title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+	</head>	
+
+	<style>
+		
+		.sidebar{
+			display: flex;
+		}
+		.sidebar__sidebar{
+			width:30%;
+		}
+		.sidebar__main{
+			flex:1;
+			overflow:auto;
+		}
+
+		.heading {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: black;
+			color: red;
+			text-align: right;
+		}
+
+		.p {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color:black;
+			color:white;
+		}
+
+		.center {
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+		}
+
+		.hangingIndent{
+			text-indent:-30px;
+			padding-left:30px;
+			font-family:Arial, Helvetica, sans-serif;
+			color:white;
+		}
+
+	</style> 
+
+	<div class="sidebar">
+	<body style="background-color: black;">
+		
+	
+		<!--sidebar-->
+		<aside class="sidebar__sidebar">
+			<script>
+				function setup() {
+					createCanvas(200,2400);
+
+				}
+
+				function draw() {
+					if(mouseIsPressed) {
+					stroke(0);
+					fill(0);
+						} else {
+					stroke(255);
+					fill(255);
+						}
+				
+					rect(mouseX,mouseY,80,80);
+					ellipse(mouseX+40,mouseY+80,80,80);
+					rect(mouseX+32,mouseY-240,15,300);
+					rect(mouseX+16,mouseY-240,50,15)
+				
+				}
+			</script>
+		</aside>
+
+		<main class="sidebar__main">
+		<div class="heading">
+			<h2> Metabolisms of Meaning: Reflections on language and labour in Andrei Platonov's <em>Kotlovan</em> (1930) and its ideological context </h2>
+		</div>
+		
+		<img src="https://illustrators.ru/uploads/illustration/image/1527174/%D0%9A%D0%9E%D0%A2%D0%9B%D0%9E%D0%92%D0%90%D0%9D%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0.jpg" style="width:300px; height:240px;" class="center"> 
+
+		<div class="p">
+			<p> 
+				In his preface to the 1973 publication of Andrei Platonov’s <em>Kotlovan</em> (1930), Iosif Brodskii argues that the novel encodes a philosophical and semantic dead-end beyond which all time and space is compromised. It is in this “language of the dead-end,” Brodskii asserts, that Soviet citizens continue to speak. My project aims towards an understanding of the “language of the dead-end” which couches Platonov’s novel in its political and philosophical context of Stalinist collectivisation. The project has two halves: the first tracks the ways in which language, introduced to Marxist theories of labour in the early years of the Soviet Union as a part of society’s superstructure, became part of the base under Stalin as a function of collectivisation; the second explores how Kotlovan stages a response to this transformation of labour and language. In my reading of <em>Kotlovan</em>, I will concentrate on the creative/destructive ambivalence of labour with regard to both man and nature, and the coextensive ambivalence of language. 
+			</p>
+			<p>
+				In the early Soviet period, attempts begin to be made to integrate language ("art") into the teleological development of man through the dialectics of labour. These attempts situate language within the superstructure of society. Labour and language remain hierarchically divided, but language came to share the goal of labour. In <em>Literatura i revoliutsii</em>, Trotskii outlines the ways in new revolutionary art must enact the coalescence of intellectual and physical labour, which is essentially to say that the artistic process must have the same teleological goal as labour (work towards the achievement of Socialism): language must become embroiled in the teleological manipulation of metabolic processes through labour.  However, Trotskii’s ambitions were curtailed by the rapid roll-out of the first five-year plan in 1928, his exile in February 1929, and the announcement by Stalin of the "Great Break" and collectivisation in November 1929. In conjunction with collectivisation (and, arguably, inextricably linked to it), Stalin "flipped the switch" on the function of language. Indeed, under Stalin, language was transformed from a complementary medium to an entity with its own ontologically meaningful status. Directives, like the five-year plans, claimed that the impossible was possible, that 4 years was 5 years, and thus, on a conceptual level, demanded language cease to be the expression of ideology and become constative of its reality.
+			</p>
+		</div>	
+
+		<div class="heading">
+			<h4>
+				Dataset: The real and ideal <em>kolkhoz</em> in Stalinist rhetoric
+			</h4>
+		</div>
+
+		<div class="p">
+			<p>
+				One of the areas in which we can observe the effects of this shift under Stalin is through the portrayal of collective farms in official newspapers (<em>Pravda, Izvestiia</em>). From 1928 onwards, collective farms feature constantly in newspapers. From my dataset dealing with the period December 1928-May 1929, I have observed that the proportion of articles about purportedly real <em>kolkhoz</em> (specific locations, specific products) to those about the ideal development of the <em>kolkhoz</em> (projected targets) is almost even. There is little coherence between the real and the ideal <em>kolkhoz</em> both in terms of the statistics attributed to them and their portrayal in print, apart from the signifier <em>kolkhoz</em> that they share. Reflection on the representation of <em>kolkhoz</em> in newspapers illuminates the status of language not as the medium through which facts or propaganda are presented, but as a means of shaping reality into something coextensive with propaganda. In Stalinist strategy, language is, thus, as responsible as labour in the construction of the collectivised landscape. 
+			</p>
+		</div>
+
+		<div class="heading">
+			<h4>
+				<em>Kotlovan</em>: Meaningless language and labour
+			</h4>
+		</div>
+
+		<div class="p">
+			<p>
+				In <em>Kotlovan</em>, the spiritually troubled worker Voshchev (dismissed from his position at a factory for thoughtfulness), joins a collectivised group of workers digging an enormous foundation pit, upon which a house for the proletariat will be built. Voshchev comes to the workers believing that they must have some sense of the inner truth that he lacks. Over the course of the novel, however, it is revealed that each of the workers has a different notion or allegiance to truth; the word ‘truth’, like the word kolkhoz, becomes an arbitrary signifier. In the same vein, the murder of two workers by a peasant demonstrates the arbitrariness of existence: one of the workers (Safronov) was a conscientious Soviet; the other (Kozlov) cynically mimicked party slogans, but they died together. In the second half of the novel, the workers adopt an orphan-girl, Nastia, and cherish her as a symbol of the future meaningfulness of their labour. When Nastia dies at the end, the workers continue to dig, knowing that they have lost the purpose towards which their labour was directed. The novel is marked by a profound sense of metaphysical dread, which does not necessarily undercut the physical project of collectivisation but interrogates what it means.
+			</p>
+
+			<p>
+				The ambivalence of labour is paralleled by the ambivalence of language in <em>Kotlovan</em>. The Stalinist understanding of language posits ideological rhetoric as constative of reality; according to this logic, the meaning of language is tangible, accessible in reality and vice versa. What occurs in <em>Kotlovan</em>, then, is not an attempt at the generation of alternative meaning through literary language, but rather the voiding of meaning through literary language. Whereas Stalinist rhetoric seems to depend on the ‘surplus value’ of labour and language to create new men, new meanings, new realities, I would argue that, in <em>Kotlovan</em>, we return to a state of surrealist metabolism, in which language and labour are constants, but teleological achievement is impossible. 
+			</p>
+		</div>
+
+		<div class="heading">
+			<h4>
+				Bibliography
+			</h4>
+		</div>
+
+		<div class="hangingIndent">
+			<p>
+				<strong>Works in English</strong>
+			</p>
+			<p>
+				Arthur, Chris, <em>Dialectics of Labour: Marx and his Relation to Hegel</em>. Oxford: Basil Blackwell, 1986. 
+			</p>
+
+			<p>
+				Duzhina, Natalia, ‘The “Common Proletarian House” or “Essessar, our mother”’. In <em>Ulbandus</em> 14 (2011/2012): 37-47.
+			</p>
+
+			<p>
+				Engels, Friedrich, ‘The Part Played by Labour in the Transition from Ape to Man.’ In <em>Dialectics of Nature</em>. Translated by Clemens Dutt. New York: International Publishers, c.1940.
+			</p>
+
+			<p>
+				Erley, Mieka, ‘Models of Soil and Society: The Legacy of Justus Liebig in Russia and the Soviet Union.’ In <em>Eurasian Environments: Nature and Ecology in Imperial Russia and the Soviet Union </em>, edited by Nicholas Breyfogle, 133-146. Pittsburgh: University of Pittsburgh Press, 2018.
+			</p>
+
+			<p>
+				Erley, Mieka, ‘The Dialectics of Nature in Kara-Kum: Andrei Platonov’s Dzhan as the Environmental History of a Future Utopia’. In <em>Slavic Review</em> 73, no.4 (Winter 2014): 727-750. 
+			</p>
+
+			<p>
+				Gestwa, Klaus, ‘Utopia and Violence’. In <em>Osteuropa</em> 66, no.8/10 (2016): 515-525.
+			</p>
+
+			<p>
+				Lacan, Jacques, ‘The Instance of the Letter in the Unconscious.’ In <em>Écrits</em>, translated by Bruce Fink, 412-441. New York: W.W. Norton, 2007. 
+			</p>
+
+			<p>
+				Lane, Tora, ‘A Groundless Foundation Pit’. In <em>Ulbandus </em>14 (2011/2012):61-75. 
+			</p>
+
+			<p>
+				Livingstone, Angela, ‘Danger and Deliverance: Reading Andrei Platonov’. In <em>The Slavonic and East European Review</em> 80, no.3 (July 2002): 401-416. 
+			</p>
+			<p>
+				Marx, Karl, <em>Capital. Volume I</em>. Translated by Ben Fowkes. Dublin: Penguin Random House UK, 1976.  
+			</p>
+
+			<p>
+				Marx, Karl, <em>Economic and Philosophic Manuscripts of 1844. Volume 3</em>. Translated by Martin Milligan. Moscow: Foreign Languages Publishing House, 1959.
+			</p>
+
+			<p>
+				Meerson, Olga, ‘Kotlovan: Translation Failures as Interpretation Clues’. In <em>Ulbandus</em> 14 (2011/2012): 48-60. 
+			</p>
+
+			<p>
+				Seifrid, Thomas, <em>A Companion to Andrei Platonov’s ‘The Foundation Pit’</em>. Boston: Academic Studies: 2009. 
+			</p>
+
+			<p>
+				Seifrid, Thomas, ‘Writing against Matter: On the Language of Andrej Platonov’s Kotlovan.’ <em>The Slavic and East European Journal</em> 31, no.3 (Autumn 1987): 370-387.
+			</p>
+
+			<p>
+				Yurchak, Aleksei, <em>Everything Was Forever, Until It Was No More</em>. Princeton: Princeton University Press, 2005. 
+			</p>
+
+			<p>
+				Žižek, Slavoj, ‘Kremlinology.’ In <em>In Defence of Lost Causes</em>, 219-236. London, New York: Verso, 2008.
+			</p>
+
+			<p>
+				<strong>Works in Russian</strong>
+			</p>
+
+			<p>
+				Brodskii, Iosif, ‘Predislovie k Kotlvanu’. In <em>Kotlovan</em>. 163-166. Ann Arbor: Ardis, 1973. 
+			</p>
+
+			<p>
+				<em>Materialy noiabr’skogo plenuma TsK VKP(b). Iz vystupleniia S.I. Syrtsova po dokladam G.M. Krhzhizhanovskogo i V.V. Kuibysheva. 12 noiabria 1929g</em>. RTsKhIDNI. F.17. Op.2. D.441. Ch.1. L.35-37.  
+			</p>
+
+			<p>
+				Platonov, Andrei, <em>Kotlovan</em>. Ann Arbor: Ardis, 1973.
+			</p>
+
+			<p>
+				Trotskii, Lev, <em>Literatura i revoliutsiia</em>. Moskva: Izdatel’stvo “Krasnaia nov’”, 1923.
+			</p>
+		</div>
+	</main>
+</body>
+</div> 
