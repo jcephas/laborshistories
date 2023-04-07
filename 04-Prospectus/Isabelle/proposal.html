@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Processing-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>IT Prospectus Presentation</title>
+</head>
+
+<header>
+  <div class="container">
+     <nav class="nav">
+          <a href="index.html" id="home">*</a>
+
+          <ul class="nav-list">
+             <li class="active">
+               <a href="proposal.html" class="nav-link">Proposal</a>
+             </li>
+             <li>
+               <a href="dataset.html" class="nav-link">Dataset</a>
+             </li>
+             <li>
+               <a href="bibliography.html" class="nav-link">Bibliography</a>
+             </li>
+          </ul>
+     </nav>
+  </div>
+</header>
+<body>
+    <div class='content'>
+      <section class='content-body'>
+        <figure>
+               <img src="img/fig-4.png">
+               <figcaption>A young cotton worker, behind her is another worker, dressed in the military green PLA and XPCC uniform (<i>zhongshan</i>). Still from <i>Army’s Reclamation and Battle Song</i> (1965)</figcaption>
+          </figure>
+          <p>Similar to its architectural meaning, the state-led program of rustication called for aesthetic techniques of surface treatment—for turning the outward appearance of urban, usually Han, subjects into rural working bodies. However, this process of urban-to-rural resettlement produced real physical and psychological attachments to land and labor. The distinct category of “educated youth” (<i>zhiqing</i>) enabled the state to target a model population of young (aged 16 to 25 sui), urban, and able-bodied subjects for spatial migration. These individuals cultivated new landscapes and engendered a new socialist subject for the nation. Yet, the construction of this subject—and their identification by the state—revealed epistemic rifts between the migrant and native “ethnic” bodies working in the PRC’s “peripheral” landscapes.</p>
+          <p>The militarized state mechanism of the Corps engendered what the Xinjiang “countryside” meant for foreign migrants: it put them to work, and many stayed permanently. However, the Corps also absorbed Uyghur, Kazakh, Turkic and Soviet labor. How were these working bodies imagined and constructed to maintain the model socialist subject? How did they (dis)identify with the subject position from which they were summoned by the state? While the settler logics of Sinification offer a crucial framework for examining state violence, this approach often makes legible a model Han subject, against whom the “ethnic minority” is pitted. By attending to the everyday and relational conditions between the working bodies enclosed within the XPCC’s environments of cotton, I hope to recover the ordinary terror and embodied life of working bodies producing Xinjiang cotton in the margins of Chinese empire.</p>
+          <p>This research will draw on recent scholarship, census material from China’s Population Yearbook, state media (e.g., newspapers such as <i>Renmin Ribao</i> and <i>Xinjiang Ribao</i>), and digital approaches to inaccessible or limited sources. I will focus on the early work of the XPCC in the Manas River Valley, mapping the historical farms and fields in and around the present-day city of Shihezi. The divisions of the XPCC will serve as an organizational entry point into historical sources and collecting the necessary information for building datasets. The form and format of the final project will be an interactive and narrative webmap that will communicate the outcomes of this work.</p>
+          <p>While present-day issues around “Xinjiang cotton” are well-documented, its history has been far less examined, particularly in the US. Ultimately, this project launches a historical investigation in order to carefully redress the mass detention and policing of ethnic populations, largely Uyghur, and the allegations of their forced and slave labor on Xinjiang’s cotton farms. The political necessity of addressing the structural dimensions of this settler, colonial, and imperial violence and its globalized idioms of power cannot be understated. Nonetheless, Xinjiang’s heightened visibility is often summoned to maintain a US-led global order. The predicaments of this optics of visibility—of what is absented in presence—propels the larger political project of my research. I hope to find who remains in that excess.</p>
+        <figure>
+          <img src="img/fig-5.png">
+          <figcaption>Illustration by Julia Kuo for <i>Vox</i> in "How your favorite jeans might be fueling a human rights crisis: Cotton’s connection to forced labor by Uyghurs in Xinjiang ought to have you rethinking fast fashion." by Sofi Thanhauser, updated Sep 3, 2021.</figcaption>
+        </figure>
+      </section>
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition); 
+        })
+</script>
+</html>
