@@ -1,0 +1,12 @@
+type,name,year,digital,location,creator,owner,size_staff,revenue,monthly_creators,monthly_users,total_content,reg_users,traffic,bounce_rate,pages_visited,visit_duration,address,tag
+platform,Wikipedia,2001,TRUE,Silicon Valley,"Jimmy Wales, Larry Sanger",Wikimedia,700,75000000,312022,45239107,57810955,106958204,4300000000,59.86,2.99,0:03:54,,
+platform,YouTube,2006,TRUE,Silicon Valley,"Chad Hurley, Steve Chen, Jawed Karim",Google,,28800000000,114000000,2562000000,800000000,,30600000000,21.1,11.09,0:20:16,,Alphabet
+platform,Twitter,2006,TRUE,Silicon Valley,"Jack Dorsey, Noah Glass, Biz Stone, Evan Williams",Twitter,,,,556000000,,,6100000000,32.65,9.67,0:10:32,,Elon
+platform,Facebook,2004,TRUE,Silicon Valley,Mark Zuckerberg,Meta,,85960000000,,2940000000,,,16200000000,31.64,8.38,0:10:21,,Meta
+platform,Twitch,2011,TRUE,Silicon Valley,"Justin Kan, Emmett Shear",Amazon,,2800000000,,7600000,,45000000,1000000000,28.87,4.12,0:09:03,,Bezos
+platform,Instagram,2010,TRUE,Silicon Valley,"Kevin Systrom, Mike Krieger",Meta,,,,,,,5800000000,34.76,10.85,0:08:09,,Meta
+platform,Quora,2009,TRUE,Silicon Valley,"Adam D'Angelo, Charlie Cheever",Quora,250,20000000,,,,,720500000,60.1,2.36,0:02:56,,
+platform,TikTok,2016,TRUE,Beijing,ByteDance,TikTok,,,,,,,1700000000,39.32,7.4,0:03:27,,
+platform,Etsy,2005,TRUE,New York,Etsy,Etsy,,2570000000,,,,,445800000,45.83,6.4,0:05:41,,
+platform,Ebay,1995,TRUE,Silicon Valley,Ebay,Ebay,,,,,,,645500000,36.51,7.04,0:07:07,,
+platform,Reddit,2005,TRUE,Silicon Valley,"Steve Huffman, Alexis Ohanian",Advance,,,,,,,1600000000,37.46,6.32,0:08:45,,CondeNast
