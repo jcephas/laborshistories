@@ -1,2 +1,0 @@
-# Win's prospectus
- 

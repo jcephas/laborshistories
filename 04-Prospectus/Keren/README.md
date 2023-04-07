@@ -1,2 +1,0 @@
-# Keren's prospectus
- 

@@ -1,2 +1,0 @@
-# Dante's prospectus
- 

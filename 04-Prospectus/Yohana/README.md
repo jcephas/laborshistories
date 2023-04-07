@@ -1,1 +1,0 @@
-# Yohana's prospectus

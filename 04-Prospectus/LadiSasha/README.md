@@ -1,1 +1,0 @@
-# Ladi'Sasha's prospectus
