@@ -1,8 +1,6 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
-        <script src="processing.js"></script>
     <title>Yohana Ansari-Thomas: Research Prospectus</title>
     <style>
         #foundPoem1-redacted {
@@ -27,9 +25,20 @@
         }
         .black {
             background-color: black;
-            }
-    </style>
+        }
 
+        .image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+        
+        image:hover {
+            cursor: pointer;
+        }
+
+    </style>
     </head>
     
     <header class="h1, center">
@@ -41,11 +50,12 @@
         of 19th century Kashmir<br>
         <br><br>
         by Yohana Ansari-Thomas
+        <br><br><br><br>
+        
     </header>
 
     <header class="black">
-        <img id="foundPoem1" src="img/arc550_foundpoem1.jpg" style="display: none;" class="center">
-        <img id="foundPoem1-redacted" src="img/arc550_foundpoem1_redacted.jpg" style="display: visible;" class="center"> 
+        <img class="image" id="image1" name="image1" src="img/arc550_foundpoem1.2_redacted.jpg" onclick='toggle(this, ["img/arc550_foundpoem1.jpg"]);' />
     </header>
 
     <body>
@@ -62,40 +72,47 @@
         Signed between the British East India Company and Maharaja Gulab Singh, the contract that ushered the Doghra’s rule over the princely state of Jammu and Kashmir drew lines across mountains and valleys, priced its territories, and subjected its people to a severance from autonomy. What few archives exist from this exchange reveal the critical role the production of kashmir goods played in producing a colonial interest in the valley of Kashmir. Prior to its conquest, the geographic terrain of the valley rendered Kashmir a self-sustaining collection of villages built upon an agrarian economic system. As such, the origins of shawl weaving in Kashmir began as a non-commodified domestic practice. Following the Mughal conquests of the 16th century, the onset of urbanization brought shawl weaving out of the homes and into the factories, known as <i>karkhanas</i>. What began as a vernacular and indigenous craft that honored heritage quickly transformed into a symbol of multiple empires at the cost of its workers’ autonomy. Wherever resistance emerged amongst the weave workers, known as <i>shaalbafs</i>, colonial legislation swiftly stifled revolutionary effort.
         <br>
         <br>
-        Focusing on the interplay between 19th century shaalbaf labor practices in Srinagar and the colonial literature which contributed to the exploitation of those practices, the project situates its analysis within the space where borderlands, laws, language, and labor intersect. How did resistance emerge amongst the shaalbafs, and how did they confront the legislative transformations through which the Kashmiri people were subjected to indentured labor exploitation as their homelands dissolved into contested borderlands? Little evidence exists in documenting the spatial conditions of both 19th century Kashmiri karkhanas and the peripheral hamlets in which the shaalbafs lived. Instead, the paper focuses its scope on the 1865 Zaldagar uprising as the event which links labor resistance in shawl weaving to the legal and narrative formations that produced colonial interest and refashioned Kashmir into a borderland. 
+        Focusing on the interplay between 19th century shaalbaf labor practices in Srinagar and the colonial literature which contributed to the exploitation of those practices, the project situates its analysis within the space where borderlands, laws, language, and labor intersect. How did resistance emerge amongst the shaalbafs, and how did they confront the legislative transformations through which the Kashmiri people were subjected to indentured labor exploitation as their homelands dissolved into contested borderlands? The project focuses its scope on the 1865 Zaldagar uprising as the event which links labor resistance in shawl weaving to the legal and narrative formations that produced colonial interest and refashioned Kashmir into a borderland. 
         <br>
         <br>
-        The project tells the story of Zaldagar as a found poem of primary sources (similar to the work of Tracy K. Smith and Charles Reznikoff). Travel accounts, legal documents, hagiographies, <i>tarikhs</i>, treaties, etc. will be presented as a redaction of words that weave together a story of stifled revolution that has never been acknowledged by the British nor Indian sovereignties. Users will be able to click on the documents and view the content in its entirety to understand how this relationship between labor and law and the schism between homeland and borderland is hidden in plain sight. The documents and narrative accounts emerging from Sikh, Persian, Kashmiri, and European writers during this period render Kashmir’s status as an occupied borderland inseparable from its transformation of the shaalbafs into labor capital. The effect of the found poem, a process of redaction, further establishes these violences as historically silenced. What is made evident in the space between silence leaves a mark on the land, and its material trace resides within the language of legislative documents, narratives, and written accounts. In its attempt, the project unravels the line that threads together borderlands, legislation, labor production, and anti-colonial revolution, revealing in its wake the violence of archival silence.</p>
+        The project tells the story of Zaldagar as a found poem of primary sources. Travel accounts, legal documents, hagiographies, <i>tarikhs</i>, treaties, etc. are presented as a redaction of words that weave together a story of stifled revolution that has never been acknowledged by the British nor Indian sovereignties. Users will be able to click on the documents and view the content in its entirety to understand how the entanglements of labor, law, homeland, and borderland are hidden in plain sight. The documents and narrative accounts emerging from Sikh, Persian, Kashmiri, and European writers during this period render Kashmir’s status as an occupied borderland inseparable from its transformation of the shaalbafs into labor capital. The process of redaction, a characteristic of found poetry, is what ultimately reveals that which has been historically silenced. What is made evident in the space between silence leaves a mark on the land, and its material trace resides within the language of legislative documents, narratives, and written accounts. In its attempt, the project unravels the line that threads together borderlands, legislation, labor production, and anti-colonial revolution, revealing in its wake the violence of archival silence.</p>
         <br>
         <hr>
         <br>
-        <p class="justified">A note on the dataset: You’ll be hard pressed to find census data of anyone living in Kashmir during the 19th century, let alone shaalbafs. Therefore, I am assembling a collection of  travel accounts, legal documents, hagiographies, tarikhs, treaties, and other written accounts that in some way or another relate to Kashmir’s land, labor, and laws (as briefly mentioned in my prospectus). Some are in English while others are translated from Persian, Kashmiri, Sikh, and French. Initially, the idea was to map these texts out according to where they were written and how they circulated to make sense of how the phenomenology of place for the Kashmiris contrasted by a definition of its land that came from outside of Kashmir and ultimately produced colonial interest in the region… but I reckon there are more compelling ways to incorporate mapping and data visualization, and I am eager to hear others’ input. I looked into precedents that use literature of previously “unmapped” territories, however I don’t think this approach is actually relevant to my project. Certainly, by the signing of the Treaty of Amritsar, Kashmir already had established lines that bound its territory. Thus, I want to think of what other ways I might think about how literature produces spatiality, and how I might “map” that. 
+        <p class="justified">A note on the dataset: I've been hard pressed to find census data of anyone living in Kashmir during the 19th century, let alone shaalbafs. Therefore, I am assembling a collection of  travel accounts, legal documents, hagiographies, tarikhs, treaties, and other written accounts that in some way or another relate to Kashmir’s land, labor, and laws (as briefly mentioned in my prospectus). Some are in English while others are translated from Persian, Kashmiri, Sikh, and French. Initially, the idea was to map these texts out according to where they were written and how they circulated to make sense of how placemaking for the Kashmiris (through their labor) contrasted by a definition of its land that came from outside of Kashmir and ultimately produced colonial interest in the region… but I wonder if there are more compelling ways to incorporate mapping and data visualization, and I am eager to hear others’ input. I looked into precedents that use literature of previously “unmapped” territories, however I don’t think this approach is actually relevant to my project. Certainly, by the signing of the Treaty of Amritsar, Kashmir already had established lines that bound its territories. Thus, I want to think of what other ways I might think about how these literatures produces spatiality or complicate placemaking, and how I might “map” that. 
         </p>
 
     <script>
-        // the code isn't working... need to reconfigure. For some reason p5.js nor processing loads, I think I need to reconfigure it from my terminal which will take some researching. For Jay: I'm trying to get it so that two images load on top of one another, and then when the mouse is pressed it toggles from one to the other, such that what I've redacted can be revealed. 
+        // clean up
+        var gStorage = {};
 
-        var img1;
-        var img2;
-        function setup() {
-            createCanvas(800, 600);
-            img1 = loadImage('img/arc550_foundpoem1.jpg')
-            img2 = loadImage('img/arc550_foundpoem1_redacted.jpg')
-        }
-        let value = img1;
-        function draw() {
+        function toggle(image, anAltSrcArr) {
+            if (typeof(image) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
+                return;
+            };
 
-            image(img1, 0, 0); // this is wrong
-        }
-        function mousePressed() {
-             if (img1 === true) { // and I think this is wrong too
-                value = img2;
+            var id = image.id;
+            var oldSrc = image.src;
+
+            if (typeof(gStorage[id]) === "undefined") {
+                gStorage[id] = {
+                    'id': id,
+                    'origSrc': oldSrc,
+                    'i': 0
+                };
+            };
+
+            gStorage[id].i += 1;
+            if (gStorage[id].i > anAltSrcArr.length) {
+                gStorage[id].i = 0;
+            };
+
+            if (gStorage[id].i === 0) {
+                image.src = gStorage[id].origSrc;
             } else {
-                value = img1;
-            }
-        }
-        mousePressed([event])
-
+                image.src = anAltSrcArr[gStorage[id].i - 1];
+            };
+        };
    
     </script>
 
@@ -159,6 +176,7 @@
               <div class="csl-entry">———. <i>Languages of Belonging: Islam, Regional Identity, and the Making of Kashmir</i>. New York: Oxford University Press, 2004.</div>
               <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=urn%3Aisbn%3A978-0-19-521939-5&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Languages%20of%20belonging%3A%20Islam%2C%20regional%20identity%2C%20and%20the%20making%20of%20Kashmir&amp;rft.place=New%20York&amp;rft.publisher=Oxford%20University%20Press&amp;rft.aufirst=Chitralekha&amp;rft.aulast=Zutshi&amp;rft.au=Chitralekha%20Zutshi&amp;rft.date=2004&amp;rft.tpages=359&amp;rft.isbn=978-0-19-521939-5"></span>
             </div>
+            <br><br><br><br><br>
             
     </footer>
 
