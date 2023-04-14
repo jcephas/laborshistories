@@ -257,13 +257,6 @@ var simulation = d3
     .on("tick", ticktock);    
 
 //movement rules    
-function stayInbound(d) {
-  const centerX = width / 2;
-  const centerY = height / 2;
-  const launchStrength = 0;
-  d.vx += (centerX - d.x) * launchStrength;
-  d.vy += (centerY - d.y) * launchStrength;
-}
  
 const speedLimitValue = 2;    
 function speedLimit(d) {
@@ -282,7 +275,6 @@ circles
       if (d !== dragging) {
         if (d.x - d.radius <= 0 || d.x + d.radius >= width) {
           d.vx = -d.vx;
-          stayInbound(d);
         }
         speedLimit(d);
         d.x += d.vx;
@@ -294,7 +286,6 @@ circles
       if (d !== dragging) {
         if (d.y - d.radius <= 0 || d.y + d.radius >= height) {
           d.vy = -d.vy;
-          stayInbound(d);
         }
        speedLimit(d);
         d.y += d.vy;
