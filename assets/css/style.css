@@ -19,6 +19,10 @@ a:hover {
 	border-bottom: 0;
 }
 
+h1 {
+	margin-top: 20px;
+}
+
 h3 {
 	color: grey;
 }
@@ -33,6 +37,12 @@ p {
 
 img {
 	width: 100%;
+}
+
+canvas {
+	z-index: 1000;
+	position: absolute;
+	top: 0;
 }
 
 .header {
