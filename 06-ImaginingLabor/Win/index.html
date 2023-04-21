@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>???</title>
+<title>Image Identity</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js?"></script>
     <style>
         html {
@@ -87,28 +87,6 @@
                     firstSlide[first].style.display = "none";
                 }
                 firstSlide[slideFirst-1].style.display = "block";
-            }
-            
-            var secondParagraph = document.getElementById("secondParagraph");
-            secondParagraph.innerHTML = "<p class='secondSlides'>" + secondParagraph.innerHTML.replace(/ /g, "</p><p class='secondSlides'>") + "</p>";
-
-            var slideSecond = 1;
-            showSecond(slideSecond);
-            setInterval(function() { plusSecond(1); }, 300);
-
-            function plusSecond(n) {
-                showSecond(slideSecond += n);
-            }
-
-            function showSecond(n) {
-                var second;
-                var secondSlide = document.getElementsByClassName("secondSlides");
-                if (n > secondSlide.length) {slideSecond = 1}
-                if (n < 1) {slideSecond = secondSlide.length}
-                for (second = 0; second < secondSlide.length; second++) {
-                    secondSlide[second].style.display = "none";
-                }
-                secondSlide[slideSecond-1].style.display = "block";
             }
         }
     </script>
