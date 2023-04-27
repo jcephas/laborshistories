@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Divisions of Labor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js?"></script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            align-content: center;
+            z-index: 2;
+            animation: background;
+            animation-duration: 10s, 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            align-content: center;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        p {
+            line-height: 2em;
+            padding: 0em 3em 0em 3em;
+            text-align: justify;
+            font-family: serif;
+            animation: fade;
+            animation-duration: 7s, 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes fade {
+            0% {color: black; text-shadow: tan 1px 0 10px;}
+            25% {color: saddlebrown; text-shadow: antiquewhite 1px 0 10px;}
+            50% {color: antiquewhite; text-shadow: indianred 1px 0 10px;}
+            75% {color: tan; text-shadow: saddlebrown 1px 0 10px;}
+            100% {color: black; text-shadow: tan 1px 0 10px;}
+        }
+         @keyframes background {
+            0% {background: black;}
+            25% {background: saddlebrown;}
+            50% {background: antiquewhite;}
+            75% {background: tan;}
+            100% {background: black;}
+        }
+    </style>    
+</head>
+    
+<body>
+<p id="response">
+    The continued practice of racializing labor outlines a systematic othering that serves to benefit, from  a Marxist perspective, the capitalist and, from a more general perspective, any member of the elite class. By dividing the working class, the purchase of labor remains in the capitalist’s favor as solidarity between laborers is undercut by either an imagined solidarity between a portion of the working class and the elite class, by sewn divisions within the working class across the class-grain, or through the creation of a three-or-more-tiered caste system. Despite its prevalent use in obfuscating labor narratives as Jones traces, this (literally) divisive strategy is not inherent to capitalism. Capitalism inherits the method from feudalism and slavery—systems where labor need not be purchased as laborers are indebted, owned, or otherwise made less than—as described by two parallel examples in Robinson and Cephas: Robinson discusses the non-revolutionary aspects of Louis XI’s “French infantry without Frenchmen” as part of a tradition of European feudalists to look outside their realm for reliable labor from peoples who do not disdain them under their rule; second, Cephas quotes that “not a single native of Lincoln county, white or colored, is serving time on the county chain-gang.” This exclusion of the population from labor serving that population elucidates the elitist desire to portray certain forms of state-sanctioned labor as ‘outside’ the occupants of the state, thereby inventing distinctions within the working class and between forms of labor. While the former case (inventing distinctions) creates entrenched differences that we are still grappling with today, the latter case (forms of labor) has proven more malleable, as Trotter divulges with his discussion of barbershops. Starting as a ‘low’ job designated to black workers, black barbers eventually recreated the profession into something higher before it was reappropriated by white immigrant labor. This is not to say all forms of racialized labor were reworkable—chain-gang roadwork reinforced racial distinctions in the working class with its premise of humiliation that somehow affected prisoners differently by race, making it a fitting punishment (‘good for the soul’ even) for black prisoners while being ‘too dehumanizing’ for white prisoners. Not even inmates can be allowed to share an identity. There is a key difference between barbershops and roadwork that allowed the former to become, in black hands, something greater than it was while the latter literally kept black hands tied. Both jobs maintain (appearances vs infrastructure), but roadwork is menial, and cutting hair involves skills—today it requires licensure—not only in the craft of shaping hair but in the entertaining of the client during the cut. The barber not only labors, but socially reproduces through the hygienic and social elements of their profession. Furthermore, requiring craft introduces creativity to labor, in turn giving a barber ‘room to play’ within the confines of their job. Black barbers thereby forged some small form of freedom in their work, while Roediger tells us that “white urban workers connected their freedom and their work,” forming their individual identity as a type of laborer rather than through their labor. Roadwork was ‘too dehumanizing’ for white Americans as they were incapable of defining their identities outside a profession, a discipline, an empire. However, by equating work with identity, white workers lose out not only in negotiations with the elite, capitalist class, but lose sight of alternative ways of living entirely.
+</p>
+<script>
+    document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replace(/white/g, "<span style='color:antiquewhite'>white</span>");
+    document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replace(/black/g, "<span style='color:saddlebrown'>black</span>");
+    document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replace(/colored/g, "<span style='color:saddlebrown'>colored</span>");
+    document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replace(/elite/g, "<span style='color:gold'>elite</span>");
+    document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replace(/elitist/g, "<span style='color:gold'>elitist</span>");
+</script>
+</body>    
+    
+</html>
