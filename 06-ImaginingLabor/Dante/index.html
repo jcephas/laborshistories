@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Dante Furioso Reading Response</title>
+	
+
+	<style>
+		
+		<style>
+		.tab {
+			overflow: hidden;
+			margin-top: 25px;
+			margin-left: 25px;
+		}
+
+		.tab button {
+			background-color: white;
+			border: 2px solid black;
+ 			color: black;
+ 			border-radius: 30px;
+  			padding: 12px 24px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 18px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+  			font-family: CMU Concrete;
+		}
+
+		.tab button:hover {
+			background-color: black;
+			border: none;
+			color: white;
+			padding: 14px 26px;
+			border-radius: 30px;
+
+		}
+
+		.tab button.active {
+			background-color: black;
+			border: none;
+			color: white;
+			padding: 14px 26px;
+			border-radius: 30px;
+
+		}
+
+		.tabcontent {
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			margin-top: 50px;
+  			width: 800px;
+		}
+
+		p {
+			font-family: CMU serif;
+			font-size: 16px;
+			line-height: 1.25;
+			width: 800px;
+  			max-width: calc(100% - 100px);
+  			display: block;
+  			margin: 50px auto;
+  			margin-top: 25px;
+  			margin-bottom: 25px;
+		}
+
+
+	</style>
+
+	<div class="tab">
+			<button class="tablinks" onclick="openDate(event, '1')" id="defaultOpen">Reading Response</button>
+			<button class="tablinks" onclick="openDate(event, '2')">Imagining Labor</button>
+		</div>
+		<div id="1" class="tabcontent">
+	
+	<body>
+			<h3 style="font-family:CMU serif; margin: 20px auto; margin-left: 20px;">Imagining Labor</h3>
+
+
+			<p>What is the purpose of visual representations of labor? Each of the authors tackles this issue in a way that reflects their position relative to the subject matter of their writing. Erika Doss is a Professor of American Studies writing on twentieth-century American popular culture; Denise Khor is a Professor of Asian American Studies and Visual Studies working on cinema, film preservation, and Asian American film; and Meredith Tenhoor is a professor of architecture, researching architectural history, urbanism, and landscape history. In each case, what the authors choose to omit from their rendering of chosen case studies is as telling as their focus. 
+			</p>
+			<p>Thus, Doss’s work focuses on the symbolism of white male bodies in New Deal-era representations and broaches the issue of homoeroticism in depictions of “beefcake” workers. It hardly addresses images from radical publications, circulars, internationalist organizations, Black movements, or Mexican American or Chicano imagery. While Doss argues that “issues of labor collectivity” were “sublimated” by the government-sponsored artists she chooses to include, it’s not clear who counts as an “artist” and whether this sublimation is by them or the author and her narrow notion of “work” and the “worker.” Notice that domestic work is not a subject she chooses to include.
+			</p> 
+			<p>Similarly, Khor’s piece is focused on representations of workers tied to large-scale industry. Khor does a better job of contextualizing her material, a vast archive of photographs commissioned by large railroad companies during the 1860s expansion of the United States transcontinental lines. Tying photography’s mechanization, standardization, and reproducibility to the organizational logic of nineteenth-century railroads, her reading of stereoscopic images of indentured Chinese laborers is enriched by this background. Furthermore, she astutely identifies the function of image production as a tool to bolster the acquisition of property and public support for railroad expansion. Sadly, despite a brief mention of the post-Civil War context, she avoids tying the issue of imported labor to Native dispossession or Black enslaved labor, between which Asian indentured labor is often situated. Thus, the celebration of the overdue “honor” and “homage” paid to Chinese workers is certainly appreciated, though a more intersectional approach may have revealed why these honors are finally enjoyed, and by whom.
+			</p>
+
+			<p>Finally, Meredith Tenhoor’s piece follows a familiar format in which architects reminisce about a time when their profession had more power. Recalling the designs for the markets and distribution of farm produce in France, Tenhoor argues that the “efficiency” gained by these reconfigurations allowed middle-class consumers to purchase new, labor-saving commodities, like electro domestics. For Tenhoor, the midcentury architects offer lessons in the power of drawings to “imagine new forms of fairness and new realms of satisfaction.” (142) Apparently, capitalism was fair in the 1940s through the 1960s, when the French middle class could afford “televisions and washing machines,” enjoying their nation’s improved food distribution networks’ newfound efficiency. Yet, for all the talk of drawing networks and connections, just where these new commodities came from and what kind of labor was involved in their manufacture, and where the raw materials were extracted, is beyond the frame.</p>
+
+		</div>
+
+		<div id="2" class="tabcontent">
+<h3 style="font-family:CMU serif; margin: 20px auto; margin-left: 20px;">People of Color in the Building Trades in Havana, Cuba, 1820 to 1842</h3>
+			<img src="Map.jpg" width = 100%>
+
+		</div>
+		
+	</body>
+
+	<script>
+		function openDate(evt, dateName) {
+  			var i, tabcontent, tablinks;
+  				tabcontent = document.getElementsByClassName("tabcontent");
+  			for (i = 0; i < tabcontent.length; i++) {
+    			tabcontent[i].style.display = "none";
+  			}
+  			tablinks = document.getElementsByClassName("tablinks");
+  			for (i = 0; i < tablinks.length; i++) {
+    			tablinks[i].className = tablinks[i].className.replace(" active", "");
+  			}
+  			document.getElementById(dateName).style.display = "block";
+  			evt.currentTarget.className += " active";
+		}
+		document.getElementById("defaultOpen").click();
+	</script>
+	
+</html>

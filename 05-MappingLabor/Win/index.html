@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+<style>
+    body {
+        overflow-x: hidden;
+        font-family: 'Comic Sans', cursive;
+    }
+    p {
+        overflow: hidden;
+        position: absolute;
+        display: block;
+        top: -1.4em;
+        left: 2.35em;
+        z-index: 2;
+        background-color: white;
+        padding: 1.2em;
+    }
+    img {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 4.35em;
+        z-index: 0
+    }
+    svg {
+        overflow: hidden;
+        position: absolute;
+        display: block;
+        top: 4.8em;
+        left: 0;
+        z-index: 4;
+    }
+
+</style>
+</head>
+    
+<body>
+    <p>Click inside the border to launch the blue ball.<br/>Maximize your engagment score to make it in the platform labor market of San Francisco.</p>
+    <img src="img/SFall.png" width="655" height="830">
+    <svg></svg>
+    
+<script>
+    
+// canvas
+var width = 800,
+    height = 800;
+var svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+svg.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .style("stroke", "black")
+    .style("fill", "none")
+    .style("stroke-width", 2);
+
+// sf projection
+var projection = d3.geoMercator()
+    .center([-122.404,37.778])
+    .scale(1000000)
+    .translate([width / 2, height / 2]);
+
+// import data
+d3.csv("img/SanFran.csv")
+    .then(function (data) {
+        data.forEach(function (d) {
+            d.lat = +d.lat;
+            d.long = +d.long;
+            var coords = projection([d.long, d.lat]);
+            d.x = coords[0];
+            d.y = coords[1];
+            d.radius = 10;
+        });
+
+    // circles from data
+        var circles = svg
+            .selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .classed("dataBall", true)
+            .attr("r", function (d) {
+                return d.radius;
+            })
+            .style("fill", "red")
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+
+    // labels from data
+        var labels = svg
+            .selectAll(null)
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("text-anchor", "left")
+            .attr("font-size", "1em")
+            .style("fill", "red")
+            .attr("x", function(d) { return d.x + d.radius * 1.5; })
+            .attr("y", function(d) { return d.y + 6; })
+            .text(function (d) {
+                return d.name;
+            });
+
+    // user launch
+    var influencer = svg.append("circle")
+        .attr("r", 20)
+        .style("fill", "blue")
+        .classed("influencerBall", true)
+        .attr("cx", Math.random() * width)
+        .attr("cy", Math.random() * height)
+        .datum({vx: 0, vy: 0});
+
+    // counters
+    var clickCount = 0;
+    var collisionCount = 0;
+    function incrementClick() {
+      clickCount++;
+      updateCounter();
+    }
+    function incrementCollision() {
+      collisionCount++;
+      updateCounter();
+    }
+    var counterText = svg.append("text")
+      .attr("x", width - 20)
+      .attr("y", height - 20)
+      .attr("text-anchor", "end")
+      .style("font-size", "20px");
+    function updateCounter() {
+        var ratio = Math.round(collisionCount / clickCount * 100) / 100;
+        counterText.text(collisionCount + " collisions / " + clickCount + " clicks = " + ratio + " engagement score");
+    }
+    
+    // movement rules
+    const speedLimitValue = 20;
+    function speedLimit(d) {
+        if (Math.abs(d.vx) > speedLimitValue) {
+            d.vx = (d.vx > 0 ? speedLimitValue : -speedLimitValue);
+        }
+        if (Math.abs(d.vy) > speedLimitValue) {
+            d.vy = (d.vy > 0 ? speedLimitValue : -speedLimitValue);
+        }
+    }
+
+    // time
+    d3.interval(ticktock, 20);
+    function ticktock() {
+        var influencerBall = d3.select("circle.influencerBall").datum();
+            speedLimit(influencerBall);
+            influencerBall.x = +influencer.attr("cx");
+            influencerBall.y = +influencer.attr("cy");
+            influencerBall.vx *= 0.99;
+            influencerBall.vy *= 0.99;
+            influencerBall.x += influencerBall.vx;
+            influencerBall.y += influencerBall.vy;
+
+            if (influencerBall.x - 10 <= 0 || influencerBall.x + 10 >= width) {
+                influencerBall.vx = -influencerBall.vx;
+                influencerBall.x += influencerBall.vx * 2;
+            }
+            if (influencerBall.y - 10 <= 0 || influencerBall.y + 10 >= height) {
+                influencerBall.vy = -influencerBall.vy;
+                influencerBall.y += influencerBall.vy * 2;
+            }
+
+            // collisions
+            circles.each(function (d) {
+                var dx = d.x - influencerBall.x;
+                var dy = d.y - influencerBall.y;
+                var distance = Math.sqrt(dx * dx + dy * dy);
+                var minDistance = d.radius + 10;
+
+                if (distance < minDistance) {
+                    var angle = Math.atan2(dy, dx);
+                    var targetX = influencerBall.x + Math.cos(angle) * minDistance;
+                    var targetY = influencerBall.y + Math.sin(angle) * minDistance;
+                    var ax = (targetX - d.x) + 1;
+                    var ay = (targetY - d.y) + 1;
+                    influencerBall.vx -= ax;
+                    influencerBall.vy -= ay;
+                    incrementCollision();
+                }
+            });
+            influencer
+                .attr("cx", influencerBall.x)
+                .attr("cy", influencerBall.y);   
+    }
+
+    // shoot function
+    function shoot(event) {
+        if (event.defaultPrevented) return;
+        var influencerBall = d3.select("circle.influencerBall").datum();
+        var maxSpeed = speedLimitValue;
+        var minSpeed = 5;
+
+        // direction vector
+        var dx = influencerBall.x - event.x;
+        var dy = influencerBall.y - event.y;
+        var length = Math.sqrt(dx * dx + dy * dy);
+        var unitVectorX = dx / length;
+        var unitVectorY = dy / length;
+
+        // shot power
+        var shootingSpeed = minSpeed + (maxSpeed - minSpeed) * (1 - Math.min(length, maxSpeed) / (maxSpeed + minSpeed));
+
+        // new velocity
+        influencerBall.vx = unitVectorX * shootingSpeed;
+        influencerBall.vy = unitVectorY * shootingSpeed;
+        
+        incrementClick();
+    }
+
+svg.on("click", shoot);
+    
+});
+    
+</script>
+
+
+
+</body>
+</html>
