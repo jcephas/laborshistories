@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Fox-ReadingResponse06</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+</head>
+
+<style>
+
+	h1, p, a{
+		padding-top:20px;
+		padding-left:220px;
+	}
+
+	h3{
+		padding-top:20px;
+		text-align:left;
+	}
+
+	a {
+		color:white;
+	}
+
+	a:hover{
+		color:#84e2f5;
+	}
+
+	.title{
+		background-color: #84e2f5;
+		height:200px;
+	}
+
+	.first{
+		background-color:#f584cd;
+		height:600px;
+	}
+
+	.second{
+		background-color: #9b84f5; 
+		height:400px;
+	}
+
+	.third{
+		background-color: #84a2f5;
+		height: 400px;
+	}
+
+	.poemheading{
+		background-color:#c284f5;
+		height:100px;
+		padding-top:10px;
+		padding-left:220px;
+	}
+
+	.poem{
+		background-color:#c284f5;
+		height:320px;
+		padding-top: 10px;
+		padding-left:500px;
+	}
+
+	.parallax01{
+		background-image:url("brick-wall01.jpeg");
+		min-height: 100px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	canvas {
+		position:absolute;
+		top:10px;
+	}
+
+</style>
+
+<body>
+	<script>
+		function setup() {
+			createCanvas(200,2400);
+				}
+
+		function draw() {
+			if(mouseIsPressed) {
+			stroke(0);
+			fill(0);
+				} else {
+			stroke(255);
+			fill(255);
+				}
+			triangle(mouseX,mouseY,mouseX-15,mouseY-15,mouseX+15,mouseY-15);
+				}
+	</script>
+
+	<div id=title class="title">
+		<h1>Architecture's Labour</h1>
+		<p><< Draw here!</p>
+	</div>
+
+	<div class="parallax01"></div>
+
+	<div id="section01" class="first">
+		<h1>Peggy Deamer</h1>
+		<p>In Peggy Deamer’s piece, she calls on architects to put their ‘work-aphasia’ behind them ‘and identify as an organization of workers’, in order to realise the ‘real social value’ of architecture’s ‘cultural caché’. She ends by claiming that ‘[a]s newly enlightened players in the labor games, architects are free to move directly toward an imagined ideal’. I am, perhaps, not in a good place to evaluate Deamer’s assessment of architecture as a profession in terms of labour (which, to me, seems sound and relevant), but it does strike me that Deamer’s categorisation of the ‘creative class’ could warrant some investigation. Deamer’s quotation from Marx at the start of her second part (‘what distinguishes the worst architect from the best of bees is this, that the architect raises his structure in imagination before he erects it in reality’ <em> Capital Vol. 1 </em>, p.284) is used, in the context of her argument, as proof of the fact that the creative work of the architect is, in fact, labour. I think, in its original context, Marx’s comparison between the bee and the architect actually has more to do with his differentiation of nature from labour, his rarefication of labour as something uniquely human and the terms in which labour is understood as an intervention in (and not part and parcel with) the natural world. Thus, what is essential to Marx’s argument (and what Deamer cashes in on) is the purposiveness of labour – creativity, form-making, imaginative solutions. Marx acknowledges creativity as labour (his idea that ‘artists’ only exist in societies subject to the capitalist division of labour, and the artist’s implication in the wage-labour relationship attests to this), but Deamer seems to omit the other Marxist category into which the artist/architect in the still-capitalist society might fall, the role of the capitalist: ‘“Have I myself not worked?”’ (<em>Capital Vol. 1</em>, p300). Clearly, the architect is not purely ‘capitalist’, but the hints at architects’ new ‘financial savvy’ throughout Deamer’s piece imply a greater confluence between architect and business manager than perhaps Marx envisioned in his comparison to the worker-bee. Furthermore, such a confluence between architect and business manager (or artist and bourgeois) is not new to attempts to negotiate the status of the ‘creative class’s’ labour. The Russian Constructivists that Deamer cites in the first part of her article are so keen on stating (and restating) the proletarian status of the poet (the labour-status of art) because there is huge anxiety about the validity of art in post-revolutionary Russia and throughout the Soviet Union. Of course, it is true, as Deamer quotes, that Marx believed the division between the artist and the labourer would eventually be erased, but the caveat to this is that it would happen <em> in a communist society </em>. Neither today’s United States, nor NEP-era Soviet Union can be classified as ‘communist’ and, I think, it is from here that the understandable anxiety regarding the social function of art shared by both Vladimir Maiakovskii and Peggy Deamer seems to spring. </p>
+		<a href="#section02"> Go to Mardges Bacon</a>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="poemheading" class="poemheading">
+		<h3>
+			Extract from Vladimir Maiakovskii, 'The working poet' (1918)
+		</h3>
+	</div>
+
+	<div id="poem" class="poem">
+		<img src="maiakovskii.jpg">
+	</div>
+
+	<div class="parallax01"></div>
+
+	<div id="section02" class="second">
+		<h1>Mardges Bacon</h1>
+		<p>Mardges Bacon’s account of The Federation of Architects, Engineers, Chemists and Technicians (FAECT) details a foundational moment of union-solidarity between white- and blue-collar workers in 1930s’ USA. A number of interesting points are raised throughout the piece: the original causes of the union’s formation; the demographic of union membership; the prevalence of public work projects during the New Deal (and with it the mediation between ‘two clients’: the taxpayers and the users of public works); and ultimately the reasons for the union’s decline after 1939. As ever, the role of foreign policy (Molotov-Ribbentrop pack and suspicion of communism) seems to have played a key role in domestic policy. The FAECT <em>Bulletin</em> (1934) and <em>Technical America</em> (renamed, 1937) provide insights into the union’s politics (the social function that they attribute to art) within the broader context of New Deal and post-war America. Given the tone of Deamer’s piece, it would be interesting to know to which future unions Bacon believes FAECT gave rise, whether they are still extant and to what extent the politics of architecture unions might be said to have changed since FAECT, as well as how US government policy might have changed/stayed the same with regard to unions. </p>
+		<a href="#section03"> Go to Adrienne Brown</a>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="section03" class="third">
+		<h1>Adrienne Brown</h1>
+		<p>Adrienne Brown’s assessment of William Starrett’s 1928 monograph <em>Skyscrapers and the Men Who Build Them</em> attempts to reground Starrett’s idealised ‘scale of bigness’ in the smaller-scale concrete context of construction. Brown pushes back on Starrett’s conception of the skyscraper as ‘not just homogeneous but homogenizing’. In this regard, she participates in a debunking of the presumptions of universality (/naturalisations of white male identity as universal) which has marked a number of the readings this semester (starting from Lowe in week 2). This move, likewise, facilitates a critique of Starrett’s inclusion of the very construction workers, whose existence he had previously elided, as racialised Others later in his text. In terms of broader discussions of modernity, Brown raises crucial questions about the discursive production of visualisations of the city, which would seem especially pertinent to the very real presence but discursive absence of undocumented construction and factory workers. </p>
+		<a href="#section01"> Go to Peggy Deamer</a>
+	</div>	
+
+</body>
+
+</html>	
