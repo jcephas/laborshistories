@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>To Touch the Sky</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js?"></script>
+<style>
+body {
+  height: 1000000px;
+    width: 75%;
+    margin: 12.5%;
+  overflow: auto;
+  font-family: sans-serif;
+    background: azure;
+}
+
+#content {
+  position: fixed;
+  bottom: 0;
+    width: inherit;
+  text-align: left;
+    color: firebrick;
+}
+
+.word {
+  transform: translateY(-100vh);
+  transition: transform 1s ease-out;
+  display: inline-block;
+}  
+</style>        
+</head>
+    
+<body>
+<div id="content">
+    <p>
+Turning the focus of this semester’s studies in labor wholly onto the practice of architecture, this week’s readings outline the confusing nature of architectural work. Firstly, Deamer addresses the “labor of love” that causes architects not to view their work as work, but rather as passion or play in a way not found in other creative disciplines. She repeatedly raises the point that artists very much view their work as labor while architects do not — perhaps this schism is due to the necessarily practical material outcome of architecture, or due to the removal of the process of architectural design from the process of physically realizing that design. Architects don’t labor because construction workers do — a hard labor that architects regularly see first hand on site. Coming into regular contact with physical labor makes it difficult to remember that one’s own work, however fun or white collar, is still work.
+    </p>
+<p>
+The physical labor of construction is precisely that which Brown discusses in her piece on the aesthetics of skyscraper construction. In her analysis, the skyscraper provides the backdrop of the capitalist city where, reduced to ant-sized workers, laborers lose their race and individual identities. The skyscraper has been theorized from many perspectives by numerous architectural thinkers (to name a few: Louis Sullivan, Guy Nordenson, Hal Foster) as simultaneously an expressive symbol on the skyline and an expression of active capitalist development. Whereas Robinson’s racial capitalism allows us to understand racial divisions as surrogates for class divisions that favor the elite class, Brown’s skyscraper provides a view that, while typically portrayed as a site of white labor in its imagery, pulls the viewer out to such a scale that any semblance of distinction between laborers is washed over. There is only the monument and the men who made it.
+    </p>
+    <p>
+Bacon bridges the gap between design and construction with her research on FAECT, an organization that itself covers professions across the discipline of building. In addition to setting much needed industry standards for compensation, FAECT built a diverse body across types of labor and across races. As Deamer reminds us, “workers identify with workers,” and it is only through the acceptance of architecture as work that architects can regain agency within their work. 
+    </p>
+    <p>
+This is not to say that architects should eschew the language of play for that of labor. Play is what makes architecture personally fulfilling. Play is an exercise in development, allowing humans to soak up information and interaction at longer intervals through an innate enjoyment. Play is personal, but architecture is a service industry. Architects must not only serve the client, but also the public. They cannot just design for themselves. They must create spaces that allow others to play, and in order to do that, they must recognize the knowledge and intellectual labor they imbue in their projects so that they can better wield it, organize it, and provide it to more people.
+</p>
+    </div>
+  </body>    
+
+<script>
+// split text
+function splitIntoWords(element) {
+  const text = element.innerText;
+  const words = text.split(' ');
+  element.innerHTML = '';
+  
+  words.forEach((word, index) => {
+    const span = document.createElement('span');
+    span.className = 'word';
+    span.innerHTML = word + (index !== words.length - 1 ? '&nbsp;' : '');
+    element.appendChild(span);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const paragraphs = document.querySelectorAll('#content p');
+  paragraphs.forEach(splitIntoWords);
+});
+    
+//build text    
+let lastScrollTop = 0;
+let throttleTimeout = false;
+
+window.addEventListener('scroll', function () {
+  if (throttleTimeout) return;
+
+  throttleTimeout = true;
+  setTimeout(() => throttleTimeout = false, 200);
+
+  const st = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (st > lastScrollTop) {
+    const words = document.getElementsByClassName('word');
+    for(let i = 0; i < words.length; i++){
+      if(words[i].style.transform !== 'translateY(0px)'){
+        words[i].style.transform = 'translateY(0px)';
+        break;
+      }
+    }
+  } else {
+    const words = Array.from(document.getElementsByClassName('word')).reverse();
+    for(let i = 0; i < words.length; i++){
+      if(words[i].style.transform !== 'translateY(-100vh)'){
+        words[i].style.transform = 'translateY(-100vh)';
+        break;
+      }
+    }
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+});
+
+    </script>    
+
+</html>
