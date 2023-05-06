@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Archivo Narrow';
+    src: url('ArchivoNarrow-Medium.ttf');
+	font-weight: 500;
+}
+
+:root {
+	--color-teal: #009990;
+	--color-pink: #ffaaee;
+	--color-dawn: #fcc777;
+	--color-gray: #a0a0a0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+	font-family: 'Archivo Narrow', sans-serif;
+    font-size: 150%;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+h2 {
+	font-family: 'Archivo Narrow', sans-serif;
+    font-size: 125%;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+p {
+	font-family: 'Archivo Narrow', sans-serif;
+    font-size: 100%;
+    line-height: 125%;
+    max-width: 40em;
+    margin-left: 0em;
+}
+button {
+    cursor: pointer;
+}
+.text {
+    margin-left: 2em;
+}
+.menu {
+    color: var(--color-teal);
+    display: block;
+    left: 10%;
+    width: 80%;
+    height: 2em;
+}
+.menuitem {
+    display: inline-block;
+    height: 2em;
+    width: 10em;
+    text-align: center;
+    background: var(--color-dawn);
+    
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 100%;
+    line-height: 125%;
+    color: var(--color-teal);
+    text-decoration: none;
+    border: 5px;
+    border-style: outset;
+    border-color: var(--color-dawn);
+}
+.menuitem:hover {
+    text-decoration: underline;
+}
+.activemenu {
+    background-color: var(--color-pink);
+    text-decoration: underline;
+    border: 5px;
+    border-style: inset;
+    border-color: var(--color-pink);
+}
+.section {
+    display: none;
+}
