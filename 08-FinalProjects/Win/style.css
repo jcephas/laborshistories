@@ -1,3 +1,5 @@
+/* general text & display */
+
 @font-face {
     font-family: 'Archivo Narrow';
     src: url('ArchivoNarrow-Medium.ttf');
@@ -12,12 +14,17 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    margin-left: 2em;
+    margin-top: 2em;
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 500;
 }
-
+@media (max-width: 48em) {
+body {
+    margin-top: 1em;
+    margin-left: 1em;    
+    } 
+}
 h1 {
 	font-family: 'Archivo Narrow', sans-serif;
     font-size: 150%;
@@ -37,22 +44,38 @@ p {
     font-size: 100%;
     line-height: 125%;
     max-width: 40em;
-    margin-left: 0em;
+    margin: 0;
+    margin-bottom: 1em;
+}
+ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin-left: 2em;
+    list-style: '// ';
 }
 button {
     cursor: pointer;
 }
 .text {
-    margin-left: 2em;
 }
+
+/* navigation menu */
+
 .menu {
     color: var(--color-teal);
-    display: block;
-    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 80%;
-    height: 2em;
+    max-width: 800px;
 }
 .menuitem {
+    flex: 1;
+    margin: 0 .5em;
+    text-align: center;
     display: inline-block;
     height: 2em;
     width: 10em;
@@ -68,6 +91,23 @@ button {
     border-style: outset;
     border-color: var(--color-dawn);
 }
+.menuitem:nth-child(1) {
+  margin-left: 0;
+}
+.menuitem:nth-child(4) {
+  margin-right: 0;
+}
+@media (max-width: 48em) {
+.menu {
+    width: calc(100% - 1em);    
+    }  
+.menuitem {
+    flex: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .menuitem:hover {
     text-decoration: underline;
 }
@@ -80,4 +120,19 @@ button {
 }
 .section {
     display: none;
+}
+
+/* map */
+.mapcontainer {
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 800px;
+    overflow: hidden;
+}
+@media (max-width: 48em) {
+  .mapcontainer {
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+  }
 }

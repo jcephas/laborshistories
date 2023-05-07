@@ -1,0 +1,9 @@
+type,name,year,digital,creator,owner,size_staff,revenue,monthly_creators,monthly_users,total_content,reg_users,traffic,bounce_rate,pages_visited,visit_duration,location,address,lat,long,tag
+platform,Etsy,2005,TRUE,Etsy,Etsy,,2570000000,,,,,0.4562,45.83,6.4,0:05:41,New York,"117 Adams St, Brooklyn, NY 11201, USA",40.70058785,-73.98813838,
+platform,Tumblr,,FALSE,,,,,,,,,0.2227,,,,New York,"770 Broadway, New York, NY 10003, USA",40.73084185,-73.99143735,
+platform,Spotify,,FALSE,,,,,,,,,0.4737,,,,New York,"150 Greenwich St 62nd Floor, New York, NY 10007, United States",40.71037672,-74.01198477,
+platform,Vine,,FALSE,,,,,,,,,0,,,,New York,"851 6th Ave, New York, NY 10001. United States",40.74720004,-73.98991569,
+product,Unreal,,FALSE,,,,,,,,,0.0094,,,,New York,"550 W 54th St Apt 1731, New York City, New York, 10019, United States",40.76771744,-73.9915652,
+platform,Stack Overflow,,FALSE,,,,,,,,,0.2122,,,,New York,"110 William St Fl 28, New York, New York, 10038, United States",40.70877301,-74.00672337,
+platform,The RealReal,,FALSE,,,,,,,,,0.0171,,,,New York,"53 W 36th St. 12th floor, New York, NY 10018",40.75086243,-73.98588407,
+platform,Seamless,,FALSE,,,,,,,,,0.005,,,,New York,"100 Lexington Ave, New York City, New York, 10016, United States",40.74224084,-73.98312385,
