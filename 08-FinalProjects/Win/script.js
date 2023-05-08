@@ -9,7 +9,7 @@ const colorGray = rootStyles.getPropertyValue('--color-gray').trim();
 // tab switcher
 document.addEventListener("DOMContentLoaded", function () {
   // tabs
-  const menuItems = document.querySelectorAll(".menuitem");
+  const menuItems = document.querySelectorAll(".navmenu");
 
   // click listener
   menuItems.forEach((button) => {
@@ -42,17 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // map
 document.addEventListener("DOMContentLoaded", function () {
     
-    
-    
     // canvas
     var width = 800,
-        height = 800,
-        mapColor1 = colorTeal,
-        mapColor2 = colorPink,
-        mapColor3 = colorDawn;
+        height = 800;
 
     var svg = d3
-      .select("#sanfran")
+      .select("#mapbox")
       .append("svg")
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("preserveAspectRatio", "xMidYMid meet");
@@ -208,6 +203,33 @@ document.addEventListener("DOMContentLoaded", function () {
             var ratio = Math.round(collisionCount / clickCount * 100) / 100;
             counterText.text(collisionCount + " collisions / " + clickCount + " clicks = " + ratio + " engagement score");
         }
+            
+        // tooltip   
+        function generateTooltipText(d) {
+            let textLines = [];
+
+            if (d.traffic) {
+                textLines.push(`${d.name} has ${d.traffic} billion users a day.`);
+            }
+            if (d.pages_visited) {
+                textLines.push(`Users visit an average of ${d.pages_visited} pages.`);
+            }
+
+            return textLines.join('<br/>');
+        }    
+
+        var tooltip = d3.select("body")
+            .append("div")
+            .style("position", "absolute")
+            .style("z-index", "10")
+            .style("color", colorTeal)
+            .style("background", colorDawn)
+            .style("padding", "10px")
+            .style("border-color", colorDawn)
+            .style("border-radius", "10px")
+            .style("pointer-events", "none")
+            .style("visibility", "hidden")
+            .classed("mapElement", true);    
 
     // simulation        
             
@@ -376,6 +398,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
             updateArrow(currentMouseCoords.x, currentMouseCoords.y);
         });
+            
+        // tooltip listeners    
+        circles.on("mouseover", function (event, d) {
+            tooltip.html(generateTooltipText(d))
+                .style("visibility", "visible");
+        })
+        .on("mousemove", function (event) {
+            tooltip.style("top", (event.pageY - 10) + "px")
+                .style("left", (event.pageX + 10) + "px");
+        })
+        .on("mouseout", function () {
+            tooltip.style("visibility", "hidden");
+        })
+        .on("touchstart", function (event, d) {
+            event.preventDefault();
+            tooltip.html(generateTooltipText(d))
+                .style("visibility", "visible");
+        })
+        .on("touchmove", function (event) {
+            tooltip.style("top", (event.touches[0].pageY - 10) + "px")
+                .style("left", (event.touches[0].pageX + 10) + "px");
+        })
+        .on("touchend", function () {
+            tooltip.style("visibility", "hidden");
+        });    
+    
             
         });
     });

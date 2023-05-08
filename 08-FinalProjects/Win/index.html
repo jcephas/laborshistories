@@ -21,16 +21,16 @@
 
 <!-- menu -->
 <div id="menu" class="menu text ">
-<button class="menuitem" data-target="#intro">
+<button class="menuitem navmenu" data-target="#intro">
     Intro-structions
     </button>
- <button class="menuitem" data-target="#map">
+ <button class="menuitem navmenu" data-target="#map">
     Platform Games
     </button>
-<button class="menuitem" data-target="#data">
+<button class="menuitem navmenu" data-target="#data">
     Prosumption
     </button>
-<button class="menuitem" data-target="#sources">
+<button class="menuitem navmenu" data-target="#sources">
     Bibliography
     </button>    
     </div>
@@ -43,7 +43,19 @@
     
 <!-- maps -->
 <div id="map" class="section">
-    <div id="sanfran" class="mapcontainer"></div>
+    <div id="mapselector" class="menu">
+        <button class="menuitem mapmenu" data-target="#sanfran">
+            San Francisco
+        </button>
+        <button class="menuitem mapmenu" data-target="#newyork">
+            New York
+        </button>
+        <button class="menuitem mapmenu" data-target="#siliconvalley">
+            Silicon Valley
+        </button>
+    </div>
+    <br/>
+    <div id="mapbox" class="mapcontainer"></div>
 </div>
     
 <!-- data visualization -->

@@ -136,3 +136,9 @@ button {
     height: calc(100% - 1em);
   }
 }
+.mapoption {
+    flex: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
