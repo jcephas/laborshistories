@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Collectivisation: In language and in labour</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+</head>
+
+<style>
+
+	h1, p{
+		padding-top:20px;
+		padding-left:250px;
+		color:white;
+
+	}
+
+	a {
+		padding-top:20px;
+		color:white;
+	}
+
+	a:hover{
+		color:#c90000;
+	}
+
+
+	.first{
+		background-color:#808080;
+		height:75px;
+	}
+
+	.second{
+		background-color: #4a4a4a;
+		height:120px;
+	}
+
+	.third{
+		background-color: #383838;
+		height: 1055px;
+	}
+
+	.fourth{
+		background-color:#212121;
+		padding-bottom: 20px;
+	}
+
+	.parallax01{
+		background-image:url("soil.jpeg");
+		min-height: 100px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.container{
+  		width:1000px;
+  		height:450px;
+  		position:relative;
+  		padding-top:20px;
+
+	}
+	.hover{
+  		display:none;
+  		position:absolute;
+ 		 top:0;
+  		left:0;
+  		z-index:1;
+	}
+	.container:hover .hover{
+  		display:block;
+	}
+
+	#head01{
+		margin-bottom:0px;
+	}
+
+	#p01{
+		margin-bottom:0px;
+	}
+
+	#p02{
+		margin-bottom:0px;
+	}
+
+	#p03{
+		margin-bottom:0px;
+	}
+
+	#p04{
+		margin-bottom:0px;
+	}
+
+	#p05{
+		margin-bottom:0px;
+		padding-bottom:30px;
+	}
+
+	canvas {
+		position:absolute;
+		top: 0px;
+		left:0px;
+	}
+
+</style>
+
+<body>
+	<script>
+		function setup() {
+			createCanvas(200,1950);
+				}		
+		function draw() {
+			if(mouseIsPressed) {
+			stroke(0);
+			fill(0);
+				} else {
+			stroke(255);
+			fill(255);
+				}
+			triangle(mouseX,mouseY,mouseX-15,mouseY-15,mouseX+15,mouseY-15);
+			rect(mouseX-15,mouseY-43,30,27)
+			rect(mouseX-5, mouseY-160,10,150)
+			rect(mouseX-10,mouseY-165,20,5)
+				}
+	</script>
+
+	<div id="section01" class="first">
+		<h1 id="head01">Collectivisation: In language and in labour</h1>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="section02" class="second">
+		<p id="p01">Stalinist collectivisation was an attempt to produce a new labour-reality contiguous with language-reality. On 1<sup>st</sup> October 1928, it was announced that the Soviet Union would break with the New Economic Policy introduced by Vladimir Lenin (1921-1928; the limited reintroduction of free-market trade to the Soviet economy), and, instead, pursue an aggressive five-year plan of industrialisation and agricultural collectivisation (1928-1933; the first ‘five-year plan’). </p>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="section03" class="third">
+		<div class="container">
+
+    		<div class="content">
+      			<img src="labour-paper-map-with-kolkhoz-image.jpg" alt="Responsive image"/
+      			style="width:1000px;height:450px;object-fit:cover"> 
+    		</div>	
+    		<div class="hover">
+      			<img src="pravda01.jpeg" alt=""
+      			style="width:1000px;height:450px;object-fit:cover">
+    		</div>
+
+  		</div>		
+  		<p id="p02">IMAGE: Map indicating the location of <em>kolkhoz</em> mentioned in <em>Pravda</em> and <em>Izvestiia</em> December 1928-May 1929 (sources: <em>Pravda</em> and <em>Izvestiia</em> accessed at <a href="https://www.eastview.com/resources/resources-links/"> www.eastview.com</a>); HOVER: The front page of <em>Pravda</em> 3<sup>rd</sup> July 1941 (sources:<a href="https://commons.wikimedia.org/wiki/File:%D0%9F%D0%A0%D0%90%D0%92%D0%94%D0%90%D0%BE%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%D1%81%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0.jpg"> commons.wikimedia.org</a>).</p>
+  		<div class="container">
+
+    		<div class="content">
+      			<img src="labour-paper-map-with-categorised-kolkhoz-image-3.jpg" alt="Responsive image"/
+      			style="width:1000px;height:450px;object-fit:cover"> 
+    		</div>
+
+    		<div class="hover">
+      			<img src="map-ethnicity-ussr-1930.jpeg" alt=""
+      			style="width:1000px;height:450px;object-fit:cover">
+    		</div>
+  		</div>	
+  		<p id="p03">IMAGE: Map indicating the location and number of <em>kolkhoz</em> mentioned in <em>Pravda</em> and <em>Izvestiia</em> December 1928-May 1929 (sources: <em>Pravda</em> and <em>Izvestiia</em> accessed at <a href="https://www.eastview.com/resources/resources-links/"> www.eastview.com</a>); HOVER: An ethnographic map of USSR c.1930 in which dark red represents "ethnic Russians" (source:<a href="https://commons.wikimedia.org/wiki/File:Ethnic_map_USSR_1930.jpg"> commons.wikimedia.org</a>)</p>.<p></p>	
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="footnote01" class="fourth">
+		<p id="p04">A case-study of 33 mentions of <em>kolkhoz</em> (‘collectivised farms’) in state media (<em>Pravda</em> and <em>Izvestiia</em>) across the period December 1928-May 1929 illustrates the divergence in the language- and labour-realities of collectivisation. Data drawn from these newspapers during early collectivisation reflects both specifically located current activity and union-wide proposed collectivisation (22-11 mentions respectively); present reality and future ambition sit side-by-side. However, the <em>kolkhoz</em> that are geographically located are disproportionately centred in the west, closer to the two largest administrative centres of the Russian Soviet Federative Socialist Republic (RSFSR; Moskva and Petrograd). While there are references to collective farms in the Republics of Ukraine and Belorus’, these account for less than 10% of the sample and no other Soviet Republics are mentioned, despite the fact that both <em>Pravda</em> and <em>Izvestiia</em> were purportedly ‘all-union’ newspapers. Moreover, the two geographically specific mentions of kulaks pinpoint them in the Northern Caucasus (the ethnically ‘Othered’ southern region of the RSFSR); there are also two stories in which nearby Russian <em>kolkhoz</em> either overcome their own problems with kulaks or donate 17% of their bread to their southern neighbours. As such, the representation of kolkhoz location and character can be seen to speak to alternative Soviet agendas, such as the political hierarchy of the RSFSR over other Republics and the ethnic hegemony of white Russians. Significantly, the places where collectivisation’s labour-reality would be most severely felt through the man-made famines of 1930-1933 (Ukraine, Kazakhstan, and the Northern Caucasus) are the most marginalised (or are excluded) from its nascent language-reality. Even through the limited scope of this study, the ways in which collectivisation served to fracture language-reality from labour-reality are visible. </p>
+		<p id="p05">
+		<a href="intro-page.html"> Back to HOME </a> &nbsp &nbsp &nbsp &nbsp
+		<a href="page03.html"> Forward to PLATONOV & KOTLOVAN </a> &nbsp &nbsp &nbsp &nbsp
+		<a href="bibliography.html"> BIBLIOGRAPHY </a> &nbsp &nbsp &nbsp &nbsp
+		<a href="about.html"> About the author </a>	
+		</p>
+	</div>
+
+</body>
+
+</html>	
