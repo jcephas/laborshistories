@@ -35,9 +35,81 @@
               <li class="nav-item">
                 <a class="nav-link" href="section05.html">V. Catachresis as Praxis</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bibliography.html">Bibliography</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bio.html">Info</a>
+              </li>
           </ul>
         </div>
       </nav>
 </head>
-<body class="black"></body>
+<body class="black">
+  <script>
+    // clean up
+    var gStorage = {};
+
+    function toggle(image, anAltSrcArr) {
+        if (typeof(image) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
+            return;
+        };
+
+        var id = image.id;
+        var oldSrc = image.src;
+
+        if (typeof(gStorage[id]) === "undefined") {
+            gStorage[id] = {
+                'id': id,
+                'origSrc': oldSrc,
+                'i': 0
+            };
+        };
+
+        gStorage[id].i += 1;
+        if (gStorage[id].i > anAltSrcArr.length) {
+            gStorage[id].i = 0;
+        };
+
+        if (gStorage[id].i === 0) {
+            image.src = gStorage[id].origSrc;
+        } else {
+            image.src = anAltSrcArr[gStorage[id].i - 1];
+        };
+    };
+
+</script>
+
+    <div id="section04" class="text">
+        <h1>Poetry as Evidence</h1>
+        <p class="paragraph">
+        The following section contains early work that attempts to read against the grain of the aforementioned 19th century literature. It utilizes redaction as a poetic method to allow new narratives to emerge from existing travel accounts, letters, poems, hagiographies, treaties, and so on. These documents were written around the time of the Zaldagar event, though not all of them write about their contemporary time. I’ve clung onto these documents not because I believe they can serve as evidence of a past violence (though, not long ago I thought they might), but rather because the past violence is a present-past; it lives with me today, and both my participation and its inclusion in a larger academic-institutional network require that we (the documents and I) familiarize ourselves with one another. Redaction, then, becomes a poetic method to write into existence the archive that cannot exist otherwise. It reveals in its simultaneous obfuscation.</p>
+    </div>
+    <div>
+      <img id="image1" class="image" name="image1" src="img/arc550_foundpoem1.2_redacted.jpg" onclick='toggle(this, ["img/arc550_foundpoem1.jpg"]);' />
+    </div>
+    <div>
+      <img id="image2" class="image" name="image2" src="img/lallarookh_redacted.jpg" onclick='toggle(this, ["img/lallarookh.jpg"]);' />
+    </div>
+    <br>
+    <div>
+      <img id="image3" class="image3" name="image3" src="img/document2_redacted.jpg" onclick='toggle(this, ["img/document2.jpg"]);' />
+    </div>
+
+    <div id="section04" class="text">
+      <p class="tab" style="padding-bottom: 300px;">
+        <span class="footnote">Poem 1</span>
+        <span class="hide">Excerpt from Robert Thorp's "Kashmir Misgovernment: An Account of the Economic and Political Oppression of the People of Kashmir by the Maharaja's Government" in S.N. Gadru's (ed.) <i>Kashmir Papers: British Intervention in Kashmir, Including Arthur Brinckman’s Wrongs of Cashmere, Robert Thorp’s Kashmir Misgovernment, and Sir William Digby’s Condemned Unheard</i>, 1st ed. (Srinagar: Freethought Literature Company, 1973), 90-91.</span>
+        <br>
+        <span class="footnote">Poem 2</span>
+        <span class="hide"> Excerpt from Thomas Moore's <i>Lalla Rookh</i>. New ed. New York: G. Smith, 1825, 146-147.</span>
+        <br>
+        <span class="footnote">Poem 3</span>
+        <span class="hide">Excerpt from Mir Izzet Ullah's “Travels beyond the Himalaya,” <i>Journal of the Royal Asiatic Society of Great Britain and Ireland 7</i>, no. 2 (1843): 325.</span>
+  </p>
+  </div>
+
+
+
+</body>
 </html>

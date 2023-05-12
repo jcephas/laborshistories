@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Unraveling the Line</title>
+    <title>Unraveling the Line: Artist's Biography</title>
 
     <!-- Bootstrap -->
 
@@ -45,66 +45,18 @@
         </div>
       </nav>
 
-
 </head>
-<style>
-        
-</style>
-
-<header class="center">
-
-        <br><br><br>
-        Unraveling the Line
-        <br><br>
-        between<br>
-        Borderlands, Laws, and the Weaving Workers<br>
-        of 19th century Kashmir<br>
-        <br><br>
-        by Yohana Ansari-Thomas
-        <br><br><br><br>
-        
-</header>
 
 <body class="black">
-
-<script>
-    // clean up
-    var gStorage = {};
-
-    function toggle(image, anAltSrcArr) {
-        if (typeof(image) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
-            return;
-        };
-
-        var id = image.id;
-        var oldSrc = image.src;
-
-        if (typeof(gStorage[id]) === "undefined") {
-            gStorage[id] = {
-                'id': id,
-                'origSrc': oldSrc,
-                'i': 0
-            };
-        };
-
-        gStorage[id].i += 1;
-        if (gStorage[id].i > anAltSrcArr.length) {
-            gStorage[id].i = 0;
-        };
-
-        if (gStorage[id].i === 0) {
-            image.src = gStorage[id].origSrc;
-        } else {
-            image.src = anAltSrcArr[gStorage[id].i - 1];
-        };
-    };
-
-</script>
-
+    <div id="biography" class="text">
+        <h1>Info
+        </h1>
+        <br>
+        <p>
+            Yohana Ansari-Thomas is pursuing his Masters of Architecture at Princeton University.
+            <br>
+            Contact: <a href="mailto: yohana@princeton.edu">Email</a>
+        </p>
+    </div>
 </body>
-
-
-<footer class="justified">
-</footer>
-
 </html>
