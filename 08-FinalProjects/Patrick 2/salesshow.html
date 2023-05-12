@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>carceral craftsmanship in a forest of products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+</head>
+
+<style>
+
+ * {
+  box-sizing: border-box;
+}
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+  .dropbtn {
+          background-color: white;
+          color: #e04c4c;
+          padding: 10px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          margin-left: 20px; margin-top: 20px;
+         }
+
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: black;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 140px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: #e04c4c;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {
+          color: #e04c4c;
+          background-color: black;}
+
+        .show {display: block;}
+
+body {
+            animation: fadeInAnimation ease 2.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+  h1{
+    padding:20px 20px 20px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+    font-weight: bold;
+    color:white;
+  }
+
+  h1 span { 
+    background-color: #e04c4c; 
+    font-size: 50px;
+}
+
+ h2{
+    padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+    color: #e04c4c;
+  }
+  h2 span { 
+    background-color:white ; 
+    font-size: 30px;
+}
+
+  h3{padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+      color: white;
+      font-size: 30px;}
+
+h3 span{
+  background-color: #e04c4c; 
+  font-color:white;
+}
+
+  h4{padding:20px 0px 0px 20px;
+    text-align: left;
+    font-family: 'Poltawski Nowy', serif;}
+
+    h4 span{
+      background-color:white ; 
+    font-size:30px;
+    }
+
+    h5{padding:20px 0px 0px 20px;
+    text-align: left;
+    font-family: 'Poltawski Nowy', serif;}
+
+
+    p span{
+      background-color:white;
+      font-family: 'Poltawski Nowy', serif; 
+}
+
+  p, ul{
+    padding:30px 0px 0px 30px;
+      color:black;
+      font-family: 'Poltawski Nowy', serif;
+      font-size:18px;
+      text-align: left;
+  }
+}
+ol, li {padding:30px 0 px 0px 30px;
+}
+
+.footnotes{
+   color: white;
+ text-align: left;
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 14px;
+}
+.first {
+    padding:30px;
+    background-color: white;
+  }
+.contents {
+padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+      color: white;
+background-color: #e04c4c;
+padding:30px;
+min-height: 300px;
+  font-family: 'Poltawski Nowy', serif;
+font-size:30px;
+  }
+
+p.indent {
+    text-indent: 30px;
+  }
+
+  a {
+    font-family: 'Poltawski Nowy', serif;
+    background-color: white;
+    color:#e04c4c;
+  }
+
+  a span{
+    color:white;background-color:#e04c4c;
+  }
+
+  a:hover, a span:hover {
+          background-color: black;}
+
+.spacer{
+    min-height:250px;
+}
+
+.spacer2{
+    min-height:50px;
+}
+p.indent {
+    text-indent: 30px;
+}
+
+  .second {
+    padding:30px;
+  }
+
+  #image {
+  text-align: center;
+  padding: 10px;
+}
+
+#caption {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align:center;
+  width: 100%;
+  font-size: 15px;
+  font-weight: semi-bold;}
+
+
+.parallax1{
+  /*set background image*/
+  background-image: url("img/sales.png");
+  
+  /*set height for image*/
+  min-height:1000px;
+
+  /*this creates the parallax effect*/
+  background-attachment:fixed;
+  background-position:center;
+  backgroundrepeat:no-repeat;
+  background-size:cover;
+}
+
+
+</style>
+
+
+<body>
+
+
+  <div id="top" class="parallax1";>
+  <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">•••</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="home.html">home</a>
+            <a  href="network.html">carceral networks</a>
+            <a href="catalogue.html">the Catalogue</a>
+            <a href="salesshow.html">sales/show</a>
+            <a href="info.html">about</a>
+          </div>
+        </div>
+
+        <script>
+
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+<h2><span>carceral craftsmanship in a forest of products</span></h2>
+<h1><span>sales/show</span></h1>
+
+<div class="spacer"></div>
+
+<h3><span><a href="#toc">↓</a></span></h3>
+</div>
+
+<div id=toc class=contents>
+<h2><span>contents</span></h2>
+<h3><a href=#sales><span><u>Sales</u></span></a> | <a href="#show"><span><u>Show</u></span></a></h3>
+
+<div class="spacer2"></div>
+  
+<div id=sales class=first>
+<h3><b><span>Sales<span></b></h3>
+<p class=indent>In 1916, a Vogue feature entitled “A Shopping Tour in the Far East” took readers with a group of shoppers on a journey across the “Orient,” through Egypt and Turkey, India, China, and Japan, ending in the Philippines. The article is steeped in the racializing discourse of the time, detailing how “all the clever wiles” that the party “learned from the Turk and the Hindu availed [them] nothing in the presence of the Chinaman” and “found the oriental adapting himself rapidly to the desires and needs of the occidental” in China; and commoditizing all sorts of curios from the natural landscapes they traversed, including a “zoological collection” of tropical birds, furs and silks, and even elephant tusks: “no sane American would go forth in his native city in pursuit of elephants, yet in Ceylon he will insist upon buying whole families of them, made of ebony, ivory, silver, and cocoanut shell [sic]...”<sup><a href="#footnote-1-text" rel="footnote" id="footnote-1-link">1</a></sup> The group’s final stop is in Manila, where they are “advised to do [their] shopping at Bilibid Prison,” where they “saw the excellent work of the native prisoners, who are natural hand-craft workers” and bought “silver souvenirs, hammocks, canes, and wicker chairs.” The short passage ends at sunset with the group watching “the prisoners salute the flag,” giving them pride in “our colonial policy.”<sup><a href="#footnote-2-text" rel="footnote" id="footnote-2-link">2</a></sup></p>
+
+<p class=indent>Shopping and pride thus went hand in hand, as the American colonial policy had created the conditions necessary for a fully functioning designer furniture factory and sales floor. Indeed, by at least 1912, there were enough forest products, processing infrastructure, incarcerated craftsmen, and internationally-facing bureaucrat capitalists to invite visitors and even take special orders for “all classes of cabinetwork, including wood carving, making furniture of special design, or refinishing old furniture.”<sup><a href="#footnote-3-text" rel="footnote" id="footnote-3-link">3</a></sup> They even made furniture for “firms or Government offices and schools,” including typewriter tables, desks, office tables, file cases, shelves, and other furniture.</p>
+
+<p class=indent>By 1924, the sales rooms at Bilibid had regular hours (8 am–12 pm, 2–5 pm daily, except Sundays and holidays), and the Catalogue detailed all the information required for shoppers to place orders and receive them efficiently.<sup><a href="#footnote-4-text" rel="footnote" id="footnote-4-link">4</a></sup> The information on crating and transportation is comprehensive and clear, detailing how the Bureau claims no liability for delivery of goods at destination, assure buyers that all crates are “strongly crated at a moderate charge,” and that while wicker furniture may be shipped short distances without crating, hardwood furniture should always be crated or boxed. Shipping was carefully calculated and planned, and several international routes were clarified:</p>
+
+<p style="text-align:center;"><img src="1924furniture/0shippingroutes.png"
+width="90%"
+height="auto"></p>
+
+<p class=indent>The American project had indeed constructed and enabled thoroughly efficient infrastructures of transport and communication, supplanting the growth of the Bilibid Workshop’s ability and popularity. The workshop even claimed that a “very considerable portion” of their business consisted of special orders, as the hardwood furniture department was equipped “to execute special work in their lines,” and were serious furniture designers insisting upon “explicit, detailed information relative to special orders, preferably by sketch and full details as to dimensions, color, and materials.”<sup><a href="#footnote-5-text" rel="footnote" id="footnote-5-link">5</a></sup>   Rattan furniture could also be ordered in black and white for a 10% charge.</p>
+
+<p class=indent>Some of these special orders were indeed quite important; two separate narra hardwood tables have occupied the West Wing’s lobby, first as a gift from then-president Emilio Aguinaldo to then-President Franklin Delano Roosevelt in 1935, and then as a replacement from then-Ambassador Carlos P. Romulo to then-President Harry S. Truman in 1952. These gifts represented the growing Philippine capabilities for the valorization of land and labor, deploying the tactics of governance—namely, incarceration—toward fiscal ends and as symbols of loyalty, control, and productivity. </p>
+
+<p class=indent>As both wicker and hardwood furniture traveled across the world in the hands of consumers, each infused with economic value, the cultural importance of the Bilibid Workshop’s commodities (newly alienated from the lands that housed its materials and from the laboring hands forced to extract value from these forest products) grew and grew, to the point where these chairs, tables, and other furniture would experience resurgences in popularity from the 1960s and 70s, through to today. </p>
+
+
+<p><a href="#toc">↑ contents</a>
+  </p>
+
+
+<div id=show>
+  <h3><b><span>Show</b></span></h3>
+    <p class=indent>This continuously growing, heterogeneous archive of purchased, sold, auctioned, handed down, and dumped furniture originating from Bilibid Prison aims to illuminate some of these connections in the context of colonial incarceration. Whether directly made by incarcerated Philippine laborers or designed to look as such, the presence and persistence of wicker furniture as a cultural symbol and narra hardwood furniture as bourgeois administrative symbols are worth investigating further.</p>
+
+   <!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/1935table.jpg" style="width:100%">
+      <p><b>Narra low table, West Wing press lobby, 1935.</b></p>
+      <p>In 1935, President Emilio Aguinaldo gifted a detailed, Bilibid-made handicraft hardwood table to then-president of the United States Franklin Delano Roosevelt. It was shipped via army transport. According to a New York Times article from the time, "in the drawer designed for the President's use is a wooden plaque carrying a design in which the flags of the US and the Philippines are intertwined." The table is depicted here with reporters' jackets strewn about during a press conference. Image: Library of Congress.</p>
+    </div>
+  </div>
+  <div class="column">
+   <div class="content">
+      <img src="salesshow/huey1960s.jpg" style="width:100%">
+      <p><b>Huey P. Newton, Defense Minister for the Black Panther Party, 1967.</b></p>
+      <p>This iconic image of Black revolutionary Huey P. Newton was taken in 1967 on a Bilibid/Peacock Chair. Photography attributed to Blair Stapp, Composition by Eldridge Cleaver, Huey Newton seated in wicker chair, 1967. Lithograph on paper; Collection of Merrill C. Berman.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/elleindonesia2010.png" style="width:100%">
+      <p><b>ELLE Indonesia, 2010.</b></p>
+      <p>ELLE Indonesia's first issue features a modern design for a peacock chair, tucked into the corner of a colorful living room. Credit: ELLE Indonesia Magazine, 2010.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/jailbird.png" style="width:100%">
+      <p><b>Jail Bird in a Peacock Chair (with child), 1914.</b></p>
+      <p>This image appeared in the Comic section of the <i>El Paso Herald</i> on May 16, 1914. Accompanying it is a short description lauding the beauty of the chair, while ignoring the life of the "jailbird" incarcerated for the alleged murder of her husband. Her baby was born in Bilibid Prison. Home Edition: Comic Section, Image 22. </p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/liztaylor.png" style="width:100%">
+      <p><b>Elizabeth Taylor, c. 1940s/50s.</b></p>
+      <p>A vast array of celebrities have sat for photographs on Bilbiid/Peacock Chairs, whose importance as a photographers' instrument (keeping cool under hot studio lighting) couples with the imagery of totality, power, and glamor that comes with the design.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/algreen.jpg" style="width:100%">
+      <p><b>Al Green, <i>I'm Still in Love With You</i>, record cover, 1972.</b></p>
+      <p>The Bilibid/Peacock Chair has appeared on numerous album covers from the late 1960s onward, from virtually every genre of music. While the interest in the chair as a powerful element of popular visual culture in relation to the sitters is interesting, it is important to recognize its design origins and labor involved in crafting the chair.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/lorettayoung1930.jpg" style="width:100%">
+      <p><b>Loretta Young, c. 1930.</b></p>
+      <p>Glamor was perhaps first associated with the chair in the 1920s, leading to this image of the actress and later television host Loretta Young.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="salesshow/caningshop.png" style="width:100%">
+      <p><b>The Caning Shop, Berkeley, CA (Facebook post, May 23 2018).</b></p>
+      <p>Bilibid chairs from the 1920s are still found across the world, refurbished, sold, and kept in personal collections. The Caning Shop in Berkeley, CA, posted this image to social media in 2018.</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <img src="salesshow/truman.png" style="width:100%">
+      <p>In 1952, Philippine Ambassador to the United States Carlos P. Romulo gifted a newly carved narra table to President Harry Truman. The table, whose carabao heads were redesigned so as to be more recessed (reporters apparently complained about hitting their shins on the previous table's protruding animal heads). The intricacies of the table are intended, perhaps to Romulo and Truman, to display the craft power of Philippine labor as a whole as well as the richness of raw materials present in the archipelago.</p>
+</div>
+
+<!-- END MAIN -->
+
+
+<p><a href="#top">↑ top</a> | <a href="home.html">home</a> | <a  href="network.html">carceral networks</a> | <a href="catalogue.html">the Catalogue</a> | <a href="info.html">about</a></p></div>
+
+</div>
+
+<div id="footnotes" class=footnotes>
+<h4></span>Notes</h4></span>
+  <ol>
+  <li id="footnote-1-text"> Reed, M. Landor, “Features: A Shopping Tour in the Far East,” <i>Vogue</i> (New York: United States: Condé Nast, 1916). <a href="#footnote-1-link">^</a></li>
+
+  <li id="footnote-2-text">Ibid. <a href="#footnote-2-link">^</a></li>
+
+  <li id="footnote-3-text"> Philippines Bureau of Corrections, “Catalogue. Sales Rooms at Bilibid Prison, Manila, P. I. Bureau of Prisons, Industrial Division,” (Manila: Bureau of Printing, 1912), 35. <a href="#footnote-3-link">^</a></li>
+
+  <li id="footnote-4-text"> Philippines Bureau of Corrections, “Catalogue of Products of the Industrial Division of Bilibid Prison, and General Information Relative to the Bureau of Prisons ...,” (Manila: Bureau of Printing, 1924), 33. <a href="#footnote-4-link">^</a></li>
+
+  <li id="footnote-5-text"> Philippines Bureau of Corrections, “Catalogue of Products of the Industrial Division of Bilibid Prison, and General Information Relative to the Bureau of Prisons ...,” (Manila: Bureau of Printing, 1924), 33. <a href="#footnote-5-link">^</a></li>
+
+
+</ol>
+
+  <div class=spacer2></div>
+    
+  </div>
+
+
+<script>
+  $('a[rel="footnote"]').hover(
+    function(){
+      $($(this).attr('href')).addClass('hovering');
+    },
+    function(){
+      $($(this).attr('href')).removeClass('hovering');
+    }
+  );
+</script>
+</body></html>
+</body>
+
+  </html>

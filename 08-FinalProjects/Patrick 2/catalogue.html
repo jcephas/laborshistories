@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>carceral craftsmanship in a forest of products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+</head>
+
+<style>
+
+  * {
+  box-sizing: border-box;
+}
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+  .dropbtn {
+          background-color: white;
+          color: #e04c4c;
+          padding: 10px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          margin-left: 20px; margin-top: 20px;
+         }
+
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: black;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 140px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: #e04c4c;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {
+          color: #e04c4c;
+          background-color: black;}
+
+        .show {display: block;}
+
+body {
+            animation: fadeInAnimation ease 2.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+  h1{
+    padding:20px 20px 20px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+    font-weight: bold;
+    color:white;
+  }
+
+  h1 span { 
+    background-color: #e04c4c; 
+    font-size: 50px;
+}
+
+  h2{
+    padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+    color: #e04c4c;
+  }
+  h2 span { 
+    background-color:white ; 
+    font-size: 30px;
+}
+
+  h3{padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+      color: white;
+      font-size: 30px;}
+
+h3 span{
+  background-color: #e04c4c; 
+  font-color:white;
+}
+
+  h4{padding:20px 0px 0px 20px;
+    text-align: left;
+    font-family: 'Poltawski Nowy', serif;}
+
+    h4 span{
+      background-color:white ; 
+    font-size:30px;
+    }
+
+    h5{padding:20px 0px 0px 20px;
+    text-align: left;
+    font-family: 'Poltawski Nowy', serif;}
+
+
+    p span{
+      background-color:white;
+      font-family: 'Poltawski Nowy', serif; 
+}
+
+  p, ul{
+    padding:30px 0px 0px 30px;
+      color:black;
+      font-family: 'Poltawski Nowy', serif;
+      font-size:18px;
+      text-align: left;
+  }
+}
+ol, li {padding:30px 0 px 0px 30px;
+}
+
+.contents {
+padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+      color: white;
+background-color: #e04c4c;
+padding:30px;
+min-height: 300px;
+  font-family: 'Poltawski Nowy', serif;
+font-size:30px;
+  }
+  .footnotes{
+   color: white;
+ text-align: left;
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 14px;}
+.first {
+    padding:30px;
+    background-color: white;
+  }
+
+p.indent {
+    text-indent: 30px;
+  }
+
+  a {
+    font-family: 'Poltawski Nowy', serif;
+    background-color: white;
+    color:#e04c4c;
+  }
+
+  a span{
+    color:white;background-color:#e04c4c;
+  }
+
+  a:hover, a span:hover {
+          background-color: black;}
+
+.spacer{
+    min-height:250px;
+}
+
+.spacer2{
+    min-height:50px;
+}
+p.indent {
+    text-indent: 30px;
+}
+
+  .second {
+    padding:30px;
+  }
+
+  #image {
+  text-align: center;
+  padding: 10px;
+}
+
+.caption {
+  color:black;font-family: 'Source Sans Pro', sans-serif;
+  text-align:center;
+  width: 100%;
+  font-size: 15px;
+  font-weight: semi-bold;}
+
+.parallax1{
+  /*set background image*/
+  background-image: url("1924furniture/w childrensizes.png");
+  
+  /*set height for image*/
+  min-height:1000px;
+
+  /*this creates the parallax effect*/
+  background-attachment:fixed;
+  background-position:center;
+  backgroundrepeat:no-repeat;
+  background-size:cover;
+}
+
+</style>
+
+
+
+<body>
+
+
+  <div id="top" class="parallax1";>
+  <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">•••</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="home.html">home</a>
+            <a  href="network.html">carceral networks</a>
+            <a href="catalogue.html">the Catalogue</a>
+            <a href="salesshow.html">sales/show</a>
+            <a href="info.html">about</a>
+          </div>
+        </div>
+
+        <script>
+
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+<h2><span>carceral craftsmanship in a forest of products</span></h2>
+<h1><span>the Catalogue</span></h1>
+
+<div class="spacer"></div>
+
+<h3><span><a href="#toc">↓</a></span></h3>
+</div>
+
+<div id=toc class=contents>
+  <h2><span>contents</span></h2>
+<h3><a href=#background><span><u>Background</u></span></a>
+  <br><br>Furniture: <a href="#wicker"><span><u>Wicker</u></a> | <a href=#hardwood><span><u>Hardwood</u></span></a></span> 
+  <br><br><a href=#pdf><span><u>Sources (PDF)</u></span></a></h3>
+
+<div class="spacer2"></div>
+  
+<div id=background class=first>
+<h3><b><span>Background<span></b></h3>
+
+<p class=indent>In 1912 and 1924, the Philippine Bureau of Corrections released prison commodity catalogues detailing the types of furniture and other miscellaneous products crafted from Philippine raw materials and incarcerated labor. The full catalogues of hundreds of items, each with specific descriptions as to materials, shipping considerations, dimensions, and price, are made freely available as PDF documents below. While my primary focus is on the wicker and hardwood furnitures created by skilled incarcerated craftsmen and put up for sale by the Bureau of Corrections, other commodities and services such as silverware (including collar buttons, cuff buttons, shirt-waist pins, belt buckles, napkin rings, cutlery, cane heads, canes, and “swagger sticks”) push-/pull-cart vehicles, and laundry services were advertised in the catalogues. 
+</p>
+
+<p style="text-align:center"><img src=1912furniture/c1094.png
+    text-align=center 
+    width= '70%'
+    height='auto'></p>
+
+  <div class=caption>Victoria, concha. Materials: "the very best native woods...rubber tires...springs, all elliptic." <i>Catalogue. Sales Rooms at Bilibid Prison, Manila, P. I. Bureau of Prisons, Industrial Division</i>, (Manila: Bureau of Printing, 1912).</div>
+
+<p class=indent>However, by 1924, the primary emphases of the catalogue had become 1. a full articulation of the carceral system in the Philippines, seemingly necessary to clarify for any potential shoppers, and 2. a catalogue of wicker and hardware furniture production in the Bilibid Industrial division, which had become the more profitable result of incarcerated labor (the Prison and Industrial Divisions in 1926 had together garnered 519,280.40 pesos, almost enough to cover the estimated costs of the carceral system of 552,857.27 pesos).<sup><a href="#footnote-1-text" rel="footnote" id="footnote-1-link">1</a></sup> The prison industrial divisions were thus crucial to the ongoing maintenance of the Philippine carceral system, then administered by the American civil government. In an effort to provide opportunities for further research into the wicker and hardwood furniture industry—much of which was concentrated in the Bilibid Prison during the American civil government and in New Bilibid Prison into the Commonwealth and independent governments—an organized selection of furniture made of wicker (rattan, but also bamboo, sea-grass, and hemp) and hardwood (primarily narra and acle) is presented below.</p>
+
+<p><a href="#toc">↑ contents</a>
+  </p>
+
+<div id=wicker>
+  <h3><b><span>Wicker</b></span></h3>
+    <!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/w200 table.png" style="width:100%">
+      <p><b>Library Table</b></p>
+      <p>Materials: well-polished wood top and well-selected heart bejuco. Dimensions: custom. Cost: P55, same in sica P60 and up.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/w15.png" style="width:100%">
+      <p><b>Chair</b></p>
+      <p>Matierals: white heart bejuco (rattan). Dimensions: total height 39 in., width of seat 23 in. Cost P24.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w423 stool.png" style="width:100%">
+      <p><b>Stool, hourglass shape</b></p>
+      <p>Materials: bejuco, black and white. Dimensions: height 17 in., diameter 14 in. Cost: P5.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w426 420 stool.png" style="width:100%">
+      <p><b>Stool, Square</b></p>
+      <p>Materials: sea grass. Dimensions: 10 x 10 x 7 in. Cost: P1.50.</p>
+    </div>
+  </div>
+</div>
+
+<!-- END MAIN -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w431 table.png" style="width:100%">
+      <p><b>Tea Table, hourglass shape</b></p>
+      <p>Materials: bejuco, black and white or white. Dimensions: height 28 in., diameter 30 in. Cost: P12.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w439.png" style="width:100%">
+      <p><b>Chess Table</b></p>
+      <p>Materials: camagon, lanete, sea grass. Cost: P25 (sea grass) / P28 (bejuco).</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w442.png" style="width:100%">
+      <p><b>Nursery Chair</b></p>
+      <p>Materials: rattan, wood seat. Cost: P2.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w450 chair.png" style="width:100%">
+      <p><b>Plain Chair</b></p>
+      <p>Materials: sea grass or bejuco. Cost: P8 / P9, respectively.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w457.png" style="width:100%">
+      <p><b>Beautiful armchair, arms flat, back finished with roll at top</b></p>
+      <p>Materials: sea grass or bejuco. Cost: P12 / P14, respectively.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w458.png" style="width:100%">
+      <p><b>Lounging Chair</b></p>
+      <p>Materials: sea grass or bejuco. Cost: P12 / P14, respectively.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w487.png" style="width:100%">
+      <p><b>Square Armchair with Round Seat, slightly curved back and sides, roll back and arms, heavy effect</b></p>
+      <p>Materials: sea grass or bejuco, seat of cane and hardwood. Cost: P11 / P13, respectively.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w573 easychair.png" style="width:100%">
+      <p><b>Fancy Steamer Chair, medium size, pockets, frame trimmed, with roll and apron</b></p>
+      <p>Materials: sea grass or bejuco. Cost: P16 / P19, respectively.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w570.png" style="width:100%">
+      <p><b>Large Steamer Chair</b></p>
+      <p>Materials: sea grass or bejuco. Cost: P16 / P19, respectively.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/w560 hammock.png" style="width:100%">
+      <p><b>Hammock</b></p>
+      <p>Materials: abaca fiber, very strong. Dimensions: 6 ft. long with valance. Cost: P7.50.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/w254.png" style="width:100%">
+      <p><b>Settee</b></p>
+      <p>Materials: flat bejuco. Dimensions: total height 42 in., width 52 in. Cost: P45.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/w270 settee.png" style="width:100%">
+      <p><b>Round Center Settee</b></p>
+      <p>Materials: carefully selected whole bejuco. Dimensions: height of center 25 in., diamter 48 in. Cost: P42.</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <img src="1924furniture/w NEW SET no9.png" style="width:100%">
+     
+</div>
+
+<p><a href="#toc">↑ contents</a>
+  </p>
+
+<div id=hardwood>
+    <h3><b><span>Hardwood</span></b></h3>
+
+   <!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/h703.png" style="width:100%">
+      <p><b>Mission Settee</b></p>
+      <p>Materials: narra, back and seat of abaca fiber. Dimensions: total length 46 in., depth 16 in. Cost: P22.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/h732.png" style="width:100%">
+      <p><b>Sanitary Desk, 7 drawers</b></p>
+      <p>Materials: tanguili. Cost: P65.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/h679.png" style="width:100%">
+      <p><b>Mission Armchair</b></p>
+      <p>Materials: narra, hemp fiber back and seat. Cost: P15.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1912furniture/h654 chair.png" style="width:100%">
+      <p><b>Hall Chair</b></p>
+      <p>Materials: acle, wax finish, leather cushion. Cost: P18.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h389 revochair.png" style="width:100%">
+      <p><b>Revolving Chair</b></p>
+      <p>Materials: narra or acle, cane bottom. Dimensions: total height 35 in., width 21 in. Cost: P40.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h415.png" style="width:100%">
+      <p><b>Combination High baby chair</b></p>
+      <p>Materials: narra, cane seat, imitation mahogany, or narra natural finish. Dimensions: total height 36.75 in., width 13.5 in. Cost: P25.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h418.png" style="width:100%">
+      <p><b>Lounging or Reading Chair</b></p>
+      <p>Materials: acle or red narra, back seat of cane. Dimensions: total height 47 in., width 22 in. Cost: P60.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h420.png" style="width:100%">
+      <p><b>Folding Chair</b></p>
+      <p>Materials: frame of tanguili, seat and back of canvas. Dimensions: total height 46 in., total length in recline, 75 in. Cost: P25.</p>
+    </div>
+  </div>
+</div>
+
+<!-- END MAIN -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h436.png" style="width:100%">
+      <p><b>Revolving Office Chair</b></p>
+      <p>Materials: tanguili, cane seat. Dimensions: total height 38.5 in., width 20.5 in. Cost: P30.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h441.png" style="width:100%">
+      <p><b>Table Desk, 5 drawers with carved legs</b></p>
+      <p>Materials: red narra. Dimensions: length 72 in., width 43 in. Cost: P290.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h445.png" style="width:100%">
+      <p><b>Ladies' Desk</b></p>
+      <p>Materials: red narra. Dimensions: length 38 in., width 27 in. Cost: P40.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h475.png" style="width:100%">
+      <p><b>Rectangular table</b></p>
+      <p>Materials: narra. Dimensions: width 4 ft., length 12 ft. Cost: P250.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h476.png" style="width:100%">
+      <p><b>Oval table</b></p>
+      <p>Materials: narra, single top. Dimensions: length 5 ft., width 4 ft. Cost: P200.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h477.png" style="width:100%">
+      <p><b>Arm Chair</b></p>
+      <p>Materials: narra or acle, cane back and seat. Dimensions: n/a. Cost: P90</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h478.png" style="width:100%">
+     <p><b>Arm Chair</b></p>
+      <p>Materials: narra or acle, cane back and seat. Dimensions: n/a. Cost: P50</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h480 a.png" style="width:100%">
+      <p><b>Single Bed</b></p>
+      <p>Materials: narra or acle. Dimensions: n/a. Cost: P120.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h482.png" style="width:100%">
+      <p><b>Chair</b></p>
+      <p>Materials: dinning, narra, or acle. Dimensions: n/a. Cost: P25.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h484.png" style="width:100%">
+      <p><b>Chair</b></p>
+      <p>Materials: dinning, narra, or acle, bone inlaid. Dimensions: n/a. Cost: P20.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h486.png" style="width:100%">
+      <p><b>Stand Mirror, curved</b></p>
+      <p>Materials: narra or acle, beveled mirror. Dimensions: 24 in. x 48 in. Cost: P180.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="1924furniture/h480 bed.png" style="width:100%">
+      <p><b>Single Bed</b></p>
+      <p>Materials: narra, cane bottom. Dimensions: n/a. Cost: P160.</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <img src="1924furniture/h SET alzates.png" style="width:100%">
+      
+</div>
+
+<!-- END MAIN -->
+
+<p><a href="#toc">↑ contents</a>
+  </p>
+
+<div id=pdf>
+
+<h3><b><span>Industrial Division, Bureau of Prisons, 1912
+  <br><i>Catalogue: Sales Room at Bilibid Prison</i></span></b></h3>
+
+    <p><embed src="img/1912 bilibid sales room catalogue.pdf" type="application/pdf" width="100%" height="600px" /></p>
+
+<h3><b><span>Bureau of Prisons, 1924
+  <br><i>Catalogue of Products of the Industrial Division <br>of Bilibid Prison</i></span></b></h3>
+
+    <p><embed src="img/1924 Bilibid Prison Catalogue.pdf" type="application/pdf" width="100%" height="600px" /></p>
+
+
+<p><a href="#top">↑ top</a> | <a href="home.html">home</a> | <a  href="network.html">carceral networks</a> | <a href=salesshow.html>sales/show</a> | <a href="info.html">about</a></p></div></div></div></div>
+
+<div id="footnotes" class=footnotes>
+<h4></span>Notes</h4></span>
+  <ol>
+  <li id="footnote-1-text">Organization chart, Philippines Bureau of Corrections, “Catalogue. Sales Rooms at Bilibid Prison, Manila, P. I. Bureau of Prisons, Industrial Division,” (Manila: Bureau of Printing, 1912). <a href="#footnote-1-link">^</a></li>
+
+ 
+</ol>
+    
+
+<script>
+  $('a[rel="footnote"]').hover(
+    function(){
+      $($(this).attr('href')).addClass('hovering');
+    },
+    function(){
+      $($(this).attr('href')).removeClass('hovering');
+    }
+  );
+</script>
+</body></html>
+</body>
+
+  </html>
