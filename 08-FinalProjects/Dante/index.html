@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dante Furioso</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Josefin Slab:wght@100..700">
+
+  <style>
+
+    h1 {
+      font-family: 'Josefin Slab';
+      font-weight: 700;
+      font-size: 60px;
+      padding: 20px 0px -20px 0px;
+      line-height: 0px;
+      color: #000000;
+    }
+    h2 {
+      font-family: 'Josefin Slab';
+      font-weight: 700;
+      font-size: 25px;
+      padding: 0px 0px 0px 0px;
+      line-height: 24px;
+      color: #000000;
+    }
+    h3 {
+      font-family: 'Josefin Slab';
+      font-weight: 700;
+      font-size: 18px;
+      padding: 0px 0px 0px 0px;
+      color: #000000;
+    }
+
+    .tab {
+      overflow: hidden;
+      margin-top: 25px;
+      margin-left: 25px;
+      margin-bottom:25px;
+    }
+
+    .tab button {
+      background-color: white;
+      border: none;
+      color: black;
+        padding: 6px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 4px 15px;
+        cursor: pointer;
+        font-family: Josefin Slab;
+        font-weight: 500;
+    }
+
+    .tab button:hover {
+      background-color: none;
+      border: none;
+      color: orange;
+      padding: 12px 24px;
+    }
+
+    .tab button.active {
+      background-color: none;
+      border: none;
+      color: orange;
+      padding: 12px 24px;
+    }
+
+    .tabcontent {
+      display: block;
+        margin: 50px auto;
+        margin-top: 25px;
+        margin-bottom: auto;
+
+        width: 800px;
+        max-width: calc(100% - 100px); 
+    }
+
+    p, a {
+      font-family: 'Josefin Slab';
+      font-size: 18px;
+      font-weight: 400;
+      padding: 0px 0px 0px 0px;
+      text-decoration-line: none;
+      color: #000000;
+    }
+
+    footer {
+      font-family: 'Josefin Slab';
+      font-size: 18px;
+      font-weight: 100;
+      padding: 0px 0px 0px 0px;
+      text-decoration-line: none;
+      color: #000000;
+    }
+
+    a:link {  
+  
+    }
+
+    a:active{
+      
+    }
+
+    a:hover {
+      color:orange;
+      cursor: pointer;  
+     
+    }
+
+    a:not(:hover) {  
+    }
+
+
+article {
+  counter-reset: footnotes;
+}
+
+a[aria-describedby="footnote-label"] {
+  counter-increment: footnotes; /* 1 */
+  text-decoration: none; /* 2 */
+  color: inherit; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+}
+
+a[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+}
+
+a[aria-describedby="footnote-label"]::after {
+  content: '[' counter(footnotes) ']'; /* 1 */
+  vertical-align: super; /* 2 */
+  font-size: 0.5em; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: blue; /* 5 */
+  text-decoration: underline; /* 5 */
+  cursor: pointer; /* 5 */
+}
+
+
+footer :target {
+  background: lightyellow;
+}
+
+
+</style>
+
+
+</head>
+
+  <body>
+
+<div class="tab">
+    <button class="tablinks" onclick="openDate(event, '1')" id="defaultOpen">Narrative</button>
+    <button class="tablinks" onclick="openDate(event, '2')">Maps</button>
+    <button class="tablinks" onclick="openDate(event, '3')">Appendix</button> 
+    <button class="tablinks" onclick="openDate(event, '4')">Bibliography</button>
+    <button class="tablinks" onclick="openDate(event, '5')">About</button>
+    </div>
+
+    
+    
+    <div id="1" class="tabcontent">
+
+      <article>
+
+      <h1>Building Resistance:</h1> 
+        <h2>Slavery, Artisans, and the Production of the Built Environment in Nineteenth-Century Havana</h2></br>
+      <h3>Blas Lucumí</h3>
+      <p>October 9, 1841, Blas Lucumí was working to build one of Havana’s largest private homes, a two-story, neoclassical structure with an Ionic portico spanning an entire city block. The building was for Blas’s master, likely the richest man in Cuba, don Domingo de <a aria-describedby="footnote-label" href="#Aldama."id="Aldama.-ref">Aldama.</a> Days earlier, Blas had learned that he was being sent to work constructing the new railroad Aldama was financing but feared he was being sent to the countryside, to one of his master’s sugar plantations. He had been talking to the other men, Yoruba speakers like him, about what he suspected was in store for them. That morning Blas convinced these men to stage a strike, refusing to leave the construction site and demanding they be paid for their work. Later that morning Spanish infantry marched from their practice grounds across the street and when the enslaved Lucumí workers stood their ground, the soldiers, armed with rifles and bayonets, attacked. They killed Blas and five others, seriously injuring six <a aria-describedby="footnote-label" href="#more."id="more.-ref">more.</a></p> 
+     
+      <p>Blas was forced to work in Havana in the 1840s, a city nearing the apex of the Second Slavery, a period in which the mechanization of sugar production turned Cuba into a top world producer of the commodity bringing unthinkable wealth to men like Aldama. While slavery had been an important part of the island’s economy since the island was conquered and colonized in the early sixteenth century, the global demand for sugar fed another industry: the illegal transatlantic slave trade. Though Spain had formally agreed to end the trade in 1815 for the next five years the number of ships carrying human cargo reached all-time highs from 85 recorded voyages from Cuba to Africa between 1809 to 1814 to 301 voyages between 1815 and <a aria-describedby="footnote-label" href="#1820." id="1820.-ref">1820.</a> For decades, as warfare plagued the collapsing Oyo empire in the Bight of Benin, the Spanish would use every means possible to transport the human captives from this conflict in West Africa to Cuba. Despite treaties outlawing the slave trade, they sailed ships under false flags and steamships well into the second half of the nineteenth <a aria-describedby="footnote-label" href="#century." id="century.-ref">century.</a> This was also a period in which the growing ranks of enslaved Africans staged numerous revolts on rural <a aria-describedby="footnote-label" href="#plantations." id="plantations.-ref">plantations.</a> Concurrently, the population of free people of color grew in the cities. The Spanish sought to remedy their perceived vulnerability to revolution through political means, including promoting white migration from Spain and attempting to take control of the built environment through regulation of construction and the labor <a aria-describedby="footnote-label" href="#force." id="force.-ref">force.</a></p>
+      
+      <img src="img/Levine3.png" width=100%>
+      <p style="font-size:12px;">View of Havana's harbor in 1850.</p>
+
+      <p>Within this context, the violent incident is remarkable for several reasons. First of all, the incident was unusual for its location—literally—behind this stately stone façade. As most revolts and uprisings occurred outside the cities, on sugar plantations, that a rebellion would occur on an urban construction site was <a aria-describedby="footnote-label" href="#unusual." id="unusual.-ref">unusual.</a> Although other uprisings did occur on suburban sites associated with building production, like a nearby <a aria-describedby="footnote-label" href="#sawmill." id="sawmill.-ref">sawmill.</a> Second, the Aldamas were one of the wealthiest families of Spanish merchants in the middle of the nineteenth century and the house was two residences: one for Domingo de Aldama and the other for his son-in-law, Domingo del Monte, who was a supporter of Cuban independence and a popular literary circle where the most famous Afro-Cuban writer, Plácido, held court. That their residence was not only built by slave labor, but the site of one of the few documented urban construction labor strikes is highly <a aria-describedby="footnote-label" href="#symbolic." id="symbolic.-ref">symbolic.</a> Finally, the confrontation highlights the immoral and contradictory nature of Aldama himself. Despite investing in the latest technologies, the wealthy businessman was known to have traded twenty slaves for an equal number of shares in the railroad company. Thus, in meting out violence against Blas Lucumí and his supporters, Aldama was taking a calculated loss, exemplifying the cruel rationality at the core of the slave <a aria-describedby="footnote-label" href="#system." id="system.-ref">system.</a></p>
+
+      <img src="img/Levine6.png" width=100%>
+      <p style="font-size:12px;">View of one of Havana's portals through the city walls in 1860.</p> 
+
+      <p>The Palacio de Aldama is often cited as the example of an opulent, academic design constructed outside the walls of Old Havana. Its location and its orderly façade are strongly associated with trends in urbanization, the regulation of urban architecture, and the professionalization of design and the construction <a aria-describedby="footnote-label" href="#trades." id="trades.-ref">trades.</a> Yet, if we follow Linda Clarke’s work on eighteenth- and nineteenth-century London, we can see that the building was not only significant for what it represented as a finished product but also for the way it was <a aria-describedby="footnote-label" href="#produced." id="produced.-ref">produced.</a> In Cuba, the social labor process involved the complex interaction of racialized slavery, skilled work by emancipated people of color, and the changing proportion and power of white artisans and merchants of varying social <a aria-describedby="footnote-label" href="#classes." id="classes.-ref">classes.</a> While symbolizing the power of the Spanish who had been recently enriched through sugar and slaves and their challenges to Spanish colonial authority as a rising bourgeoisie, the mansion as an icon and finished work of architecture does not tell the whole story. Clarke argues that “the relations between built products hides the relations between activities involved in their <a aria-describedby="footnote-label" href="#production." id="production.-ref">production.</a> In a city perennially short on skilled labor, production of the palace was only possible due to the large number of skilled and enslaved individuals residing in Havana. Through their interaction with people of other classes and races involved in architecture and construction, we can analyze production.</p>
+
+      <img src="img/Map2.png" width=100%>
+
+      <p style="font-size:12px;">
+        Location of the Palacio de Aldama in 1849, to left (west) of the large open area just outside the colonial city walls. Image by author.</p>
+
+
+      <h3>Division of labor</h3>
+
+      <p>We don’t know everyone present at the Aldama construction site. Yet, if we were to sketch the division of labor on the construction site for the Palacio de Aldama, we would have Domingo de Aldama himself acting as the owner/contractor, Manuel José Carrerá y Heredia, a Dominican-born engineer acting as the architects, Aldama’s relative Evariso del Monte acting as an overseer and administrator. Working on the site that day there were at least 52 enslaved Africans, who needed stone to do their jobs, suggesting that at least some of them were masons. In Aldama’s account books for the period, he has entries for salaries for workers on the site, suggesting that some (not the Lucumí men) were receiving wages. These may have been carpenters, blacksmiths, or other <a aria-describedby="footnote-label" href="#tradesmen." id="tradesmen.-ref">tradesmen.</a>  The confrontation between the owner/contractor, his overseer, and the enslaved African masons is just one example of the frequent conflicts and tensions that were undoubtedly part of an evolving process of production of the built environment at this time. Yet, the presence of free people of color on or near the site may in part explain the willingness of Blas and his supporters to rebel.</p>
+
+      <p>Nevertheless, the fact is that many of the artisans and laborers responsible for the construction and maintenance of the built environment were enslaved. Numerous advertisements in the local newspapers of Havana announced the sale of men of African descent (Cuban-born and African-born), who practiced as an <i>albañil</i>, the Spanish word for mason, bricklayer, or <a aria-describedby="footnote-label" href="#builder." id="builder.-ref">builder.</a> Occasionally men with carpentry skills are mentioned and there are frequently people working as day laborers for sale.</p>  
+
+      <img src="img/Ad1.png" width=100%>
+
+      <p style="font-size:12px;">
+        Caption.</p>
+
+      <p>In addition, the same papers ran advertisements for <i>prófugos</i> or fugitive slaves. Many describe the valuable skills held by runaways, like those of builders, carpenters, carriage drivers, and stevedores.</p>
+
+      <img src="img/Ad2.png" width=100%>
+
+      <p style="font-size:12px;">
+        Caption.</p>
+
+      <p>Therefore, as demonstrated in a mapping of these individuals whose names appeared in both types of advertisements (for-sale and fugitive), skilled and enslaved individuals lived and worked throughout Havana in the old part of the city and outside the walls during the period bookending the rebellion at the Palacio de Aldama construction site, approximately between 1820 and 1860. Interestingly, the vast majority of these advertisements appear in the years around 1840. Despite the historic dichotomy of intramural and extramural Havana, the vast majority of enslaved artisans were recorded inside the walls or just outside them.</p>
+
+      <img src="img/Map1.png" width=100%>
+
+      <p style="font-size:12px;">
+        Approximate locations listed for enslaved Africans working in the building trades between 1820 and 1850. Image by author.</p>
+
+      <p>In a short essay titled, “The Arts Are in the Hands of the People of Color,” liberal reformer José Antonio Saco bemoans the deplorable state of artistic and mechanical capacity among the island’s white population, attributing the low level of skill among the privileged castes to their cultural aversion to manual labor and avarice. To advance in the world, Saco believed, Cuba needed to educate its white youth in drawing, painting, geometry, and other useful arts to support <a aria-describedby="footnote-label" href="#industrialization." id="industrialization.-ref">industrialization.</a> Indeed, during the nineteenth century, as the sugar industry mechanized and expanded, the construction industry did too as capital produced by selling the lucrative, global commodity, was invested in real estate and <a aria-describedby="footnote-label" href="#buildings." id="buildings.-ref">buildings.</a> In this process of transforming what was essentially capital produced through agriculture and commerce into urban assets, the production of architecture was necessary. Just who was involved in this process, whether and how much they would be paid, and what it would look like was an ongoing struggle.</p>
+
+      <img src="img/Barnard2.png" width=100%>
+      <p style="font-size:12px;">
+        The Grecian Chapel built on the spot where Columbus first said Mass. [Cuba]; George N. Barnard (American, 1819 - 1902), Edward and Henry T. Anthony & Co. (American, founded 1862, merged 1902), Kuhns; about 1859–1861; Albumen silver print; 84.XC.702.232; No Copyright - United States (http://rightsstatements.org/vocab/NoC-US/1.0/)</p>
+
+      <p>On the one hand, some have argued that neoclassicism was the aesthetic manifestation of Saco’s anxiety and austere facades organized by retrained classical orders rendered in a palette of light stone and stucco became increasingly common in the <a aria-describedby="footnote-label" href="#1800s." id="1800s.-ref">1800s.</a> It was precisely during the period in which the population of people of color threatened to overtake the white population that formal art training was instituted on the island. Un until the early nineteenth century, the majority of practicing architects were military engineers. Most buildings were relatively simple and the master builders that did practice on the island were typically <a aria-describedby="footnote-label" href="#self-taught." id="self-taught.-ref">self-taught.</a> The beginning of the academic transformation in the arts is exemplified by the building known as “El Templete” or the Little Temple, a Greek Revival temple built in 1827 to commemorate the first Catholic mass held by Christopher Columbus in 1519. Filled with classically-inspired murals, the temple is representative of the Bourbon Crown authority’s use of neoclassicism to assert their superiority and wrest control of the arts and trades, which had long been the purview of self-educated, Black <a aria-describedby="footnote-label" href="#artisans." id="artisans.-ref">artisans.</a> Neoclassicism provided the aesthetic regime for the expansion of the city and the standardization of its production at all scales. Façade projections and floor heights were regulated by decree and the signature of a licensed architect, engineer, or master builder was required on plans filed in the town hall—even though a sufficient number of these professionals was entirely <a aria-describedby="footnote-label" href="#lacking." id="lacking.-ref">lacking.</a></p>
+    
+      <img src="img/Barnard3.png" width=100%>
+      <p style="font-size:12px;">
+        Instantaneous View, from the Calle de Obispo looking towards the Plaza.; George N. Barnard (American, 1819 - 1902), Edward and Henry T. Anthony & Co. (American, founded 1862, merged 1902), Kuhns; about 1859–1861; Albumen silver print; 84.XC.702.233; No Copyright - United States (http://rightsstatements.org/vocab/NoC-US/1.0/)</p>
+
+      <img src="img/Calzada1.png" width=100%>
+      <p style="font-size:12px;">
+        View of a road leaving the city of Havana. Notice the repeating Doric columns along self-similar facades even for more humble residences. Circa 1860.</p>
+
+      <p>Buildings, boulevards, and other crucial urban infrastructures had long been “in the hands” of not just free people of color, but the large number of African slaves who were routinely employed constructing some of the most essential urban structures to make Havana possible. While the process of professionalization and the conflict between licensed and self-trained master builders, was one level of the process, intermediaries who could communicate and manage teams of enslaved workers were surely necessary for larger jobs like the Palacio de Aldama. Historically, teams of enslaved Africans owned by the Crown, “the king’s slaves” were the preferred labor force for the eighteenth-century fortifications that protected Havana during a time of intense naval and military jousting between the British, French, and Spanish forces who were routinely at odds to control the strategic and lucrative Caribbean <a aria-describedby="footnote-label" href="#islands." id="islands.-ref">islands.</a> Similarly, as Cuba began to mechanize and industrialize—especially connected to sugar production—the expansion of railroads was made possible by the labor of enslaved <a aria-describedby="footnote-label" href="#Africans." id="Africans.-ref">Africans.</a>  Similarly, there are numerous accounts of enslaved Africans laboring on other grueling tasks that were fundamental to the expansion of communications and transportation infrastructure, such as the large Vento Canal.</p>
+
+      <img src="img/Dumont2.png" width=100%>
+      <p style="font-size:12px;">
+        Photographs of an "emancipated" family in the 1860s (left) and an enslaved couple known to have worked in the Vento Canal in Cuba. From Henri Dumont, "Antropoloía y patología de los negros esclavos," <i>Revista bimestre cubana</i>, 25, 1915.</p>
+
+      <p>When Blas refused to leave Aldama’s construction site, he was resisting being moved from an urban site to a rural one. The incident is a reminder that construction work of urban buildings, transportation infrastructure, and rural agricultural work could be performed by the same enslaved workers. Indeed, not only was the division of labor evolving at the level of managers and master builders drawn from competing backgrounds, but the workers themselves might be enslaved, incarcerated, or wage laborers. Indeed, these categories were not necessarily mutually exclusive either.</p>
+
+      <p>Emancipation, which was often used as a tool to incentivize the enslaved to work harder during their most productive years of life, was also granted as an occasional reward for extraordinary service to a master or the <a aria-describedby="footnote-label" href="#Crown." id="Crown.-ref">Crown.</a> The extent of enslaved Africans’ involvement in infrastructure projects needs further research, but its scale is suggested by the 2,033 who were emancipated for their work on the canal between 1856 and ’58. Though, this was not granted by decree until 1865 and finally announced to the public in 1870 in an official effort to provide credentials to those freed for their work completed over a decade <a aria-describedby="footnote-label" href="#earlier." id="earlier.-ref">earlier.</a> Indeed, the racialized use of incarcerated people was not unique to Cuba and played an important role in “modern” systems of infrastructure from US roads to the creation of the US Panama Canal <a aria-describedby="footnote-label" href="#Zone." id="Zone.-ref">Zone.</a></p> 
+
+      <img src="img/Barnard_Fort.jpeg" width=100%>
+      <p style="font-size:12px;">
+        An Instantaneous view. The Harbor of Havana, with Castle of the Point in the foreground; the Moro [sic] Castle in the background.; George N. Barnard (American, 1819 - 1902), Edward and Henry T. Anthony & Co. (American, founded 1862, merged 1902), Kuhns; about 1862; Albumen silver print; 84.XC.873.394; No Copyright - United States (http://rightsstatements.org/vocab/NoC-US/1.0/).</p>
+
+      <p>The Crown and local Spanish elites had gone to great lengths to enforce measures that would sew divisions between free people of color and enslaved Africans, both worked in the building trades and were responsible for the processes of production that made the built environment of the city <a aria-describedby="footnote-label" href="#possible." id="possible.-ref">possible.</a> Many prominent leaders of rebellions were free people of color who worked as artisans, inspired by the Haitian Revolution’s victory in <a aria-describedby="footnote-label" href="#1804." id="1804.-ref">1804.</a> For example, the 1812 Aponte Rebellion, was led by a self-educated carpenter and sculptor, José Antonio Aponte, a Black man living just outside the city walls in <a aria-describedby="footnote-label" href="#Havana." id="Havana.-ref">Havana.</a>A century later, in 1912, the movement of the Independentistas de Color was led by Evaristo Estenoz, another Black carpenter. He organized a political and military uprising to improve the political representation of people of color in Cuba, who had been promised (and denied) greater representation and economic possibilities in post-Independence for their alliance with white elites fighting for independence from <a aria-describedby="footnote-label" href="#Spain." id="Spain.-ref">Spain.</a> The two skilled builders, Aponte and Estenoz were both executed for their revolutionary activity. The symbolism of these hundred years bookended by two literate Black artisans is meant as a reminder of the perennial inspiration (and threat) of the self-educated artisan. In the case of Cuba, this threat was undoubtedly racialized and it was embodied by a group of people dispersed throughout the very colonial city they were building and plotting to overtake. Thus, as C.L.R. James famously wrote of the French colony of Saint Domingue, the growth of slavery contained the seeds of its <a aria-describedby="footnote-label" href="#demise." id="demise.-ref">demise.</a> In the construction of colonial architecture in mid-nineteenth-century Cuba, those who constructed the buildings themselves were often the same people who led uprisings challenging the slave system.</p>
+
+      <img src="img/Barnard1.png" width=100%>
+      <p style="font-size:12px;">
+        Interior of a Sugar house. Negroes making sugar - an interesting operation. [Cuba]; George N. Barnard (American, 1819 - 1902), Edward and Henry T. Anthony & Co. (American, founded 1862, merged 1902), Kuhns; about 1862; Albumen silver print; 84.XC.979.1455; No Copyright - United States (http://rightsstatements.org/vocab/NoC-US/1.0/).</p>
+
+      <h3>Freedom and its contradictions</h3>
+      <p>If enslaved individuals possessing sought-after skills were widespread throughout the city of Havana around the middle of the nineteenth century. Many scholars have pointed to the fact that urban slaves were surrounded by examples of free and propertied people of color, for whom they may have worked, collaborated, imagined emulating or even been <a aria-describedby="footnote-label" href="#owned." id="owned.-ref">owned.</a> Indeed, the October 1841 incident on Aldama’s construction site exemplifies the multivalent divisions along with status, skill, and nationality that would be needed to fully comprehend the division of labor on a mid-nineteenth-century construction site in Cuba.</p>
+
+      <p>Blas Lucumí and the other striking masons had two demands when they refused to work: that they be able to remain in the city (and not be sent to the countryside), and that they be allowed to hire themselves out for a wage. That slave labor in Cuban cities was different from that of the countryside has been repeatedly emphasized by numerous prominent contemporaries from the Prussian naturalist and travel writer Alexander von Humboldt to the most famous chronicler of nineteenth-century Cuban society, Cirilio Villaverde. In his 1826 account of his time on the island, Humboldt writes:</p>
+
+      <p style="font-size:14px; padding-left:30px">Slavery is possibly the greatest evil ever to have afflicted humanity, no matter if one focuses on the individual slave ripped from his family in the country of his birth and thrown into the hold of a ship or considers him as part of the herd of black men penned up in the Antilles. Still, there are degrees of suffering and deprivation. What a difference there is between a slave who works in a rich man’s house in Havana or Kingston, or who works for himself and gives his master only a daily amount, and a slave who labors in a sugar <a aria-describedby="footnote-label" href="#factory!" id="factory!-ref">factory!</a></p>
+
+      <p>Similarly, Villaverde expresses a widely held (if equally reductive) view of the degrees of relative brutality when he describes the almost Eden-like natural world of the coffee plantation compared to the brooding scene at a sugar mill in his novel <i>Cecilia </i> <a aria-describedby="footnote-label" href="#Valdés." id="Valdés.-ref"><i>Valdés.</i></a></p>
+
+      <p>While the difference between urban life as an enslaved artisan and life in the barracoons and cane fields was surely not the same, what remains true, as exemplified by Blas Lucumí’s resistance, was that anyone who was enslaved could easily be moved between the two conditions. This movement was contingent upon larger networks of material supply, labor, and production. Indeed, the deposition also mentions that the men were being sent to work on the railroad because they had run out of stone, which would have likely been quarried locally. Quarry work was another occupation that appears in the advertisements selling enslaved Africans at this <a aria-describedby="footnote-label" href="#time." id="time.-ref">time.</a> Quarries were located in the south of Cuba, where companies operated workshops preparing stone for shipment to urban construction <a aria-describedby="footnote-label" href="#sites." id="sites.-ref">sites.</a> Thus, production exists beyond the site of a single building or of an expanding city to include areas where building materials are produced and their transportation. The flows within these local and international networks—imported materials were used too—had huge implications for the working conditions of those constructing the built environment.</p>
+
+      <img src="img/Levine_013.jpg" width=100%>
+      <p style="font-size:12px;">
+        View of a nail factory outside of Havana c. 1860.</p>
+
+    <p>Unlike many enslaved Africans, Blas was working in the heart of Havana, blocks from the center of colonial power, but also near a large population of freed people of color. Both were crucial for the transformation of capital generated through agricultural production and commerce into the built environment and urbanization. The production of the palace and the process of urbanization of which it was a part was made possible by individuals who worked in multiple contexts, moving in and out of multiple occupational roles.</p> 
+
+    <img src="img/Barnard4.jpg" width=100%>
+      <p style="font-size:12px;">
+        Plantation view. The cooper's shop. George N. Barnard. c. 1860. The United States Library of Congress.</p>
+
+    <p>It was through the interactions of enslaved Africans and free people of color on construction sites, in urban neighborhoods, but also across a landscape of degrees of necessary (albeit harshly constrained and controlled) Black mobility, that the required materials, commodities, and messages were transported to make large urban buildings like the Palacio de Aldama a <a aria-describedby="footnote-label" href="#reality." id="reality.-ref">reality.</a> Embedded and co-constitutive of this production process in which people of different statuses, enslaved and free, the future growth of rebellions germinated, and capital was transformed into enduring structures that would continue to provide the ground and material structures for society to reproduce itself.</p>
+
+    </article>
+
+        <footer>
+    <h2 id="footnote-label">Notes</h2>
+
+    <ol>
+  <li id="Aldama.">The incident is described by at least three scholars, though usually used as an exceptional anecdote. See Manuel Barcia Paz, <i>Seeds of Insurrection: Domination and Resistance on Western Cuban Plantations, 1808-1848</i> (Baton Rouge: Louisiana State University Press, 2008), 39; José Antonio Piqueras, <i>Negreros: españoles en el tráfico y en los capitales esclavistas </i>(Madrid: Catarata, 2021), 138–45; Ada Ferrer, <i>Cuba: An American History</i> (London, England: Scribner, 2021), 99.<a href="#Aldama.-ref" aria-label="Back to content">↵</a></li>
+  <li id="more.">Ministerio de Ultramar, “Expediente reservado sobre un motín de negros en la propiedad de Domingo Aldama,” 1841, ES.28079.AHN/16//ULTRAMAR,8,Exp.10, Archivo Histórico Nacional (Spain), http://pares.mcu.es/ParesBusquedas20/catalogo/description/1333031.<a href="#Aldama.-ref" aria-label="Back to content">↵</a></li>
+  <li id="1820.">José Antonio Piqueras, “The End of the Legal Slave Trade in Cuba and the Second Slavery,” in <i>Atlantic Transformations: Empire, Politics, and Slavery During the Nineteenth Century</i>, ed. Dale W. Tomich, Fernand Braudel Center Studies in Historical Social Science (Albany, NY: State University of New York Press, 2020), 91.<a href="#1820.-ref" aria-label="Back to content">↵</a></li>
+  <li id="century.">Michael Zeuske, “Out of the Americas: Slave Traders and the Hidden Atlantic in the Nineteenth Century,” <i>Atlantic Studies</i>, 15, no. 1 (January 2, 2018): 103–35, https://doi.org/10.1080/14788810.2017.1411705.<a href="#century.-ref" aria-label="Back to content">↵</a></li>
+   <li id="plantations.">Barcia Paz, <i>Seeds of Insurrection.</i><a href="#plantations.-ref" aria-label="Back to content">↵</a></li>
+   <li id="force.">Carlos Venegas Fornias, <i>La urbanización de las murallas: dependencia y modernidad </i>(La Habana, Cuba: Ed. Letras Cubanas, 1990).<a href="#force.-ref" aria-label="Back to content">↵</a></li>
+   <li id="unusual.">Barcia Paz, <i>Seeds of Insurrection</i>, 39.<a href="#unusual.-ref" aria-label="Back to content">↵</a></li>
+   <li id="sawmill.">Barcia Paz, <i>Seeds of Insurrection</i>, 153 n68.<a href="#sawmill.-ref" aria-label="Back to content">↵</a></li>
+   <li id="symbolic.">Ferrer, <i>Cuba</i>, 97–99.<a href="#symbolic.-ref" aria-label="Back to content">↵</a></li>
+   <li id="system.">Piqueras, <i>Negreros</i>, 145.<a href="#system.-ref" aria-label="Back to content">↵</a></li>
+   <li id="trades.">Venegas Fornias, <i>La urbanización de las murallas</i>, 38–50.<a href="#trades.-ref" aria-label="Back to content">↵</a></li>
+   <li id="produced.">Linda Clarke, <i>Building Capitalism: Historical Change and the Labour Process in the Production of Built Environment</i>, Routledge Revivals (Oxon [England]: Routledge, 2011), 17–22.<a href="#produced.-ref" aria-label="Back to content">↵</a></li>
+   <li id="classes.">Throughout the term “people of color” is used as a direct translation of “gente de color,” the Spanish term used in Cuba at the time to refer to people with African ancestry. While enslaved Africans were often referred to simply as “negros,” people of color were often those free individuals of African or mixed and African descent who had either bought their freedom through manumission or been born outside of slavery to free parents. The mid-nineteenth century represents the apex and subsequent decline of this group’s proportional size to the rest of the population of Cuba.<a href="#classes.-ref" aria-label="Back to content">↵</a></li>
+   <li id="production.">Clarke, <i>Building Capitalism</i>, 18.<a href="#production.-ref" aria-label="Back to content">↵</a></li>
+   <li id="tradesmen.">Ministerio de Ultramar, “El Consejo Administrativo de Bienes Embargados de Cuba remite al gobernador superior político de la isla la relación de los libros de cuentas pertenecientes a Domingo Aldama que estaban en el archivo del referido Consejo,” 1871, 2, ES.28079.AHN/16//ULTRAMAR,4425,Exp.54, Archivo Histórico Nacional (Spain).<a href="#tradesmen.-ref" aria-label="Back to content">↵</a></li>
+   <li id="builder.">Albañil from Spyros' paper.<a href="#builder.-ref" aria-label="Back to content">↵</a></li>
+   <li id="industrialization.">José Antonio Saco, “Las artes están en manos de la gente de color,” in <i>Coleccion de papeles cientificos, historicos, politicos y de otros ramos sobre la isla de Cuba</i>, First (Paris: d’Aubusson y Kugelmann, 1858), 205–10<a href="#industrialization.-ref" aria-label="Back to content">↵</a></li>
+   <li id="buildings.">Llilian Llanes, <i>Apuntes para una historia sobre los constructores cubanos</i>, Colección Arquitectura cubana (Ciudad de La Habana, Cuba: Editorial Letras Cubanas, 1985), 8.<a href="#buildings.-ref" aria-label="Back to content">↵</a></li>
+   <li id="1800s.">Llanes, 10.<a href="#1800s.-ref" aria-label="Back to content">↵</a></li>
+   <li id="self-taught.">Llanes, 10-11.<a href="#self-taught.-ref" aria-label="Back to content">↵</a></li>
+   <li id="artisans.">Paul B. Niell, <i>Urban Space as Heritage in Late Colonial Cuba: Classicism and Dissonance on the Plaza De Armas of Havana, 1754-1828</i>, First edition. (Austin: University of Texas Press, 2015), 14, http://www.jstor.org/stable/10.7560/7666594.<a href="#artisans.-ref" aria-label="Back to content">↵</a></li>
+  <li id="lacking.">Venegas Fornias, <i>La urbanización de las murallas</i>, 38–40.<a href="#lacking.-ref" aria-label="Back to content">↵</a></li>
+  <li id="islands.">Francisco Pérez Guzmán, “Modo de vida de esclavos en las fortificaciones de Cuba: Siglo XVIII,” <i>Anuario de Estudios Americanos</i>, 47, no. 1 (December 30, 1990): 241–57, https://doi.org/10.3989/aeamer.1990.v47.i1.577.<a href="#islands.-ref" aria-label="Back to content">↵</a></li>
+  <li id="Africans.">Camillia Cowling, <i>Conceiving Freedom: Women of Color, Gender, and the Abolition of Slavery in Havana and Rio De Janeiro</i> (Chapel Hill: The University of North Carolina Press, 2013), http://www.jstor.org/stable/10.5149/9781469610894_cowling; Alejandro Garcia and Oscar Zanetti, <i>Sugar and Railroads: A Cuban History, 1837-1959</i> (Chapel Hill, UNITED STATES: University of North Carolina Press, 1998), http://ebookcentral.proquest.com/lib/princeton/detail.action?docID=3039429.<a href="#Africans.-ref" aria-label="Back to content">↵</a></li>
+  <li id="Crown.">The subject of emancipation is crucial for a longer version of this study. While it was certainly the exception rather than the rule, Cuba does stand out for having higher levels of emancipated people of African descent. This in no way made the system more humane. In fact, it was just one more insidious way to make the enslaved work harder while denying Black people full selfhood and political representation in society. See Orlando Patterson, <i>Slavery and Social Death: A Comparative Study</i>, ACLS Humanities E-Book. (Cambridge, Mass: Harvard University Press, 1982).<a href="#Crown.-ref" aria-label="Back to content">↵</a></li>
+  <li id="earlier.">Governor of Cuba, “Resolución. Negoción de emancipados.,” <i>Gaceta de la Habana</i>, March 11, 1870, 1.<a href="#earlier.-ref" aria-label="Back to content">↵</a></li>
+  <li id="Zone.">On chain-gangs, race, and modernity in the US South, see Jay Cephas, “Producing Modernity: Race, Labor, and Landscape Production in the Old South,” ed. Jane Hutton, <i>Landsript</i>, no. 5 (2017): 125–41. On the use of incarcerated labor in the US Panama Canal Zone, see Benjamin D. Weber, “The Strange Career of the Convict Clause: US Prison Imperialism in the Panamá Canal Zone,” <i>International Labor and Working Class History</i>, 96 (Fall 2019): 79–102, http://dx.doi.org/10.1017/S0147547919000176.<a href="#Zone.-ref" aria-label="Back to content">↵</a></li>
+  <li id="possible.">For the measures taken to ensure the loyalty of free people of color, such as their service in Spanish militias, see Matt D. Childs, <i>The 1812 Aponte Rebellion in Cuba and the Struggle against Atlantic Slavery</i>, Envisioning Cuba (Chapel Hill: The University of North Carolina Press, 2006), 83; Laird W. Bergad, <i>The Comparative Histories of Slavery in Brazil, Cuba, and the United States, New Approaches to the Americas</i> (New York: Cambridge University Press, 2007), 44–48, http://www.loc.gov/catdir/toc/ecip077/2006101940.html. Multiple authors have commented on the predominance of freed people of color as artisans and builders. See Cowling, <i>Conceiving Freedom</i>, 31; Herbert S. Klein, <i>Slavery in the Americas: A Comparative Study of Virginia and Cuba </i> (Chicago: University of Chicago Press, 1967), 217–28.<a href="#possible.-ref" aria-label="Back to content">↵</a></li>
+  <li id="1804.">For an argument against the connection between the bulk of the slave revolts and “external influences” see Barcia Paz, <i>Seeds of Insurrection</i>, 46–47. For an argument in favor of the tight relationship between Cuba and Haiti, see Ada Ferrer, <i>Freedom’s Mirror: Cuba and Haiti in the Age of Revolution </i> (Cambridge: Cambridge University Press, 2014), https://doi.org/10.1017/CBO9781139333672.<a href="#1804.-ref" aria-label="Back to content">↵</a></li>
+  <li id="Havana.">The Aponte Rebellion is fascinating, not least for the trial record in which Aponte described page by page his “book of paintings,” which has since been lost. Even without the visual, the detailed ekphrasis provides a vivid window into his worldview, cultural influences, and the material culture of late-eighteenth- to early-nineteenth-century Cuba. See New York University’s Digital Aponte website. See also <i>Childs, The 1812 Aponte Rebellion in Cuba and the Struggle against Atlantic Slavery</i>, 9–15; Philip A. Howard, <i>Changing History: Afro-Cuban Cabildos and Societies of Color in the Nineteenth Century</i> (Baton Rouge: Louisiana State University Press, 1998), 73–99. <a href="#Havana.-ref" aria-label="Back to content">↵</a></li>
+  <li id="Spain.">Aline Helg, <i>Our Rightful Share: The Afro-Cuban Struggle for Equality, 1886-1912 </i> (Chapel Hill: University of North Carolina Press, 1995), 24–54. See also Helg, 119. <a href="#Spain.-ref" aria-label="Back to content">↵</a></li>
+  <li id="demise.">C.L.R. James, <i>The Black Jacobins: Toussaint L’ouverture and the San Domingo Revolution</i>, 2d ed., rev. (New York: Vintage Books, 1963).<a href="#demise.-ref" aria-label="Back to content">↵</a></li>
+  <li id="owned.">On the urban environment of Havana and the example of free people of color see Rebecca J. Scott, <i>Degrees of Freedom: Louisiana and Cuba After Slavery</i> (Cambridge, Mass: Belknap Press of Harvard University Press, 2005), 27, https://www.jstor.org/stable/10.2307/j.ctvjsf6m7; on free people of color taking the opportunity to become slave owners in the Atlantic world, see Orlando Patterson, “Three Notes of Freedom: The Nature and Consequences of Manumission,” in <i>Paths to Freedom</i>, ed. Rosemary Brana-Shute and Randy J. Sparks, Manumission in the Atlantic World (University of South Carolina Press, 2009), 20, https://doi.org/10.2307/j.ctv1gk4r3w.5.<a href="#owned.-ref" aria-label="Back to content">↵</a></li>
+  <li id="factory!">Alexander von Humboldt, <i>Political Essay on the Island of Cuba</i>, Alexander von Humboldt in English (London: University of Chicago Press, 2011), 144.<a href="#factory!-ref" aria-label="Back to content">↵</a></li>
+  <li id="Valdés.">Cirilo Villaverde, <i>Cecilia Valdés o La loma del Ángel,</i> Colección Raices (La Habana: Ediciones Boloña, 2018).<a href="#Valdés.-ref" aria-label="Back to content">↵</a></li>
+  <li id="time.">See Appendix 1.<a href="#time.-ref" aria-label="Back to content">↵</a></li>
+  <li id="sites.">José García de Arbolega, <i>Manual de la isla de Cuba</i>, Second Edition (Havana, Cuba: Imprenta del Tiempo, 1859), 177.<a href="#sites.-ref" aria-label="Back to content">↵</a></li>
+  <li id="reality.">Aisha K. Finch, <i> Rethinking Slave Rebellion in Cuba: La Escalera and the Insurgencies of 1841-1844,</i> Envisioning Cuba (Chapel Hill: The University of North Carolina Press, 2015), 56, http://www.jstor.org/stable/10.5149/9781469622354_finch.<a href="#reality.-ref" aria-label="Back to content">↵</a></li>
+
+
+</ol>
+  </footer>
+
+    </div>
+
+
+
+    <div id="2" class="tabcontent">
+
+
+    <img src="img/Map2.png" width=100%>
+
+    <p style="font-size:12px;">Location of the Palacio de Aldama in 1849, to left (west) of the large open area just outside the colonial city walls. Image by author.</p></br>
+
+    <img src="img/Map1.png" width=100%>
+
+    <p style="font-size:12px;">Approximate locations listed for enslaved Africans working in the building trades between 1820 and 1850. Image by author.</p></br>
+
+      </div>
+
+      <div id="3" class="tabcontent">
+        
+        <h3>Appendix 1</h3>
+        <img src="img/Appendix1.png" width=100%>
+        <p>Full appendix under construction.</p></br></br>
+
+
+
+      </div>
+
+      <div id="4" class="tabcontent">
+        
+
+        <h3>Bibliography</h3>
+      <p>Barcia Paz, Manuel. Seeds of Insurrection: Domination and Resistance on Western Cuban Plantations, 1808-1848. Baton Rouge: Louisiana State University Press, 2008.</br></br>
+      
+      Bergad, Laird W. The Comparative Histories of Slavery in Brazil, Cuba, and the United States. New Approaches to the Americas. New York: Cambridge University Press, 2007. http://www.loc.gov/catdir/toc/ecip077/2006101940.html.</br></br>
+      
+      Cephas, Jay. “Producing Modernity: Race, Labor, and Landscape Production in the Old South.” Edited by Jane Hutton. Landsript, no. 5 (2017): 125–41.</br></br>
+      
+      Childs, Matt D. The 1812 Aponte Rebellion in Cuba and the Struggle against Atlantic Slavery. Envisioning Cuba. Chapel Hill: The University of North Carolina Press, 2006.</br></br>
+      
+      Clarke, Linda. Building Capitalism: Historical Change and the Labour Process in the Production of Built Environment. Routledge Revivals. Oxon [England]: Routledge, 2011.</br></br>
+
+      Cowling, Camillia. Conceiving Freedom: Women of Color, Gender, and the Abolition of Slavery in Havana and Rio De Janeiro. Chapel Hill: The University of North Carolina Press, 2013. http://www.jstor.org/stable/10.5149/9781469610894_cowling.</br></br>
+
+      Ferrer, Ada. Cuba: An American History. London, England: Scribner, 2021.</br></br>
+
+      ———. Freedom’s Mirror: Cuba and Haiti in the Age of Revolution. Cambridge: Cambridge University Press, 2014. https://doi.org/10.1017/CBO9781139333672.</br></br>
+
+      Finch, Aisha K. Rethinking Slave Rebellion in Cuba: La Escalera and the Insurgencies of 1841-1844. Envisioning Cuba. Chapel Hill: The University of North Carolina Press, 2015. http://www.jstor.org/stable/10.5149/9781469622354_finch.</br></br>
+
+      Garcia, Alejandro, and Oscar Zanetti. Sugar and Railroads: A Cuban History, 1837-1959. Chapel Hill, UNITED STATES: University of North Carolina Press, 1998. http://ebookcentral.proquest.com/lib/princeton/detail.action?docID=3039429.</br></br>
+
+      García de Arbolega, José. Manual de la isla de Cuba. Second. Havana, Cuba: Imprenta del Tiempo, 1859.</br></br>
+
+      Governor of Cuba. “Resolución. Negoción de emancipados.” Gaceta de la Habana, March 11, 1870.</br></br>
+
+      Helg, Aline. Our Rightful Share: The Afro-Cuban Struggle for Equality, 1886-1912. Chapel Hill: University of North Carolina Press, 1995.</br></br>
+
+      Howard, Philip A. Changing History: Afro-Cuban Cabildos and Societies of Color in the Nineteenth Century. Baton Rouge: Louisiana State University Press, 1998.
+      Humboldt, Alexander von. Political Essay on the Island of Cuba. Alexander von Humboldt in English. London: University of Chicago Press, 2011.</br></br>
+
+      James, C. L. R. The Black Jacobins: Toussaint L’ouverture and the San Domingo Revolution. 2d ed., rev. New York: Vintage Books, 1963.</br></br>
+
+      Klein, Herbert S. Slavery in the Americas; a Comparative Study of Virginia and Cuba. Chicago: University of Chicago Press, 1967.</br></br>
+
+      Llanes, Llilian. Apuntes para una historia sobre los constructores cubanos. Colección Arquitectura cubana. Ciudad de La Habana, Cuba: Editorial Letras Cubanas, 1985.</br></br>
+
+      Ministerio de Ultramar. “El Consejo Administrativo de Bienes Embargados de Cuba remite al gobernador superior político de la isla la relación de los libros de cuentas pertenecientes a Domingo Aldama que estaban en el archivo del referido Consejo,” 1871. ES.28079.AHN/16//ULTRAMAR,4425,Exp.54. Archivo Histórico Nacional (Spain).</br></br>
+
+      ———. “Expediente reservado sobre un motín de negros en la propiedad de Domingo Aldama,” 1841. ES.28079.AHN/16//ULTRAMAR,8,Exp.10. Archivo Histórico Nacional (Spain). http://pares.mcu.es/ParesBusquedas20/catalogo/description/1333031.</br></br>
+
+      Niell, Paul B. Urban Space as Heritage in Late Colonial Cuba: Classicism and Dissonance on the Plaza De Armas of Havana, 1754-1828. First edition. Austin: University of Texas Press, 2015. http://www.jstor.org/stable/10.7560/7666594.
+      Patterson, Orlando. Slavery and Social Death a Comparative Study. ACLS Humanities E-Book. Cambridge, Mass: Harvard University Press, 1982.</br></br>
+
+      ———. “Three Notes of Freedom: The Nature and Consequences of Manumission.” In Paths to Freedom, edited by Rosemary Brana-Shute and Randy J. Sparks, 15–30. Manumission in the Atlantic World. University of South Carolina Press, 2009. https://doi.org/10.2307/j.ctv1gk4r3w.5.</br></br>
+
+      Pérez Guzmán, Francisco. “Modo de vida de esclavos en las fortificaciones de Cuba: Siglo XVIII.” Anuario de Estudios Americanos 47, no. 1 (December 30, 1990): 241–57. https://doi.org/10.3989/aeamer.1990.v47.i1.577.</br></br>
+
+      Piqueras, José Antonio. Negreros: españoles en el tráfico y en los capitales esclavistas. Madrid: Catarata, 2021.</br></br>
+
+      ———. “The End of the Legal Slave Trade in Cuba and the Second Slavery.” In Atlantic Transformations: Empire, Politics, and Slavery During the Nineteenth Century, edited by Dale W. Tomich. Fernand Braudel Center Studies in Historical Social Science. Albany, NY: State University of New York Press, 2020.</br></br>
+
+      Saco, José Antonio. “Las artes están en manos de la gente de color.” In Coleccion de papeles cientificos, historicos, politicos y de otros ramos sobre la isla de Cuba, First., 205–10. Paris: d’Aubusson y Kugelmann, 1858.</br></br>
+
+      Scott, Rebecca J. Degrees of Freedom: Louisiana and Cuba After Slavery. Cambridge, Mass: Belknap Press of Harvard University Press, 2005.  https://www.jstor.org/stable/10.2307/j.ctvjsf6m7.</br></br>
+
+      Venegas Fornias, Carlos. La urbanización de las murallas: dependencia y modernidad. La Habana, Cuba: Ed. Letras Cubanas, 1990.</br></br>
+
+      Villaverde, Cirilo. Cecilia Valdés o La loma del Ángel. Colección Raices. La Habana: Ediciones Boloña, 2018.</br></br>
+
+      Weber, Benjamin D. “The Strange Career of the Convict Clause: US Prison Imperialism in the Panamá Canal Zone.” International Labor and Working Class History 96 (Fall 2019): 79–102. http://dx.doi.org/10.1017/S0147547919000176.</br></br>
+
+      Zeuske, Michael. “Out of the Americas: Slave Traders and the Hidden Atlantic in the Nineteenth Century.” Atlantic Studies 15, no. 1 (January 2, 2018): 103–35. https://doi.org/10.1080/14788810.2017.1411705.</br></br>
+      </p>
+      </div>
+
+      <div id="5" class="tabcontent">
+
+      <p>Dante Furioso is a PhD student at Princeton University.<a href="mailto:dante.furioso@princeton.edu"> Send an email to Dante.</a>
+      </p></br>
+    </div>
+
+      
+</div>
+
+
+
+
+
+       <footer style="font-family:Josefin Slab; font-size:12px; font-weight: 100margin-top:50px; margin-bottom: 25px; margin-left: 20px"> Dante Furioso — May 12, 2023 </footer>
+
+      </div>  
+
+     
+
+    </body>
+
+    <script>
+    function openDate(evt, dateName) {
+        var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(dateName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+  </script>
+</html>
+
+
+
