@@ -1,0 +1,115 @@
+h1 {
+    padding: 100px 250px 30px 150px;
+}
+p {
+    padding: 0px 250px 0px 150px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    color: white;
+    font-size: 2em
+}
+.justified {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%
+}
+
+.paragraph {
+    text-indent: 40px
+}
+
+.tab {
+    margin-left: 40px
+}
+
+.text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.text2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.black2 {
+    background-image: black;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.image:hover {
+    cursor: crosshair;
+}
+
+.image3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
+
+.image3:hover {
+    cursor: crosshair;
+}
+
+.navbar-nav li a {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.parallax {
+    background-image: url(img/map2.jpg);
+    min-height: 600px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hide {
+    display: none;
+  }
+
+.footnote {
+    display: inline;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.footnote:hover + .hide {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    padding: 10px;
+    max-width: 200px;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+    text-indent: 0px
+  }
