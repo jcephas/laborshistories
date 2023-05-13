@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Spaces of Life</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+
+ <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+     <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="/feed.xml"
+      title="Holly Bushman"
+    />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+
+
+<style>
+    .maplibregl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+        .footer{ 
+       position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       font-size: 25px;
+       width: 100%;
+       text-transform:uppercase;
+       color: black;
+   }  
+
+  .text{
+position: fixed;  
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 15px;
+  color: black;
+  font-family: 'Averia Serif Libre', cursive;
+
+}
+
+   h1,h2,h3,h4,h5,h6,p,li,a,div{
+
+  font-family: 'Averia Serif Libre', cursive;
+  color: black;
+
+  }
+
+  div{text-align:center;}
+
+
+a{
+  color: black;
+  text-decoration:none;
+  border-bottom:1px solid black
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: skyblue;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+</style>
+
+<div class="text">
+<h1>Spaces of Life</h1>
+</div>
+
+
+<div id="map"></div>
+<script>
+    var map = new maplibregl.Map({
+        container: 'map',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=LFoOSpY7paHDU9Ss8oLt',
+        center: [13.1205, 52.0520],
+        zoom: 6
+    });
+
+    map.on('load', function () {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+
+                            'description':
+                                '<strong>Badstelle Wolzigersee</strong><p>Holiday retreat on the shore of the Wolzigersee, used by Mozambican <i>Vertragsarbeiter</i> as a holiday destination in summers.</p><p>Source: Mutambe (2014) 224</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.825, 52.273]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>BSG Tiefbau Berlin</strong><p>Boxing gym where Jua Luciano Louis, the 1984 Berlin city champion, trained while working as a trainee in a meatpacking factory.</p><p>Source: <i>Neues Deutschland</i> November 28, 1984.</p><p> <a href="boxer.html" target="_blank" title="Opens in a new window">Click here to learn more about sport and leisure as a <i>Vertragsarbeiter</i>.</a>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.48759387, 52.556985]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Berliner Fernsehturm </strong><p>In 1982, an exhibition of paining, sculpture, and traditional handicraft from Mozambique was hosted in the gallery at the base of Berlin`s TV Tower.</p><p>Source: Saehrendt (2017) 103</p><p><a href="kunst.html" target="_blank" title="Opens in a new window">Click here to learn more about Mozambican art and the GDR.</a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.409, 52.5214]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Schule der Freundschaft</strong><p>School for 900 Mozambican, who studied in the small city of Staßfurt between 1982 and 1988.</p> <p><a href=school.html" target="_blank" title="Opens in a new window">Click here to learn more about the Schule der Freundschaft.</a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [11.5820, 51.86]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Friedrich-Schiller-Universität Jena</strong><p>Univeristy which offered short-term courses for Mozambican students.</p><p>Source: <i>Neues Deutschland</i> July 29, 1986, p.2.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [11.5897, 50.93]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Internationale Genossenschaftsschule des Verbandes der Konsumergenossenschaften</strong><p>School of economics near Dresden, attended by <i>Vertragsarbeiter</i> for a half-year course.</p><p>Source: <i>Neues Deutschland</i> January 29, 1979.',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.8732, 51.0107]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Afrikanische Kultur Café Rio Save</strong><p>Mozambican-owned cafe in Dresden, the first Mozambican-owned restaurant in the city. Former <i>Vertragsarbeiter</i> opened the business in the 1990s, after German Reunification. It is a rare example of a business owned my <i>Vertragsarbeiter</i> who remained in Germany after the dissolution of the GDR. Please note that this location is not exact.</p><p>Source: Mazuze (2014) 224</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.74, 51.053]
+                        }
+                    }
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}_15',
+                'icon-overlap': 'always'
+            }
+        });
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function (e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+
+   <div class="footer" text-align="center">
+   
+<a href="index.html">Home</a>
+ | <a href="contact.html">Contact</a> | <a href="sources.html">Sources & Further Reading</a>
+  </div>
+</body>
+</html>
