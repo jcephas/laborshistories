@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Processing-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>IT Final Project</title>
+</head>
+<style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 125px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #b5895b; /* Fallback color */ 
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Add Animation */
+.modal-content {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  color: #F6F6F6;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+
+<header>
+  <div class="container">
+     <nav class="nav">
+          <a href="index.html" id="home">*</a>
+
+          <ul class="nav-list">
+            <li>
+            <a href="people.html" class="nav-link">People</a>
+            </li>
+            <li class="active">
+               <a href="data.html" class="nav-link">Map</a>
+             </li>
+             <li>
+               <a href="bibliography.html" class="nav-link">Bibliography</a>
+             </li>
+             <li>
+               <a href="contact.html" class="nav-link">Contact</a>
+             </li>
+          </ul>
+     </nav>
+  </div>
+</header>
+<body>
+     <div class='content'>
+     <section class='content-body'>
+        <p style="font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;"><b>Historic Farms of the 8th Agricultural Division of the XPCC</b></p>
+        <div style="display:flex; align-items:center; justify-content:center; padding-top: 50px;">
+            <img class="myImages" id="myImg" src="img/maps/4.png" alt="Historic Farms of the 8th Agricultural Division of the XPCC" style="width:100%; max-width:800px;">
+        </div>
+        
+        <figure><figcaption>◌ = cotton fields/cotton production farms in the Shihezi Military Reclamation Area, from 1953 onwards<br><br>□ = "short form" population data from 2000 census<br><br><u>Data Source:</u> Fang Yingkai and Li Fushen, <i>The History of the Xinjiang Corps’ Reclamation and Frontier Defense</i> (Xinjiang Bingtuan Tunkenchang Lishi), Volume 1 (Xinjiang Keji Weisheng Chubanshe, 1997); <i>Renmin Ribao</i> 人民日报, 1959 - 1965; and Township map of Xinjiang with 2000 Census short form data, <a href="https://maps.princeton.edu/catalog/princeton-5q47rq18h">link.</a></figcaption></figure>
+        <p>This static map visualizes the historic reclamation farms of the 8th Agricultural Division of the Xinjiang Produciton and Construction Corps. It shows where labor was situated. The map also includes census data from 2000 to roughly show population, concentrated on the present-day city of Shihezi. The primary dataset used for this map collected information on the establishment of each farm and tracked their former names to assist in spatially locating the working bodies of this research.
+        </p>
+
+
+        <div style="display:flex; align-items:center; justify-content:center; padding-top: 50px;">
+            <img class="myImages" id="myImg" src="img/d1.png" alt="Dataset for Historic Farms of the 8th Agricultural Division of the XPCC" style="width:100%; max-width:800px;">
+        </div>
+
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+        
+      </section>
+  </div>
+       
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition); 
+        })
+    // Get the modal
+ // create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+// Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+}
+</script>
+</html>
