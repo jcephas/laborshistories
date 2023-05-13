@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+	<html>
+	<head><title>Olmsted's Dividends - Shareholders</title>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+		p{
+			font-family: 'Inter',sans-serif;
+			font-size: 1.5vw;
+			line-height: 133%;
+			margin: 0;
+			margin-top:0%;		
+		}
+
+		p+p{
+			text-indent: 2em;
+			margin:0%;
+
+		}
+
+		h3+p{
+			text-indent: 0em;
+			margin:0%;
+		}
+
+		p.menuitem+p.menuitem{
+			text-indent: 0%;
+			margin-bottom:3%;
+		}
+
+		p+p.citation{
+			text-indent:0%;
+		}
+
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+
+		a:hover{
+			opacity: 50%;
+		}
+
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+
+		a.ref{
+			text-decoration: underline;
+		}
+
+		h1{
+			font-family: 'Inter',sans-serif;
+			font-size: 2.5vw;
+			font-weight: 300;
+			margin:0;
+			padding-top: 2%;
+			margin-bottom: 15%;
+		}
+
+		h2{}
+
+		h3{font-family: 'Inter',sans-serif;
+			font-size: 1.8vw;
+			font-weight: 300;
+			margin:0;
+			text-transform:uppercase;
+			padding-top: 1vh;
+			margin-bottom: 2vh;
+		}
+
+		sup, sub{vertical-align: baseline;
+ 		 	position: relative;
+  			top: -0.4em;
+  		}
+
+		select{
+			font-size: 1.2vw;
+			width: 88%;
+			text-indent:0%;
+		}
+
+		img{
+ 			width: 100%;
+    		height: auto;
+    		max-width: 100%;
+
+		}
+
+		img.leftwrap{
+			width:50%;
+			float:left;
+			margin:1% 2% 0% 0%;
+		}
+
+		ol{
+			font-family: 'Inter',sans-serif;
+			font-size: 1vw;
+			margin:0;
+			padding:2%;
+			list-style-position: outside;
+		}
+
+		li{
+			padding-bottom:2vh;
+		}
+
+		li.nostyle {
+  			list-style-type: none;
+		}
+
+
+	.menuitem {
+		text-indent: 0%;
+		font-family: 'Inter',sans-serif;
+		font-size: 1.8vw;
+		font-weight: 300;
+		text-transform:capitalize;
+		margin-bottom:3%;
+	}
+
+	.info {
+		position:absolute;
+		color:rgb(75,75,75);
+		bottom:1%;
+		width:100%;
+		height:auto;
+		text-transform:uppercase;
+	}
+
+	.caption {
+			font-family: 'Inter',sans-serif;
+			font-size: 1.1vh;
+			width: 100%;
+			Margin: auto;
+			padding-top: 0px;
+		}
+
+	.citation{
+		font-family: 'Inter',sans-serif;
+		font-size: 1.5vh;
+		width: 100%;
+		Margin: auto;
+		padding-top: 0px;
+	}
+
+	.inlineimg{
+		padding-bottom:0vh;
+	}
+
+	.inlineimg+.caption{
+		padding-bottom:2vh;
+	}
+
+
+	.abstract{
+		color:white;
+		background-color:rgb(40, 40, 40);
+		padding-bottom:3vh;
+	}
+
+	.essaytext{
+		background-color: rgb(230, 230, 230);
+		padding-bottom: 3vh;
+	}
+
+	.essaytext, .abstract{
+		
+		position: relative;
+		height:auto;
+		width:96;
+		padding-left:2%;
+  		padding-right:2%;
+	}
+
+	.parallax1{
+		background-image: url("img/OlmstedPortrait.jpg");
+		min-height:100%;
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -60px;*/
+		/*background-repeat: no-repeat;*/
+		background-position:center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.parallax2{
+		position:relative;
+		background-image: url("img/Fremont'sOfficeBearCreek.jpg");
+		height:60%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+		background-position-y: -40px;
+		/*background-repeat: no-repeat;*/
+		background-size: cover;
+	}
+
+		.parallax3{
+		position:relative;
+		background-image: url("img/Watkins_IndianCampBearValley_18601_Yale_Crop.jpg");
+		height:75%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:left;
+		
+	}
+
+		.parallax4{
+		position:relative;
+		background-image: url("img/Billings.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		
+	}
+
+/*		For map from Chamberlain*/
+		.parallax5{
+		position:relative;
+		background-image: url("img/Billings.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+	}
+
+		.parallax6{
+		position:relative;
+		background-image: url("img/DudleyField.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+	}
+
+		.parallax7{
+		position:relative;
+		background-image: url("img/Ketchum.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		}
+
+		.parallax8{
+		position:relative;
+		background-image: url("img/Opdyke.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		}
+
+		.parallax9{
+		position:relative;
+		background-image: url("img/Ralston.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		}
+
+	#wrapper{}
+
+	#sidebar{
+		position: fixed;
+  		top: 0;
+  		left: 0;
+  		background-color: lightgrey;
+  		width:13.5%;
+  		height:100%;
+  		padding-left: 1.5%;
+	}
+	
+	#documentbar {
+  		position: fixed;
+  		top:0;
+  		left:75%;
+  		right:0;
+  		background-color:snow;
+  		width:23.5;
+  		height:100%;
+  		padding-top:0%;
+  		padding-left: 1.5%;
+  		overflow-y:scroll;
+  	}
+
+  	.docbarheader{
+  		z-index:100;
+  		position:fixed;
+  		left:75%;
+  		top:0%;
+  		width:100%;
+  		height:auto;
+  		margin-top:0vh;
+  		padding-bottom:2vh;
+  		padding-top:1vh;
+  		padding-left:2%;
+  		background-color: snow;
+
+  	}
+
+  	#docs {
+  		position: absolute;
+  		top:5vh;
+  		width:90%;
+  		padding-top:2vh;
+  		padding-left:2%;
+
+  	}
+	
+	#header{}
+
+	#body{
+		position: absolute;
+  		top: 0%;
+  		left: 15%;
+  		width:60%;
+  		height:100%;
+  		margin:0%;
+  		padding-top:0%;
+  		overflow-y: scroll;
+  		overflow-x:hidden;
+  	}
+
+	#colophon{
+		
+		background-color: rgb(190,190,190);
+		border-style: solid;
+		border-width: 1px;
+		border-bottom: none;
+		border-left: none;
+		border-right:none;
+		position: absolute;
+		margin-top:0vh;
+		padding-top:5%;
+		padding-left:2%;
+		left:0%;
+		width:100%;
+		padding-bottom:5%;
+
+	}
+
+
+	</style>
+	</head>
+
+<body>
+
+<div id="sidebar">
+	<h1><a href="index.html">Olmsted's Dividends</a></h1>
+	<p class="menuitem"><select name="Shareholders" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Shareholders -</option><option value="shareholders.html">All Shareholders</option><option value="shareholders.html#Olmsted">Frederick Law Olmsted</option><option value="shareholders.html#Billings">Frederick Billings</option><option value="shareholders.html#Brumagin">Brumagin and Garrison</option><option value="shareholders.html#Field">David Dudley Field</option><option value="shareholders.html#Ketchum">Morris Ketchum</option><option value="shareholders.html#Opdyke">George Opdyke</option><option value="shareholders.html#Ralston">William Ralston</option></select></p>
+	<p class="menuitem"><select name="Places" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Places -</option><option value="places.html">All Places</option></select></p>
+	<p class="menuitem"><p class="menuitem"><select name="Securities" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Securities -</option><option value="securities.html">Mariposa Company</option></select></p></p>
+<div class="info"><p><a href="#colophon">Info</a></p></div>
+</div>
+
+<div id="body">
+	<div class="abstract">
+	<h3>shareholders</h3>
+	<p>On October 17, 1863, Mariposa Company Stock began being traded on the New York Stock Exchange. This is the transcontinental group of men, all wealthy and connected, who had financial stakes in Mariposa Estate during Olmsted's management.</p>
+	</div>
+	<div id="OlmstedPortrait" class="parallax1"></div>
+	<div class="essaytext" id="Olmsted">
+	<h3>Frederick Law Olmsted (1822-1903)</h3>
+	<p>In the summer of 1863, Frederick Law Olmsted resigned from his post as head of the Sanitary Commission, “overseeing the health of volunteer soldiers in the Union Army.”<sup>1</sup> At this point in his career, Olmsted was well-known for both his journalism and for working with the architect Calvert Vaux in the creation of Central Park between 1858 and 1861. After his service in the Sanitary Commission, Olmsted hoped to start a newspaper with Edwin Godkin, but found it trying to convince potential backers to support the project. According to his biographer, Laura Roper, Olmsted’s career was at an impasse: “the door to Central Park had been slammed on him, the magazine was hanging fire, and he was twelve thousand dollars in debt and sliding a little further all the time.”<sup>2</sup> It was in this context that Charles Dana, the Assistant Secretary of War, referred Olmsted to the former New York City mayor, George Opdyke, who was seeking a new manager for a California gold mining estate he was invested in.<sup>3</sup> Olmsted accepted the job to work as “Superintendent or Manager” of the Mariposa Estate on August 20, 1863.</p>
+	<p>Olmsted left New York on a steamship on September 14, arriving at the Mariposa Estate on October 14 after crossing the Panama Canal and briefly staying in San Francisco. The estate comprised about seventy square miles south of the Merced River in the foothills of the Sierra Nevada Mountains, and was controlled by a group of New York investors with whom Olmsted had become friendly from his work on Central Park. The businessmen verbally agreed to pay Olmsted a salary of $10,000/year in gold, nominally twice the dollar amount he was paid as Superintendent of Central Park, but the real value was likely even higher because gold was worth about twenty times the value of paper currency in the fall of 1863. Olmsted’s compensation package also included five hundred shares of Mariposa Company stock, with a par value of $50,000.<sup>4</sup> Olmsted accepted the position at Mariposa in hopes that after several years, he would have established investments so profitable that he only had to undertake work consonant with his ethical convictions.<sup>5</sup></p></div>
+	<div id="Office" class="parallax2"></div>
+	<div class="essaytext">
+	<br>
+	<p>Soon after arriving at Mariposa Estate, Olmsted learned of the Company’s dire financial situation resulting from poor mine performance, previous mismanagement, and the fallout from a highly litigated land grant from before the Mexican American War. To cut expenses, Olmsted cuts workers’ wages by 2%, reducing miners’ day rates to a maximum of $3.15 and the pay of other underground laborers to $2.40 per day. After workers protested by stopping work, Olmsted hired Chinese people willing to work for the even lower rate of $1.75 a day, which ultimately compelled some of the white workforce on strike to return to the mines out of racial animosity.<sup>6</sup>While Olmsted was initially appalled by the violence between blacks, Native Americans, and East Asians he witnessed at Mariposa, he eventually relied upon these racial divisions to eke some profit from the failing mines and to begin repaying some of the Company’s creditors.<sup>7</sup> On this incident, Olmsted wrote James Hoy, one of the investors in New York, “I don’t want the men to think they can ever expect to gain anything from me by striking – and the sooner they learn this the better in every respect shall we be situated.”<sup>8</sup></p></div>
+	<div id="IndianCamp" class="parallax3"></div>
+	<div class="essaytext">
+	<br>
+	<p>Originally hired because the Mariposa Company trustees believed Olmsted’s work on Central Park made him an ideal mine manager, Olmsted was relatively unsuccessful at improving the Estate’s output of mineral ore.</p>
+	<p>Instead, his successes were largely financial. As Mariposa Company dissolved throughout 1864, Olmsted made a series of novel deals to lease the mines to Mariposa’s lenders in payment for outstanding debts. But, most significantly, while staying in San Francisco for four months negotiating between the Company’s investors in New York and their local lender, the Bank of California, Olmsted ingratiated himself with San Francisco businessmen in the throes of betting on infrastructure, oil, and other minerals. Through these connections, Olmsted gained access to securities markets in which he applied his knowledge and expertise towards making wise investments for himself and his acquaintances back on the East Coast. By the time he left California for New York in October 1865, Olmsted had personally invested $2,500 (about $50,000 today) in the stocks of California telegraph, shipping, and gas companies that would continue to grow in value throughout his lifetime.<sup>10</sup> &nbsp;&#9744;</p></div>
+	<div id="Billings" class="parallax4"></div>
+	<div class="essaytext">
+		<br>
+	<h3>Frederick Billings (1823-1890)</h3>
+	<p>Billings was a San Francisco based lawyer who represented John C. Frémont before the U.S. Supreme Court in an 1856 trial that upheld the validity of Frémont’s title to Mariposa Estate. Later, Frémont borrowed against the land from a group of creditors including Billings and Brumagin; when Frémont became delinquent on his debts, these lenders repossessed Mariposa Estate, later selling it to the New York investors who hired Olmsted.<sup>11</sup></p>
+	<p>Billings retained some interest in the Estate and when Olmsted landed at San Francisco, Billings accompanied him on a steamship to Stockton and then by horse coach to Mariposa.<sup>12</sup> Just weeks into his new job, Olmsted received a letter from Billings alerting that the mines’ prospects had dramatically dwindled from months earlier when Olmsted was first hired: production had dropped from $100,000/month to $25,000/month.<sup>13</sup> &nbsp;&#9744;</p></div>
+	<div class="essaytext" id="Brumagin">
+	<h3>Mark Brumagin and Cornelius K. Garrison (1809-1885)</h3>
+	<img src="img/ChamberlainMap_FremontClaim.jpg" class="inlineimg" id="Brumagin">
+	<p class="caption">Map showing the "floating" land grant purchased by John C. Frémont from Mexican overnor Juan B. Alvaredo in 1847. Under Mexican law, Frémont was able to set the bounds of his claim. After the Mexican-American War ended in 1848, land grants issued by Mexico had to be certified by Congress in a process that often favored white settlers over Mexican or Indigenous people.</p>
+	<img src="img/Garrison.jpg" class="leftwrap">
+	<p>On October 28, 1863, the newly installed manager at Mariposa, Olmsted, received a letter informing him that Garrison and Brumagin had a lien against the Estate stemming from, “an old debt of $7,847 which John C. Frémont had failed to pay to a Los Angeles cattle rancher named Francisco Ocampo in the 1850s.” At a sheriff’s sale in November 1858, the Estate’s title had passed to Ocampo in order to settle Frémont’s debts. Brumagin, one of Frémont’s creditors, bought the titled from Ocampo, later selling 1/8th of it. Frémont then struck a deal with Brumagin to repurchase the Estate title after paying back his debts with 2% monthly interest, but Frémont failed to repay Brumagin, resulting in “both the debt and the right to redeem the title,” passing to  Mariposa Company. By the time Olmsted was notified about the issues with the title, with inflation, the Company now owed $308,000 in gold to Brumagin, who refused payment in paper money as was common amongst California businessmen. However, Mariposa Company was short on gold, having issued $1.5 million in bonds to pay its creditors. Under a special arrangement, Brumagin agreed to split the proceeds with Garrison, a financier involved in the shipping trade between San Francisco and New York, if he oversaw collecting the $308,000 debt from Mariposa Company. On June 24, 1864, Mariposa Company settled with Garrison, agreeing to pay him $300,000 in gold over four years.<sup>14</sup>  The burden of the settlement placed severe restrictions on Olmsted’s ability to manage the Estate and eventually led to the Company’s bankruptcy.&nbsp;&#9744;</p></div>
+	<div id="Field" class="parallax6"></div>
+	<div class="essaytext">
+		<br>
+	<h3>David Dudley Field (1805-1894)</h3>
+	<p>Field belonged to the group of New Yorker investors in the Mariposa Company. As a lawyer, Field represented both Morris Ketchum and John Frémont. He provided his services to Ketchum, Opdyke, and Hoy to incorporate as the Mariposa Company on June 25, 1863, for which he received 2,000 shares of Company stock.</p>
+	<p>Olmsted knew him well: Field contributed money to Olmsted’s 1856 “campaign to arm the free-soil settlers in Kansas,” and one year later Field signed the petition to name Olmsted Superintendent of Central Park. Field’s involvement in Mariposa helped convince Olmsted to take the job.<sup>15</sup>&nbsp;&#9744;</p></div>
+	<div id="Ketchum" class="parallax7"></div>
+		<div class="essaytext">
+			<br>
+	<h3>Morris Ketchum (1796-1880)</h3>
+	<p>Ketchum was the primary investor in the Mariposa Company and its treasurer. After purchasing John Frémont’s six-eighths interest in the Estate for $1.5 million in January 1863, Ketchum then sold his interest in the Estate to the Company when it incorporated later that year. The Company then issued $1.5 million in mortgage bonds to repay him.</p>
+	<p>A prominent banker with Ketchum, Son & Company, Ketchum “sold much of the first issue of government bonds for Secretary of the Treasury Salmon P. Chase in 1861.”<sup>16</sup></p>
+	<p>In 1865, while still in San Francisco after retiring from Mariposa, Olmsted became Ketchum’s private consultant regarding California investments. In this capacity, Olmsted shared information about Ralston’s ventures with Ketchum and investigated possible investment in a manganese mine on an island off San Francisco.&nbsp;&#9744;</p></div>
+	<div id="Opdyke" class="parallax8"></div>
+	<div class="essaytext">
+		<br>
+	<h3>George Opdyke (1805-1880)</h3>
+	<p>Opdyke was mayor of New York City between 1862 and 1863. He was part of the New York investment group incorporated as Mariposa Company. Olmsted was offered the job at Mariposa through Opdyke.&nbsp;&#9744;</p></div>
+	<div id="Ralston" class="parallax9"></div>
+	<div class="essaytext">
+	<h3>WILLIAM CHAPMAN RALSTON (1826-1875)</h3>
+	<p>Ralston was founder of the Bank of California who Olmsted worked with closely while in San Francisco negotiating Mariposa Company’s bankruptcy. In his final months in California, Olmsted advised Ralston on a number of investment schemes based on land and natural resources. Olmsted accompanied Ralston on a visit to the Buena Vista Vinicultural Society near Sonoma and, at Ralston’s request, wrote a report on wine production in the state entitled “The Production of Wine in California: Particularly Referring to the Establishment of the Buena Vista Vinicultural Society.”<sup>17</sup> Olmsted also assisted Ralston’s petroleum speculation, investigating oil properties on the rocky shore near Santa Cruz and at Sargent’s Ranch, 25 miles east.<sup>18</sup>&nbsp;&#9744;</p></div>
+	<div id="colophon">
+		<p class="citation">Final project by <a href="mailto:ms9714@princeton.edu" class="ref">Maxwell Smith-Holmes</a> for Architecture's Subjects: Labor's Histories [ARC550]</p>
+		<br>
+		<p class="citation">Last updated May 12, 2023</p>
+	</div>
+</div>
+<div id="documentbar"><h3 class="docbarheader">documents</h3>
+	<div id="docs">
+		<ol>
+			<li class="nostyle"><a href="img/OlmstedPortrait.jpg" target="_blank"><img src="img/OlmstedPortrait.jpg"><p class="caption">Frederick Law Olmsted in 1865 (Courtesy of the National Park Service, Yosemite Research Library, Yosemite National Park).</p></a></li>
+			<li class="citation" value="1">Victoria Post Ranney, “Introduction,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, vol. 5, The Papers of Frederick Law Olmsted (Baltimore: Johns Hopkins University Press, 1990), 1.</li>
+  			<li class="citation">Laura Wood Roper, FLO, a Biography of Frederick Law Olmsted (Johns Hopkins University Press, 1983), 235, https://hdl.handle.net/2027/heb05866.0001.001.</li>
+  			<li class="citation">Ranney, “Introduction,” 6.</li>
+  			<li class="citation">Ranney, 6; Roper, FLO, a Biography of Frederick Law Olmsted, 235.</li>
+			<li class="citation">Frederick Law Olmsted, “Letter to Henry W. Bellows, August 16, 1863,” ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, The Papers of Frederick Law Olmsted, v. 4 (Baltimore: Johns Hopkins University Press, 1990), 698.</li>
+			<li class="nostyle"><a href="img/Fremont'sOfficeBearCreek.jpg" target="_blank"><img src="img/Fremont'sOfficeBearCreek.jpg"><p class="caption">Olmsted's office at Mariposa Estate, located in the town of Bear Valley. Carleton E. Watkins, date unknown. (UC Berkeley, Bancroft Library).</p></a></li>
+			<li class="citation" value="6">Frederick Law Olmsted, “Letter to James Hoy, March 2, 1864,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, The Papers of Frederick Law Olmsted, v. 5 (Baltimore: Johns Hopkins University Press, 1990), 197; Ranney, “Introduction,” 15.
+  			<li class="citation">Olmsted’s first impressions of Mariposa are documented in Roper, FLO, a Biography of Frederick Law Olmsted, 240.
+  			<li class="citation">Olmsted, “Letter to James Hoy, March 2, 1864,” 198.
+			<li class="nostyle"><a href="https://collections.library.yale.edu/catalog/2017785" target="_blank"><img src="img/Watkins_IndianCampBearValley_18601_Yale_Crop.jpg"><p class="caption">Indian Camp in Bear Valley, ca. 1861. Photograph by Carleton E. Watkins. (Beinecke Rare Book and Manuscript Library, Yale University).</p></a></li>
+			<li class="citation" value="9">Ranney, “Introduction,” 27.
+  			<li class="citation">Ranney, 218 n3.</li>
+  			<li class="nostyle"><a href="img/Billings.jpg" target="_blank"><img src="img/Billings.jpg"><p class="caption">Frederick Billings. (Billings Gazette).</p></a>
+  			<li class="citation" value="11">Reinhold Martin, Knowledge Worlds: Media, Materiality, and the Making of the Modern University (New York: Columbia University Press, 2021), 202; W.W. Robinson, Land in California: The Story of Mission Lands, Ranchos, Squatters, Mining Claims, Railroad Grants, Land Scrip, Homesteads (1948; repr., Berkeley, Calif.: University of California Press, 1979), 144.</li>
+  			<li class="citation">Laura Wood Roper, FLO, a Biography of Frederick Law Olmsted (Johns Hopkins University Press, 1983), 239.
+  			<li class="citation">Victoria Post Ranney, “Introduction,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, vol. 5, The Papers of Frederick Law Olmsted (Baltimore: Johns Hopkins University Press, 1990), 11.
+  			<li class="nostyle"><a href="img/ChamberlainMap.jpg" target="_blank"><img src="img/ChamberlainMap.jpg"><p class="caption">John C. Frémont's ten-square mile "floating" land grant. (Newell D. Chamberlain, The Call of Gold: True Tales on the Gold Road to Yosemite (Mariposa, Calif.: Gazette Press, 1936), iix.)</p></a>
+  			<li class="nostyle"><a href="http://sfmuseum.org/hist10/corneliusgarrison.html" target="_blank"><img src="img/Garrison.jpg"><p class="caption">Cornelius K. Garrison. (Museum of the City of San Francisco)</p></a>
+  			<li clas="citation" value="14"> Victoria Post Ranney, “Introduction,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, vol. 5, The Papers of Frederick Law Olmsted (Baltimore: Johns Hopkins University Press, 1990), 12–13; Laura Wood Roper, FLO, a Biography of Frederick Law Olmsted (Johns Hopkins University Press, 1983), 233.</li>
+  			<li class="nostyle"><a href="img/DudleyField.jpg" target="_blank"><img src="img/DudleyField.jpg"><p class="caption">David Dudley Field</p></a>
+  			<li class="citation" value="15">Ranney, “Introduction,” 8.</li>
+  			<li class="nostyle"><a href="img/Ketchum.jpg" target="_blank"><img src="img/Ketchum.jpg"><p class="caption">Morris Ketchum</p></a>
+  			<li class="citation" value="16">Ranney, 7.</li>
+  			<li class="nostyle"><a href="img/Opdyke.jpg" target="_blank"><img src="img/Opdyke.jpg"><p class="caption">George Opdyke</p></a>
+  			<li class="nostyle"><a href="img/Ralston.jpg" target="_blank"><img src="img/Ralston.jpg"><p class="caption">William Chapman Ralston</p></a></li>
+  			<li class="citation" value="17">Frederick Law Olmsted, “The Production of Wine in California: Particularly Referring to the Establishment of the Buena Vista Vinicultural Society, 1865,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, The Papers of Frederick Law Olmsted, v. 5 (Baltimore: Johns Hopkins University Press, 1990), 332–39.</li>
+  			<li class="citation" value="18">Ranney, “Introduction,” 31.</li>
+
+
+
+</ol>
+	</div>
+</div>
+
+
+
+</body>
+	</html>
