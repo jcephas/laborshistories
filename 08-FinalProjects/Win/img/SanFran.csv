@@ -1,17 +1,19 @@
-type,name,year,digital,creator,owner,size_staff,revenue,monthly_creators,monthly_users,total_content,reg_users,traffic,bounce_rate,pages_visited,visit_duration,location,address,lat,long,tag
-platform,Wikipedia,2001,TRUE,"Jimmy Wales, Larry Sanger",Wikimedia,700,75000000,312022,45239107,57810955,106958204,4.7,59.86,2.99,0:03:54,San Francisco,"1 Montgomery St Suite 1600, San Francisco, CA 94104",37.78925119,-122.4022358,
-platform,Twitter,2006,TRUE,"Jack Dorsey, Noah Glass, Biz Stone, Evan Williams",Twitter,,,,556000000,,,6.6,32.65,9.67,0:10:32,San Francisco,"Market Square, 1355 Market St suite 900, San Francisco, CA 94103, United States",37.77653567,-122.4169673,Elon
-platform,Twitch,2011,TRUE,"Justin Kan, Emmett Shear",Amazon,,2800000000,,7600000,,45000000,1.1,28.87,4.12,0:09:03,San Francisco,"350 Bush St 2nd floor, San Francisco, CA 94104",37.79099091,-122.4033588,Amazon
-platform,Instagram,2010,TRUE,"Kevin Systrom, Mike Krieger",Meta,,,,,,,6.4,34.76,10.85,0:08:09,San Francisco,"181 Fremont St. San Francisco, CA 94105, USA",37.78961294,-122.3954568,Meta
-platform,Reddit,2005,TRUE,"Steve Huffman, Alexis Ohanian",Advance,,,,,,,1.7,37.46,6.32,0:08:45,San Francisco,"420 Taylor St, San Francisco, CA 94102, USA",37.77563426,-122.4180243,CondeNast
-platform,Pinterest,,FALSE,,,,,,,,,1.1,,,,San Francisco,"651 Brannan St, San Francisco, CA 94107, USA",37.77524117,-122.399756,
-platform,WordPress,,FALSE,,,,,,,,,0.3,,,,San Francisco,"60 29th St 343, San Francisco, California, 94110, United States",37.74416753,-122.4214451,
-product,Unity,,FALSE,,,,,,,,,0.014,,,,San Francisco,"30 3rd Street,San Francisco,California,94103",37.7871082,-122.4034361,
-platform,Uber,,FALSE,,,,,,,,,0.061,,,,San Francisco,"1455 Market St #400, San Francisco, CA 94103, USA",37.76932025,-122.3889026,
-platform,Lyft,,FALSE,,,,,,,,,0.017,,,,San Francisco,"185 Berry St #5000, San Francisco, CA 94107, USA",37.77649426,-122.391917,
-platform,Discord,,FALSE,,,,,,,,,1.1,,,,San Francisco,"444 De Haro St Suite 200, San Francisco, CA 94107, United States",37.76458574,-122.4018518,
-platform,DoorDash,,FALSE,,,,,,,,,0.0737,,,,San Francisco,"116 New Montgomery St, San Francisco, CA 94105, United States",37.78714856,-122.4004476,
-product,Zynga,,FALSE,,,,,,,,,0.0066,,,,San Francisco,"699 Eighth Street San Francisco, CA 94103 United States",37.77035862,-122.4004937,
-platform,NextDoor,,FALSE,,,,,,,,,0.178,,,,San Francisco,"400 Taylor St, San Francisco, CA 94102",37.78642222,-122.4111279,
-platform,Instacart,,FALSE,,,,,,,,,0.0343,,,,San Francisco,"50 Beale St #600, San Francisco, CA 94105",37.79127651,-122.3963799,
-platform,Yahoo,,FALSE,,,,,,,,,3.4,,,,San Francisco,"110 5th St, San Francisco, CA 94103",37.78209985,-122.4059672,
+type,name,year,info,creator,owner,size_staff,revenue,monthly_creators,monthly_users,total_content,reg_users,traffic,play_downloads,play_reviews,bounce_rate,pages_visited,visit_duration,location,address,lat,long,tag
+platform,Wikipedia,2001,an online encyclopedia with user-generated entries.,"Jimmy Wales, Larry Sanger",Wikimedia,700,75000000,312022,45239107,57810955,106958204,4.7,50,0.687,59.86,2.99,0:03:54,San Francisco,"1 Montgomery St Suite 1600, San Francisco, CA 94104",37.78925119,-122.4022358,
+platform,Twitter,2006,a social media platform where users post short text messages.,"Jack Dorsey, Noah Glass, Biz Stone, Evan Williams",Twitter,,,,556000000,,,6.6,1000,21,32.65,9.67,0:10:32,San Francisco,"Market Square, 1355 Market St suite 900, San Francisco, CA 94103, United States",37.77653567,-122.4169673,Elon
+platform,Twitch,2011,a streaming platform where users live broadcast video.,"Justin Kan, Emmett Shear",Amazon,,2800000000,,7600000,,45000000,1.1,100,5.2,28.87,4.12,0:09:03,San Francisco,"350 Bush St 2nd floor, San Francisco, CA 94104",37.79099091,-122.4033588,Amazon
+platform,Instagram,2010,a social media platform where users post images.,"Kevin Systrom, Mike Krieger",Meta,,,,,,,6.4,1000,146,34.76,10.85,0:08:09,San Francisco,"181 Fremont St. San Francisco, CA 94105, USA",37.78961294,-122.3954568,Meta
+platform,Reddit,2005,an online forum where users post within user-created communities.,"Steve Huffman, Alexis Ohanian",Advance,,,,,,,1.7,100,2.81,37.46,6.32,0:08:45,San Francisco,"420 Taylor St, San Francisco, CA 94102, USA",37.77563426,-122.4180243,CondeNast
+platform,Pinterest,,an image collection website where users can create boards from online images.,,,,,,,,,1.1,500,9.85,,6.25,,San Francisco,"651 Brannan St, San Francisco, CA 94107, USA",37.77524117,-122.399756,
+product,Unity,,"a game-design software that allows users to create their own video games, including many popular titles.",,,,,,,,,0.014,,,,7.41,,San Francisco,"30 3rd Street,San Francisco,California,94103",37.7871082,-122.4034361,
+platform,Uber,,a rideshare platform that connects drivers and passengers.,,,,,,,,,0.061,500,11.8,,3.67,,San Francisco,"1455 Market St #400, San Francisco, CA 94103, USA",37.76932025,-122.3889026,
+platform,Lyft,,a rideshare platform that connects drivers and passengers.,,,,,,,,,0.017,50,0.324,,3.8,,San Francisco,"185 Berry St #5000, San Francisco, CA 94107, USA",37.77649426,-122.391917,
+platform,Discord,,a social media platform with text and audio chat features.,,,,,,,,,1.1,100,5.25,,7.14,,San Francisco,"444 De Haro St Suite 200, San Francisco, CA 94107, United States",37.76458574,-122.4018518,
+platform,DoorDash,,"a food delivery service that connects restaurants, drivers, and customers.",,,,,,,,,0.0737,50,3.56,,5.24,,San Francisco,"116 New Montgomery St, San Francisco, CA 94105, United States",37.78714856,-122.4004476,
+product,Zynga,,"a game company known for its social games like Farmville, Words With Friends, and Poker.",,,,,,,,,0.0066,,,,4.3,,San Francisco,"699 Eighth Street San Francisco, CA 94103 United States",37.77035862,-122.4004937,
+platform,NextDoor,,a social media platform based on a user's physical location.,,,,,,,,,0.178,100,288,,2.72,,San Francisco,"400 Taylor St, San Francisco, CA 94102",37.78642222,-122.4111279,
+platform,Instacart,,a food delivery service that allows for grocery delivery.,,,,,,,,,0.0343,10,0.239,,6.96,,San Francisco,"50 Beale St #600, San Francisco, CA 94105",37.79127651,-122.3963799,
+platform,Yahoo,,a search engine with multiple other features such as crowd-sourced question answering.,,,,,,,,,3.4,,,,5.56,,San Francisco,"110 5th St, San Francisco, CA 94103",37.78209985,-122.4059672,
+platform,Yelp,,a review platform where users can rate businesses.,,,,,,,,,0.135,50,0.548,,5.18,,San Francisco,"140 New Montgomery St 19th floor, San Francisco, CA 94105",37.78666387,-122.4000423,
+platform,IndieGogo,,a crowdfunding platform that allows users to get or give funding for projects.,,,,,,,,,0.0056,,,,3.01,,San Francisco,"965 Mission Street Sixth Floor San Francisco, CA 94103 USA",37.78151114,-122.4075325,
+platform,Airbnb,,a rental platform that allows users to list and book rooms.,,,,,,,,,0.0983,100,1.44,,18.85,,San Francisco,"888 Brannan St, San Francisco, CA 94103",37.77165183,-122.4053769,

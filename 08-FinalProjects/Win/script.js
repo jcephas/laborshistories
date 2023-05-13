@@ -8,66 +8,316 @@ const colorGray = rootStyles.getPropertyValue('--color-gray').trim();
 
 // tab switcher
 document.addEventListener("DOMContentLoaded", function () {
-  // tabs
-  const menuItems = document.querySelectorAll(".navmenu");
+    
+    // tabs
+    const menuItems = document.querySelectorAll(".navmenu");
+    const mapMenuItems = document.querySelectorAll(".mapmenu");
 
-  // click listener
-  menuItems.forEach((button) => {
-    button.addEventListener("click", function () {
-      const targetDiv = button.getAttribute("data-target");
+    // click listener
+    menuItems.forEach((button) => {
+        button.addEventListener("click", function () {
+            const targetDiv = button.getAttribute("data-target");
 
-      // hide all divs
-      const allDivs = document.querySelectorAll(".section");
-      allDivs.forEach((div) => {
-        div.style.display = "none";
-      });
+            // hide all divs
+            const allDivs = document.querySelectorAll(".section");
+            allDivs.forEach((div) => {
+                div.style.display = "none";
+            });
 
-      // show target div
-      document.querySelector(targetDiv).style.display = "block";
-      menuItems.forEach((button) => {
-        button.classList.remove("activemenu");
-      });
-      button.classList.add("activemenu");
+            // show target div
+            document.querySelector(targetDiv).style.display = "block";
+            menuItems.forEach((button) => {
+                button.classList.remove("activemenu");
+            });
+        button.classList.add("activemenu");
+        });
     });
-  });
+    
+    // click listener for map menu
+    mapMenuItems.forEach((button) => {
+        button.addEventListener("click", function () {
+            mapMenuItems.forEach((button) => {
+                button.classList.remove("activemenu");
+            });
+        button.classList.add("activemenu");
+        });
+    });
 
-  // show intro
-  document.querySelector("#map").style.display = "block";
-  menuItems[1].classList.add("activemenu");
+    // show intro
+    document.querySelector("#intro").style.display = "block";
+    menuItems[0].classList.add("activemenu");
+    mapMenuItems[0].classList.add("activemenu");
 });
 
 
 
 
-// map
-document.addEventListener("DOMContentLoaded", function () {
-    
+// bouncing balls
     // canvas
-    var width = 800,
-        height = 800;
+    var ballDiv = d3.select("#introcontainer"),
+        ballDivNode = ballDiv.node();
+    var ballWidth = ballDivNode.getBoundingClientRect().width,
+        ballHeight = ballDivNode.getBoundingClientRect().height;
+    var ballsvg = d3
+        .select("#introcontainer")
+        .append("svg")
+        .attr("width", ballWidth)
+        .attr("height", ballHeight)
+        .attr("id", "introballs")
+        .attr("viewBox", `0 0 ${ballWidth} ${ballHeight}`)
+        .attr("preserveAspectRatio", "xMidYMid meet");
 
-    var svg = d3
-      .select("#mapbox")
-      .append("svg")
-      .attr("viewBox", `0 0 ${width} ${height}`)
-      .attr("preserveAspectRatio", "xMidYMid meet");
-    
-    svg.append("rect")
-        .attr("width", width)
-        .attr("height", height)
-        .style("stroke", "black")
-        .style("fill", "none")
-        .style("stroke-width", 2);
+    // import data
+    Promise
+        .all([
+        d3.csv("img/SanFran.csv"), 
+        d3.csv("img/SiliconValley.csv"), 
+        d3.csv("img/NewYork.csv")
+        ])
+        .then(function (datasets) {
+            var data = [];
+            var idCounter = 0;
+            var multi = 1;
 
-    // sf projection
-    var projection = d3.geoMercator()
+        // place balls    
+            datasets.forEach(function (dataset, index) {
+                dataset.forEach(function (d) {
+                    d.x = Math.random() * ballWidth;
+                    d.vx = Math.random() * 2;
+                    d.y = Math.random() * ballHeight;
+                    d.vy = Math.random() * 2;
+                    d.radius = index === 0 ? d.traffic * multi * 10 : index === 1 ? d.traffic * multi : index === 2 ? d.traffic * multi * 100 : 0;
+                    d.id = idCounter++;
+                    d.color = index === 0 ? colorTeal : index === 1 ? colorPink : index === 2 ? colorDawn : colorGray;
+                    data.push(d);
+                });
+            });
+
+        // circles from data
+        var ballCircles = ballsvg
+            .selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .classed("dataBall", true)
+            .attr("r", function(d) {
+                return d.radius;
+            })
+            .style("fill", function(d) {
+                return d.color;
+            })
+            .call(d3.drag()
+                  .on("start", dragStart)
+                  .on("drag", dragged)
+                  .on("end", dragEnd));
+
+        // labels from data
+        var ballLabels = ballsvg
+            .selectAll(null)
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("text-anchor", "middle")
+            .attr("font-size", "1em")
+            .append("tspan")
+            .text(function(d) {
+            return d.name;
+        });
+
+        // bigger click area for small circles
+        var circlesClick = ballsvg
+            .selectAll(null)
+            .data(data)
+            .enter()
+            .append("circle")
+            .classed("clickBall", true)
+            .attr("r", 25)
+            .style("opacity",0)
+            .call(d3.drag()
+              .on("start", dragStart)
+              .on("drag", dragged)
+              .on("end", dragEnd));
+
+        // ball movement simulation definition
+        var simulation = d3
+            .forceSimulation(data)
+            .alphaMin(0)
+            .velocityDecay(0)
+            .force("ambient", d3.forceManyBody().strength(.1))
+            .force("collision", d3.forceCollide().radius(function(d) {
+              return d.radius;
+            }))
+            .force("attract", attractForce(""))
+            .on("tick", ticktockBall);    
+
+        // movement rules    
+        const ballSpeedLimitValue = 2;    
+        function speedLimit(d) {
+          if (Math.abs(d.vx) > ballSpeedLimitValue) {
+            d.vx = (d.vx > 0 ? ballSpeedLimitValue : -ballSpeedLimitValue);
+          }
+          if (Math.abs(d.vy) > ballSpeedLimitValue) {
+            d.vy = (d.vy > 0 ? ballSpeedLimitValue : -ballSpeedLimitValue);
+          }
+        }  
+
+        // time    
+        function ticktockBall() {
+        ballCircles
+            .attr("cx", function(d) {
+              if (d !== dragging) {
+                if (d.x - d.radius <= 0 || d.x + d.radius >= ballWidth) {
+                  d.vx = -d.vx;
+                }
+                speedLimit(d);
+                d.x += d.vx;
+                d.x = Math.max(d.radius, Math.min(ballWidth - d.radius, d.x));
+              }
+            return d.x;
+            })
+            .attr("cy", function(d) {
+              if (d !== dragging) {
+                if (d.y - d.radius <= 0 || d.y + d.radius >= ballHeight) {
+                  d.vy = -d.vy;
+                }
+               speedLimit(d);
+                d.y += d.vy;
+                d.y = Math.max(d.radius, Math.min(ballHeight - d.radius, d.y));
+              }
+                return d.y;
+            })
+
+        ballLabels
+            .classed("label", true)
+            .attr("x", function(d) {
+              return d.x;
+            })
+            .attr("y", function(d) {
+              return d.y;
+            });
+
+        circlesClick
+            .attr("cx", function(d) {
+              return d.x;
+            })
+            .attr("cy", function(d) {
+              return d.y;
+            });
+        }
+
+        //drag interact
+        var dragging = null;
+        function dragStart(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+            d.lastX = d.x;
+            d.lastY = d.y;
+            dragging = d;
+        }
+        function dragged(event, d) {
+          d.fx = event.x;
+          d.fy = event.y;
+          d.vx = event.x - d.lastX;
+          d.vy = event.y - d.lastY;
+          d.lastX = event.x;
+          d.lastY = event.y;
+        }
+        function dragEnd(event, d) {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+          dragging = null;
+        }    
+
+        //attract
+        function attractForce(tag) {
+            let strength = 1;
+            let minDistance = 1;
+            function force(alpha) {
+                if (dragging) {
+                  for (const d of nodes) {
+                    if (d.tag !== "" && d.tag === dragging.tag && d !== dragging) {
+                      const dx = dragging.x - d.x;
+                      const dy = dragging.y - d.y;
+                      const distance = Math.sqrt(dx * dx + dy * dy);
+                      if (distance > minDistance) {
+                        d.vx += (dx / distance) * strength * alpha;
+                        d.vy += (dy / distance) * strength * alpha;
+                      }
+                    }
+                  }
+                }
+            }
+            force.initialize = function(_nodes) {
+                nodes = _nodes;
+            };
+                let nodes;
+                return force;
+        }
+    });
+    // toggles
+    function toggleText() {
+        var textVisDiv = d3.selectAll("#introtext, #intronotes");
+        var currentDisplay = textVisDiv.style("display");
+        if (currentDisplay == "none") {
+            textVisDiv.style("display", "block");
+        } else {
+            textVisDiv.style("display", "none");
+        }
+    };
+
+    function toggleBalls() {
+        var ballsVisDiv = d3.select("#introballs");
+        var currentDisplay = ballsVisDiv.style("display");
+        if (currentDisplay == "none") {
+            ballsVisDiv.style("display", "block");
+        } else {
+            ballsVisDiv.style("display", "none");
+        }
+    };
+
+
+
+
+// map
+    var mapWidth = 800,
+        mapHeight = 800;
+    let ticktockInterval;
+
+// projections
+    var sfProjection = d3.geoMercator()
         .center([-122.404,37.778])
         .scale(1000000)
-        .translate([width / 2, height / 2]);
+        .translate([mapWidth / 2, mapHeight / 2]);
+    var nyProjection = d3.geoMercator()
+        .center([-73.993,40.732])
+        .scale(400000)
+        .translate([mapWidth / 2, mapHeight / 2]);
+    var svProjection = d3.geoMercator()
+        .center([-122.176,37.481])
+        .scale(65000)
+        .translate([mapWidth / 2, mapHeight / 2]);
+
+// draw map
+function drawMap(csvFile, geojsonFile, projection, trafficMultiplier, bgLineWeight, yLabelLocation) {
+    
+    // remove old map
+    d3.selectAll("#mapbox").selectAll("*").remove();
+    d3.select("div.mapElement").remove();
+    if(ticktockInterval) clearInterval(ticktockInterval);
+
+    // canvas
+    var mapsvg = d3
+      .select("#mapbox")
+      .append("svg")
+      .attr("viewBox", `0 0 ${mapWidth} ${mapHeight}`)
+      .attr("preserveAspectRatio", "xMidYMid meet");
+    
     var path = d3.geoPath().projection(projection);
     
     // import data
-    d3.csv("img/SanFran.csv")
+    d3.csv(csvFile)
         .then(function (data) {
         data.forEach(function (d) {
             d.lat = +d.lat;
@@ -77,25 +327,26 @@ document.addEventListener("DOMContentLoaded", function () {
             d.x = coords[0];
             d.y = coords[1];
             d.radius = 10;
-            d.isChanged = false;
-            d.influenceRadius = 20 * d.traffic;
+            d.isChanged = false; // for label colors
+            d.influenceRadius = trafficMultiplier * d.traffic;
         });   
         
         // street background
-        d3.json("img/SanFran.geojson")
+        d3.json(geojsonFile)
             .then(function (geojson){
-            svg.selectAll(".streetbg")
+            mapsvg.selectAll(".streetbg")
                 .data(geojson.features)
                 .enter()
                 .append("path")
                 .attr("d", path)
                 .attr("stroke", colorPink)
                 .attr("fill", "none")
-                .attr("stroke-width", 1.5)
+                .attr("stroke-width", bgLineWeight)
                 .classed("streetbg", true);
 
-        // influence circles
-        var influenceCircles = svg
+
+        // influence circles (gravity effect)
+        var influenceCircles = mapsvg
             .selectAll(".influenceCircle")
             .data(data)
             .enter()
@@ -105,12 +356,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 return d.influenceRadius;
             })
             .style("fill", colorDawn)
-            .style("opacity", 0.3)
+            .style("opacity", 0.2)
             .attr("cx", function(d) { return d.x; })
             .attr("cy", function(d) { return d.y; });    
             
         // circles from data
-            var circles = svg
+            var mapCircles = mapsvg
                 .selectAll(".dataBall")
                 .data(data)
                 .enter()
@@ -124,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .attr("cy", function(d) { return d.y; });
 
         // labels from data
-            var labels = svg
+            var mapLabels = mapsvg
                 .selectAll(null)
                 .data(data)
                 .enter()
@@ -133,18 +384,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 .attr("font-size", "1em")
                 .attr("fill", function (d) { return d.isChanged ? colorTeal : colorDawn; })
                 .attr("x", function(d) { return d.x + d.radius * 1.25; })
-                .attr("y", function(d) { return d.y + 16; })
+                .attr("y", function(d) { return d.y + yLabelLocation; })
                 .text(function (d) {
                     return d.name;
                 });
 
-        // launch arrow
-        var arrow = svg.append("line")
-            .attr("stroke", colorPink)
+        // launch arrow definition
+        var arrow = mapsvg
+            .append("line")
+            .attr("stroke", colorTeal)
             .attr("stroke-width", 3)
             .attr("marker-end", "url(#arrowhead)")
-            .style("visibility", "hidden");
-        svg.append("defs")
+            .classed("arrow", true);
+            
+        mapsvg
+            .append("defs")
             .append("marker")
             .attr("id", "arrowhead")
             .attr("viewBox", "0 0 10 10")
@@ -152,13 +406,13 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("refY", 5)
             .attr("markerWidth", 6)
             .attr("markerHeight", 6)
-            .attr("fill", colorPink)
+            .attr("fill", colorTeal)
             .attr("orient", "auto")
             .append("path")
             .attr("d", "M 0 0 L 10 5 L 0 10 z");
-            
+        
+        // launch arrow updater    
         function updateArrow(mouseX,mouseY) {
-            var influencerBall = d3.select("circle.influencerBall").datum();
             var arrowLength = 5;
             var shootingData = getShootingData(mouseX, mouseY, influencerBall);
             var arrowEndX = influencerBall.x + shootingData.unitVectorX * -shootingData.shootingSpeed * arrowLength;
@@ -169,20 +423,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 .attr("y1", influencerBall.y)
                 .attr("x2", arrowEndX)
                 .attr("y2", arrowEndY)
-                .style("visibility", "visible")
-                .classed("arrow", true);
+                .style("opacity", .5);
         }
         
-        // user ball
-        var influencer = svg.append("circle")
-            .attr("r", 20)
-            .style("fill", colorTeal)
-            .classed("influencerBall", true)
-            .attr("cx", Math.random() * width)
-            .attr("cy", Math.random() * height)
-            .datum({vx: 0, vy: 0});
+        // interactive 'influencer' cue ball
+        let influencer = d3.select("circle.influencerBall")    
+
+        if (influencer.empty()) {
+            influencer = mapsvg
+                .append("circle")
+                .attr("r", 20)
+                .style("fill", colorTeal)
+                .classed("influencerBall", true)
+                .attr("cx", Math.random() * mapWidth)
+                .attr("cy", Math.random() * mapHeight)
+                .datum({vx: 0, vy: 0});
+            var influencerBall = d3.select("circle.influencerBall").datum();
+        };
         
-        // counters
+        // collision & click counter
         var clickCount = 0;
         var collisionCount = 0;
         function incrementClick() {
@@ -193,26 +452,46 @@ document.addEventListener("DOMContentLoaded", function () {
           collisionCount++;
           updateCounter();
         }
-        var counterText = svg.append("text")
-          .attr("x", width - 20)
-          .attr("y", height - 20)
-          .attr("text-anchor", "end")
-          .style("fill", colorTeal)
-          .style("font-size", "20px");
+        var counterText = mapsvg
+            .append("text")
+            .attr("x", mapWidth - 20)
+            .attr("y", mapHeight - 20)
+            .attr("text-anchor", "end")
+            .style("fill", colorTeal)
+            .style("font-size", "20px");
         function updateCounter() {
             var ratio = Math.round(collisionCount / clickCount * 100) / 100;
             counterText.text(collisionCount + " collisions / " + clickCount + " clicks = " + ratio + " engagement score");
         }
+           
+        // boundary box
+        mapsvg.append("rect")
+            .attr("width", mapWidth)
+            .attr("height", mapHeight)
+            .style("stroke", colorPink)
+            .style("fill", "none")
+            .style("stroke-width", 5);    
             
-        // tooltip   
+        // tooltips   
         function generateTooltipText(d) {
             let textLines = [];
 
-            if (d.traffic) {
-                textLines.push(`${d.name} has ${d.traffic} billion users a day.`);
+            if (d.info) {
+                textLines.push(`${d.name} is ${d.info}`);
             }
-            if (d.pages_visited) {
-                textLines.push(`Users visit an average of ${d.pages_visited} pages.`);
+            if (d.traffic) {
+                if (d.traffic < 1) {
+                    textLines.push(`Its website has ${Math.round(d.traffic * 1000) / 10} million visits a day with users visting about ${Math.round(d.pages_visited * 10) / 10} pages.`);
+                } else {
+                textLines.push(`Its website has ${Math.round(d.traffic * 10) / 10} billion visits a day with users visting about ${Math.round(d.pages_visited * 10) / 10} pages.`);
+                }
+            }
+            if (d.play_downloads) {
+                if (d.play_downloads >= 1000) {
+                textLines.push(`The ${d.name} app has over ${d.play_downloads / 1000} billion downloads on Google Play with ${Math.round(d.play_reviews * 10) / 10} million reviews.`);
+                } else {
+                textLines.push(`The ${d.name} app has over ${d.play_downloads} million downloads on Google Play with ${Math.round(d.play_reviews * 10) / 10} million reviews.`);    
+                }
             }
 
             return textLines.join('<br/>');
@@ -234,14 +513,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // simulation        
             
         // movement rules
-        const speedLimitValue = 20;
+        const mapSpeedLimitValue = 20;
         const speedThreshold = 2
         function speedLimit(d) {
-            if (Math.abs(d.vx) > speedLimitValue) {
-                d.vx = (d.vx > 0 ? speedLimitValue : -speedLimitValue);
+            if (Math.abs(d.vx) > mapSpeedLimitValue) {
+                d.vx = (d.vx > 0 ? mapSpeedLimitValue : -mapSpeedLimitValue);
             }
-            if (Math.abs(d.vy) > speedLimitValue) {
-                d.vy = (d.vy > 0 ? speedLimitValue : -speedLimitValue);
+            if (Math.abs(d.vy) > mapSpeedLimitValue) {
+                d.vy = (d.vy > 0 ? mapSpeedLimitValue : -mapSpeedLimitValue);
             }
         }
         function ballMoving(ball, threshold) {
@@ -257,9 +536,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var unitVectorX = dx / length;
             var unitVectorY = dy / length;
 
-            var maxSpeed = speedLimitValue;
+            var maxSpeed = mapSpeedLimitValue;
             var minSpeed = .5;
-            var diagonal = Math.sqrt(width * width + height * height);
+            var diagonal = Math.sqrt(mapWidth * mapWidth + mapHeight * mapHeight);
         var distanceRatio = 1 - (length / diagonal);
         var shootingSpeed = minSpeed + (maxSpeed - minSpeed) * distanceRatio;
 
@@ -271,11 +550,15 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         // time
-        d3.interval(ticktock, 20);
+        ticktockInterval = d3.interval(ticktock, 20);
         let arrowTimeout;
+        let collisionLast = 0;
+        let collisionTimeout = 100;
+            
         function ticktock() {
-            var influencerBall = d3.select("circle.influencerBall").datum();
                 speedLimit(influencerBall);
+            
+            // move ball
                 influencerBall.x = +influencer.attr("cx");
                 influencerBall.y = +influencer.attr("cy");
                 influencerBall.vx *= 0.99;
@@ -283,29 +566,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 influencerBall.x += influencerBall.vx;
                 influencerBall.y += influencerBall.vy;
 
-                if (influencerBall.x - 10 <= 0 || influencerBall.x + 10 >= width) {
+            // bounce ball of walls
+                if (influencerBall.x - 10 <= 0 || influencerBall.x + 10 >= mapWidth) {
                     influencerBall.vx = -influencerBall.vx;
                     influencerBall.x += influencerBall.vx * 2;
                 }
-                if (influencerBall.y - 10 <= 0 || influencerBall.y + 10 >= height) {
+                if (influencerBall.y - 10 <= 0 || influencerBall.y + 10 >= mapHeight) {
                     influencerBall.vy = -influencerBall.vy;
                     influencerBall.y += influencerBall.vy * 2;
                 };
             
-                // toggle arrow
-                var arrow = d3.select("line.arrow");
+            // toggle arrow
                 if (ballMoving(influencerBall, speedThreshold)) {
                     clearTimeout(arrowTimeout);
-                    arrow.style("opacity", 0);
+                    arrow.style("display", "none");
                 } else {
                     arrowTimeout = setTimeout(() => {
-                        arrow.style("opacity", 1);
+                    arrow.style("display", "block");
                     }, 200);
-                };
+                }
                 updateArrow(currentMouseCoords.x, currentMouseCoords.y);
 
-                // collisions
-                circles.each(function (d) {
+            // collisions with other balls
+                mapCircles.each(function (d) {
                     var dx = d.x - influencerBall.x;
                     var dy = d.y - influencerBall.y;
                     var distance = Math.sqrt(dx * dx + dy * dy);
@@ -319,13 +602,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         var ay = (targetY - d.y) + 5;
                         influencerBall.vx -= ax;
                         influencerBall.vy -= ay;
-                        incrementCollision();
                         d.isChanged = true;
                         updateLabels();
+                        var currentTime = Date.now();
+                        if (currentTime - collisionLast > collisionTimeout) {
+                            incrementCollision();
+                            collisionLast = currentTime;
+                        }
                     };
 
                     
-                // gravity effect
+            // gravity effect
                 var gravityDistance = d.influenceRadius + 10;
                 if (distance < gravityDistance) {
                     var force = -.2;
@@ -336,23 +623,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
                 });
             
-                influencer
-                    .attr("cx", influencerBall.x)
-                    .attr("cy", influencerBall.y);
-                if (arrow.style("opacity") == 1) {
-                    updateArrow(currentMouseCoords.x, currentMouseCoords.y);
-                }
+            // update svg
+            influencer
+                .attr("cx", function(d) { return d.x = influencerBall.x; })
+                .attr("cy", function(d) { return d.y = influencerBall.y; });
+ 
         };
             
-        // label color    
+        // label color changer   
         function updateLabels() {
-            labels
+            mapLabels
                 .attr("fill", function (d) {
                     return d.isChanged ? colorTeal : colorDawn;
                 });
         };
         function resetLabels() {
-            labels.each(function (d) {
+            mapLabels.each(function (d) {
                 d.isChanged = false;
                 d3.select(this).attr("fill", colorDawn);
             });
@@ -360,12 +646,11 @@ document.addEventListener("DOMContentLoaded", function () {
             
         // shoot function
         function shoot(event) {
-            var influencerBall = d3.select("circle.influencerBall").datum();
-
+            
             if (event.defaultPrevented) return;
-            var rect = svg.node().getBoundingClientRect();
-            var mouseX = (event.clientX - rect.left) * (width / rect.width);
-            var mouseY = (event.clientY - rect.top) * (height / rect.height);
+            var rect = mapsvg.node().getBoundingClientRect();
+            var mouseX = (event.clientX - rect.left) * (mapWidth / rect.width);
+            var mouseY = (event.clientY - rect.top) * (mapHeight / rect.height);
             var shootingData = getShootingData(mouseX, mouseY, influencerBall);
 
             influencerBall.vx = shootingData.unitVectorX * -shootingData.shootingSpeed;
@@ -374,19 +659,19 @@ document.addEventListener("DOMContentLoaded", function () {
             incrementClick();
         };
 
-        // event listeners
+        // event listeners for shoot and arrow
         var currentMouseCoords = { x: 0, y: 0 };
-        svg.on("click", function (event) {
-            var influencerBall = d3.select("circle.influencerBall").datum();
+        mapsvg.on("click", function (event) {
+            
             if (ballMoving(influencerBall, speedThreshold)) {
                 return;
             };
             resetLabels();
             shoot(event);
         });
-        svg.on("mousemove", function (event) {
-            var rect = svg.node().getBoundingClientRect();
-            var viewBox = svg.attr("viewBox").split(" ");
+        mapsvg.on("mousemove", function (event) {
+            var rect = mapsvg.node().getBoundingClientRect();
+            var viewBox = mapsvg.attr("viewBox").split(" ");
             var viewBoxX = parseFloat(viewBox[0]);
             var viewBoxY = parseFloat(viewBox[1]);
             var viewBoxWidth = parseFloat(viewBox[2]);
@@ -400,7 +685,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
             
         // tooltip listeners    
-        circles.on("mouseover", function (event, d) {
+        mapCircles.on("mouseover", function (event, d) {
             tooltip.html(generateTooltipText(d))
                 .style("visibility", "visible");
         })
@@ -427,4 +712,4 @@ document.addEventListener("DOMContentLoaded", function () {
             
         });
     });
-});
+};
