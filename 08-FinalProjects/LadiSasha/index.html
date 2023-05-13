@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Final Project Page One</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+        
+</head> 
+
+<style>
+
+    canvas {
+        position: absolute;
+        top: 60px;
+        right: 200px;
+    }
+
+    h1 {            
+        color: white;
+        font-family: oswald;
+        font-size: 50px;
+    }
+
+    h2 {            
+        font-family: oswald;
+        font-size: 35px;
+        padding-top: 35px;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-shadow: 5px;
+        color: #b88c49;
+    }
+
+    h3 {
+        color: white;
+        font-family: oswald italic;
+        font-size: 40px;
+        font-style: italic;
+        padding: 50px;
+
+    }
+
+    h4 {
+        padding: 100px;
+        max-width: 380px;
+        text-align: left;
+        font-family: oswald;        
+        font-size: 14px;
+        color: white;
+    }
+
+    h5 {
+        padding: 100px;
+        max-width: 380px;
+        text-align: left;
+        font-family: oswald;        
+        font-size: 14px;
+        color: black;
+    }
+
+    h6 {
+        font-style: normal;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 80px;
+        padding-right: 50px;
+        font-family: oswald;
+        font-size: 15px;
+    }
+
+    a {
+        color: #b88c49;
+        font-family: oswald;
+        font-style: bold;
+        padding-top: 75px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    a:hover {
+        color: greenyellow;
+        font-family: oswald;
+        padding-top: 75px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    a:link {
+        color: #ff0000;
+        text-decoration: none;
+    }
+
+    p {
+        font-style: normal;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-family: oswald;
+        font-size: 18px;
+    }
+
+    p.italic {
+        font-style: italic;
+    }
+  
+    p.bold {
+        font-style: bold;
+    }    
+
+    .first {
+        background-color: black;
+        height: 700px;
+        padding-top: 75PX;
+        padding-left: 75px;
+        padding-right: 75px;
+        text-align: center;
+        text-decoration-color: white;
+
+         /* background image*/
+        background-image: url("southernoutline.jpg");
+         background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background size: cover;
+    }
+
+    .parallax {
+        /* background image*/
+        background-image: url("GemTheatreMemphisTN.jpg");
+
+        /* set height for the image */
+        min-height: 500px;
+
+        /* Create the parralax effect.*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background size: cover;
+        background-color: black;
+    }
+
+    .second { 
+        padding-top: 100PX;
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 75px;
+        background-color: black;
+        height: 650px
+    }
+
+    .parallax2 {
+        /* Create the parralax effect.*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background size: cover;
+        background-color: black;
+        height: 250px;
+        padding: 30px;
+    }
+    .third {
+        background-color: black;
+        padding-top: 100PX;
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 75px;
+        background-color: black;
+        height: 465px
+    }
+    .parallax3 {
+          /* background image*/
+        background-image: url("StrandTheatreFL.jpg");
+
+        /* set height for the image */
+        min-height: 500px;
+
+        /* Create the parralax effect.*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background size: cover;
+    }
+
+    .fourth {
+        background-color: black;
+        padding-top: 50PX;
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 75px;
+        height: 1400px
+    }
+        .parallax4 {
+          /* background image*/
+        background-image: url("StarTheatreGA.jpg");
+ 
+        /* set height for the image */
+        min-height: 500px;
+
+        /* Create the parralax effect.*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background size: cover;
+        background-color: black;
+        height: 700px;
+    }
+
+    .fifth {
+        background-color: black;
+        padding-top: 50PX;
+        padding-left: 75px;
+        padding-right: 75px;
+        background-color: black;
+        height: 100px
+    }
+
+       
+</style>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/esm/popper.min.js",
+        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.esm.min.js"
+      }
+    }
+    </script>
+    <script type="module">
+      import * as bootstrap from 'bootstrap'
+
+      new bootstrap.Popover(document.getElementById('popoverButton'))
+    </script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" role="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="finalproject.html" aria-current="true">Project Homepage</a></li>
+                <li><a class="dropdown-item" href="finalproject02.html">Theater Dataset</a></li>
+                <li><a class="dropdown-item" href="finalproject03.html">Theater Maps</a></li> 
+                <li><a class="dropdown-item" href="finalproject04.html">Project Reference Page</a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+
+    <div id="section01" class="first">
+        <h1>BLACK SPATIAL PLAY:</h1>
+          <h1>MAPPING SOUTHERN THEATER CULTURE</h1>
+        <h2>Ladi'Sasha Jones</h2>
+        <a href="#section02">Go To The Next Section.</a>
+    </div>
+
+    <div class="parallax">
+        <h4>Figure 1.1: The Gem Theatre in Knoxville.</h4>       
+    </div>
+
+    <div id="section02" class="second">
+        <h2>Black Spatial Play and Southern Urbanity</h2>
+        <p>     The Black American theater is a critical signifier within the landscape of Black cultural and spatial modernity as it indicates the intersecting politics of racialized labor and economic advancement, migratory patterns and the rise of Black urbanity, and shifts in Black public life and institution building. In other words, a study of the history of the Black theater attends to the determining conditions of labor, place, and sociality as foundational to a productive and holistic reading of the built environment. This project examines these intersecting conditions in relation to the burgeoning of the Black theater in the South at the turn of the twentieth century. While at the same time asserting the framework of Black spatial play as a method of historical and theoretical analysis that recovers the cultural project of Black building practice. Here, this cultural project is conceptualized around the architectural strategies of play and performance through the theater and demonstrates the relational orientation of political thought and cultural practice surrounding the built environment.</p>
+
+        <p> Contextualizing theater buildings within the construction of Black spatial play shifts this project away from merely presenting a mapping of these sites as a survey of individual markers. Craig Evan Burton makes a similar claim around cultural landscapes and the importance of expanding our focus from architectural landmarks alone to considering a border representation of a socio-spatial history instead,</p>
+
+        <h6>“Much of the black cultural landscape, however, was shaped by spaces ``designed” by appropriation, custom or use. As a result, such critical components of the physical past and present have remained outside of the analytic view of historians and designers. Often obscured over the course of time, these larger cultural landscapes, defined by customs and events as much as by specific buildings, and represented in text, images and music, offer invaluable insights into the memory of a place.” <a href="finalproject04.html">[1]</a> </h6>
+    </div>
+
+    <div class="parallax2">
+         <h3>"... Black spatial play addresses a landscape of social life in the South that shifts the overwhelming historicity of The Great Migration. It is a writing of the Southern landscape and the people who stayed and continued to build cities in a time of migratory movement..."</h3>
+    </div>
+
+    <div id="section03" class="third">
+        <p>The socio-spatial history taken up in this text centers on the broader regional context of the Southern city in the post-Reconstruction and Jim Crow eras, alongside the significant growth of art workers in the entertainment fields of literary, sonic, and performance arts. Through this lens, Black spatial play addresses a landscape of social life in the South that shifts the overwhelming historicity of The Great Migration. It is a writing of the Southern landscape and the people who stayed and continued to build cities in a time of migratory movement from rural areas instead of the shallow focus on cultural modernity and industrial urbanity being situated in the North and West. As part of an emerging politics of space and place, the sphere of Black theater buildings is situated within Mabel O. Wilson’s viewpoint of the counterpublic as a methodology for studying Black cultural building histories within their segregated urban environments.Peering into the developments and shifts occurring across the rapidly growing and expanding city centers across the South—like the growing business districts and the cycles of displacement and resettlement of Southern enclaves—is essential to understanding Black theaters and their publics.</p>
+        <a href="#section04">Go To The Next Section.</a>
+    </div>
+
+     <div class="parallax3">
+        <h5>Figure 1.2: The Strand Theatre in Jacksonville.</h5>       
+    </div>
+
+     <div id="section04" class="fourth"> <div id="section04" class="fourth">
+        <h2>The Politics of Black Performance </h2>
+        <p> We can seriously take up the politics and economic forces behind play and performance production in attending to theater histories. Specifically, the racialized nature of Black performance work is important to unpack here. Minstrelsy and black-face productions embody sociocultural racialization processes in this country, as they were entrenched across artistic media, from on the stage and early cinema to song and literature. These material foundations of Black performance culture in the U.S. directly reflect the larger conditions and imaging of Black life in the country. Raced circuits of power, commodification, and dispossession shrouded a significant portion of Black performance labor production. There was a racial dynamic and discriminatory economic dynamics for the wage-earning Black art worker. This made independent Black spatial production for Black audiences necessary for the Black art worker. These spaces not only broke from the overwhelming racist framing of Black subjectivity but seeded the beginnings of a cultural industry and ecosystem for Black performers, promoters, business owners, and the like.</p>
+
+        <p>It is important to note that minstrelsy is not a beginning node for this mapping of Black theater history. There is a long tradition of Black arts and letters with its own formal qualities and interior politics that we can position the Black theater within. On the design of Black theater culture during enslavement, Douglas A. Jones Jr. writes,</p>
+
+        <h6>“The medium of cultural performance was crucial to the formation of racial solidarity among slaves because it allowed them to assess their condition in communal and expressive terms. The performative reflections made plain the commonality of their condition and, as such, fostered the racial oness that was necessary for survival, redressive action, and pragmatic problem solving.” <a href="finalproject04.html">[2]</a></h6>
+        <p>Black art as collective action extended beyond the holds of slavery and is part of a more extensive praxis of intellectual thought that is reflected throughout the building of Black enclaves and cultural systems. An argument can be made that Southern theater culture was also connected to shifting the tides of Black public life. In this way, we can connect Black spatial play not only to the construction of the built environment but also to the sociality and lifeworlds of the community. These spaces were marked as centers of racial uplift, nestling the vision for new media narratives and artistic production that are Black-led for Black publics. Black theaters and movie houses were also connected to a larger network of Black institutions that undergird Black urban infrastructure and social welfare. Cara Cadoo describes cinema as a building block of Black city life,</p>
+
+        <h6>“...it is impossible to tell the story of twentieth-century black public life and its institutions without considering the catalytic role of the moving pictures. Shortly after commercial motion picture projectors were introduced to the United States in 1896, black Americans began promoting the technology as a symboland tool for “racial uplift”—the belief that self-help initiatives were the key to collective racial advancement. … Motion picture exhibitions not only raised money for black institutions, they also brought black people together for collective enjoyment. When motion pictures began to shift into colored theaters after 1906, these venues, like churches and lodges, brought black city dwellers together as they staked claim to public space in the Jim Crow city. The popularity of cinema in black life continued to generate new industries and cultural practice.” <a href="finalproject04.html">[3]</a></h6>
+
+        <p>To Cadoo’s point, the larger research project connected to this essay continues to posit how we can trace how the architectural strategies of play and performance are inextricably linked to the Black city and its many enclaves and townships.</p>
+        <a href="#section01">Go To The Top.</a>
+    </div>
+
+<div> <div class="parallax4">
+        <h5>Figure 1.3: Program for the Star Theatre in Savannah, advertising the vaudeville show, "Happy Go Lucky" circa 1929 May 13-19</h5>
+</div>
+
+      <div id="section05" class="fifth">
+        <a href="finalproject02.html">Go To The Next Page: Theater Dataset.</a>
+    </div>
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <span class="page-link">"Previous"</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="finalproject">1</a></li>
+    <li class="page-item"><a class="page-link" href="finalproject02">2</a></li>
+    <li class="page-item"><a class="page-link" href="finalproject03">3</a></li>
+     <li class="page-item"><a class="page-link" href="finalproject04">4</a></li>
+    <li class="page-item">
+      <a class="page-link" href="finalproject02" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</body>
+
+</html>
