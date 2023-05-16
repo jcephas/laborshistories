@@ -178,6 +178,27 @@ button {
         width: calc(100% - 1em);
     } 
 }
+.textsection {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+.parallax {
+    height: 300px;
+    width: calc(100vw - 4em);
+    position: relative;
+    left: 0;
+    background-position: 1em;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+.caption {
+    color:white;
+    margin-left: 1em;
+    padding-top: 1em;
+}
 
 /* map */
 .mapcontainer {
