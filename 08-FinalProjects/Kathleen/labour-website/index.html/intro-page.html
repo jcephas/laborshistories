@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Counter-teleologies of labour and de/ontologising language</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+</head>
+
+<style>
+
+	h1, h3, p{
+		padding-top:20px;
+		padding-left:250px;
+		color:white;
+
+	}
+
+	a {
+		padding-top:20px;
+		padding-left:250px;
+		color:white;
+	}
+
+	a:hover{
+		color:#c90000;
+	}
+
+	.first{
+		background-color:#808080;
+		height:75%;
+	}
+
+	.second{
+		background-color: #4a4a4a;
+		height:150%;
+	}
+
+	.third{
+		background-color: #383838;
+		height: 175%;
+	}
+
+	.fourth{
+		background-color:#212121;
+		height:200%;
+		padding-top: 50px;
+	}
+
+	.parallax01{
+		background-image:url("soil.jpeg");
+		min-height: 100px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#head01{
+		margin-bottom:0px;
+	}
+
+	#head03{
+		margin-bottom:0px;
+	}
+
+	#p01{
+		margin-bottom:0px;
+	}
+
+	#p02{
+		margin-bottom:0px;
+		padding-left:0px;
+		padding-bottom:20px;
+	}
+
+
+	canvas {
+		position:absolute;
+		top: 0px;
+		left:0px;
+	}
+
+</style>
+
+<body>
+	<script>
+		function setup() {
+			createCanvas(200,730);
+				}		
+		function draw() {
+			if(mouseIsPressed) {
+			stroke(0);
+			fill(0);
+				} else {
+			stroke(255);
+			fill(255);
+				}
+			triangle(mouseX,mouseY,mouseX-15,mouseY-15,mouseX+15,mouseY-15);
+			rect(mouseX-15,mouseY-43,30,27)
+			rect(mouseX-5, mouseY-160,10,150)
+			rect(mouseX-10,mouseY-165,20,5)
+				}
+	</script>
+
+	<div id="section01" class="first">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  			<a class="navbar-brand" href="#">(DIS)CONTENTS:</a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbarNav">
+    			<ul class="navbar-nav">
+      				<li class="nav-item active">
+        				<a class="nav-link" href="intro-page.html">HOME <span class="sr-only"></span></a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="page01.html">FROM MARX TO STALIN</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="page02.html">COLLECTIVISATION</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="page03.html">PLATONOV & <em>KOTLOVAN</em></a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="page04.html">LABOUR</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="page05.html">LANGUAGE</a>
+      				</li>
+    			</ul>
+  			</div>
+		</nav>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="section02" class="second">
+		<h1 id="head01"><bold>(COUNTER-)TELEOLOGIES & DE/ONTOLOGISING LANGUAGE:</bold></h1>
+		<h3 id="head03">Andrei Platonov's <em>Kotlovan</em> (1930) in the discursive context of early Stalinist collectivisation</h3>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="section03" class="third">
+		<p id="p01">The early Stalinist period fractured reality between labour and language. In a departure from Marxist and early Soviet thought, Stalinist discourse attributed an ontologically causal role to language integrating it within the socioeconomic base. As a result, the Marxist teleology of labour was discursively replaced by a Stalinist attempt to ontologise language as reality. In what follows, I will investigate how this transformation of the relationship between language and labour occurs, its manifestation in the discourse surrounding early collectivisation, and then move on to examine Andrei Platonov’s novella <em>Kotlovan</em> (‘The Foundation Pit’, 1930) as a response both to the praxis of collectivisation and to the theories of labour and language that attend it. </p>
+	</div>	
+
+	<div class="parallax01"></div>
+
+	<div id="section04" class="fourth">
+		<p id="p02">
+		<a href="page01.html"> Forward to FROM MARX TO STALIN</a> 
+		<a href="bibliography.html"> BIBLIOGRAPHY</a> 
+		<a href="about.html"> About the author </a>
+	</p>
+	</div>	
+
+</body>
+
+</html>	
