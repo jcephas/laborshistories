@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+	<html>
+	<head><title>Olmsted's Dividends - Places</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+	<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+		p{
+			font-family: 'Inter',sans-serif;
+			font-size: 1.5vw;
+			line-height: 133%;
+			margin: 0;
+			margin-top:0%;		
+		}
+
+		p+p{
+			text-indent: 2em;
+			margin:0%;
+
+		}
+
+		h3+p{
+			text-indent: 0em;
+			margin:0%;
+		}
+
+		p.menuitem+p.menuitem{
+			text-indent: 0%;
+			margin-bottom:3%;
+		}
+
+		p+p.citation{
+			text-indent:0%;
+		}
+
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+
+		a:hover{
+			opacity: 50%;
+		}
+
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+
+		a.ref{
+			text-decoration: underline;
+		}
+
+		a.refabstract{
+			text-decoration: underline;
+			color:white;
+		}
+
+		h1{
+			font-family: 'Inter',sans-serif;
+			font-size: 2.5vw;
+			font-weight: 300;
+			margin:0;
+			padding-top: 2%;
+			margin-bottom: 15%;
+		}
+
+		h2{}
+
+		h3{font-family: 'Inter',sans-serif;
+			font-size: 1.8vw;
+			font-weight: 300;
+			margin:0;
+			text-transform:uppercase;
+			padding-top: 1vh;
+			margin-bottom: 2vh;
+		}
+
+		sup, sub{vertical-align: baseline;
+ 		 	position: relative;
+  			top: -0.4em;
+  		}
+
+		select{
+			font-size: 1.2vw;
+			width: 88%;
+			text-indent:0%;
+		}
+
+		img{
+ 			width: 100%;
+    		height: auto;
+    		max-width: 100%;
+
+		}
+
+		img.leftwrap{
+			width:50%;
+			float:left;
+			margin:1% 2% 0% 0%;
+		}
+
+		ol{
+			font-family: 'Inter',sans-serif;
+			font-size: 1vw;
+			margin:0;
+			padding:2%;
+			list-style-position: outside;
+		}
+
+		li{
+			padding-bottom:2vh;
+		}
+
+		li.nostyle {
+  			list-style-type: none;
+		}
+
+
+	.menuitem {
+		text-indent: 0%;
+		font-family: 'Inter',sans-serif;
+		font-size: 1.8vw;
+		font-weight: 300;
+		text-transform:capitalize;
+		margin-bottom:3%;
+	}
+
+	.info {
+		position:absolute;
+		color:rgb(75,75,75);
+		bottom:1%;
+		width:100%;
+		height:auto;
+		text-transform:uppercase;
+	}
+
+	.caption {
+			font-family: 'Inter',sans-serif;
+			font-size: 1.1vh;
+			width: 100%;
+			Margin: auto;
+			padding-top: 0px;
+		}
+
+	.citation{
+		font-family: 'Inter',sans-serif;
+		font-size: 1.5vh;
+		width: 100%;
+		Margin: auto;
+		padding-top: 0px;
+	}
+
+	.inlineimg{
+		padding-bottom:0vh;
+	}
+
+	.inlineimg+.caption{
+		padding-bottom:2vh;
+	}
+
+
+	.abstract{
+		z-index:100;
+		height:10%;
+		position:absolute;
+		top:0%;
+		color:white;
+		background-color:rgb(40, 40, 40);
+		padding-bottom:3vh;
+	}
+
+	.essaytext{
+		background-color: rgb(230, 230, 230);
+		padding-bottom: 3vh;
+	}
+
+	.essaytext, .abstract{
+		
+		position: relative;
+		height:auto;
+		width:96;
+		padding-left:2%;
+  		padding-right:2%;
+	}
+
+	.parallax1{
+		background-image: url("img/OlmstedPortrait.jpg");
+		min-height:100%;
+		max-width:100%;
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -60px;*/
+		/*background-repeat: no-repeat;*/
+		background-size: cover;
+	}
+
+	.parallax2{
+		position:relative;
+		background-image: url("img/Fremont'sOfficeBearCreek.jpg");
+		height:60%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+		background-position-y: -40px;
+		/*background-repeat: no-repeat;*/
+		background-size: cover;
+	}
+
+		.parallax3{
+		position:relative;
+		background-image: url("img/Watkins_IndianCampBearValley_18601_Yale_Crop.jpg");
+		height:75%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:left;
+		
+	}
+
+		.parallax4{
+		position:relative;
+		background-image: url("img/Billings.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		
+	}
+
+/*		For map from Chamberlain*/
+		.parallax5{
+		position:relative;
+		background-image: url("img/Billings.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+	}
+
+		.parallax6{
+		position:relative;
+		background-image: url("img/DudleyField.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+	}
+
+		.parallax7{
+		position:relative;
+		background-image: url("img/Ketchum.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		}
+
+		.parallax8{
+		position:relative;
+		background-image: url("img/Opdyke.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		}
+
+		.parallax9{
+		position:relative;
+		background-image: url("img/Ralston.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*backgroun-position-x: 100px;*/
+/*		background-position-y: -70px;*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:center;
+		}
+
+	#wrapper{}
+
+	#sidebar{
+		position: fixed;
+  		top: 0;
+  		left: 0;
+  		background-color: lightgrey;
+  		width:13.5%;
+  		height:100%;
+  		padding-left: 1.5%;
+	}
+	
+	#documentbar {
+  		position: fixed;
+  		top:0;
+  		left:75%;
+  		right:0;
+  		background-color:snow;
+  		width:23.5;
+  		height:100%;
+  		padding-top:0%;
+  		padding-left: 1.5%;
+  		overflow-y:scroll;
+  	}
+
+  	.docbarheader{
+  		z-index:100;
+  		position:fixed;
+  		left:75%;
+  		top:0%;
+  		width:100%;
+  		height:auto;
+  		margin-top:0vh;
+  		padding-bottom:2vh;
+  		padding-top:1vh;
+  		padding-left:2%;
+  		background-color: snow;
+
+  	}
+
+  	#docs {
+  		position: absolute;
+  		top:5vh;
+  		width:90%;
+  		padding-top:2vh;
+  		padding-left:2%;
+
+  	}
+	
+	#header{}
+
+	#body{
+		position: absolute;
+  		top: 0%;
+  		left: 15%;
+  		width:60%;
+  		height:100%;
+  		margin:0%;
+  		padding-top:0%;
+  		overflow-y: scroll;
+  		overflow-x:hidden;
+  	}
+
+	#colophon{
+		
+		background-color: rgb(190,190,190);
+		border-style: solid;
+		border-width: 1px;
+		border-bottom: none;
+		border-left: none;
+		border-right:none;
+		position: absolute;
+		top:100%;
+		margin-top:0vh;
+		padding-top:5%;
+		padding-left:2%;
+		left:0%;
+		width:100%;
+		padding-bottom:5%;
+
+	}
+
+	#map { position: absolute; left: 0; top: 10%; bottom: 0; height: 90%; width: 100%; }
+
+    .maplibregl-popup {
+
+        min-width: 400px;
+        font: 12px/20px 'Inter', sans-serif;
+    }
+
+
+	</style>
+	</head>
+
+<body>
+
+<div id="sidebar">
+	<h1><a href="index.html">Olmsted's Dividends</a></h1>
+	<p class="menuitem"><select name="Shareholders" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Shareholders -</option><option value="shareholders.html">All Shareholders</option><option value="shareholders.html#Olmsted">Frederick Law Olmsted</option><option value="shareholders.html#Billings">Frederick Billings</option><option value="shareholders.html#Brumagin">Brumagin and Garrison</option><option value="shareholders.html#Field">David Dudley Field</option><option value="shareholders.html#Ketchum">Morris Ketchum</option><option value="shareholders.html#Opdyke">George Opdyke</option><option value="shareholders.html#Ralston">William Ralston</option></select></p>
+	<p class="menuitem"><select name="Places" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Places -</option><option value="places.html">All Places</option></select></p>
+	<p class="menuitem"><p class="menuitem"><select name="Securities" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Securities -</option><option value="securities.html">Mariposa Company</option></select></p></p>
+<div class="info"><p><a href="#colophon">Info</a></p></div>
+</div>
+
+<div id="body">
+	<div class="abstract">
+	<h3>places</h3>
+	<p>Mariposa Company was a corporation controlled by financiers based in New York; the Company owned the title and mineral rights to <a href="img/ChamberlainMap.jpg" target="_blank" class="refabstract">the seventy square-mile land grant called Mariposa Estate</a> <a href="img/LasMariposas_Strobel_1861_full.jpg" target="_blank" class="refabstract">("Las Mariposas" prior to 1848)</a>. The Company and Estate were legally distinct entities. This transcontinental business arrangement enabled speculators to float the Estate's mineral deposits on financial markets. These are the spaces comprising this network of money, land, and labor.</p>
+	</div>
+
+	<div class="essaytext" id="AllPlaces">
+
+	</div>
+	<div id="map"></div>
+	<div id="colophon">
+		<p class="citation">Final project by <a href="mailto:ms9714@princeton.edu" class="ref">Maxwell Smith-Holmes</a> for Architecture's Subjects: Labor's Histories [ARC550]</p>
+		<br>
+		<p class="citation">Last updated May 14, 2023</p>
+	</div>
+</div>
+<div id="documentbar"><h3 class="docbarheader">documents</h3>
+	<div id="docs">
+		<ol>
+			<li class="nostyle"><a href="img/ChamberlainMap.jpg" target="_blank"><img src="img/ChamberlainMap.jpg"><p class="caption">John C. Frémont's ten-square mile "floating" land grant. (Newell D. Chamberlain, The Call of Gold: True Tales on the Gold Road to Yosemite (Mariposa, Calif.: Gazette Press, 1936), iix.)</p></a>
+			<li class="nostyle" id="AguaFria"><a href="img/AguaFria.jpg" target="_blank"><img src="img/AguaFria.jpg"><p class="caption">Agua Frio. Carleton E. Watkins, date unknown. (UC Berkeley, Bancroft Library).</p></a></li>
+			<li class="nostyle"><a href="img/AguaFrioMill.jpg" target="_blank"><img src="img/AguaFrioMill.jpg"><p class="caption">Agua Frio Mill. Carleton E. Watkins, ca. 1861. (Beinecke Rare Book and Manuscript Library, Yale University).</p></a></li>
+			<li class="nostyle" id="BoC"><a href="img/BankOfCaliforniaExterior_LOC.jpg" target="_blank"><img src="img/BankOfCaliforniaExterior_LOC.jpg"><p class="caption">Exterior view of the Bank of California Headquarters #1 (right), San Francisco, c. 1890. (Library of Congress, Historic American Building Survey).</p></a></li>
+			<li class="nostyle"><a href="img/BankOfCaliforniaExterior_Stereo.jpg" target="_blank"><img src="img/BankOfCaliforniaExterior_Stereo.jpg"><p class="caption">Bank of California.</p></a></li>
+			<li class="nostyle"><a href="img/Buildings.jpg" target="_blank"><img src="img/Buildings.jpg"><p class="caption">Unidentified buildings on Mariposa Estate. Carleton E. Watkins, ca. 1861. (Beinecke Rare Book and Manuscript Library, Yale University).</p></a></li>
+			<li class="nostyle" id="Hornitos"><a href="img/HornitosWFMarker_1928.jpg" target="_blank"><img src="img/HornitosWFMarker_1928.jpg"><p class="caption">Wells Fargo Express in Hornitos</p></a></li>
+			<li class="nostyle"><a href="img/wells-fargo_plan.jpg" target="_blank"><img src="img/wells-fargo_plan.jpg"><p class="caption">Typical floor plan for a Wells Fargo Express office like the one in Hornitos.</p></a></li>
+			<li class="nostyle" id="Josephine"><a href="https://collections.library.yale.edu/catalog/2017786" target="_blank"><img src="img/Josephine.jpg"><p class="caption">Josephine Mine. Carleton E. Watkins, <i>Mariposa</i>, ca. 1861. (Beinecke Library, Yale University)</p></a></li>
+			<li class="nostyle" id="SFExchange"><a href="img/MerchantsExchange.jpg" target="_blank"><img src="img/MerchantsExchange.jpg"><p class="caption">San Francisco Merchants Exchange</p></a></li>
+			<li class="nostyle"><a href="img/MexicanArrestesPrinceton.jpg" target="_blank"><img src="img/MexicanArrestesPrinceton.jpg"><p class="caption">Mexican Arrestes at Princeton Mine. Carleton E. Watkins, ca. 1861. (Beinecke Rare Book and Manuscript Library, Yale University).</p></a></li>
+			<li class="nostyle" id="MtOphir"><a href="img/MtOphir.jpg" target="_blank"><img src="img/MtOphir.jpg"><p class="caption">Mt. Ophir. Carleton E. Watkins, ca. 1861. (Beinecke Rare Book and Manuscript Library, Yale University).</p></a></li>
+			<li class="nostyle" id="Oso"><a href="img/OsoMineMill.jpg" target="_blank"><img src="img/OsoMineMill.jpg"><p class="caption">Oso Mine and Mill. Carleton E. Watkins, ca. 1861. (Beinecke Rare Book and Manuscript Library, Yale University).</p></a></li>
+			<li class="nostyle" id="PineTree"><a href="img/PineTreeMine_FLO_papers_p132.jpg" target="_blank"><img src="img/PineTreeMine_FLO_papers_p132.jpg"><p class="caption">Pine Tree Mine.</p></a></li>
+			<li class="nostyle" id="Princeton"><a href="img/PrincetonMill.jpg" target="_blank"><img src="img/PrincetonMill.jpg"><p class="caption">Princeton Mill. Carleton E. Watkins, date unknown. (UC Berkeley, Bancroft Library).</p></a></li>
+			<li class="nostyle" id="WellsFargoSF"><a href="img/WellsFargoExpress_SF.jpg" target="_blank"><img src="img/WellsFargoExpress_SF.jpg"><p class="caption">Wells Fargo Express building in San Francisco's financial district.</p></a></li>
+</ol>
+	</div>
+</div>
+
+ <script>
+var map = new maplibregl.Map({
+container: 'map',
+style: 'https://api.maptiler.com/maps/streets/style.json?key=IbAESQJHU9ATHMcDsLxF',
+center: [-95.946175, 39.833333],
+zoom: 2.5
+});
+ 
+map.on('load', function () {
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#MtOphir">Mount Ophir Mine</a></strong>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.067793, 37.514262] 
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#Princeton" class="ref">Princeton Mine</a></strong><p>Considered on of the most productive mines in all of California during the 1860s. This was in part to the intensive, unsustainable mining done by Tenor Park, the Superintendent prior to Olmsted. In 1862 and 1863 combined, Princeton yielded $2,000,000 of bullion, in 1864, it produced $243,707. There was a large mill at the top of Princeton Mine.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.0490823, 37.50340172]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#Josephine" class="ref">Josephine Mine</a></strong><p>Mine that has been worked through three tunnels. Mr. Kelton, the superintendent of the Josephine Mine beginning in 1858, corrected the reports of Yale geologist Benjamin Silliman.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.1203766, 37.58733382]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#AguaFria" class="ref">Agua Fria Mill<a></strong><p>A small settlement around one of the largest mills in Mariposa Estate.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.018301, 37.484572]
+
+
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#PineTree" class="ref">Pine Tree Mine</a></strong><p>Important mine that is situated directly on the "mother lode". A railroad connected the mine to mills where extracted ore was processed. In 1863, the mine yielded $35,000, in 1864 it yielded $67,949.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.1230114, 37.59506663]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Linda Mine</strong>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-119.9496316, 37.46499016]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Green Gulch Mine</strong><p>Olmsted’s workers intensively explored Green Gulch mine but soon discovered that “rich bunches” of minerals were too far apart to profitably operate the mine. A mill for processing ore was constructed there and then relocated to Mariposa Mine. In 1864, Green Gulch yielded $19,509.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.094877, 37.50857603]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#Oso" class="ref">Oso Mine</a></strong><p>Contained a "very narrow vein of decomposed talcose matter." Olmsted did not work this mine, but locals claimed $400,000 worth of minerals were taken from it years before his arrival.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [ -120.117992, 37.568806]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#Mariposa" class="ref">Mariposa Mine</a></strong><p>The Mariposa Mine extracted gold and quartz from an extensive vein system. By 1864, various pockets of gold had been mined, each yielding between $100 to $15,000 depending on quality. In 1864, Mariposa Mine yielded $84,948. Prior to Olmsted’s tenure, the mine was rented to a Mr. Barnett who was known for paying employees well and always stopping work at supper.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-119.9598823, 37.48381046]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#Hornitos" class="ref">Wells Fargo Express office in Hornitos</a></strong><p>After Olmsted oversaw the grading of various minerals extracted at all the Mariposa mines, the produce was then transported a short distance to the Wells Fargo Express office established in the town of Hornitos in 1854. There, gold powder and bullion would be assayed and processed as deposits.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-120.23831014022649, 37.501767122244544] 
+
+
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Mariposa Company Office</strong><p>Location where Mariposa Company listed its address upon incorporation.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-74.00999080822723, 40.70690597992341]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Mariposa Company (temporary office)</strong><p>Where Olmsted worked while negotiating the bankruptcy between January and April of 1864.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.4200406, 37.79689224]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#WellsFargoSF" class="ref">Wells Fargo Express Office</a></strong><p>Wells Fargo Express office building in San Francisco.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.4027464, 37.792853]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Wells Fargo Express Office</strong><p>In 1855, Wells Fargo Express opened a New York office at 16 Wall Street. The New York Company was incorporated as "Wells, Fargo & Company, New York, Europe & California."</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-74.00948885068144, 40.706581142112505] 
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>McKittrick-Reward Oil Field</strong><p>In 1865, Olmsted investigated this oil field for <a href="shareholders.html#Ketchum" class="ref">Morris Ketchum</a> as a potential petroleum investment. After resigning from Mariposa, Olmsted worked as a private consultant for several of the financiers behind the failed Company.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-119.655075, 35.347602]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Santa Cruz Mountains oil fields</strong><p>Olmsted investigated the possibility of petroleum extraction in the Santa Cruz mountains for <a href="shareholders.html#Ralston" class="ref">William Ralston.</a></p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.010005, 37.214096]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#BoC" class="ref">Bank of California</a></strong><p>Mariposa Company\'s lender was the Bank of California, founded by <a href="shareholders.html#Ralston" class="ref">William Ralston</a> and <a href="shareholders.html#Brumagin" class="ref">Cornelius Garrison.</a> The Bank occupied an ornate two-story Italianate building on Sansome and California Streets in San Francisco\'s financial district.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.40127693757869, 37.79304983818067] 
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Buena Vista Vinicultural Society</strong><p>Olmsted visited the Buena Vista Vinicultural Society near Sonoma as an advisor to <a href="shareholders.html#Ralston" class="ref">William Ralston</a>, for whom Olmsted wrote a report on California wine production.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.42171651109513, 38.29948041235834] 
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong><a href="#SFExchange" class="ref">San Francisco Mining Exchange<a></strong><p>An exchange for California mining securities that started in 1862. Futures and various other financial products for several of the individual mines that comprised Mariposa Estate were sold here.</p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.40332982688503, 37.79093050343375] 
+}
+},
+]
+}
+});
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': '{icon}_15',
+'icon-overlap': 'always'
+}
+});
+ 
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+map.on('click', 'places', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new maplibregl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+</script>
+
+
+</body>
+	</html>

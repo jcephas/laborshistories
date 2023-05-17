@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+	<html>
+	<head><title>Olmsted's Dividends</title></head>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+		p{
+			font-family: 'Inter',sans-serif;
+			font-size: 1.5vw;
+			line-height: 133%;
+			margin: 0;
+			margin-top:0%;		
+		}
+
+		p+p{
+			text-indent: 2em;
+			margin:0%;
+
+		}
+
+		h3+p{
+			text-indent: 0em;
+			margin:0%;
+		}
+
+		p.menuitem+p.menuitem{
+			text-indent: 0%;
+			margin-bottom:3%;
+		}
+
+		p+p.citation{
+			text-indent:0%;
+		}
+
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+
+		a:hover{
+			opacity: 50%;
+		}
+
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+
+		a.ref{
+			text-decoration: underline;
+		}
+
+		h1{
+			font-family: 'Inter',sans-serif;
+			font-size: 2.5vw;
+			font-weight: 300;
+			margin:0;
+			margin-top: 2%;
+			margin-bottom: 15%;
+		}
+
+		h2{}
+
+		h3{font-family: 'Inter',sans-serif;
+			font-size: 1.8vw;
+			font-weight: 300;
+			margin:0;
+			text-transform:uppercase;
+			padding-top: 1vh;
+			margin-bottom: 2vh;
+		}
+
+		sup, sub{
+			vertical-align: baseline;
+ 		 	position: relative;
+  			top: -0.4em;
+		}
+
+		select{
+			font-size: 1.2vw;
+			width: 88%;
+			text-indent:0%;
+		}
+
+		img{
+ 			width: 100%;
+    		height: auto;
+    		max-width: 100%;
+
+		}
+
+		ol{
+			font-family: 'Inter',sans-serif;
+			font-size: 1vw;
+			margin:0;
+			padding:2%;
+			list-style-position: outside;
+		}
+
+		li{
+			padding-bottom:2vh;
+		}
+
+	li.nostyle {
+  			list-style-type: none;
+		}
+
+	.menuitem {
+		text-indent: 0%;
+		font-family: 'Inter',sans-serif;
+		font-size: 1.8vw;
+		font-weight: 300;
+		text-transform:capitalize;
+		margin-bottom:3%;
+	}
+
+	.info {
+		position:absolute;
+		color:rgb(75,75,75);
+		bottom:1%;
+		width:100%;
+		height:auto;
+		text-transform:uppercase;
+	}
+
+	.caption {
+			font-family: 'Inter',sans-serif;
+			font-size: 1.1vh;
+			width: 100%;
+			Margin: auto;
+			padding-top: 0px;
+		}
+
+	.citation{
+		font-family: 'Inter',sans-serif;
+		font-size: 1.5vh;
+		width: 100%;
+		Margin: auto;
+		padding-top: 0px;
+	}
+
+	.inlineimg{
+		padding-bottom:0vh;
+	}
+
+	.inlineimg+.caption{
+		padding-bottom:1vh;
+	}
+
+	.abstract{
+/*		color:white;*/
+/*		background-color:rgb(40, 40, 40);*/
+		color: black;
+		background-color: white;
+		padding-bottom:3vh;
+	}
+
+	.essaytext{
+		background-color: rgb(230, 230, 230);
+		padding-bottom: 3vh;
+	}
+
+	.essaytext, .abstract{
+		position: relative;
+		height:auto;
+		padding-left:2%;
+  		padding-right:2%;
+	}
+
+	.hangingindent{
+			font-family: 'Inter',sans-serif;
+			font-size: 1.1vh;
+			width: 98%;
+			padding-left: 2em;
+			text-indent: -2em;
+	}
+
+	.parallax1{
+		position:relative;
+		background-image: url("img/LasMariposas_Strobel_1861_bg.jpg");
+		height:100%;
+/*		max-width:100%;*/
+		/*background-origin:inherit;
+		background-position-x:-200px;
+		background-position-y:-500px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 120%;*/
+		background-repeat: no-repeat;
+		background-position:left;
+		background-size:cover;
+	}
+
+	.parallax2{
+		position:relative;
+		background-image: url("img/HornitosStreet.jpg");
+		min-height:50%;
+/*		max-width:100%;*/
+/*		background-origin:inherit;*/
+		/*background-position-x:-200px;
+		background-position-y:-500px;*/
+/*		background-attachment: fixed;*/
+/*		background-repeat: no-repeat;*/
+/*		background-size: 100%;*/
+		background-repeat: no-repeat;
+		background-position:right;
+		background-size:cover;
+	}
+
+	.parallax3{
+		position:relative;
+		background-image: url("img/ChineseMiningMariposaCreek1867.jpg");
+		min-height:95%;
+/*		max-width:100%;*/
+/*		background-origin:inherit;*/
+		/*background-position-x:-200px;
+		background-position-y:-500px;*/
+/*		background-attachment: fixed;*/
+/*		background-repeat: no-repeat;*/
+/*		background-size: 100%;*/
+		background-repeat: no-repeat;
+		background-position:right;
+		background-size:cover;
+	}
+
+	.parallax4{
+		position:relative;
+		background-image: url("img/CleaningUp.jpg");
+		min-height:85%;
+/*		max-width:100%;*/
+/*		background-origin:inherit;*/
+		/*background-position-x:-200px;
+		background-position-y:-500px;*/
+/*		background-attachment: fixed;*/
+/*		background-repeat: no-repeat;*/
+/*		background-size: 100%;*/
+		background-repeat: no-repeat;
+		background-position:left;
+		background-size:cover;
+	}
+
+		.parallax5{
+		position:relative;
+		background-image: url("img/Josephine.jpg");
+		min-height:50%;
+/*		max-width:100%;*/
+/*		background-origin:inherit;*/
+		/*background-position-x:-200px;
+		background-position-y:-500px;*/
+/*		background-attachment: fixed;*/
+/*		background-repeat: no-repeat;*/
+/*		background-size: 100%;*/
+		background-repeat: no-repeat;
+		background-position:right;
+		background-size:cover;
+	}
+
+	#wrapper{}
+
+	#sidebar{
+		position: fixed;
+  		top: 0;
+  		left: 0;
+  		background-color: lightgrey;
+  		width:13.5%;
+  		height:100%;
+  		padding-left: 1.5%;
+	}
+	
+	#documentbar {
+  		position: fixed;
+  		top:0;
+  		left:75%;
+  		right:0;
+  		background-color:snow;
+  		width:23.5;
+  		height:100%;
+  		padding-top:0%;
+  		padding-left: 1.5%;
+  		overflow-y:scroll;
+  	}
+
+  	.docbarheader{
+  		z-index:100;
+  		position:fixed;
+  		left:75%;
+  		top:0%;
+  		width:100%;
+  		height:auto;
+  		margin-top:0vh;
+  		padding-bottom:2vh;
+  		padding-top:1vh;
+  		padding-left:2%;
+  		background-color: snow;
+
+  	}
+
+  	#docs {
+  		position: absolute;
+  		top:5vh;
+  		width:90%;
+  		padding-top:2vh;
+  		padding-left:2%;
+
+  	}
+	
+	#header{}
+
+	#body{
+		position: absolute;
+  		top: 0%;
+  		left: 15%;
+  		width:60%;
+  		height:100%;
+  		margin:0%;
+  		padding-top:0%;
+  		overflow-x:hidden;
+  		overflow-y: scroll;
+  	}
+
+	#colophon{
+		
+		background-color: rgb(190,190,190);
+		border-style: solid;
+		border-width: 1px;
+		border-bottom: none;
+		border-left: none;
+		border-right:none;
+		position: absolute;
+		margin-top:3vh;
+		padding-top:5%;
+		padding-left:2%;
+		left:0%;
+		width:100%;
+		padding-bottom:5%;
+
+	}
+
+
+	</style>
+
+<body>
+
+<div id="sidebar">
+	<h1><a href="index.html">Olmsted's Dividends</a></h1>
+	<p class="menuitem"><select name="Shareholders" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Shareholders -</option><option value="shareholders.html">All Shareholders</option><option value="shareholders.html">Frederick Law Olmsted</option><option value="shareholders.html#Billings">Frederick Billings</option><option value="shareholders.html#Brumagin">Brumagin and Garrison</option><option value="shareholders.html#Field">David Dudley Field</option><option value="shareholders.html#Ketchum">Morris Ketchum</option><option value="shareholders.html#Opdyke">George Opdyke</option><option value="shareholders.html#Ralston">William Ralston</option></select></p>
+	<p class="menuitem"><select name="Places" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Places -</option><option value="places.html">All Places</option></select></p>
+	<p class="menuitem"><p class="menuitem"><select name="Securities" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Securities -</option><option value="securities.html">Mariposa Company</option></select></p></p>
+<div class="info"><p><a href="#colophon">Info</a></p></div>
+</div>
+
+<div id="body">
+	<div class="abstract">
+	<h3>Read Me</h3>
+	<p><br><ol class="citation"><li class="nostyle">This is a final project for Architecture's Subjects: Labor's Histories [ARC550] by <a href="mailto:ms9714@princeton.edu" class="ref">Maxwell Smith-Holmes,</a> a PhD student in architectural history at Princeton University.</li> <li class="nostyle">Navigate to different sections of the site using the pull down menus to the left. Scroll down to read the <a href="index.html#essay">essay</a> this project is based on. Use the "Documents" pane on the right to view sources, image captions, or additional materials.</li><li class="nostyle">A full list of <a href="index.html#references" class="ref">references</a> is available at the bottom of this page</li></ol></p>
+	</div>
+	<div id="LasMariposasMap" class="parallax1"></div>
+	<div class="essaytext" id="essay">
+		<br>
+	<h3><strong>Essay</strong></h3>
+	<p>Six years after overseeing the design and construction of Central Park in New York, Frederick Law Olmsted was appointed “Superintendent or Manager” of the Mariposa Estate, a network of gold mines occupying a ten square mile land grant in central California.<sup>1</sup> Olmsted’s reputation largely rests on his formative role in shaping the modern profession of landscape architecture and his journalistic career, including a series of abolitionist texts on the agricultural economies of the American South published in major newspapers in the years immediately before the Civil War. Olmsted is less known for his work in mineral extraction.<sup>2</sup> The mid-19th century rapport between landscape architecture and mining illuminated by Olmsted’s work managing Mariposa Estate, I argue, underscores the historical intimacy between land, labor, and value.<sup>3</sup></p>
+	<br>
+	<img src="https://cdn.calisphere.org/data/13030/12/tf02900512/files/tf02900512-FID4.jpg" class="inlineimg">
+	<p class="caption">Photograph of Mariposa Estate. Carleton E. Watkins, <i>Mariposa</i>, date unknown. <a href="https://calisphere.org/item/ark:/13030/tf02900512/" base target="_blank">(UC Berkeley, Bancroft Library)</a></p>
+	<p>The New York businessmen controlling the Mariposa Company selected Olmsted to run the mines’ day-to-day operations because of his proven administrative competencies, familiarity with the political economy of land-based industries, and his work on Central Park’s clear applicability to mining.<sup>4</sup> On the newly incorporated Company’s personnel decision, a September 1864 New York Times article remarked, “As to their ‘Manager,’ and his fitness for the position, they need say no more than refer the public to his great and enduring work of the Central Park.”<sup>5</sup> Indeed, in the making of Central Park, Olmsted oversaw a highly technological endeavor combining design with all the practical challenges of moving massive amounts of earth. Moreover, manipulating rocks, soil, trees, and other natural elements required extensive human labor; over the course of Central Park’s construction, Olmsted directed a 3,000-person labor force.<sup>6</sup> After Central Park, Olmsted was well-positioned to manage the seven gold mines, four mills, two company stores, and small railroad comprising Mariposa Estate.</p>
+	<p>Both Central Park and Mariposa needed significant expenditures of human energy for their creation and perpetual maintenance. Scholars such as Anne Whiston Spirn, Jane Hutton, and others have commented on the condition by which the naturalistic appearance of Olmsted’s landscapes occludes the human labor that constructed them.<sup>7</sup> In the case of Mariposa, this occlusion is literal in that many of those hired to work the mines did their jobs underground, hidden in hastily built tunnels beneath sprawling mineral veins. About seven thousand people were employed in capacities ranging from administrative office jobs to menial physical labor that required being underground in unhealthy and dangerous conditions for most the day.<sup>8</sup> Almost everyone lived on the Estate either in housing provided by the Company to some classes of workers, in rental properties, or in ad-hoc shelters dispersed around the outskirts of villages. Unsurprisingly, this gradation in housing arrangements mapped onto racial and class hierarchies: Olmsted’s letters depict clusters of tent-like shanties segregated by race for Chinese, Indian, and Mexican workers.<sup>9</sup></p>
+	<p>This racially stratified economic geography organized Mariposa’s society vertically as well as horizontally. Workers of color, particularly of Chinese descent, often did the riskiest and least remunerated work deep down sometimes hundreds of feet in mineshafts producing more than ten tons of ore each month.<sup>10</sup> Olmsted’s operation must be understood, then, as not only producing monetary value in minerals but also as producing racialized subjects as expendable, poorly paid, and underground. In other words, a Mariposa Estate, racial difference was a function of the varying proximity between mineral matter and particular workers’ bodies and of the geological strata in which they labored. The “geologic life,” as the geographer Kathryn Yusoff might describe it, of Olmsted’s employees at Mariposa differed dramatically when seen from above or below ground.<sup>11</sup></p></div>
+	<div id="HornitosStreet" class="parallax2"></div>
+	<div id="ChineseMiningMariposaCreek1867" class="parallax3"></div>
+	<div class="essaytext">
+		<br>
+	<p>To Mariposa’s shareholders, all of whom witnessed the erection of Central Park first-hand, Olmsted’s practice of landscape architecture likely appealed as a somewhat alchemical transformation of space, minerals, vegetation, and water into something new and valuable, much like mining produced expensive and luxurious objects from the ground. The “feverish futurity of gold rush,” to borrow a phrase from historian Manu Karuka, propelled a powerful mythology of financial gains submerged in veins underground, waiting to be realized.<sup>12</sup> In Civil War era U.S., transforming earth – either into an urban park or securities floated on the New York Stock Exchange – entailed significant technological and managerial expertise. Olmsted was perfectly suited to exploit the financial potential of ground. Mariposa’s status as a pecuniary landscape becomes clear in a letter Olmsted sent to his father in February 1864 describing the twice-monthly process of “cleaning up,” by which raw gold and quicksilver are transformed into monetary media by officials from Wells, Fargo, & Co. permanently stationed at the mining settlement. After Olmsted himself separates the two minerals, Wells, Fargo, & Co. agents “value the dust at sight,” then transport the material to a “Central Office,” where according to Olmsted, it is “weighed, rudely refined and melted, cast into bars like thin bricks, stamped, kept one night in our safe box and by the following day’s mail stage, in Wells Fargo’s box, it goes to our bankers.” Once assayers verify the values of gold and silver bricks, a “Mint certificate” is issued and the final monetary value either credited to Mariposa’s bank accounts or delivered to the mine as coin.<sup>13</sup> This process demonstrates that the Mariposa Estate was materially interwoven with the institutions and techniques of financialization; the techniques of constructing nature that Olmsted exhibited in Central Park provided the precedent for a labor-intensive transmutation of land into money.<sup>14</sup></p></div>
+	<div id="CleaningUp" class="parallax4"></div>
+	<div class="essaytext">
+		<br>
+	<p>In March 1864, Olmsted determined that the mine worker’ wages were too high, so he slashed pay and began hiring Chinese laborers at $1.75 per day, about a dollar less than white workers were paid. Miners then organized a strike, which Olmsted eventually terminated by sending sheriffs after the action’s organizers.<sup>15</sup> Olmsted’s readiness to hire Chinese workers as replacements for those on strike demonstrates Cedric Robinson’s assertion that “the character of capitalism can only be understood in the social and historical context of its appearance.”<sup>16</sup> As a manager, Olmsted employed pre-existing racial differences to blunt the work stoppage’s effects on profit so that Mariposa Company could continue to pay its shareholder dividends.</p>
+	<p>Throughout Olmsted’s tenure at Mariposa Estate, his writings and correspondence show him applying his longstanding concern with the links between social conduct and the built environment to the new landscape of California. In the Law and History Review article, “Olmsted’s Police,” David Thacher describes Olmsted’s installation of a Central Park police force based on a philosophy of policing that sought to regulate the decorum of urban masses to prevent more serious injuries from eventually occurring.<sup>17</sup> At Mariposa, Olmsted projected this understanding of urban parks as spaces for social ordering onto the much larger scale of the arid landscape of the American West. Under his management, Olmsted hoped to make the West “civilized.”<sup>18</sup></p>
+	<p>Olmsted remained in charge of Mariposa Estate between 1863 and 1865, during which time he ingratiated himself with the leaders of San Francisco businesses like banks, shippers, telegraph companies, canal building firms, and oil prospectors – the kinds of firms that would soon profit from settler expansionism.<sup>19</sup> Olmsted himself invested in these firms while also managing other New York elites’ investments in California infrastructure. In his final months in California, after resigning from Mariposa Estate, Olmsted worked as an informal advisor on petroleum and agricultural investments.<sup>20</sup> During his time in California, Olmsted’s expertise in land-based production had led to a new act in his career. Through his work as a park designer, mine manager, and financial consultant, Olmsted defined a unique profession based on turning land into value, and keeping the labor hidden from sight. &nbsp;&#9744;<p></div>
+		<div id="Josephine" class="parallax5"></div>
+		<div class="essaytext">
+			<br><br>
+			<h3 id="references">References</h3>
+			<p class="hangingindent">Bhandar, Brenna. “Property, Law, and Race: Modes of Abstraction.” UC Irvine Law Review, Symposium Issue: Law As II, History as Interface for the Interdisciplinary Study of Law: Articles & Essays, 4, no. 1 (2014): 203–18.</p>
+			<p class="hangingindent">Blodgett, Geoffrey. “Frederick Law Olmsted: Landscape Architecture as Conservative Reform.” The Journal of American History 62, no. 4 (1976): 869–89. https://doi.org/10.2307/1903842.</p>
+			<p class="hangingindent">Browne, J. Ross. “Official Report of J. Ross Browne, U.S. Commissioner, &c., upon the Mineral Resources of the Mariposa Estate.” New York: Russells’ American Steam Printing House, 1868.</p>
+			<p class="hangingindent">Eigen, Edward. “Birds, Dogs, and Humankind in Olmsted’s ‘Bramble’: A Story of Central Park.” Studies in the History of Gardens & Designed Landscapes 42, no. 1 (January 2, 2022): 3–21. https://doi.org/10.1080/14601176.2022.2035164.</p>
+			<p class="hangingindent">———. “Claiming Landscape as Architecture.” Studies in the History of Gardens & Designed Landscapes 34, no. 3 (July 3, 2014): 226–47. https://doi.org/10.1080/14601176.2014.911577.</p>
+			<p class="hangingindent">———. “Olmsted and the ‘Veritable and Eminent Pirate’ Captain William Kidd: An Unhistorical History.” Studies in the History of Gardens & Designed Landscapes 42, no. 4 (October 2, 2022): 254–75. https://doi.org/10.1080/14601176.2022.2161190.</p>
+			<p class="hangingindent">———. “Olmsted’s Pencil Sharpener.” Studies in the History of Gardens & Designed Landscapes 40, no. 3–4 (October 1, 2020): 322–29. https://doi.org/10.1080/14601176.2020.1784603.</p>
+			<p class="hangingindent">Goldstein, Alyosha. “By Force of Expectation.” Discourse – UCLA Law Review, March 1, 2018. https://www.uclalawreview.org/by-force-of-expectation/.
+			Hoy, James. Letter to Frederick Law Olmsted, August 20, 1863. Library of Congress, Frederick Law Olmsted Papers. https://www.loc.gov/resource/mss35121.mss35121_025_0770_0805/?sp=7.</p>
+			<p class="hangingindent">Hutton, Jane. “On Fertility.” Journal of Architectural Education 68, no. 1 (January 2, 2014): 43–46. https://doi.org/10.1080/10464883.2013.865466.</p>
+			<p class="hangingindent">Karuka, Manu. Empire’s Tracks: Indigenous Nations, Chinese Workers, and the Transcontinental Railroad. Oakland, California: University of California Press, 2019.</p>
+			<p class="hangingindent">Madley, Benjamin. An American Genocide: The United States and the California Indian Catastrophe, 1846-1873. The Lamar Series in Western History. New Haven: Yale University Press, 2016.</p>
+			<p class="hangingindent">Martin, Reinhold. Knowledge Worlds: Media, Materiality, and the Making of the Modern University. New York: Columbia University Press, 2021.</p>
+			<p class="hangingindent">Marx, Karl. “The Labor Process and the Valorization Process.” In Capital: A Critique of Political Economy, Volume 1:283–306. 1867. Reprint, London: Penguin Books, 1990.</p>
+			<p class="hangingindent">Mumford, Lewis. Technics and Civilization. 1934. Reprint, Chicago ; London: The University of Chicago Press, 2010.</p>
+			<p class="hangingindent">Chamberlain, Newell D. The Call of Gold: True Tales on the Gold Road to Yosemite. Mariposa, Calif.: Gazette Press, 1936.</p>
+			<p class="hangingindent">Olmsted, Frederick Law. “Civilizing the Frontier.” In The California Frontier, 1863-1865, edited by Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, 212–38. The Papers of Frederick Law Olmsted, v. 5. Baltimore: Johns Hopkins University Press, 1990.</p>
+			<p class="hangingindent">———. “Letter to John Olmsted, February 11, 1864.” In The California Frontier, 1863-1865, edited by Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, 186–92. The Papers of Frederick Law Olmsted, v. 5. Baltimore: Johns Hopkins University Press, 1990.</p>
+			<p class="hangingindent">———. The Cotton Kingdom: A Traveller’s Observations on Cotton and Slavery in the American Slave States. Based upon Three Former Volumes of Journeys and Investigations .. New York: Mason brothers; etc, etc, 1861. http://nrs.harvard.edu/urn-3:HUL.FIG:001724205.</p>
+			<p class="hangingindent">Park, K-Sue. “Money, Mortgages, and the Conquest of America.” Law & Social Inquiry 41, no. 04 (2016): 1006–35. https://doi.org/10.1111/lsi.12222.</p>
+			<p class="hangingindent">Ranney, Victoria Post. “Introduction.” In The California Frontier, 1863-1865, edited by Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, 5:1–40. The Papers of Frederick Law Olmsted. Baltimore: Johns Hopkins University Press, 1990.</p>
+			<p class="hangingindent">Roper, Laura Wood. FLO, a Biography of Frederick Law Olmsted. Johns Hopkins University Press, 1983.
+			<p class="hangingindent">———. “Frederick Law Olmsted and the Western Texas Free-Soil Movement.” The American Historical Review 56, no. 1 (1950): 58–64. https://doi.org/10.2307/1840621.</p>
+			<p class="hangingindent">Spirn, Anne Whiston. “Constructing Nature: The Legacy of Frederick Law Olmsted.” In Uncommon Ground: Rethinking the Human Place in Nature, edited by William Cronon, 91–113. New York: W.W. Norton, 1996.</p>
+			<p class="hangingindent">Thacher, David. “Olmsted’s Police.” Law and History Review 33, no. 3 (August 2015): 577–620. https://doi.org/10.1017/S0738248015000231.</p>
+			<p class="hangingindent">Williams, Rosalind H. Notes on the Underground: An Essay on Technology, Society, and the Imagination. New ed. Cambridge, Mass.: The MIT Press, 2008.</p>
+			<p class="hangingindent">Yusoff, Kathryn. A Billion Black Anthropocenes or None. Forerunners (Minneapolis, Minn.). Minneapolis, MN: University of Minnesota Press, 2018.</p>
+
+	<div id="colophon">
+		<p class="citation">Final project by <a href="mailto:ms9714@princeton.edu" class="ref">Maxwell Smith-Holmes</a> for Architecture's Subjects: Labor's Histories [ARC550]</p>
+		<br>
+		<p class="citation">Last updated May 12, 2023</p>
+	</div>
+</div>
+<div id="documentbar"><h3 class="docbarheader">documents</h3>
+	<div id="docs">
+		<ol>
+			<li class="nostyle"><a href="img/LasMariposas_Strobel_1861_full.jpg" target="_blank"><img src="img/LasMariposas_Strobel_1861_icon.jpg"><p class="caption">Max Strobel, <i>Las Mariposas Estate, Containing 44,386 83/100 Acres or 70 Square Miles</i>, 1:38,000 (449 Broadway, New York: Lithograph of Sarony Major & Knapp, 1861).</p></a></li>
+			<li class="citation" value="1">James Hoy to Frederick Law Olmsted, August 20, 1863, Library of Congress, Frederick Law Olmsted Papers.</li>
+  			<li class="citation">See Edward Eigen, “Claiming Landscape as Architecture,” Studies in the History of Gardens & Designed Landscapes 34, no. 3 (July 3, 2014): 226, https://doi.org/10.1080/14601176.2014.911577; among Olmsted’s most famous works on the economies of slave-holding states is, The Cotton Kingdom: A Traveller’s Observations on Cotton and Slavery in the American Slave States. Based upon Three Former Volumes of Journeys and Investigations .. (New York: Mason brothers; etc, etc, 1861), http://nrs.harvard.edu/urn-3:HUL.FIG:001724205.
+  			<li class="citation">See, for instance, Karl Marx’s discussion of the “metabolic interaction between man and nature” that is the “labour process,” in “The Labor Process and the Valorization Process,” in Capital: A Critique of Political Economy, vol. Volume 1 (1867; repr., London: Penguin Books, 1990), 290.
+  			<li class="citation" value="4">Victoria Post Ranney, “Introduction,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, vol. 5, The Papers of Frederick Law Olmsted (Baltimore: Johns Hopkins University Press, 1990), 5.
+  			<li class="citation">“Mariposa Company,” New York Times, September 14, 1863, 4.
+  			<li class="citation">Ranney, 9.
+  			<li class="nostyle"><a href="img/US_1860_PopforeignBrn.png" target="_blank"><img src="img/US_1860_PopforeignBrn.png"><p class="caption">U.S. counties in 1860. Darker red counties have a higher percentage of foreign born population. Data source: Steven Ruggles, Catherine A. Fitch, Ronald Goeken, J. David Hacker, Matt A. Nelson, Evan Roberts, Megan Schouweiler, and Matthew Sobek. IPUMS Ancestry Full Count Data: Version 3.0 [dataset]. Minneapolis, MN: IPUMS, 2021. https://doi.org/10.18128/D014.V3.0.</p></a></li>
+  			<li class="nostyle"><a href="img/US_1870_PopforeignBrn.png" target="_blank"><img src="img/US_1870_PopforeignBrn.png"><p class="caption">U.S. counties in 1870. Darker red counties have a higher percentage of foreign born population. Data source: Ruggles et. al., IPUMS Ancestry Full Count Data: Version 3.0 [dataset]. Minneapolis, MN: IPUMS, 2021.</p></a></li>
+ 			<li class="citation" value="7"> Anne Whiston Spirn, “Constructing Nature: The Legacy of Frederick Law Olmsted,” in Uncommon Ground: Rethinking the Human Place in Nature, ed. William Cronon (New York: W.W. Norton, 1996), 91–113; Jane Hutton, “On Fertility,” Journal of Architectural Education 68, no. 1 (January 2, 2014): 43–46, https://doi.org/10.1080/10464883.2013.865466.
+  			<li class="citation">J. Ross Browne, “Official Report of J. Ross Browne, U.S. Commissioner, &c., upon the Mineral Resources of the Mariposa Estate” (New York: Russells’ American Steam Printing House, 1868), 19; Frederick Law Olmsted, “Letter to James Hoy, March 2, 1864,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, The Papers of Frederick Law Olmsted, v. 5 (Baltimore: Johns Hopkins University Press, 1990), 197; the figure of 7,000 workers comes from Victoria Post Ranney, “Introduction,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, vol. 5, The Papers of Frederick Law Olmsted (Baltimore: Johns Hopkins University Press, 1990), 6.
+  			<li class="citation">Laura Wood Roper, FLO, a Biography of Frederick Law Olmsted (Johns Hopkins University Press, 1983), 240.
+  			<li class="citation">Olmsted, “Letter to James Hoy, March 2, 1864,” 197.
+  			<li class="citation">See Kathryn Yusoff, A Billion Black Anthropocenes or None, Forerunners (Minneapolis, Minn.) (Minneapolis, MN: University of Minnesota Press, 2018).
+  			<li class="nostyle"><a href="img/HornitosStreet.jpg" target="_blank"><img src="img/HornitosStreet.jpg"><p class="caption">Street in Hornitos. From Newell D. Chamberlain, The Call of Gold: True Tales on the Gold Road to Yosemite (Mariposa, Calif.: Gazette Press, 1936), 135.</p></a></li>
+  			<li class="nostyle"><a href="img/ChineseMiningMariposaCreek1867.jpg" target="_blank"><img src="img/ChineseMiningMariposaCreek1867.jpg"><p class="caption">"Chinese mining on Mariposa Creek, 1867." From Newell D. Chamberlain, The Call of Gold: True Tales on the Gold Road to Yosemite (Mariposa, Calif.: Gazette Press, 1936), 26.</p></a></li>
+  			<li class="citation" value="12">Manu Karuka, Empire’s Tracks: Indigenous Nations, Chinese Workers, and the Transcontinental Railroad (Oakland, California: University of California Press, 2019), 6.
+  			<li class="citation">Frederick Law Olmsted, “Letter to John Olmsted, February 11, 1864,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, The Papers of Frederick Law Olmsted, v. 5 (Baltimore: Johns Hopkins University Press, 1990), 187–88.
+  			<li class="citation">On the contradictory equation between, land, property, and money, see K-Sue Park, “Money, Mortgages, and the Conquest of America,” Law & Social Inquiry 41, no. 04 (2016): 1009, https://doi.org/10.1111/lsi.12222.</li>
+  			<li class="nostyle"><a href="https://collections.library.yale.edu/catalog/2017783" target="_blank"><img src="img/CleaningUp.jpg"><p class="caption">Cleaning Up at Mt. Ophir. Carleton E. Watkins, <i>Mariposa</i>, ca. 1861. (Beinecke Library, Yale University)</p></a></li>
+  			<li class="citation" value="15">Ranney, “Introduction,” 15–16.
+  			<li class="citation">Cedric Robinson, “Racial Capitalism: The Nonobjective Character of Capitalist Development,” in Black Marxism: The Making of the Black Radical Tradition (1983; repr., Chapel Hill, North Carolina: University of North Carolina Press, 2000), 24.
+  			<li class="citation">David Thacher, “Olmsted’s Police,” Law and History Review 33, no. 3 (August 2015): 581, https://doi.org/10.1017/S0738248015000231; Eigen treats Olmsted’s Central Park police force in “Birds, Dogs, and Humankind in Olmsted’s ‘Bramble’: A Story of Central Park,” Studies in the History of Gardens & Designed Landscapes 42, no. 1 (January 2, 2022): 5, https://doi.org/10.1080/14601176.2022.2035164.
+  			<li class="citation">Ranney, “Introduction,” 2.
+  			<li class="citation">Ranney, 31.
+  			<li class="citation">Olmsted’s work as an informal financial advisor for east coast elites interested in western investments is detailed through a series of letters published in, “Civilizing the Frontier,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, The Papers of Frederick Law Olmsted, v. 5 (Baltimore: Johns Hopkins University Press, 1990), 212–38.
+  			<li class="nostyle"><a href="https://collections.library.yale.edu/catalog/2017786" target="_blank"><img src="img/Josephine.jpg"><p class="caption">Josephine Mine. Carleton E. Watkins, <i>Mariposa</i>, ca. 1861. (Beinecke Library, Yale University)</p></a></li>
+
+		</ol>
+	</div>
+</div>
+
+
+
+</body>
+	</html>

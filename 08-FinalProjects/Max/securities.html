@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+	<html>
+	<head><title>Olmsted's Dividends - Securities</title></head>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+		p{
+			font-family: 'Inter',sans-serif;
+			font-size: 1.5vw;
+			line-height: 133%;
+			margin: 0;
+			margin-top:0%;		
+		}
+
+		p+p{
+			text-indent: 2em;
+			margin:0%;
+
+		}
+		h3+p{
+			text-indent: 0em;
+			margin:0%;
+		}
+
+		p.menuitem+p.menuitem{
+			text-indent: 0%;
+			margin-bottom:3%;
+		}
+
+		p+p.citation{
+			text-indent:0%;
+		}
+
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+
+		a:hover{
+			opacity: 50%;
+		}
+
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+
+		a.ref{
+			text-decoration: underline;
+		}
+
+		h1{
+			font-family: 'Inter',sans-serif;
+			font-size: 2.5vw;
+			font-weight: 300;
+			margin:0;
+			margin-top: 2%;
+			margin-bottom: 15%;
+		}
+
+		h2{}
+
+		h3{font-family: 'Inter',sans-serif;
+			font-size: 1.8vw;
+			font-weight: 300;
+			margin:0;
+			text-transform:uppercase;
+			padding-top: 1vh;
+			margin-bottom: 2vh;
+		}
+
+		sup, sub{
+			vertical-align: baseline;
+ 		 	position: relative;
+  			top: -0.4em;
+		}
+
+		select{
+			font-size: 1.2vw;
+			width: 88%;
+			text-indent:0%;
+		}
+
+		img{
+ 			width: 100%;
+    		height: auto;
+    		max-width: 100%;
+
+		}
+
+		ol{
+			font-family: 'Inter',sans-serif;
+			font-size: 1vw;
+			margin:0;
+			padding:2%;
+			list-style-position: outside;
+		}
+
+		li{
+			padding-bottom:2vh;
+		}
+
+		li.nostyle {
+  			list-style-type: none;
+		}
+
+
+	.menuitem {
+		text-indent: 0%;
+		font-family: 'Inter',sans-serif;
+		font-size: 1.8vw;
+		font-weight: 300;
+		text-transform:capitalize;
+		margin-bottom:3%;
+	}
+
+	.info {
+		position:absolute;
+		color:rgb(75,75,75);
+		bottom:1%;
+		width:100%;
+		height:auto;
+		text-transform:uppercase;
+	}
+
+	.caption {
+			font-family: 'Inter',sans-serif;
+			font-size: 1.1vh;
+			width: 100%;
+			Margin: auto;
+			padding-top: 0px;
+		}
+
+	.citation{
+		font-family: 'Inter',sans-serif;
+		font-size: 1.5vh;
+		width: 100%;
+		Margin: auto;
+		padding-top: 0px;
+	}
+
+	.inlineimg{
+		padding-bottom:2vh;
+	}
+
+	.abstract{
+		color:white;
+		background-color:rgb(40, 40, 40);
+		padding-bottom:3vh;
+	}
+
+	.essaytext{
+		background-color: rgb(230, 230, 230);
+		padding-bottom: 3vh;
+	}
+
+	.essaytext, .abstract{
+		position: relative;
+		height:auto;
+		width:96;
+		padding-left:2%;
+  		padding-right:2%;
+	}
+
+	.parallax1{
+		position:relative;
+		background-image: url("img/MariposaCertificate.jpg");
+		min-height:100%;
+	/*	backgroun-position-x: 100px;
+		background-position-y: -100px;*/
+		background-position:center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#wrapper{}
+
+	#sidebar{
+		position: fixed;
+  		top: 0;
+  		left: 0;
+  		background-color: lightgrey;
+  		width:13.5%;
+  		height:100%;
+  		padding-left: 1.5%;
+	}
+	
+	#documentbar {
+  		position: fixed;
+  		top:0;
+  		left:75%;
+  		right:0;
+  		background-color:snow;
+  		width:23.5;
+  		height:100%;
+  		padding-top:0%;
+  		padding-left: 1.5%;
+  		overflow-y:scroll;
+  	}
+
+  	.docbarheader{
+  		z-index:100;
+  		position:fixed;
+  		left:75%;
+  		top:0%;
+  		width:100%;
+  		height:auto;
+  		margin-top:0vh;
+  		padding-bottom:2vh;
+  		padding-top:1vh;
+  		padding-left:2%;
+  		background-color: snow;
+
+  	}
+
+  	#docs {
+  		position: absolute;
+  		top:5vh;
+  		width:90%;
+  		padding-top:2vh;
+  		padding-left:2%;
+
+  	}
+	
+	#header{}
+
+	#body{
+		position: absolute;
+  		top: 0%;
+  		left: 15%;
+  		width:60%;
+  		height:100%;
+  		margin:0%;
+  		padding-top:0%;
+  		overflow-y: scroll;
+  	}
+
+	#colophon{
+		
+		background-color: rgb(190,190,190);
+		border-style: solid;
+		border-width: 1px;
+		border-bottom: none;
+		border-left: none;
+		border-right:none;
+		position: absolute;
+		margin-top:3vh;
+		padding-top:5%;
+		padding-left:2%;
+		left:0%;
+		width:100%;
+		padding-bottom:5%;
+
+	}
+
+
+	#my_datavizm{
+		z-index:100;
+		position: relative;
+		width:100%;
+		height:100%;
+  		padding-bottom:2%;
+	}
+
+	#sixtythree{
+		position: relative;
+		height:inherit;
+		padding-left:.4vh;
+		width:5%;
+		left:0%;
+		top:.4vh;
+		padding-right: 0;
+	}
+	}
+
+	#sixtyfour{
+		position: relative;
+		width: 5%;
+		top:0%;
+		padding-left:.4vh;
+		left: 33%;
+		top:.4vh;
+	}
+
+	.justify{
+		position: relative;
+		height:100%;
+		padding-top:.2vw;
+		text-align:center;
+		word-spacing:15vi;
+	}
+
+	img.behind{
+		position:relative;
+		z-index: 1;
+		height:auto;
+	}
+
+
+	</style>
+
+<body>
+
+<div id="sidebar">
+	<h1><a href="index.html">Olmsted's Dividends</a></h1>
+	<p class="menuitem"><select name="Shareholders" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Shareholders -</option><option value="shareholders.html">All Shareholders</option><option value="shareholders.html#Start">Frederick Law Olmsted</option><option value="shareholders.html#Billings">Frederick Billings</option><option value="shareholders.html#Brumagin">Brumagin and Garrison</option><option value="shareholders.html#Field">David Dudley Field</option><option value="shareholders.html#Ketchum">Morris Ketchum</option><option value="shareholders.html#Opdyke">George Opdyke</option><option value="shareholders.html#Ralston">William Ralston</option></select></p>
+	<p class="menuitem"><select name="Places" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Places -</option><option value="places.html">All Places</option></select></p>
+	<p class="menuitem"><p class="menuitem"><select name="Securities" onchange="location = this.options[this.selectedIndex].value;"><option value="javascript:;">- Securities -</option><option value="securities.html">Mariposa Company</option></select></p></p>
+<div class="info"><p><a href="#colophon">Info</a></p></div>
+</div>
+
+<div id="body">
+	<div class="abstract">
+	<h3>securities</h3>
+	<p>During his time in California, Olmsted invested $2,500 (about $50,000 in 2023) in stocks of California-based companies specializing in infrastructure and extraction. These securities not only enriched Olmsted but also represented the confluence of East Coast capital with Western land and natural resources that would fuel the expansion of U.S. empire internally throughout the second half of the 19<sup>th</sup> century. By the end of 1865, Olmsted embraced a new role as an informal financial advisor, sharing stock picks with his father and Edwin Godkin, and investigating land-based investments for William Ralston and Morris Ketchum. These are several of the securities Olmsted invested in.</p>
+	</div>
+	<div id="MariposaCertificate" class="parallax1"></div>
+	
+	<div class="essaytext" id="Olmsted">
+	<p><h3>Mariposa Company</h3></p>
+	
+	<div id="my_datavizm"><p class="justify">1863 1864 1865</p><img src="img/mariposastockline-01.svg" class="behind"></div>
+	<div>
+	<p>Mariposa Company stock plunged from $30/share on December 28, 1864, to $19/share on January 2, 1865.<sup>1</sup>&nbsp;&#9744;</p></div>
+	<div id="colophon">
+		<p class="citation">Final project by <a href="mailto:ms9714@princeton.edu" class="ref">Maxwell Smith-Holmes</a> for Architecture's Subjects: Labor's Histories [ARC550]</p>
+		<br>
+		<p class="citation">Last updated May 12, 2023</p>
+	</div>
+</div>
+<div id="documentbar"><h3 class="docbarheader">documents</h3>
+	<div id="docs">
+		<ol>
+			<li class="nostyle"><a href="img/MariposaCertificate.jpg" target="_blank"><img src="img/MariposaCertificate.jpg"><p class="caption">Mariposa Company stock certificate for 1,000 shares.</p></a></li>
+			<li value="1"><p class="citation">Victoria Post Ranney, “Introduction,” in The California Frontier, 1863-1865, ed. Victoria Post Ranney, Garard J. Rauluk, and Carolyn F. Hoffman, vol. 5, The Papers of Frederick Law Olmsted (Baltimore: Johns Hopkins University Press, 1990), 27.</p></li>
+			<li class="nostyle"><p class="citation">Note: the historic stock market data for this chart is from “Old New York Stock Exchange 1815-1920,” The NYSE History Research Project, <a href="https://som.yale.edu/centers/international-center-for-finance/data/historical-financial-research-data/new-york-exchange">https://som.yale.edu/centers/international-center-for-finance/data/historical-financial-research-data/new-york-exchange.</a></p></li>
+			
+		</ol>
+	</div>
+</div>
+
+
+
+</body>
+	</html>
