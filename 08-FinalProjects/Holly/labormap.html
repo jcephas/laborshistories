@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Spaces of Labor</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+     <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="/feed.xml"
+      title="Holly Bushman"
+    />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+    .maplibregl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+       .footer{ 
+       position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       font-size: 25px;
+       width: 100%;
+       text-transform:uppercase;
+   }  
+
+   .text{
+
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 15px;
+  color: black;
+  font-family: sans-serif;
+
+}
+
+   h1,h2,h3,h4,h5,h6,p,li,a,div{
+
+  font-family: 'Averia Serif Libre', cursive;
+  color:black;
+
+  }
+
+  div{text-align:center;}
+
+
+a{
+  color: black;
+  text-decoration:none;
+  border-bottom:1px solid black
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: skyblue;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+</style>
+<div id="map"></div>
+<script>
+    var map = new maplibregl.Map({
+        container: 'map',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=LFoOSpY7paHDU9Ss8oLt',
+        center: [13.1205, 52.0520],
+        zoom: 6
+    });
+
+    map.on('load', function () {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+
+                            'description':
+                                '<strong>VEB Motorradwerk Zschopau</strong><p>Major motorcycle and motorbike manufacturing plant in Zschopau, Saxony.</p><p><a href="car.html">Click here to learn about a worker at the Motorradwerk</a>.</p><p><a href="factory.html">Click here to see more images from the Motorradwerk.</a></p><p>Source: Schenck (2023) 2.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.065, 50.739]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Film und Chemiefaserwerk Agfa Wolfen</strong><p>Film and video casette manufacturing in Bitterfeld-Wolfen, Saxony-Anhalt.</p><p>Source: Schenck (2023) 110.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.3059, 51.625]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Vereinigte Baumwollspinnereien und Zwirnereien Baumwollspinnerei Zwickau</strong><p>Cotton spinnery mill in Zwickau, Saxony.</p><p>Source: Schenck (2023) 120.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.4827, 50.7372]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Vereinigte Baumwollspinnereien und Zwirnereien Baumwollspinnerei Zwickau, Werk II Meerane</strong><p>Cotton mill in Meerane, Saxony. Overseen by the same VEB as the mill in Zwickau.</p><p><a href="spin.html">Click here to see more about <i>Vertragsarbeiter</i> in East German textile production.</a></p><p>Source: Schenck (2023) 120.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.4568, 50.6034]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Fahrzeug- und Jagdwaffenwerk Ernst Thälmann Suhl</strong><p>Manufacturer of various goods including motocycles, mopeds, strollers, and sport rifles. Suhl and the surrounding area had been a major manufacturing hub pre-WWII, and in the postwar era several private companies were claimed by the SED and turned into a "Volkseigener Betrieb" ("publicly-owned enterprise"), hence the unusual (for East German factories) range of products manfactured there.</p><p>Source: Schenck (2023) 135.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [10.6386, 50.6034]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Schlacht- und Verarbeitungskombinat Eberswalde/Britz</strong><p>Abbatoir and meat processing in Britz, Brandenburg.</p><p>Source: Schenck (2023) 143.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.8205, 52.89]
+                        } 
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>IFA Automobilwerk Berlin Ludwigsfelde</strong><p>Automobile manufacturing in Ludwigsfelde, Brandenburg. Primarily manufactured large trucks (dump trucks, construction vehicles) in the 1980s.</p><p>Source: Schenck (2023) 227.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.269, 52.309]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kombinat Lederwaren</strong><p>Leatherworks and leather goods manufacturer in Schwerin, Mecklinburg.</p><p>Source: Schenck (2023) 319.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [11.3933, 53.5741]
+                        }
+                    },
+                         {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Fernsehgerätewerk Staßfurt</strong><p>Television factory in Staßfurt, Saxony-Anhalt. Students at the <a href="school.html">Schule der Freundschaft</a> worked as a trainees at the television factory as part of their technical education program.</p><p>Source: Müller (2014) 124.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [11.568, 51.863]
+                        }
+                    },
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kombinat Textima </strong><p>Textile and chemical fiber production in Chemnitz, Saxony.</p><p>Source: <a href="https://www.deutschlandfunk.de/gastarbeiter-in-der-ddr-eine-frage-der-verantwortung-100.html">Deutschlandfunk</a>.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.9559, 50.7909]
+                        }
+                    },
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Groditzer Zellstoffwerk</strong><p>Pulp mill for paper production in Gröditz, Saxony.</p><p>Source: Zropf (2014) 257.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.44, 51.408]
+                        }
+                    },
+                          {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Leuchtenbau</strong><p>Lighting manufacturing in Lengefeld, Saxony.</p><p>Source: Straßburg (2014) 124.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.182, 50.8287]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Coswiger Zellstoffwerk</strong><p>Pulp mill for paper production in Coswig, Saxony.</p><p>Source: Seidel (2014) 245.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.5883, 51.1326783106177]
+                        }
+                    },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kraftwerk Lübbenau-Vetschau</strong><p>Lignite power generating station in Lübbenau, Brandenburg.</p><p>Source: Mutambe (2014) 247.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.9649753382656, 51.9228085646511]
+                        }
+                    },
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Tagebau Cottbus Nord </strong><p>Open pit mine for brown coal (lignite) near Forst, Brandenburg</p><p>Source: Mutambe (2014) 248.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [14.5333304052979, 51.7783936473404]
+                        }
+                    },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Chemiefaserwerk Premnitz</strong><p>Chemical fiber manufacturing in Premnitz, Brandenburg.</p><p>Source: Chirindza (2014) 209.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.3613119277847, 52.5366456641985]
+                        }
+                    },
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VE Dresdner Getrankenkombinat</strong><p>Beverage production and bottling in Dresden, Saxony.</p><p>Source: Mazuze (2014) 218.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.7071359880865, 51.0171831052788]
+                        }
+                    },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Waggonbau Ammendorf</strong><p>Train car manufacturing in Halle (Saale), Saxony.</p><p>Source: <i>Neues Deutschland</i> June 27 1983 p.3.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [11.9894848917093, 51.4329042081508]
+                        }
+                    },
+                       {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Leipziger Baumwollspinnerei</strong><p>Cotton mill in Leipzig, Saxony.</p><p><a href="spin.html">Click here to learn more about <i>Vertragsarbeiter</i> in the East German textile industry.</a></p><p>Source: <i>Neues Deutschland</i> August 17 1983 p.3.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.317041530685, 51.3259222043681]
+                        }
+                    },
+                       {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kombinat Textima Textilmaschinenbau Gera</strong><p>Equiptment manufacturing for textile mills in Gera, Thuringia.</p><p><a href="spin.html">Click here to learn more about <i>Vertragsarbeiter</i> in the East German textile industry.</a></p><p>Source: <i>Neues Deutschland</i> December 24, 1982 p.6.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.0739360567854, 50.8564977120092]
+                        }
+                    },
+                       {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kraftwek Schwarze Pump</strong><p>Brown coal (lignite) power generating station, also major training site for <i>Vertragsarbeiter</i> in mining trades.</p><p>Source: <i>Neues Deutschland</i> November 27, 1980 p.2.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [14.3505823693149, 51.5346639190483]
+                        }
+                    },
+                          {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kombinat Espenhain</strong><p>Brown coal (lignite) processing plant in Espenhain-Rötha, Saxony.</p><p>Source: <i>Neues Deutschland</i> November 27, 1980 p.2.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.4905538411397, 51.1756354445257]
+                        }
+                    },
+                       {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Braunkohlenkombinat Senftenberg</strong><p>Brown coal (lignite) open-pit mine and processing plant in Senftenberg, Brandenburg.</p><p><a href="video.html">Click here to see a clip produced by the Schwarze Pump station about <i>Vertragsarbeiter</i> employees.</a></p><p>Source: Saehrendt (2017) 99</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [14.0477511826296, 51.4903520423599]
+                        }
+                    },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Braunkohlenwerk Welzow </strong><p>Brown coal (lignite) open-pit mine in Welzow, Brandenburg.</p><p><a href="bike.html">Click here to see images of <i>Vertragsarbeiter</i> labor, including a worker in Welzow.</a></p><p>Source: <a href="bruderland.de">bruderland.de</a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [14.2352485384561, 51.5829680483907]
+                        }
+                    },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Frottana Großschonau</strong><p>Garment factory in Großschonau, Saxony.</p><p>Source: <a href="bruderland.de">bruderland.de</a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [14.6592288539723, 50.8897537480019]
+                        }
+                    },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Fischfang Rostock</strong><p>Industrial fishery. <i>Vertragsarbeiter</i> were trained in fishing logistics in the Rostock, Mecklenburg-Vopommern headquarters.</p><p>Source: Scatassa (2018) 58.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.0832912539723, 54.1369734107835]
+                        }
+                    },
+                       {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Kabelwerk Oberspree</strong><p>Cable and wire manufacturing factory in Oberschöneweide, Berlin.</p><p>Source: van der Heyden (2013) 143.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.5269603576705, 52.4583988019914]
+                        }
+                    },
+                
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Wälzlagerwerk "Josef Orlopp"</strong><p>Ball bearing manufacture in Licktenberg, Berlin.</p><p> <a href="kuss.html">Click here for more on a worker at the VEB Wälzlagerwerk "Josef Orlopp."</a></p><p>Source: van der Heyden (2013) 143.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.4873621375591, 52.5230157229593]
+                        }
+                    },
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Bergmann-Borsig </strong><p>Manufacturing for power plant components in Wilhelmsruhe, Berlin.</p><p>Source: van der Heyden (2013) 143.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.3554576333832, 52.589404200126474]
+                        }
+                    },
+                     {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>DR RAW Roman Chwalek</strong><p>Train car manufacturing for inner-city transit, Schöneweide, Berlin.</p><p>Source: van der Heyden (2013) 143.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.532293, 52.444561]
+                        }
+                    },
+                       {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Glaswerk Stralau</strong><p>Bottle manufacturing in Rummelsberg, Berlin.</p><p>Source: van der Heyden (2013) 143.</p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [13.4682544399058, 52.4994587801018]
+                        }
+                    },
+                        {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Feinspinnerei Venusberg</strong><p>Textile mill in Venusberg, Saxony.</p><p><a href= "deport.html">Click here to learn more about the forced deportation of a worker at the VEB Feinspinnerei Venusberg.</a></p><p>Source: <a href="bruderland.de">bruderland.de</a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [12.9881283976098, 50.6965931478602]
+                        }
+                    },
+                           {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Fleischkombinat Cottbus</strong><p>Slaughterhouse and meat processing plant in Cottbus, Brandenburg.</p><p><a href= "strike.html">Click here to learn more about a strike organized by workers at this factory.</a></p><p>Source: <a href="bruderland.de">bruderland.de</a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [14.3351690975382, 51.7594106283286]
+                        }
+                    },
+
+                             {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>VEB Automobilwerk Eisenach</strong><p>Automobile manufacturing in Eisenach, Thuringia.</p><p><a href="bike.html">Click here to see images of <i>Vertragsarbeiter</i> labor, including a worker in Welzow.</a></p>><p>Source: Iken (2021)<a href="https://www.spiegel.de/geschichte/ddr-vertragsarbeiter-aus-mosambik-ausgegrenzt-geprellt-vergessen-a-fb81c960-6da3-4e92-8678-89ad62ae482d"><i>Der Spiegel</i></a></p>',
+                            'icon': 'marker'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [10.2809929848639, 50.9834648384136]
+                        }
+                    }
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}_15',
+                'icon-overlap': 'always'
+            }
+        });
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function (e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+   <div class="footer" text-align="center">
+   
+<a href="index.html">Home</a>
+ | <a href="contact.html">Contact</a> | <a href="sources.html">Sources & Further Reading</a>
+  </div>
+</body>
+</html>
