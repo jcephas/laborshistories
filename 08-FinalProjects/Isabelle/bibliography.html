@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Processing-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>IT Final Project</title>
+</head>
+
+<header>
+  <div class="container">
+     <nav class="nav">
+          <a href="index.html" id="home">*</a>
+
+          <ul class="nav-list">
+            <li>
+            <a href="people.html" class="nav-link">People</a>
+            </li>
+            <li>
+               <a href="data.html" class="nav-link">Map</a>
+            </li>
+            <li class="active">
+               <a href="bibliography.html" class="nav-link">Bibliography</a>
+            </li>
+            <li>
+               <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+     </nav>
+  </div>
+</header>
+<body>
+    <div class='content'>
+      <section class='content-body'>
+        <p><b>Primary sources:</b><br>
+            <i>People’s Daily</i> (<i>Renmin Ribao</i> 人民日报), 1959 - 1965<br><br>
+            Google Earth, historical imagery, 1984* - 2021<br><br>
+            Township map of Xinjiang with 2000 Census short form data. <a href="https://maps.princeton.edu/catalog/princeton-5q47rq18h">Link.</a><br><br><br>
+
+            <b>Secondary sources:</b><br>
+            <i>Empire at the Margins: Culture, Ethnicity, and Frontier in Early Modern China,</i> eds.by Pamela Kyle Crossley, Helen F. Siu, and Donald S. Sutton. Berkley: University of California Press, 2005.<br><br>
+            Bin Xu. “Historically Remaining Issues: The Shanghai-Xinjiang Zhiqing Migration Program and the Tangled Legacies of the Mao Era in China, 1980-2017.” <i>Modern China</i> 48, no. 4 (2022): 726.<br><br>
+            Bernstein, Thomas P. <i>Up to the Mountains and Down to the Villages: The Transfer of Youth from Urban to Rural China.</i> New Haven: Yale University Press, 1977.<br><br> 
+            Bonin, Michel, “Restricted, Distorted but Alive: The Memory of the ‘Lost Generation’ of Chinese Educated Youth.” <i>The China Quarterly</i> 277 (September 2016). Special Issue: <i>Red Shadows: Memories and Legacies of the Chinese Cultural Revolution</i>: 775-772.<br><br> 
+            Fang, Yingkai and Li Fushen. <i>The History of the Xinjiang Corps’ Reclamation and Frontier Defense</i> (Xinjiang Bingtuan Tunkenchang Lishi). Volume 1 and 2. Xinjiang Keji Weisheng Chubanshe, 1997.<br>
+            [These two volumes will serve as a primary source of historical information on the XPCC]<br><br>
+            Honing, Emily, and Zhao Xiaojian. <i>Across the Great Divide: The Sent-down Youth Movement in Mao's China</i>, 1968–1980. Cambridge University Press, 2019.<br><br>
+            Kardos, Amy. "A Rock and a Hard Place: Chinese Soldiers in Xinjiang Caught between Center and Periphery after 1949." In <i>China on the Margins</i>, eds. by Sherman Cochran and Paul G. Pickowicz, Ithaca, NY: Cornell University Press, 2011, 135-158.<br><br>
+            Kardos, Amy. “‘Fields of White Gold:’ The Cotton Experiment in Chinese Central Asia, 1950-1955.” <i>Journal of the Southwest Conference on Asian Studies</i> 7 (2011): 100-116.<br><br> 
+            Krauss, Charles Richard. “Chapter 2: Origins.” In “Xinjiang’s 100,000: State-led Urban-to-Rural Population Resettlement in Socialist China” (PhD diss., George Washington University, 2017).<br><br> 
+            McMillen, Donald. "Xinjiang and the Production and Construction Corps: A Han Organization in a Non-Han Region." <i>The Australian Journal of Chinese Affairs</i>, no.6 (August, 1981), 65-96.<br><br>
+            Millward, James A. <i>Eurasian Crossroads: A History of Xinjiang.</i> Columbia University Press, 2007.<br><br>
+            Seymour, James D. “Xinjiang’s Production and Construction Corps, and the Sinification of East Turkestan.” <i>Inner Asia</i> 2, no.2 (2000). Special Issue: Xinjiang: 171-193.<br><br>
+            Toops, Stanely. “Demographics and Development in Xinjiang after 1979.” Working paper, no. 1. East-West Center Washington, May 2004. <a href="https://www.eastwestcenter.org/sites/default/files/private/EWCWwp001.pdf">Link.</a><br><br> 
+            White, Lynn T., III. “The Road to Urumqi: Approved Institutions in Search of Attainable Goals During Pre-1968 Rustication from Shanghai.” <i>The China Quarterly</i> 79 (September 1979): 481-510.<br><br>
+            Yu, Zhang. <i>Going to the Countryside: The Rural in the Modern Chinese Cultural Imagination<, 1915-1965.</i> University of Michigan Press, 2020.
+        </p>
+      </section>
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition); 
+        })
+</script>
+</html>

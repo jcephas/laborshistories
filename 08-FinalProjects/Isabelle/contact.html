@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Processing-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>IT Final Project</title>
+</head>
+
+<header>
+  <div class="container">
+     <nav class="nav">
+          <a href="index.html" id="home">*</a>
+
+          <ul class="nav-list">
+            <li>
+            <a href="people.html" class="nav-link">People</a>
+            </li>
+            <li>
+               <a href="data.html" class="nav-link">Map</a>
+            </li>
+            <li>
+               <a href="bibliography.html" class="nav-link">Bibliography</a>
+            </li>
+            <li class="active">
+               <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+     </nav>
+  </div>
+</header>
+<body>
+    <div class='content'>
+      <section class='content-body'>
+        <p>
+        <br><br><br><br><b style="font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 17px; text-align: right;"><a href="mailto: it5678@princeton.edu" style="text-decoration: none;">Isabelle A. Tan</a></b> is a PhD student in History and Theory of Architecture at Princeton University. Alongside her doctoral studies, she is an assistant editor at the <a href="https://averyreview.com/" style="color: #010057;"><i>Avery Review</i></a> and one-half of an experimental practice, Workshop for Environmental Technik (WET, 环境技术工作小组). This work includes an interview published in <a href="https://www.novembermag.com/content/jussi-parikka" style="color: #010057;"><i>November</i></a> and a forthcoming exhibition at 80WSE. Isabelle previously taught at The New School. She is a graduate of Columbia GSAPP’s Critical, Curatorial & Conceptual Practices in Architecture program. Her writing has appeared in the <i>Avery Review</i>, <a href="https://www.pidgin.press/issues/p/issue-29"style=" color: #010057;"><i>Pidgin</i></a>, and <a href="https://www.pinupmagazine.org/issues/pinup-32-the-architecture-of-art" style=" color: #010057;"><i>PIN-UP</i></a>, and she is indebted to politically dissent techniques of approach.</p>
+        </div>
+      </section>
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition); 
+        })
+</script>
+</html>
