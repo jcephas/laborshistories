@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Final Project Page One</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+        
+
+</head> 
+
+<style>
+
+    canvas {
+        position: absolute;
+        top: 60px;
+        right: 200px;
+    }
+
+    h1 {            
+        color: white;
+        font-family: oswald;
+        font-size: 50px;
+    }
+
+    h2 {
+       font-family: oswald;
+        font-size: 35px;
+        padding-top: 35px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        text-shadow: 5px;
+        color: #b88c49;
+    }
+
+    h3 {
+        color: white;
+         font-family: oswald;
+    }
+
+     h6 {
+        font-style: normal;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 80px;
+        padding-right: 50px;
+        font-family: oswald;
+        font-size: 15px;
+    }
+
+    a {
+        color: #b88c49;
+        font-family: oswald;
+        font-style: bold;
+        padding-top: 75px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+ a:hover {
+        color: greenyellow;
+        font-family: oswald;
+        padding-top: 75px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+  p {
+        font-style: normal;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-family: oswald;
+        font-size: 18px;
+    }
+
+    p.italic {
+        font-style: italic;
+    }
+  
+    p.bold {
+        font-style: bold;
+    }    
+
+    table {
+        font-style: normal;
+        font-family: oswald;
+        font-size: 16px;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        color: white;
+    }
+
+    .first {
+        background-color: black;
+        height: 700px;
+        padding-top: 75PX;
+        padding-left: 75px;
+        padding-right: 75px;
+        text-align: center;
+        text-decoration-color: white;
+
+         /* background image*/
+        background-image: url("southernoutline.jpg");
+         background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background size: cover;
+    }
+
+    .parallax {
+        /* background image*/
+        background-image: url("datasetimage.jpg");
+
+        /* set height for the image */
+        min-height: 400px;
+
+        /* Create the parralax effect.*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-size: auto;
+    }
+
+    .second { 
+        background-color: black;
+        height: 1000px
+    }
+
+    .third {
+        background-color: black;
+        height: 650px;
+        padding-top: 75PX;
+        padding-left: 75px;
+        padding-right: 50px;
+        font-style: normal;
+        font-family: oswald;
+
+    }
+
+  .fourth {
+     background-color: black;
+        height: 200px;
+        padding-top: 75PX;
+        padding-left: 75px;
+        padding-right: 50px;
+        font-style: normal;
+        font-family: oswald;
+  }
+       
+</style>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/esm/popper.min.js",
+        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.esm.min.js"
+      }
+    }
+    </script>
+    <script type="module">
+      import * as bootstrap from 'bootstrap'
+
+      new bootstrap.Popover(document.getElementById('popoverButton'))
+    </script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" role="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Project Homepage</a></li>
+                <li><a class="dropdown-item" href="finalproject02.html"aria-current="true">Theater Dataset</a></li>
+                <li><a class="dropdown-item" href="finalproject03.html">Theater Maps</a></li> 
+                <li><a class="dropdown-item" href="finalproject04.html">Project Reference Page</a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+
+    <div id="section01" class="first">
+        <h1>THEATER DATASET</h1>
+        <a href="#section02">Go To The Next Section.</a>
+    </div>
+
+    <div class="parallax">
+        <p>Figure 1.1 Interior image of Church's Park and Auditorium Theatre, opened circa 1892. Located at 191 Beale Street, Memphis TN.</p>       
+    </div>
+
+    <div id="section02" class="second">
+        <h2>Developing a Black Theater Dataset</h2>
+        <p>The project’s dataset illustrates the prevalent theater culture in the South, focusing on the theater buildings that were opened and active between 1890 and 1930. Collecting evidence of theaters owned and operated by Black Americans in the following states: Alabama, Arkansas, Florida, Georgia, Louisiana, Mississippi, North Carolina, South Carolina, Tennessee, Texas, and Virginia. This dataset does not include theaters that were only maintained by Black management, nor does it include sites that merely catered to Black audiences while upholding Jim Crow audience structures. There is currently an assembly of thirty-seven theater sites within this research dataset - of which only sixteen are presented, reflecting only independent commercial theater houses instead of the wider ecosystem of multi-use and community-based play stages that were prominent in the region. Thus, what is being gathered is a mere fraction of the history of Black theater production during this time period.</p>
+
+        <p>Jonathan Shandell explores the formation of theaters and play troupes on a community-based and hyper-local scale that dominated the Black theater landscape during the early part of the twentieth century,</p>
+
+        <h6>“James V. Hatch and Errol G. Hill report that “by 1925 …more than three thousand amateur groups - schools, women's clubs, men’s lodges, churches and settlement houses - had built raised platforms for stages and ‘put on plays.” Historians have labeled this swell of activity in the early twentieth century as the “Negro Little Theare Movement.” From roughly the mid 1910s until the late 1930s, an assortment of independent, non-commercial African American theatre companies producing dramatic works grew throughout the United States. These companies took root in library auditoriums, churches, community centers, universities,  and anywhere else a platform could be built and artists and audiences might gather. In a multitude of ways with a highly varied repertory, these little theatre groups addressed vital needs of the African American communities: authentic self-expression, political protest, intellectual and artistic development, and communal celebration and solidarity.” <a href="finalproject04.html">[4]</a></h6>
+
+        <p>I would be remiss to only write of the development of the Black theater as a surplus development when it can also be contextualized as being formed through a set of systematic fractures. By fractures, we can pinpoint the spatial fractures of Jim Crow that were dramatically molding the Southern region alongside the economic fragility of these institutions from a business standpoint and through that of the art worker. The dataset represents these fractures through the short-term nature of their status as active sites and their evolution from staged theaters to cinemas. The dataset shows the rapid turnover of businesses and the relocation of sites. Donald Bogle describes this fragility as the theatrical technologies that thwarted the cinema industry,</p>
+
+        <h6>“The audience for black films grew rapidly (particularly between 1915 and 1923); eventually there were about 600 theatres on the race-movie circuit . But a number of basic problems plagued this burgeoning industry: financing, distribution, promotion. When talking movies came into vogue, many companies lacked the capital to keep up production and to acquire new sound equipment.” <a href="finalproject04.html">[5]</a></h6>
+
+        <p>An additional fracture at play is that these sites are not widely valued as popular sites for public memory. These economic and political fractures are part of the broader conditional structures that account for the mapping and data visualizations produced for the project.</p>
+        <a href="#section03">Go To The Next Section.</a>
+    </div>
+
+     <div id="section03" class="third">
+        <h2>Data Table</h2>
+        <table>
+        <tr>
+            <th>Site Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Address</th>
+            <th>Year Opened</th>
+            <th>Year Closed</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+        </tr>
+        <tr>
+            <td>Frolic Theatre</td>
+            <td>Bessemer</td>
+            <td>AL</td>
+            <td>1914 1st Avenue North</td>
+              <th>1922</th>
+            <th>1954</th>
+            <th>33.4023320105451</th>
+            <th>-86.9513544715537</th>
+        </tr>
+        <tr>
+            <td>Famous Theatre</td>
+            <td>Bessemer</td>
+             <td>AL</td>
+            <td>1917 North 4th Street</td>
+              <th>1922</th>
+            <th>1970</th>
+            <th>33.5335441</th>
+            <th>-86.8291495</th>
+        </tr>
+        <tr>
+            <td>Frolic Theatre</td>
+            <td>Birmingham</td>
+            <td>AL</td>
+            <td>312 North 18th Avenue</td>
+              <th>1921</th>
+            <th>1950</th>
+            <th>33.51486</th>
+            <th>-86.810498</th>
+        </tr>
+        <tr>
+            <td>Gay Theatre</td>
+            <td>Birmingham</td>
+             <td>AL</td>
+            <td>1722 North 4th Avenue</td>
+              <th>null</th>
+            <th>null</th>
+            <th>33.5158085606852</th>
+            <th>-86.8113893304979</th>
+        </tr>
+
+          <tr>
+            <td>New Queen Theatre</td>
+            <td>Anniston</td>
+             <td>AL</td>
+            <td>504 West 15th Street</td>
+              <th>1924</th>
+            <th>null</th>
+            <th>33.6636403425998</th>
+            <th>-85.8360534561686</th>
+        </tr>
+
+          <tr>
+            <td>Queen Theatre</td>
+            <td>Birmingham</td>
+             <td>AL</td>
+            <td>212 18th Street North</td>
+              <th>1910</th>
+            <th>null</th>
+            <th>33.5144233922446</th>
+            <th>-86.8094217525856</th>
+        </tr>
+
+          <tr>
+            <td>Airdome Theatre</td>
+            <td>Jacksonville</td>
+             <td>FL</td>
+            <td>601 West Ashley Street</td>
+              <th>1909</th>
+            <th>1915</th>
+            <th>30.3327831453766</th>
+            <th>-81.663928428704</th>
+        </tr>
+
+          <tr>
+            <td>Bijou Theatre</td>
+            <td>Jacksonville</td>
+             <td>FL</td>
+            <td>1615 West Ashley Street</td>
+              <th>1908</th>
+            <th>1909</th>
+            <th>30.3327831453766</th>
+            <th>-81.663928428704</th>
+        </tr>
+
+          <tr>
+            <td>The Star Theatre</td>
+            <td>Savannah</td>
+             <td>GA</td>
+            <td>508 West Broad Street</td>
+              <th>1910</th>
+            <th>1930</th>
+            <th>32.0673452539849</th>
+            <th>-81.0874127779103</th>
+        </tr>
+
+          <tr>
+            <td>Auditorium Theatre</td>
+            <td>Memphis</td>
+             <td>TN</td>
+            <td>191 Beale Street</td>
+              <th>1892</th>
+            <th>null</th>
+            <th>35.1383617326113</th>
+            <th>-90.0504384727952</th>
+        </tr>
+
+          <tr>
+            <td>Gem Theatre</td>
+            <td>Memphis</td>
+             <td>TN</td>
+            <td>258 North Main</td>
+              <th>1900</th>
+            <th>null</th>
+            <th>35.1518824998277</th>
+            <th>-90.0494762067462</th>
+        </tr>
+    </table>
+
+        <a href="#section01">Go To The Top.</a>
+    </div>
+
+      <div id="section04" class="fourth">
+        <a href="finalproject03.html">Go To The Next Page: Theater Maps.</a>
+    </div>
+
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item">
+ <a class="page-link" href="index.html" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>    </li>
+    <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="finalproject02.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="finalproject03.html">3</a></li>
+     <li class="page-item"><a class="page-link" href="finalproject04.html">4</a></li>
+    <li class="page-item">
+      <a class="page-link" href="finalproject03.html" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+</body>
+
+</html>

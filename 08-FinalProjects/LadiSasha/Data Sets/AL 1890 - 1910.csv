@@ -1,0 +1,3 @@
+SiteName,SiteType,City,State,Address,YearOpened,YearClosed,Latitude,Longitude,ReferneceCitation,Notes
+Gay Theater,theater,Birmingham,AL,1722 North 4th Avenue ,,,33.51580856,-86.81138933,"Smith, Eric Ledell. African American Theater Buildings: An Illustrated Historical Directory, 1900-1955. Jefferson: McFarlandand Company, inc., Publishers, 2003.",
+Queen Theater,theater,Birmingham,AL,212 18th Street North,1910,,33.51442339,-86.80942175,"Smith, Eric Ledell. African American Theater Buildings: An Illustrated Historical Directory, 1900-1955. Jefferson: McFarlandand Company, inc., Publishers, 2003.","unsure of exact year opened, this this should read ""1910s"""
