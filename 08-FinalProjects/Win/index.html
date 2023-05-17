@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>Platform Gamification</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+</head>
+    
+<body>  
+
+<!-- title -->   
+<div id="title" class="text">
+<h1>Platform Gamification</h1>    
+<h2>Playbor and Prosumption in Post-Industrial Markets</h2>
+<p>Win Overholser &mdash; ARC 550 &mdash; 12 May 2023</p>    
+</div>
+
+<!-- menu -->
+<div id="menu" class="menu text ">
+<button class="menuitem navmenu" data-target="#intro">
+    Instructions
+    </button>
+<button class="menuitem navmenu" data-target="#map">
+    Ludic Maps
+    </button>     
+<button class="menuitem navmenu" data-target="#sources">
+    Further Reading
+    </button>    
+    </div>
+    <br/>
+        
+<!-- intro -->
+<div id="intro" class="section">
+    <!--<div id="togglemenu" class="menu text">
+    <button class="menuitem togglemenu" onclick="toggleText()">Toggle Text</button>
+    <button class="menuitem togglemenu" onclick="toggleBalls()">Toggle Balls</button>
+    </div>
+    <br/>-->   
+        <p class="text textsection">The once unbridgeable gap between play and labor has all but disappeared. While formerly the two could be seen as poles on a spectrum of human activity, any attempt to define their ranges today quickly reveals the collapse of this dichotomy in contemporary business and leisure practices. A growing number of people play video games for a living while carpentry has become more and more a hobby rather than a profession. Play and labor have become thoroughly intertwined&mdash;into 'playbor'&mdash;through the proliferation of the platform business model, the increasing number of leisure hours afforded to individuals in post-industrial societies, and the gamification of the labor that still needs to be performed. The space created by this amphibolous playbor suggests an imminent alternative expression of human subjectivity, and a departure from the stagnant, neoliberal diagnosis that has pervaded visions of a forever unchanging future since the late 20th century. Playbor promises a future where humans can perform labor without tiring as they never consciously feel as though they are laboring because they are actually playing. As society moves beyond the industrial era, it moves into a posthuman moment where the need to conquer nature subsides. Humans have redefined the planet around themselves, and the era that playbor foretells is one where humans can reap the rewards of the millennia-long project of civilization by doing as they please.</p>
+    
+    <div class="parallax" style="background-image: url(img/505a.jpg)"><p class="caption"><i>New Babylon.</i> Constant, 1963.</p></div>
+        
+        <p class="text textsection">Centuries before humans arrived at this decisive turn, German theorist Karl Marx defined labor as the process by which man overcame nature whether through manipulation or perseverance.<sup><a href="#footnote1">1</a></sup> With this nebulous definition, he went on to outline how capitalism operates by separating labor from the means of production, creating profit from the gap between the value of a day’s labor and the requisite day’s salary for that labor.<sup><a href="#footnote2">2</a></sup> In purchasing labor, the capitalist could prosper off ownership of land, materials, or equipment alone. Today, however, the most successful companies of the 21st century have taken this concept a step farther. While large technological conglomerates do employ an ever-fluctuating number of laborers to develop and maintain their products, neither the capitalist nor their hired labor produce the actual content of their product. Their product is a platform whose consumable content is created by its very consumers as an externalized labor cost. Platforms minimize their overhead and maximize their profit because they cater to consumers who produce and consume their own content. Beyond some technical initial labor, the platform relies on its users to labor within it of their own volition, turning labor into a form of play.</p>
+        
+        <p class="text textsection">The platform model changes how labor operates within a market because it fundamentally alters how the market operates. In 1980, American futurist Alvin Toffler foresaw the platform changes of today brought about by what he termed the 'Third Wave.' Viewing history as waves continually lapping against a shore rather than as a linear, Hegelian construct that inevitably leads to 'end of' discourses<sup><a href="#footnote3">3</a></sup> and the perpetuation of an ever-industrializing, neoliberal status quo,<sup><a href="#footnote4">4</a></sup> Toffler lays out the three largest waves of human civilization: the agricultural revolution, the industrial revolution, and now the technological revolution.<sup><a href="#footnote5">5</a></sup> In the first, humans produced for their own consumption. In the second, they produced for exchange, creating a market system that would dominate advancing forms of global economics from simple bartering systems to capitalism to socialism.<sup><a href="#footnote6">6</a></sup> In all these systems, the producer is separated from the consumer regardless of their distance from the means of production. Indeed, these elaborate systems only function because they separate production and consumption.<sup><a href="#footnote7">7</a></sup> However, the Third Wave “begins to heal the historic breach between producer and consumer, giving rise to the ‘prosumer’ economics of tomorrow.”<sup><a href="#footnote8">8</a></sup> The Third Wave enables humans to return to producing primarily for their own consumption—what Toffler terms 'prosumption.' Prosumers both produce and consume, negating the exchange-based economy of the industrial Second Wave. In the Third Wave, market maintenance replaces market growth as the primary focus of human civilization shifts away from expanding its economic impact.<sup><a href="#footnote9">9</a></sup> This phenomenon not only continues today, but does so at a much deeper level than the early traces Toffler identifies in <i>The Third Wave</i>.</p>
+        
+        <div class="parallax" style="background-image: url(img/505b.jpg)"><p class="caption"><i>Future Shock Trilogy.</i> Alvin Toffler, 1970&ndash;90. Graphic by Boot Boys Biz.</p></div>
+        
+    
+        <p class="text textsection">One of Toffler's 20th-century examples of prosumption is the ATM, which disembodied the teller in a self-operated, bank-owned machine.<sup><a href="#footnote10">10</a></sup> Today, platforms like PayPal or Venmo transfer money between users without ever holding it as a bank would, disembodying monetary transfers a step beyond the automated teller machine. Consumers are not only able to do the work themselves (instead of having a teller do it), but can do the work through a third-party of their choice. They not only can transfer money outside banking hours, but wholly outside banks. In their 2016 book <i>Platform Revolution</i>, MIT researchers outlined how platform models oppose pipeline models—the traditional “business that employs a step-by-step arrangement for creating and transferring value, with producers at one end and consumers at the other.”<sup><a href="#footnote11">11</a></sup> In democratizing and opening business through a platform model, businesses subvert Marx’s process of labor valorization. The value generated by their work stems not from the creation of goods, but from the cultivation of a user base.<sup><a href="#footnote12">12</a></sup> The value generated through labor, while needed to create the software architecture of the platform, is no longer the primary valorization method. Viewers flock to YouTube not necessarily because it is the best, highest quality, or most economical video streaming platform on the internet, but rather because it has the most users, the most uploaders, and thus the most content. In fact, on the rare occasions YouTube does produce its own content—such as in the infamous <a href="https://www.theverge.com/2018/12/13/18137894/youtube-rewind-2018-dislike-shane-dawson-logan-paul-pewdiepie-mkbhd-philip-defranco">YouTube Rewind 2018</a>—users often respond negatively, or ignore the content entirely.</p>
+        
+        <p class="text textsection">Through platforms like YouTube and Twitch, play has become an increasingly accessible employment opportunity. While professional athletics have long allowed people to play as their job, the rise of streaming and professional gaming has democratized and expanded the realm of professional playing. In these cases, play is the literal labor being done, which in turn transforms the relationship the player has with their playing from one of having fun into one of performing. The role of performance—both in terms of efficiency and entertainment—serves as a spectral link between play and labor. Toffler debunks the trite, perennial notion that no one wants to work anymore by identifying that this is only true when viewing the market from a Second Wave mindset that limits what 'work' can be.<sup><a href="#footnote13">13</a></sup> Labor no longer exists entirely within a factory or office, but often becomes a hobby or other self-directed endeavor. People can now afford to labor for themselves on things they enjoy, and choose to do so instead of taking on additional jobs to earn more capital.<sup><a href="#footnote14">14</a></sup> Toffler claims that between 1970 and 1980 a major shift occurred in how laborers used their downtime. In 1970, the sale of power tools was split: 70% were purchased by professionals, and 30% by hobbyists. By 1980, these figures had reversed.<sup><a href="#footnote15">15</a></sup> Leisure and play have increasingly become intrinsically motivated labor.</p>
+        
+    <div class="parallax" style="background-image: url(img/505c.jpg)"><p class="caption"><i>Super Mario Maker.</i> Nintendo, 2015. In this Mario title, gameplay revolves around players building their own levels, and playing levels built by other players.</p></div>
+    
+        <p class="text textsection">In research on MMORPGs (Massively Multiplayer Online Role-Playing Games), American researcher Nick Yee found that “many players in fact characterize their game play as a second job.”<sup><a href="#footnote16">16</a></sup> While this could be taken solely as the number of hours committed to playing in virtual worlds, Yee identifies multiple cases where <a href="http://www.wired.com/wired/archive/11.01/gaming.html">capital has been generated through the labor of online play.</a><sup><a href="#footnote17">17</a></sup> In these cases, the individual act of play is indistinguishable from labor save for the fact that the player chose to play while the laborer must labor. This has direct impacts on the labor market outside platform industries. “Video games are changing the nature of both work and play. It is not so much that businesses will need to adapt to gamers as much as that work and play are starting to become indistinguishable from each other.”<sup><a href="#footnote18">18</a></sup> American game designer Celia Pearce agrees with this sentiment, recounting how players of the MMORPG <i>Myst</i> painstakingly rebuilt the game in <i>Second Life</i>, another MMORPG, after <i>Myst</i>’s servers shut down. Not only did they perform all the digital design labor needed to rebuild the original game world, they designed and built a sequel in the spirit of the original.<sup><a href="#footnote19">19</a></sup> The desire to labor as a form of play has led to a “new hybrid entertainment form in which players [pay] to produce their own entertainment media. … Enabling people to their own entertainment experience has become a viable business model.”<sup><a href="#footnote20">20</a></sup> Pearce goes on to outline how this “dynamic, two-way medium in which the 'audience' has just as much power to create content as the 'producer' threatens to upend” the global hegemonic order that persists from Toffler’s Second Wave.<sup><a href="#footnote21">21</a></sup> The merging of play and labor into playbor works in tandem with the merging of production and consumption into prosumption to build an alternative framework for how humans operate that enables envisioning a world after the endless 'end of history' and neoliberal repetition. Through playbor and prosumption, humans can transition from <i>Homo faber</i> (man who makes) to <i>Homo ludens</i> (man who plays) without losing what is made. The act of making simply changes from that which occurs in a factory to that which occurs in a makerspace: namely, it is made because the maker wants to make it, not because they have been instructed to make it.</p>
+        
+        <p class="text textsection">While labor by any definition requires a level of toil that likely brings more stress and misery than joy, play is inherently less definitive. New Zealand theorist Brian Sutton-Smith committed his career to exploring ideas around play, and even he had to title his canonical text <i>The Ambiguity of Play</i>. Scholars can debate over the nuances of the term labor, but play invites debate over its broader definition. Borrowing a page from English literary critic William Empson’s book <i>Seven Types of Ambiguity</i>, Sutton-Smith identifies seven rhetorics of play: 1) as progress, such as the social and physical play central to a child’s development; 2) as fate, such as gambling, which pits the notion that play is self-directed and of a free will against powers beyond the player’s control; 3) as power, such as in athletic matches that represent conflict; 4) as identity, such as in communal celebrations and activities that form a cultural identity; 5) as the imaginary, such as in improvisation and creation; 6) as the self, such as hobbies and activities taken on simply because the player enjoys doing them; and 7) as frivolous, such as any activity that produces nothing but wasted time.<sup><a href="#footnote22">22</a></sup> The breadth of these seven modes of playing, all of which certainly are forms of play, demonstrate the paradoxical and ambiguous nature of play. Furthermore, all but types 2 and 7 can readily include forms of what would otherwise be considered labor within them. In strictly Marxist analyses, considering play in these terms does not compute. Indian professor Tithi Bhattacharya proposes the lens of social reproduction to account for the time laborers must spend to recuperate in order to continue to labor,<sup><a href="#footnote23">23</a></sup> which allows for play to factor into the labor process, but it does not allow play and labor to coincide. For social reproduction, play supports labor, recharging laborers so they might continue to labor.</p>
+        
+       <div class="parallax" style="background-image: url(img/505d.jpg)"><p class="caption">Google's office in Tel Aviv with playful elements to keep employees engaged.</p></div>    
+    
+        <p class="text textsection">In a 2020 study, South African researchers found that organizations that incorporated playtime during work breaks tended to have higher team performances.<sup><a href="#footnote24">24</a></sup> Similarly, Finnish professors found that gamification was an effective method “to increase the motivation of (crowd)workers and influence their behaviors, such as the quantitative crowdsourcing participation, the contribution quality and even the long-term engagement.”<sup><a href="#footnote25">25</a></sup> Based on these studies, play clearly excels as a form of social reproduction that engenders more labor. However, the Finnish study also found that gamification was not always necessary, and sometimes could even hurt performance depending on the factors that brought workers to the job.<sup><a href="#footnote26">26</a></sup> Intrinsic motivation, self-direction, and personal desire have a greater impact than simply converting labor into a game. French anthropologist Emmanuelle Savignac also found this to be the case in her study of the gamification of work. In her analyses, she distinguishes between gamification, ludification, and ludicization. Gamification requires the introduction of gameplay mechanics into non-gameplay environments. Meanwhile ludification simply entails making activities fun. Ludicization combines the two, reframing an activity as a game and in turn changing the player’s understanding of what makes a game a game.<sup><a href="#footnote27">27</a></sup> The combining of play and labor is precisely ludicization: as labor becomes play, the definition of play expands to include more and more laborious tasks.</p>
+    
+        <p class="text testsection">On one hand, large digital platforms have found an exploitative way to gamify labor behind dopamine-delivering like systems in order to generate a profit for themselves from the voluntary labor of their users. On the other hand, the rapid spread of play as labor (and labor as play) serves to deconstruct the exploitative capitalist system in favor of a system where humans are able to do what they enjoy and still make a living. As the platform market continues to grow and digital democracies become more prevalent around the globe, the future of labor seems increasingly fun. Where the capitalist purchased labor in the 19th and 20th centuries, the 21st century promises that, through the ludicization of labor, the capitalist will eventually create such a distance between themselves and the labor that even their hired laborers are nowhere near the arduous labor of previous eras.</p>
+        
+    
+    <br/>
+    
+    <div id="introcontainer"></div>
+    
+    <br/>
+    
+    <p>The above diagram shows platform companies sized based on web traffic. Pink balls, which are based in Silicon Valley, have been scaled down, and orange balls, which are based in New York, have been scaled up. Teal balls, which are based in San Francisco, are neutral. Clicking and dragging the balls will reveal links between platforms that belong to the same parent company.</p>
+    
+    <br/>
+    
+    <div id="intronotes">
+        <p id="footnote1" class="biblioentry"><sup>1</sup> Karl Marx, "The Labor Process and the Valorization Process" in <i>Capital: A Critique of Political Economy, Volume I</i> (London: Penguin Books, 1990 [1867]), 283.</p>
+        <p id="footnote2" class="biblioentry"><sup>2</sup> Marx, "The Labor Process and the Valorization Process," 301.</p>
+        <p id="footnote3" class="biblioentry"><sup>3</sup> Frances Fukuyama, <i>The End of History and the Last Man</i> (New York: Free Press, 1992).</p>
+        <p id="footnote4" class="biblioentry"><sup>4</sup> Alvin Toffler, <i>The Third Wave</i> (New York: William Morrow and Company, 1980), 27–29.</p>
+        <p id="footnote5" class="biblioentry"><sup>5</sup> Toffler himself does not commit to the term technological, and instead offers a slew of terms that others had proferred for what he continually refers to as the Third Wave. Such terms include the Space Era, the Electronic Era, the Technetronic Era, the Post-Industral Era, the Scientific-Technological Era, and the Super-Industrial Era. Toffler, <i>The Third Wave</i>, 25.</p>
+        <p id="footnote6" class="biblioentry"><sup>6</sup> Toffler, <i>The Third Wave</i>, 305.</p>
+        <p id="footnote7" class="biblioentry"><sup>7</sup> Toffler, <i>The Third Wave</i>, 292.</p>
+        <p id="footnote8" class="biblioentry"><sup>8</sup> Toffler, <i>The Third Wave</i>, 27.</p>
+        <p id="footnote9" class="biblioentry"><sup>9</sup> Toffler, <i>The Third Wave</i>, 304.</p>
+        <p id="footnote10" class="biblioentry"><sup>10</sup> Toffler, <i>The Third Wave</i>, 287.</p>
+        <p id="footnote11" class="biblioentry"><sup>11</sup> Geoffrey Parker, Marshall Van Alstyne, and Sangeet Choudary, <i>Platform Revolution</i> (New York: W. W. Norton & Company, 2017), 11.</p>
+        <p id="footnote12" class="biblioentry"><sup>12</sup> Parker, Van Alstyne, and Choudary, <i>Platform Revolution</i>, 14.</p>
+        <p id="footnote13" class="biblioentry"><sup>13</sup> Toffler, <i>The Third Wave</i>, 296.</p>
+        <p id="footnote14" class="biblioentry"><sup>14</sup> Toffler, <i>The Third Wave</i>, 298.</p>
+        <p id="footnote15" class="biblioentry"><sup>15</sup> Toffler, <i>The Third Wave</i>, 289.</p>
+        <p id="footnote16" class="biblioentry"><sup>16</sup> Nick Yee, “The Labor of Fun: How Video Games Blur the Boundaries of Work and Play” <i>Games and Culture</i> 1, no. 1 (January 2006): 69.</p>
+        <p id="footnote17" class="biblioentry"><sup>17</sup> Yee, “The Labor of Fun:” 70.</p>
+        <p id="footnote18" class="biblioentry"><sup>18</sup> Yee, “The Labor of Fun:” 70.</p>
+        <p id="footnote19" class="biblioentry"><sup>19</sup> Celia Pearce, “Productive Play: Game Culture from the Bottom Up” <i>Games and Culture</i> 1, no. 1 (2006): 22.</p>
+        <p id="footnote20" class="biblioentry"><sup>20</sup> Pearce, “Productive Play:” 18.</p>
+        <p id="footnote21" class="biblioentry"><sup>21</sup> Pearce, “Productive Play:” 19.</p>
+        <p id="footnote22" class="biblioentry"><sup>22</sup> Brian Sutton-Smith,<i>The Ambiguity of Play</i> (Cambridge: Harvard University Press, 2001), 9&ndash;11.</p>
+        <p id="footnote23" class="biblioentry"><sup>23</sup> Tithi Bhattacharya, "<a style="color:var(--color-dawn)" href="https://www.youtube.com/watch?v=Uur-pMk7XjY">What Is Social Reproduction Theory?</a>"</p>
+        <p id="footnote24" class="biblioentry"><sup>24</sup> Liana Fourie, Crizelle Els, and Leon T. de Beer, “A Play-at-Work Intervention: What are the Benefits?” <i>South African Journal of Economic and Management Sciences</i> 23, no. 1 (2020): 1.</p>
+        <p id="footnote25" class="biblioentry"><sup>25</sup> Benedikt Morschheuser and Juho Hamari, “The Gamification of Work: Lessons from Crowdsourcing,” <i>Journal of Management Inquiry</i> 28, no. 2 (2019): 146.</p>
+        <p id="footnote26" class="biblioentry"><sup>26</sup> Morschheuser and Hamari, “The Gamification of Work:" 147.</p>
+        <p id="footnote27" class="biblioentry"><sup>27</sup> Emmanuelle Savignac, <i>The Gamification of Work: The Uses of Games in the Workplace</i> (Hoboken: John Wiley & Sons, 2016), xiv–xvi.</p>
+        
+    </div>
+</div>       
+    
+<!-- maps -->
+<div id="map" class="section">
+    <div id="mapselector" class="menu">
+        <button class="menuitem mapmenu" onclick="drawMap('img/SanFran.csv', 'img/SanFran.geojson', sfProjection, 20, 1.2, 16);">
+            San Francisco
+        </button>
+        <button class="menuitem mapmenu" onclick="drawMap('img/SiliconValley.csv', 'img/SiliconValley.geojson', svProjection, 2, .8, 16);">
+            Silicon Valley
+        </button>
+        <button class="menuitem mapmenu" onclick="drawMap('img/NewYork.csv', 'img/NewYork.geojson', nyProjection, 200, 1, -8);">
+            New York
+        </button>
+        <!-- Getting this to work was a pain... At first I tried to have all three maps visible at the same time, but the interactive ball kept showing up multiple times, moving simultaneously on all three maps, and colliding with invisible points. Then I tried having the maps stacked on top of one another with a visibility toggle. This almost worked, but the little launch arrow and click counter never fell in line, and the whole thing became super laggy (not due to the multiple maps, but due to parsing what was visible at a given time since d3.js did not automatically account for what was 'display: block' and what was 'display: none', causing invisible collisions galore). It was almost really cool though because one could swap maps midgame to keep the ball going! Even when I finally realized I could just redraw the map by calling the function again from the buttons (rather than using the buttons to toggle visibility), there were issues with the interactive ball. It just kept adding new ones when you swapped the maps, and they would all move in sync and collide with everything. But now it works, and all I can do is write a long comment to lament the hours of my life I lost to debugging this silly map game. -->
+    </div>
+        <br/>
+    <div id="mapbox" class="mapcontainer"></div>
+        <br/>
+    <p class="text">Click inside the frame to launch the teal 'influencer' ball. Try to ricochet it off as many platform corporate headquarters as possible with as few clicks as possible to maximize your engagement score. Platform points have gravity fields based off their online web traffic statistics. Hover over them for more information. If you can hit them all with one click (their labels will turn teal), you've got what it takes to be the next big platform influencer!</p>
+</div>
+    
+<!-- glossary -->
+<div id="glossary" class="section">
+    <p class="text">Testing 1</p>
+</div>     
+    
+<!-- bibliography -->
+<div id="sources" class="section">
+    <p class="text">Works cited:</p>
+    <p class="biblioentry">Arendt, Hannah. "The Human Condition," "Labor," and "Work" in <i>The Human Condition</i>. Chicago: University of Chicago Press, 1958. 7&ndash;21, 79&ndash;135, 136&ndash;174.</p>
+    <p class="biblioentry">Bhattacharya, Tithi. "<a href="https://www.youtube.com/watch?v=Uur-pMk7XjY">What Is Social Reproduction Theory?</a>"</p>
+    <p class="biblioentry">Fourie, Liana, Crizelle Els, and Leon T. de Beer. “A Play-at-Work Intervention: What are the Benefits?” <i>South African Journal of Economic and Management Sciences</i> 23, no. 1 (2020): a2815.</p>
+    <p class="biblioentry">Fukuyama, Frances. <i>The End of History and the Last Man</i>. New York: Free Press, 1992.</p>
+    <p class="biblioentry">Henricks, Thomas S.. <i>Play and the Human Condition.</i> Chicago: University of Illinois Press, 2015.</p>
+    <p class="biblioentry">Huizinga, Johan. <i>Homo Ludens: A Study of the Play-Element in Culture.</i> Translated by Johan Huizinga. London: Routledge & Kegan Paul, 1949 [1944].</p>
+    <p class="biblioentry">Marx, Karl. "The Labor Process and the Valorization Process" in <i>Capital: A Critique of Political Economy, Volume I</i>. London: Penguin Books, 1990 [1867]. 283&ndash;306.</p>
+    <p class="biblioentry">Morschheuser, Benedikt and Juho Hamari. “The Gamification of Work: Lessons from Crowdsourcing.” <i>Journal of Management Inquiry</i> 28, no. 2 (2019): 145–148.</p>
+    <p class="biblioentry">Parker, Geoffrey, Marshall Van Alstyne, and Sangeet Choudary. <i>Platform Revolution.</i> New York: W. W. Norton & Company, 2017.</p>
+    <p class="biblioentry">Pearce, Celia. “Productive Play: Game Culture from the Bottom Up.” <i>Games and Culture</i> 1, no. 1 (2006): 17–24.</p>
+    <p class="biblioentry">Savignac, Emmanuelle. <i>The Gamification of Work: The Uses of Games in the Workplace</i>. Hoboken: John Wiley & Sons, 2016.</p>
+    <p class="biblioentry">Sutton-Smith, Brian. <i>The Ambiguity of Play</i>. Cambridge: Harvard University Press, 2001.</p>
+    <p class="biblioentry">Toffler, Alvin. <i>The Third Wave.</i> New York: William Morrow and Company, 1980.</p>
+    <p class="biblioentry">Yee, Nick. “The Labor of Fun: How Video Games Blur the Boundaries of Work and Play.” <i>Games and Culture</i> 1, no. 1 (January 2006): 68–71.</p>
+    
+    <p class="text">Web and app statistics gathered from:</p>
+    
+    <ul>
+        <li><a href="https://play.google.com/">play.google.com</a></li>
+        <li><a href="https://www.semrush.com/">semrush.com</a></li>
+        <li><a href="https://sensortower.com/">sensortower.com</a></li>
+        <li><a href="https://www.similarweb.com/">similarweb.com</a></li>
+    </ul>
+    <br/><br/>
+    <p class="text">About the author:</p>
+    <p class="text"><a href="http://overholser.win">Win Overholser</a> is an MArch candidate at Princeton. He holds a Bachelor of Science in Arcitectural Studies from Northeastern University. He is an editor of <a href="http://rumor.reviews">Rumor</a> and <a href="http://malarch.com">MALarch</a>.</p>
+
+</div>
+    
+<script src="script.js"></script>
+<script>
+    drawMap("img/SanFran.csv", "img/SanFran.geojson", sfProjection, 20, 1.5, 16);
+</script>
+</body>            
+</html>

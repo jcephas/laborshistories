@@ -1,0 +1,11 @@
+type,name,year,info,creator,owner,size_staff,revenue,monthly_creators,monthly_users,total_content,reg_users,traffic,play_downloads,play_reviews,bounce_rate,pages_visited,visit_duration,location,address,lat,long,tag
+platform,Etsy,2005,an online retail platform that connects small makers with customers.,Etsy,Etsy,,2570000000,,,,,0.4562,10,1.27,45.83,6.4,0:05:41,New York,"117 Adams St, Brooklyn, NY 11201, USA",40.70058785,-73.98813838,
+platform,Tumblr,,a social media platform where users post and share text and images.,,,,,,,,,0.2227,100,3.72,,6.8,,New York,"770 Broadway, New York, NY 10003, USA",40.73084185,-73.99143735,
+platform,Spotify,,a music streaming platform.,,,,,,,,,0.4737,1000,28.5,,5.91,,New York,"150 Greenwich St 62nd Floor, New York, NY 10007, United States",40.71037672,-74.01198477,
+platform,Vine,,a defunct social media platform where users posted short videos.,,,,,,,,,0,50,1.14,,,,New York,"851 6th Ave, New York, NY 10001. United States",40.74720004,-73.98991569,
+product,Unreal Engine,,a game development software that allows users to create their own video games.,,,,,,,,,0.0094,,,,5.11,,New York,"550 W 54th St Apt 1731, New York City, New York, 10019, United States",40.76771744,-73.9915652,
+platform,Stack Overflow,,an online forum where users can resolve coding problems.,,,,,,,,,0.2122,,,,2.24,,New York,"110 William St Fl 28, New York, New York, 10038, United States",40.70877301,-74.00672337,
+platform,The RealReal,,an online retail platform where users resell designer clothing.,,,,,,,,,0.0171,0.1,0.001,,8.37,,New York,"53 W 36th St. 12th floor, New York, NY 10018",40.75086243,-73.98588407,
+platform,Seamless,,"a food delivery service that connects restaurants, drivers, and customers.",,,,,,,,,0.005,1,0.0642,,5.59,,New York,"100 Lexington Ave, New York City, New York, 10016, United States",40.74224084,-73.98312385,
+platform,Kickstarter,,a crowdfunding platform that allows users to get or give funding for projects.,,,,,,,,,0.022,1,0.0341,,3.55,,New York,"155 Rivington St, New York, NY 10002",40.71914592,-73.98555778,
+platform,Venmo,,a payment platform that allows users to exchange payments.,,,,,,,,,0.0119,10,0.686,,4.99,,New York,"117 Barrow St, New York, NY 10014",40.73171611,-74.00837011,

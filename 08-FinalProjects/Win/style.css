@@ -1,0 +1,229 @@
+/* general text & display */
+
+@font-face {
+    font-family: 'Archivo Narrow';
+    src: url('ArchivoNarrow-Medium.ttf');
+	font-weight: 500;
+}
+
+:root {
+	--color-teal: #009990;
+	--color-pink: #ffaaee;
+	--color-dawn: #fcc777;
+	--color-gray: #a0a0a0;
+}
+
+body {
+    margin-left: 2em;
+    margin-top: 2em;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 500;
+}
+@media (max-width: 48em) {
+body {
+    margin-top: 1em;
+    margin-left: 1em;    
+    } 
+}
+h1 {
+	font-family: 'Archivo Narrow', sans-serif;
+    font-size: 150%;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+h2 {
+	font-family: 'Archivo Narrow', sans-serif;
+    font-size: 125%;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+p {
+	font-family: 'Archivo Narrow', sans-serif;
+    font-size: 100%;
+    line-height: 125%;
+    max-width: 40em;
+    margin: 0;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+a {
+    color: var(--color-teal);
+}
+sup {
+    line-height: 0;
+    color: var(--color-pink);
+}
+ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin-left: 2em;
+    list-style: '// ';
+}
+button {
+    cursor: pointer;
+}
+.text {
+
+}
+
+/* navigation menu */
+
+.menu {
+    color: var(--color-teal);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 40em;
+}
+.menuitem {
+    flex: 1;
+    margin: 0 .5em;
+    text-align: center;
+    display: inline-block;
+    height: 2em;
+    width: 10em;
+    text-align: center;
+    background: var(--color-dawn);
+    
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 100%;
+    line-height: 125%;
+    color: var(--color-teal);
+    text-decoration: none;
+    border: 5px;
+    border-style: outset;
+    border-color: var(--color-dawn);
+}
+.menuitem:nth-child(1) {
+  margin-left: 0;
+}
+.menuitem:nth-child(4) {
+  margin-right: 0;
+}
+@media (max-width: 48em) {
+.menu {
+    width: calc(100% - 1em);    
+    }  
+.menuitem {
+    flex: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.menuitem:hover {
+    text-decoration: underline;
+}
+.activemenu {
+    background-color: var(--color-pink);
+    text-decoration: underline;
+    border: 5px;
+    border-style: inset;
+    border-color: var(--color-pink);
+}
+.section {
+    display: none;
+}
+
+
+/* intro */
+#intro {
+    width: 100%;
+    max-width: 40em;
+    display: block;
+    height: 100%;
+}
+
+#introtext {
+    height: 300px;
+    overflow-y: scroll;
+    z-index: 4;
+    background-color: var(--color-pink);
+    max-width: 37.5em;
+    padding: 1em;
+}
+#introcontainer {
+    height: 500px;
+    z-index: 0;
+    max-width: 37.5em;
+    padding: 1em;
+}
+#introballs {
+    height: 500px;
+    z-index: 0;
+    max-width: 37.5em;
+}
+#intronotes {
+    height: 300px;
+    overflow-y: scroll;
+    color: white;
+    background-color: var(--color-teal);
+    max-width: 37.5em;
+    padding: 1em;
+}
+@media (max-width: 48em) {
+    #introtext {
+        width: calc(100% - 1em);
+    } 
+    #introcontainer {
+        width: calc(100% - 1em);
+    } 
+    #intronotes {
+        width: calc(100% - 1em);
+    } 
+}
+.textsection {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+.parallax {
+    height: 300px;
+    width: calc(100vw - 4em);
+    position: relative;
+    left: 0;
+    background-position: 1em;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+.caption {
+    color:white;
+    margin-left: 1em;
+    padding-top: 1em;
+}
+
+/* map */
+.mapcontainer {
+    width: 80%;
+    height: 80%;
+    max-width: 39.5em;
+    max-height: 40em;
+    overflow: hidden;
+}
+@media (max-width: 48em) {
+  .mapcontainer {
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+  }
+}
+.mapoption {
+    flex: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* biblio */
+.biblioentry {
+    text-indent: -2em;
+    margin-left: 2em;
+    max-width: 37em;
+}
