@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>carceral craftsmanship in a forest of products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+</head>
+
+<style>
+
+ * {
+  box-sizing: border-box;
+}
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+  .dropbtn {
+          background-color: white;
+          color: #e04c4c;
+          padding: 10px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          margin-left: 20px; margin-top: 20px;
+         }
+
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: black;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 140px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: #e04c4c;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {
+          color: #e04c4c;
+          background-color: black;}
+
+        .show {display: block;}
+
+body {
+            animation: fadeInAnimation ease 2.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+  h1{
+    padding:20px 20px 20px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+    font-weight: bold;
+    color:white;
+  }
+
+  h1 span { 
+    background-color: #e04c4c; 
+    font-size: 50px;
+}
+
+  h2{
+    padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+    color: #e04c4c;
+  }
+  h2 span { 
+    background-color:white ; 
+    font-size: 30px;
+}
+
+  h3{padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+      color: white;
+      font-size: 30px;}
+      
+h3 span{
+  background-color: #e04c4c; 
+  font-color:white;
+}
+
+  h4{padding:20px 0px 0px 20px;
+    text-align: left;
+    font-family: 'Poltawski Nowy', serif;}
+
+    h4 span{
+      background-color:white ; 
+    font-size:30px;
+    }
+
+    h5{padding:20px 0px 0px 20px;
+    text-align: left;
+    font-family: 'Poltawski Nowy', serif;}
+
+
+    p span{
+      background-color:white;
+      font-family: 'Poltawski Nowy', serif; 
+}
+
+  p, ul{
+    padding:30px 0px 0px 30px;
+      color:black;
+      font-family: 'Poltawski Nowy', serif;
+      font-size:18px;
+      text-align: left;
+  }
+}
+ol, li {padding:30px 0 px 0px 30px;
+}
+
+.footnotes{
+   color: white;
+ text-align: left;
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 14px;
+}
+.first {
+    padding:30px;
+    background-color: white;
+  }
+.contents {
+padding:20px 0px 0px 20px;
+    text-align: center;
+    font-family: 'Poltawski Nowy', serif;
+      color: white;
+background-color: #e04c4c;
+padding:30px;
+min-height: 300px;
+  font-family: 'Poltawski Nowy', serif;
+font-size:30px;
+  }
+
+p.indent {
+    text-indent: 30px;
+  }
+
+  a {
+    font-family: 'Poltawski Nowy', serif;
+    background-color: white;
+    color:#e04c4c;
+  }
+
+  a span{
+    color:white;background-color:#e04c4c;
+  }
+
+  a:hover, a span:hover {
+          background-color: black;}
+
+.spacer{
+    min-height:250px;
+}
+
+.spacer2{
+    min-height:50px;
+}
+p.indent {
+    text-indent: 30px;
+}
+
+  .second {
+    padding:30px;
+  }
+
+  #image {
+  text-align: center;
+  padding: 10px;
+}
+
+#caption {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align:center;
+  width: 100%;
+  font-size: 15px;
+  font-weight: semi-bold;}
+
+
+.parallax1{
+  /*set background image*/
+  background-image: url("img/infopage.png");
+  
+  /*set height for image*/
+  min-height: 350px;
+
+  /*this creates the parallax effect*/
+  background-attachment:fixed;
+  background-position:top;
+  background-repeat:no-repeat;
+  background-size:100%;
+}
+
+
+</style>
+
+
+<body>
+
+<div id=top class=parallax1>
+  <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">•••</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="home.html">home</a>
+            <a  href="network.html">carceral networks</a>
+            <a href="catalogue.html">the Catalogue</a>
+            <a href="salesshow.html">sales/show</a>
+            <a href="info.html">about</a>
+          </div>
+        </div>
+
+        <script>
+
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+<h2><span>carceral craftsmanship in a forest of products</span></h2>
+
+</div>
+<div id=toc class=contents>
+
+<div id=author class=first>
+<h3><b><span>About the author<span></b></h3>
+<p><a href="mailto:jaojoco@princeton.edu"><b>Patrick Jaojoco</b></a> is a PhD candidate in the History and Theory of Architecture at Princeton University. My work considers the role of 20th century social, environmental, and infrastructural experimentation in crafting a postcolonial Philippine society amenable to neoliberal globalization. 
+
+<p>Read more <a href="https://pjaojoco.github.io/aboutme/">here</a>.
+
+
+<div id=project>
+  <h3><b><span>About the project</b></span></h3>
+<p>This project was conceived, designed, and created by Patrick Jaojoco for the class ARC 550: Space and Subjectivity: Labor’s Histories with Dr. Jay Cephas at Princeton University, Spring 2023. The maps depicted in the section entitled “carceral networks” were also conceived, designed, and created by Patrick Jaojoco with guidance from Dr. Cephas.</p>
+
+<p>This project elaborates upon past reading and research conducted with guidance from Dr. Wendy Warren in a seminar entitled HIS 579: Readings in Carceral History at Princeton University, Fall 2022. 
+</p>
+
+<h3><b><span>Works Cited</span></b></h3>
+  <ul>
+    <li>Ahearn, George P. “Annual Report of the Director of Forestry of the Philippine Islands, July 1, 1908 to June 30, 1909,” 1909. https://congressional-proquest-com.ezproxy.princeton.edu/congressional/result/congressional/congdocumentview?accountid=13314&groupid=98846&parmId=186BD675621.</li>
+    <li>Ahern, George P. <i>A Few Pertinent Facts Concerning the Philippine Forests and Needs of the Forest Service, That Should Interest Every Filipino</i>. Bureau of printing, 1908.</li>
+    <li>Belsky, Jill M., and Stephen F. Siebert. “Managing Ratttan Harvesting for Local Livelihoods and Forest Conservation in Kerinci-Seblat National Park, Sumatra.” <i>Selbyana</i> 16, no. 2 (1995): 212–22.</li>
+    <li>Broad, Robin. <i>Plundering Paradise: The Struggle for the Environment in the Philippines</i>. Berkeley: University of California Press, 1993.</li>
+    <li>“Catalogue. Sales Rooms at Bilibid Prison, Manila, P. I. Bureau of Prisons, Industrial Division." Accessed March 10, 2023. https://princeton.userservices.exlibrisgroup.com.</li>
+    <li>Charbonneau, Oliver. “Colonizing Workers: Labor, Race, and U.S. Military Governance in the Southern Philippines.” <i>Modern American History</i> 4, no. 1 (March 2021): 25–47. https://doi.org/10.1017/mah.2021.4.</li>
+    <li>Delina, Laurence L. “Indigenous Environmental Defenders and the Legacy of Macli-Ing Dulag: Anti-Dam Dissent, Assassinations, and Protests in the Making of Philippine Energyscape.” <i>Energy Research & Social Science</i> 65 (July 1, 2020): 101463. https://doi.org/10.1016/j.erss.2020.101463.</li>
+    <li>“Guards’ Manual: Bilibid Prison." Accessed March 10, 2023. https://princeton.userservices.exlibrisgroup.com.</li>
+    <li>Hammarstrom, Olav. <i>Design and Manufacture of Wooden and Rattan Furniture in the Philippines; Report and Recommendations of a United Nations Expert.</i> New York: United nations Technical assistance administration, 1952.</li>
+    <li>Luyt, Brendan. “Empire Forestry and Its Failure in the Philippines: 1901–1941.” <i>Journal of Southeast Asian Studies</i> 47, no. 1 (February 2016): 66–87. https://doi.org/10.1017/S0022463415000466.</li>
+    <li>Magno, Francisco. “Forest Devolution and Social Capital: State-Civil Society Relations in the Philippines.” <i>Environmental History</i> 6, no. 2 (2001): 264–86. https://doi.org/10.2307/3985087.</li>
+    <li>Mallari, Aaron Abel T. “The Bilibid Prison as an American Colonial Project in the Philippines.” <i>Philippine Sociological Review</i> 60 (2012): 165–92.</li>
+    <li><i>McClure’s Magazine</i> 1923-08: Vol 55 Iss 6. Open Court Publishing Co, 1923. http://archive.org/details/sim_new-mcclures-magazine_1923-08_55_6.</li>
+    <li>McCoy, Alfred W. <i>Policing America’s Empire: The United States, the Philippines, and the Rise of the Surveillance State.</i> New Perspectives in Southeast Asian Studies. Madison, Wis: University of Wisconsin Press, 2009.</li>
+    <li>Philippine Prisons Review. Bureau of Prisons, 1926.</li>
+    <li><i>Annual Report of the Director of Forestry</i>. Manila [etc.], 1902. https://www.biodiversitylibrary.org/bibliography/58448.</li>
+    <li>Semper, Gottfried. <i>Style in the Technical and Tectonic Arts, Or, Practical Aesthetics</i>. Getty Publications, 2004.</li>
+    <li>Siebert, Stephen F. <i>The Nature and Culture of Rattan: Reflections on Vanishing Life in the Forests of Southeast Asia</i>. University of Hawai’i Press, 2012. https://www.jstor.org/stable/j.ctt6wqdf6.</li>
+    <li>Tadiar, Neferti Xina M. <i>Remaindered Life</i>. Durham: Duke University Press, 2022.</li>
+    <li><i>The Shanghai Times</i> (1914-1921). “IN PRISON: An Interesting Description VISIT TO BILIBID.” May 27, 1916.</li>
+    <li>Tucker, Richard P. <i>Insatiable Appetite: The United States and the Ecological Degradation of the Tropical World</i>. University of California Press, 2000. https://hdl.handle.net/2027/heb31240.0001.001.</li>
+    <li>Wright, Hamilton Mercer. <i>A Handbook of the Philippines</i>. Chicago: McClurg, 1909.</li>
+    <li>Yang, Anand A. “The Prison-Handicraft Complex: Convict Labour in Colonial India.” <i>Modern Asian Studies</i> 57, no. 3 (May 2023): 808–34. https://doi.org/10.1017/S0026749X22000324.</li>
+
+
+    
+  </div>
+
+<p><a href="#top">↑ top</a> | <a href="home.html">home</a> | <a  href="network.html">carceral networks</a> | <a href="catalogue.html">the Catalogue</a> | <a href=salesshow.html>sales/show</a></p>
+
+<script>
+  $('a[rel="footnote"]').hover(
+    function(){
+      $($(this).attr('href')).addClass('hovering');
+    },
+    function(){
+      $($(this).attr('href')).removeClass('hovering');
+    }
+  );
+</script>
+</body></html>
+</body>
+
+  </html>
