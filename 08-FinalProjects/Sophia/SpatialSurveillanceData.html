@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Everyday Life and Labor in the Black Butterfly - Spatial Surveillance Data</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+.button-container {
+  position: fixed;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  z-index: 999;
+  }
+
+.circle-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bf9e59;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.circle-button:hover {
+  opacity: 0.3;
+}
+
+.circle-button:hover:not(:hover) {
+  opacity: 1;
+}
+
+.current-button{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #786337;
+  border: none;
+  pointer-events: none;
+  cursor: defualt;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+</style>
+
+<style>
+.fullscreen-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('IMG/4camerashoes.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  }
+
+.content-container {
+  text-align: center;
+  z-index: 1;
+}
+
+.content-container h1 {
+  font-size: 45px;
+  color: #fff;
+}
+
+.content-container p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.reveal-element {
+  opacity: 0;
+  animation: revealAnimation 3s forwards;
+}
+
+@keyframes revealAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.SpatialSurveillanceData {
+	  margin: 25px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  position: relative;
+  pointer-events: auto;
+}
+
+.SpatialSurveillanceData-container {
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: ;
+  color: #fff;
+}
+
+.SpatialSurveillanceData-container .image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.SpatialSurveillanceData-container .caption {
+
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #bf9e59;
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.SpatialSurveillanceData-container:hover .caption {
+  opacity: 0.7;
+}
+
+.SpatialSurveillanceData-container img{
+  max-width: 90%;
+  height: auto;
+  cursor: pointer;
+}
+
+.SpatialSurveillanceData-image{
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.SpatialSurveillanceData-content{
+  flex-grow: 1;
+}
+
+.SpatialSurveillanceData-container .image-wrapper .image1 {
+  max-width: 130%;
+}
+
+.SpatialSurveillanceData-container .image-wrapper .image2 {
+  max-width: 100%;
+}
+
+.SpatialSurveillanceData-container .image-wrapper .image3 {
+  max-width: 260%;
+}
+
+.SpatialSurveillanceData-container .image-wrapper .image4 {
+  max-width: 200%;
+}
+
+</style>
+
+<div class="button-container">
+  <a href="index.html" class="circle-button"></a>
+  <a href="PlantationArchitecture.html" class="circle-button"></a>
+  <a href="BaltimoreMD.html" class="circle-button"></a>
+  <a href="SpatialSurveillanceData.html" class="current-button"></a>
+  <a href="Conclusion.html" class="circle-button"></a>
+</div>
+
+<body>
+
+	<section class="fullscreen-section">
+	  <div class="background-image"></div>
+	  <div class="content-container">
+	  	 <h1 class="reveal-element">SPATIAL SURVEILLANCE DATA</h1>
+			 <p class="reveal-element"></p>
+		</div>
+	</section>
+ 
+	<section class="SpatialSurveillanceData" style="margin-left: 200px;margin-right: 200px;">
+    </div>
+		<h2></h2>
+		<p>Today, Baltimore’s hypersegregated condition reifies the boundaries throughout the city that were first established through redlining. With poverty and crime concentrated in specific pockets of the city, much of the surveillance exists in areas of the city experiencing practices of over-policing. Currently, over 60% of Baltimore’s population is Black living predominantly in neighborhoods located in East and West Baltimore. Additionally, the poorest communities are in these indicated neighborhoods.
+    </p>
+  </section>
+
+<section class="SpatialSurveillanceData">
+     <div class="SpatialSurveillanceData-container" style="margin-left: 0px;margin-right: 200px;">
+      <div class="image-wrapper">
+        <img class="SpatialSurveillanceData-image image1" src="IMG/4dem_med_title.png">
+        <div class="caption"><i>PERCENT OF BLACK/AFRICAN AMERICAN RESIDENTS (LEFT): Map showing the percent of Black/African American Residents in Baltimore City distributed by neighborhood. Purple indicates a higher proportion of Black/African American residents. MEDIAN HOUSEHOLD INCOME (RIGHT): Map showing median household income in Baltimore City distributed by neighborhood. White indicates a higher level of income. By author.</i>
+</section>
+
+  <section class="SpatialSurveillanceData">
+    <div class="SpatialSurveillanceData-container">
+        <div class="image-wrapper">
+          <img class="SpatialSurveillanceData-image image2" src="IMG/4cctv_title.png">
+          <div class="caption"><i>CCTV LOCATIONS: Map showing the locations of CCTVs (closed-circuit televisions) in Baltimore City represented by orange markers. By author.</i></div>
+      </div>
+    </div>
+		<p>The collected data for this project has focused on geolocating surveillance technology embedded within Baltimore, MD. The most accessible, public data has been the locations of CCTVs (closed-circuit televisions), provided by the city government through Open Baltimore. The location markers show overlap with parts of the city that have come to be defined by their hypersegregated conditions.</p>
+	</section>
+
+  <section class="SpatialSurveillanceData">
+    <div class="SpatialSurveillanceData-container">
+      <div class="image-wrapper">
+          <img class="SpatialSurveillanceData-image image3" src="IMG/4shotstopper_title.png">
+          <div class="caption"><i>SHOTSTOPPER LOCATIONS: Map showing the locations of ShotStopper sensors in Baltimore City represented by pink markers. By author.</i></div>
+      </div>
+    </div>
+    <h2></h2>
+    <p style="margin-left: 400px;border-left-style: solid;padding-left: 30px;border-left-width: 0px;">The second set of data collected focused on locations of relatively new technology: ShotStoppers, a system of sensors that detect sounds reflecting gunshots that are located using AI, categorized by human analysts, and then sent to local law enforcement should they meet the criteria. According to published communications between Open Justice Baltimore and the Baltimore Police Department, as of 2021, BPD does not have the sensor location data claiming that it is “confidential,” “owned,” and “maintained” by the company (MuckRock, “Location of ShotSpotter Devices"). However, a small set of data had been previously collected by academic researchers at the Justice Tech Lab (Justice Tech Lab, "ShotStopper Data"). Upon analysis, it is unclear whether this data indicates the sensors’ locations or simply the AI-generated triangulation of the audio input. The location data strictly included street addresses (no neighborhood or area data) and this information was input into an excel sheet and run through Python to output latitude and longitude data. Each data set includes 600+ rows of information (the latter having been collected from May 2018 to October 2018).
+    </p>
+  </section>
+
+  <section class="SpatialSurveillanceData">
+    <div class="SpatialSurveillanceData-container"></div>
+    <h2></h2>
+    <p style="margin-left: 200px;margin-right: 200px;">The ShotStopper data collected shows that the sensors are strictly located in East and West Baltimore neighborhoods. Their distribution in these areas are mostly scattered not showing particular groupings or patterns within the bounds of these neighborhoods. However, the CCTV data shows a greater distribution throughout these neighborhoods and the core of the city. For example, the map shows a centralized grid of their locations in the Downtown neighborhood. This area contains a number businesses, hotels, and entertainment venues such as the Hippodrome Theater, Everyman Theater, and CFG Arena. The grid appears to stop just before going into the University of Maryland’s Baltimore Campus and Medical School (likely due to the utilization of private security systems) and the edge of Camden Yards, home of the Baltimore Orioles. Considering the state runs these cameras, it is not particularly shocking that their locations would be centralized around areas with the biggest attractions and larger business interests.
+    </p>
+  </section>
+
+<section class="SpatialSurveillanceData">
+  <div class="SpatialSurveillanceData-container">
+    <div class="image-wrapper">
+            <img class="SpatialSurveillanceData-image image1" src="IMG/4both_panels.png" style="margin-right: 0px;margin-left: -100px;">
+            <div class="caption"><i>CCTV & SHOTSTOPPER LOCATIONS (LEFT): Map showing the locations of CCTVs and ShotStopper sensors in Baltimore City represented by orange markers and pink markers, respectively. Blue circle indicates the bounds of the point of interest discussed, the core of the city. POINT OF INTEREST (RIGHT): "Zoomed-in" map highlighting the discussed point of interest, the core of the city. The blue circle highlights the gridded locations of the CCTVs in downtown Baltimore City. By author.</i></div>
+    </div>
+  </div>
+</section>
+
+  <section class="SpatialSurveillanceData">
+    <div class="SpatialSurveillanceData-container">
+      <div class="image-wrapper">
+          <img class="SpatialSurveillanceData-image image4" src="IMG/4zoom_clusters.png" style="margin-left: 100px;">
+          <div class="caption"><i>CCTV CLUSTERS: Map highlighting the four CCTV clusters, circled in blue, proximate to the CCTV grid located downtown. Cluster 1 - the Gilmore Homes, located in Sandtown-Winchester, Cluster 2 - located in McCulloh Homes, Upton, Cluster 3 - Poe Homes, located in Poppleton, and Cluster 4 - Latrobe Homes, located in Oldtown. By author.</i></div>
+      </div>
+    </div>
+    <h2></h2>
+    <p style="margin-left: 400px;border-left-style: solid;padding-left: 25px;border-left-width: 0px; margin-right: 10px;">Another set of interesting groupings are found in East and West Baltimore, north of the downtown area. There are four main clusters that appear less organized than that of the downtown cameras. Group 1 is located in Sandtwon-Winchester, Group 2 is located in Upton, Group 3 is located in Poppleton, and Group 4 is located in Oldtown. Upon closer observation, each of these clusters are located at different public housing complexes: Gilmore Homes, McCulloh Homes, Poe Homes, and Latrobe Homes, respectively (Housing Authority of Baltimore City, “History of HABC”). Each property is run by the Housing Authority of Baltimore City, a state entity that owns and operates the properties. Having been established in the early 1940s, these properties mark the beginning of Baltimore’s slum clearance programs that led to the displacement through the 1970s. While poverty began to be concentrated in the few high-rise complexes built by the HABC, policies put forward by the Federal Housing Authority subsidized the development of thousands of single-family houses, sparking white flight out of urban areas (Baltimore City Department of Planning, Historical and Architectural Preservation Division, “History of Inequality in Baltimore").
+    </p>
+  </section>
+
+  <section class="SpatialSurveillanceData">
+      <div class="SpatialSurveillanceData-container"></div>
+      <h2></h2>
+      <p style="margin-left: 200px;margin-right: 200px;">Public housing projects have been praised across the country for utilizing surveillance measures to enhance security on these properties despite many residents feeling as though the cameras are used to police them, not strictly criminal activity (Cresta 2013). In Baltimore, the projects acted as tools to facilitate the choreographing of these families’ subsequent displacement. An oppressive gaze lingers on these properties as CCTV cameras continue to keep watch over subsequent movements of the residents under the guise of “public safety.” A Washington Post investigation found that public housing surveillance technology has been used widely to penalize residents for a variety of “minor rule violations,” in some cases, through the implementation of a number of cameras rivaling the number of cameras per capita found at Rikers Island’s Jail Complex (MacMillan, 2023). The presence of surveillance in this manner, focusing its gaze from the state onto these communities recreates their subject position as laborers, needing to be watched in what should be places of leisure, their home. Instead, communities of predominantly Black Baltimoreans are surveilled and choreographed at the urban scale to facilitate control and state surveillance, echoing the practices performed on plantation landscapes only several miles away from Charm City’s bounds.
+      </p>
+    </section>
+
+</body>
+
+</html>

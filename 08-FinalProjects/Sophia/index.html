@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Everyday Life and Labor in the Black Butterfly</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+	h1, h3, p, a {
+
+		padding: 20px 0px 0px 20px;
+	}
+
+	a {
+		color: #b88c49;
+	}
+
+	a:hover {
+		color: #9e9eba;
+	}
+
+	.first {
+		background-color: #9ebaba;
+		height: 800px;
+	}
+
+	.second {
+		background-color: #9eacba;
+		height: 800px;
+	}
+
+	.third {
+		background-color: #9e9eba;
+		height: 800px;
+	}
+
+</style>
+
+<style>
+
+.button-container {
+  position: fixed;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  z-index: 999;
+  }
+
+.circle-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bf9e59;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.circle-button:hover {
+  opacity: 0.3;
+}
+
+.circle-button:hover:not(:hover) {
+  opacity: 1;
+}
+
+.current-button{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #786337;
+  border: none;
+  pointer-events: none;
+  cursor: defualt;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+</style>
+
+<style>
+.fullscreen-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('IMG/1heatmap1.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  }
+
+.content-container {
+  text-align: center;
+  z-index: 1;
+}
+
+.content-container h1 {
+  font-size: 45px;
+  color: #fff;
+}
+
+.content-container p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.reveal-element {
+  opacity: 0;
+  animation: revealAnimation 3s forwards;
+}
+
+@keyframes revealAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Introduction {
+  margin: 25px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  position: relative;
+  pointer-events: auto;
+}
+
+.Introduction-container {
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: ;
+  color: #fff;
+}
+
+
+</style>
+
+<div class="button-container">
+  <a href="index.html" class="current-button"></a>
+  <a href="PlantationArchitecture.html" class="circle-button"></a>
+  <a href="BaltimoreMD.html" class="circle-button"></a>
+  <a href="SpatialSurveillanceData.html" class="circle-button"></a>
+  <a href="Conclusion.html" class="circle-button"></a>
+</div>
+
+<body>
+
+	<section class="fullscreen-section">
+	  <div class="background-image"></div>
+	  <div class="content-container">
+	  		<h1 class="reveal-element">EVERYDAY LIFE AND LABOR IN THE BLACK BUTTERFLY</h1>
+			<p class="reveal-element">Spatialized Surveillance Practices and the Creation of the Black Racial Subject as Laborer</p><p class="reveal-element"><i>by Sophia-Rose Diodati</i></p>
+		</div>
+	</section>
+
+	<section class="Introduction">
+		<div class="Introduction-container"></div>
+		<h2>Introduction</h2>
+		<p>Surveillance practices as they have appeared through architectural and spatial intervention have a long history in the United States. Chattel slavery during the antebellum period in the U.S. served as the driving force for the implementation of some of these characteristics in the design of plantation landscapes. Today, these mechanisms of control have evolved and reappear in various exclusionary practices through the use of technology, zoning laws, and design interventions at the urban scale. In predominantly Black cities, the traces of segregation can be read at an aerial view; grocery store and bank locations, public transit routes, and one-way street outlets often follow the patterns defined by redlining policies of the 1930s (Brown 2018). Similarly, as understood through the context of the plantation, both public and private spaces in neighborhoods characterized by factors of hypersegregation show patterns of being over-policed, resulting in the disproportionate surveillance practices enacted on Black communities.</p>
+		<p>Scholars such as Simone Browne (2015) and Ruha Benjamin (2019) have researched the effects of surveillance on Black workers with importance placed on the understanding that the surveillance of Black labor has been a key feature of capitalism in the U.S. and has reproduced these dynamics not only through the disciplining and controlling of Black workers, but also as surveillance technologies (ie. AI, CCTV, etc.) (re)produce knowledge and information about Black bodies. Just as places can hold racial identities by virtue of their histories of discriminatory practices that inform how those who live in these locations are perceived, these technologies (that frequently appear in these locations) can also inform the construction of racialized subjects (Schindler 2015). This project will analyze surveillance infrastructure traditionally designed into the build environment at both the symbolic and explicit level and compare their presence with that of modern surveillance technology and their prevalence in Baltimore.</p>
+	</section>
+
+
+</body>
+
+</html>
