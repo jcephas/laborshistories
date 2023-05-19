@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Everyday Life and Labor in the Black Butterfly - Plantation Architecture</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+.button-container {
+  position: fixed;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  z-index: 999;
+  }
+
+.circle-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bf9e59;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.circle-button:hover {
+  opacity: 0.3;
+}
+
+.circle-button:hover:not(:hover) {
+  opacity: 1;
+}
+
+.current-button{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #786337;
+  border: none;
+  pointer-events: none;
+  cursor: defualt;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+</style>
+
+<style>
+.fullscreen-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('IMG/2lhermitage1.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  }
+
+.content-container {
+  text-align: center;
+  z-index: 1;
+}
+
+.content-container h1 {
+  font-size: 45px;
+  color: #fff;
+}
+
+.content-container p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.reveal-element {
+  opacity: 0;
+  animation: revealAnimation 3s forwards;
+}
+
+@keyframes revealAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ .PlantationArchitecture {
+ 	  margin: 25px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    position: relative;
+    pointer-events: auto;
+  }
+
+  .PlantationArchitecture-container {
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: ;
+    color: #fff;
+    display: flex;
+    flex-drection: row;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .PlantationArchitecture-container .image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .PlantationArchitecture-container .caption {
+
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #bf9e59;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+  }
+
+  .PlantationArchitecture-container:hover .caption {
+    opacity: 0.7;
+  }
+
+  .PlantationArchitecture-container img{
+    max-width: 500%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .PlantationArchitecture-image{
+    max-width: 100%;
+    margin-right: 20px;
+  }
+
+  .PlantationArchitecture-content{
+    flex-grow: 1;
+  }
+
+</style>
+
+<div class="button-container">
+  <a href="index.html" class="circle-button"></a>
+  <a href="PlantationArchitecture.html" class="current-button"></a>
+  <a href="BaltimoreMD.html" class="circle-button"></a>
+  <a href="SpatialSurveillanceData.html" class="circle-button"></a>
+  <a href="Conclusion.html" class="circle-button"></a>
+</div>
+
+<body>
+
+	<section class="fullscreen-section">
+	  <div class="background-image"></div>
+	  <div class="content-container">
+	  		<h1 class="reveal-element">PLANTATION ARCHITECTURE</h1>
+			<p class="reveal-element"></p>
+		</div>
+	</section>
+
+	<section class="PlantationArchitecture" style="margin-left: 200px;margin-right: 200px;">
+    <div class="PlantationArchitecture-container"></div>
+		<h2></h2>
+		<p>Antebellum aesthetics continue to occupy the American imagination today, gripping onto what semblance of their beauty can still be seen beyond their dark historical associations. Plantation architecture played a significant role in shaping the landscape of the United States, particularly in the South, where plantations and the enslaved laborers who worked their grounds were critical factors driving the region’s economy and history. Today, many plantation homes have been repurposed as museums and event spaces for parties or weddings, many glossing over the horrors of their often-buried histories. Beyond groomed gardens, period-appropriate furnishings, and costumed docents, these destinations hold the histories, memories, and narratives embedded in the structures and architectures that make them so visually striking, and at times, haunting. Outside of the steadfast symmetries and opulence of the plantation homes themselves, the organization of the plantation, when understood through the lens of their utility, reveal their designed intentions: to assert control over the enslaved laborers at the estate. Architectural historian Dell Upton (1984) has asserted that in conjunction with their instrumentality in communicating social status to, <i>other</i> white neighbors through their aesthetics, plantation landscapes also utilized designed interventions to control the behaviors, movements, and perceived surveillance of enslaved laborers. Five main elements comprise the plantation landscape: the main house, living quarters for enslaved workers, overseer’s house, land and structures dedicated to agricultural production, and possible ancillary structures, such as schoolhouses, chapels, carriage houses, etc.</p>
+  </section>
+
+  <section class="PlantationArchitecture">
+    <div class="PlantationArchitecture-container">
+        <div class="image-wrapper">
+          <img class="PlantationArchitecture-image" src="IMG/2lhermitage2.jpg">
+          <div class="caption"><i>'Map showing spatial relationships between secondary house and slave quarters. Main house is located behind (uphill from) the secondary house on the map.' Map and description provided by Tom Gwaltney</i></div>
+        </div>
+    </div>
+    <div class="PlantationArchitecture-content">
+      <h2></h2>
+		  <p style="padding-left: 400px">As explored by University of Maryland researcher Meghan Bailey (2022, 9) at the former Maryland, plantation, <i>L’Hermitage</i>, the “orderliness” of some of these structures’ organization suggests a deep consideration for their placement by the estate’s original owners, the Vincendières, a French family that fled to Frederick, MD in 1794 from modern-day Haiti after slave revolts. Bailey (2022, 15) finds that the organization of the main house, the secondary house, and the enslaved workers’ cabins show designed precision that would be consistent with intentions of symbolizing and exercising power and control. The foundations of six discovered cabins are organized linearly facing northwest, almost precisely aligned to the front facade of the main and secondary houses, within 0.17 degrees and 0.07 degrees, respectively. Hearths were constructed along the southern side of each cabin and are distanced exactly 66 feet apart, or the length of a “chain,” “a common surveyor’s unit of measurement in the 18th and 19th centuries” (2022, 15). The consistency of the measurements suggests strict attention to the order and control of the landscape. The secondary house, likely belonging to the overseer of the land, is situated between the main house and the cabins, with the main house facing the cabins as well but off-center from the secondary house, allowing both houses to be visible to those in the cabins and vice versa. The vantage point of both houses is further exaggerated by their position atop a hill with the cabins below, situated in a floodplain. This organization suggests consideration for providing direct sightlines to the enslaved laborers without ever having to leave the bounds of their homes while also allowing the structures themselves to create the illusion of surveillance at all times — whether someone within is truly watching or not. Many scholars have understood this principle through Foucault’s writings on the panopticon, noting that the “possibility of surveillance” would cause “enslaved people to monitor themselves and participate in their own subjugation even when in reality they were unwatched by overseers or enslavers” (Lydia Wilson Marshall 2022, 1).
+      </p>
+    </div>
+	</section>
+
+  <section class="PlantationArchitecture">
+    <div class="PlantationArchitecture-container">
+      <div class="image-wrapper">
+          <img class="PlantationArchitecture-image" src="IMG/2monticello.jpg" alt="Aerial image of Thomas Jefferson's Monticello Plantation showing the front facade and domed roof of the main structure and the extension of the terraces extending from its sides and to the back of the building. A green lawn is between the terraces. Photo credit: Crystal O'Connor and Fraser D. Neiman, June 8, 2020.">
+          <div class="caption"><i>Aerial image of Thomas Jefferson's Monticello Plantation. Photo credit: Crystal O'Connor and Fraser D. Neiman, June 8, 2020.</i></div>
+      </div>
+    </div>
+    <div class="PlantationArchitecture-content">
+    <h2></h2>
+    <p style="padding-left: 400px">The most accessible example of this consideration for plantation organization can be understood through Thomas Jefferson’s plantation, Monticello. Its iconic, symmetrical facade shrouds the true expansiveness of the entire structure’s design, furthering the invisibilization of labor while also being the means through which it is choreographed. Just beyond the main structure, its terraces shoot behind the structure, emphasizing its position at the top of a hill as the ground below seems to fall away. The terraces provide views across the expansive estate while also providing a particular vantage point of perceived surveillance to those below, where the enslaved laborers’ working rooms are situated. Adjacent to the main house, Jefferson situated several living quarters for his enslaved laborers along Mulberry Row following strict attention to measurements and detail, similar to that of L’Hermitage: “Not only did Jefferson create all of the plans for Mulberry Row himself, he was so committed to having total control over the appearance of his landscape that his plans sometimes included measurements to be carried out to four or five decimal places” (Dalzell 1993, as cited in Bailey 2022, 16). Interiorly, Jefferson implemented a complex dumbwaiter and rotating door system, which further choreographed the enslaved laborers’ movements and work to be out of sight — their presence being revealed strictly through that which traveled through the dumbwaiter’s shaft or on the shelves built into the opposite side of the revolving door (Thomas Jefferson's Monticello, "Dumbwaiter."). These details, as small as they may seem, are fundamental to the full formation of the surveillance systems implemented on plantation landscapes to control every aspect of the estates’ production — most critically, surveilling those that performed the labor. Through choreographing the movement of enslaved laborers, whether within the main houses or to and from their sites of labor, be it fields, sheds, or kitchens, surveillance in this context extends beyond the facilitation of sightlines to the manifestation of it through one’s own influenced movements. Where there are imagined or actualized surveillance mechanisms, enslaved laborers navigate paths designed by and under the gaze of their watchers, their oppressors.</p>
+  </div>
+  </style>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Everyday Life and Labor in the Black Butterfly - Baltimore, MD</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+.button-container {
+  position: fixed;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  z-index: 999;
+  }
+
+.circle-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bf9e59;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.circle-button:hover {
+  opacity: 0.3;
+}
+
+.circle-button:hover:not(:hover) {
+  opacity: 1;
+}
+
+.current-button{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #786337;
+  border: none;
+  pointer-events: none;
+  cursor: defualt;
+  margin-bottom: 3px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+</style>
+
+<style>
+.fullscreen-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('IMG/3rowhomes.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  }
+
+.content-container {
+  text-align: center;
+  z-index: 1;
+}
+
+.content-container h1 {
+  font-size: 45px;
+  color: #fff;
+}
+
+.content-container p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.reveal-element {
+  opacity: 0;
+  animation: revealAnimation 3s forwards;
+}
+
+@keyframes revealAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.BaltimoreMD {
+	margin: 25px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  position: relative;
+  pointer-events: auto;
+}
+
+.BaltimoreMD-container {
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: ;
+  color: #fff;
+}
+
+.BaltimoreMD-container .image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.BaltimoreMD-container .caption {
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #bf9e59;
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.BaltimoreMD-container:hover .caption {
+  opacity: 0.7;
+}
+
+.BaltimoreMD-container img{
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.BaltimoreMD-image{
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.BaltimoreMD-content{
+  flex-grow: 1;
+}
+
+</style>
+
+<div class="button-container">
+  <a href="index.html" class="circle-button"></a>
+  <a href="PlantationArchitecture.html" class="circle-button"></a>
+  <a href="BaltimoreMD.html" class="current-button"></a>
+  <a href="SpatialSurveillanceData.html" class="circle-button"></a>
+  <a href="Conclusion.html" class="circle-button"></a>
+</div>
+
+<body>
+
+	<section class="fullscreen-section">
+	  <div class="background-image"></div>
+	  <div class="content-container">
+	  		<h1 class="reveal-element">BALTIMORE, MD</h1>
+			<p class="reveal-element"></p>
+		</div>
+	</section>
+
+	<section class="BaltimoreMD" style="margin-left: 200px;margin-right: 200px;">
+		<p style="padding-right: 50px;">While many cities across the nation continue to be plagued by histories of discriminatory zoning practices and redlining, the effects of it in Baltimore, MD create a particularly striking pattern known as the “Black Butterfly,” a term coined by Dr. Lawrence Brown to visualize the disparity between East and West Baltimore and the neighborhoods at the city’s core, otherwise known as the “White L” (Brown 2021). The shape makes reference to how the city’s predominantly Black population splays like butterfly wings extending from the city’s core, an L-shape of concentrated resources and most “desirable” real estate. As suggested by the allusion, East and West Baltimore experience hypersegregation, a condition characterized by the disproportionate reinforcement of existing segregation resulting in greater rates of poverty, crime, and disinvestment from the state (Massey and Denton 1989 as cited in Brown 2021). However, at the turn of the 20th century, Baltimore was in fact a bustling trade port and manufacturing center.</p><p>As the world’s leading manufacturer of steel and copper and producers of oysters and canned goods, its population grew rapidly, with many Black families migrating from the south to take advantage of the city's economic opportunities (Fernández-Kelly 2015). To keep up with the demands of the city’s expansion, the city government invested in modernization and expansion projects through the 20s, but discriminatory housing practices limited where Black individuals could live. In 1910, Baltimore became the first city to pass a neighborhood-level segregation law (Power 1983). While the Supreme Court later ruled that such laws were unconstitutional, discriminatory practices continued through zoning ordinances, segregated education, and covenants restricting sales to Black families.</p>
+  </section>
+
+  <section class="BaltimoreMD">
+    <div class="BaltimoreMD-container">
+      <div class="image-wrapper">
+        <img class="BaltimoreMD-image" src="IMG/3redliningmap.jpg">
+        <div class="caption"><i>Map of Baltimore, MD highlighting different sections and neighborhoods on a gradient'Residential Security Map of Baltimore, MD (1937), HOLC Division of Research & Statistics. Sourced from Johns Hopkins Univeristy Sheridan Libraries</i></div>
+      </div>
+    </div>
+    <h2></h2>
+		<p style="padding-left: 25px">These local policies and practices were amplified and reinforced by the federal government’s increased role in the housing market beginning through Federal Housing Agency (FHA) policies and various congressional acts allocating funding for highway construction, business tax credits, and public housing. The FHA barred suburban developers from subsidized federal construction loans unless they committed to excluding Black homeowners, refused to ensure mortgage loans for Black families in white developments, and even refused to ensure mortgage loans for Black families in their own neighborhoods—a process known now as redlining (Rothstein 2015). City construction projects for schools, urban renewal, and expressways displaced 75,000 residents—80-90% Black residents—between 1951-1971, yet only 15,000 public housing units were made available for these relocated families (Power 1983). Whole neighborhoods were condemned to accommodate expressway construction, and if the roads were not built, as is the case in the Rosemont neighborhood, the area was left abandoned. After the Fair Housing Act (1968) was passed, the damage to the now majority Black city had already been engrained, only to be further exacerbated as discriminatory practices continued through the housing bubble in the early 2000’s. These deleterious housing policies, enacted by institutions, communities and private enterprises, left Baltimore depleted of resources — a collection of disparate neighborhoods confined under the yoke of their own history, unable to share in the prosperity of the surrounding counties.
+    </p>
+	</section>
+
+</body>
+
+</html>
