@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Architecture's Labor</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+</head>
+<style type="text/css">
+	/* grid container */
+	.right-sidebar-grid {
+	    display:grid;
+	    grid-template-areas:
+	        'header'
+	        'main-content'
+	        'right-sidebar'
+	        'footer';
+	}
+	a { text-decoration: none; 
+
+		}
+	a:link, a:visited {
+    		color: blue;
+		}
+	sup{
+		color: red;
+	}
+	/* general column padding */
+	.right-sidebar-grid > * {
+	}
+
+	/* assign columns to grid areas */
+	.right-sidebar-grid > .header {
+	    grid-area:header;
+	    padding-bottom: 150px;
+	}
+	.right-sidebar-grid > .main-content {
+	    grid-area:main-content;
+	    background:#fff;
+	    text-align: left;
+	    padding: 100px;
+	}
+	.right-sidebar-grid > .right-sidebar {
+	    grid-area:right-sidebar;
+	    background:#f5d55f;
+	}
+	.right-sidebar-grid > .footer {
+	    grid-area:footer;
+	    background: red;
+	}
+
+	/* tablet breakpoint */
+	@media (min-width:768px) {
+	    .right-sidebar-grid {
+	        grid-template-columns:repeat(3, 1fr);
+	        grid-template-areas:
+	            'header header header'
+	            'main-content main-content main-content'
+	            'footer footer footer';
+	    }
+	}
+
+	.section{
+		height: 800px;
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 20px;
+	}
+	.floating-container-left{
+		text-align: center;
+		width: 70%;
+		padding: 100px;
+		float:left;
+
+	}
+	.floating-content-left{
+		text-align: center;
+		background-color: rgba(255, 255, 255, .92);
+		margin-bottom: 50px;
+		color: black;
+		text-align: justify;
+		padding: 20px;
+		outline: 1px dashed blue;
+
+	}
+	.floating-container-right{
+		text-align: center;
+		width: 30%;
+		padding: 50px;
+		padding-top: 100px;
+		padding-right: 100px;
+		float:left;
+		text-align: justify;
+		paddding-top:40vh;
+	}
+	.floating-content-right{
+		text-align: center;
+		background-color: white;
+		margin-bottom: 20px;
+		color: black;
+		text-align: left;
+		padding: 20px;
+		font-size: 10pt;
+		outline: 1px dashed blue;
+
+	}
+	.parallax {
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 90vh;
+		padding-top:40vh;
+		text-align: justify;
+		min-height: 200vh;
+
+	}
+	#parallax0{
+
+	}
+	#parallax1{
+		background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/streams/2013/April/130423/6C7070829-pb-130423-louvre-cleaning-jsa-605p.jpg");
+	}
+	#parallax2{
+		background-image: url("img/Logo1.png");
+	}
+	#parallax3{
+		background-image:url('https://jadrafting.com/wp-content/uploads/2014/09/Construction-Document1-e1411656170860.jpg');
+	}
+	.header-column{
+		 float: left;
+ 		 width: 25%;
+ 		 text-align: center;
+		}
+	#title{
+		text-align: center;
+		font-family: "Akzidenz-Grotesk Next", sans-serif;	
+		font-size: 25px;
+		font-weight: 400;
+		margin-bottom: 50px;
+		color: blue;
+		padding-top: 50px;
+		}
+	.logo-container{
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		}
+	.logo {
+        height: 200px;
+        width: 300px;
+        position: relative;
+        margin-left: 40vw;
+        margin-top: 40vh;
+    }
+    .logo .logo2{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: white;
+    }
+    .logo:hover .logo2 {
+        display: inline;
+    }
+    .sticky {
+	  position: -webkit-sticky;
+	  position: sticky;
+	  top: 0;
+	  background-color: #666;
+	  padding: 40px;
+	  font-size: 25px;
+	}
+</style>
+<body id="logo">
+	<div class="right-sidebar-grid">
+    <header class="header" id="header">
+    		<div id="title">
+    			Designing Laborers <br> Legal Representations of Architectural Labor and Acknowledgements of Labor by the Built Environment in the UK and Sweden since 2002 </div>
+    			
+    		<div class="header-column"><a href="index.html">home</a></div>
+    		<div class="header-column"><a href="index.html#parallax0">text</a></div>
+    		<div class="header-column"><a href="figures.html">figures</a></div>
+    		<div class="header-column"><a href="bibliography.html">bibliography</a></div>
+    	</header>
+    <main class="main-content">
+    	Bibliography:<br>
+		Louis Althusser, “On the Materialist Dialectic,” essay, in For Marx (London, UK: Verso, 2010), 161–218.<br><br>
+		Tithi Bhattacharya, Social Reproduction Theory: Remapping Class, Recentering Oppression (London, UK: Pluto Press, 2017).<br><br>
+		Clair Brown et al., “Symphony Musicians and Symphony Orchestras,” essay, in Labor in the Era of Globalization (New York: Cambridge University Press, 2010), 264–94.<br><br>
+		Peggy Deamer, “Work,” in The Architect as Worker: Immaterial Labor, the Creative Class, and the Politics of Design, edited by Peggy Deamer (London: Bloomsbury Publishing Plc, 2015), pp. 61-81.<br><br>
+		Alan Jones, “RIBA President’s Initial Response to the Future Architects Front Open Letter from Students and Architectural Assistants,” RIBA, accessed June 1, 2023, https://www.architecture.com/knowledge-and-resources/knowledge-landing-page/riba-responds-to-future-architects-front-open-letter.<br><br>
+		Living Wage Foundation, accessed June 1, 2023, https://www.livingwage.org.uk/what-real-living-wage.<br><br>
+		Karl Marx, “Postface to the Second Edition,” in Capital: A Critique of Political Economy (London: Penguin Classics, 1990), 94–103.<br><br>
+		Karl Marx, Grundrisse. London etc.: Macmillan, 1972, 91.<br><br>
+		Cedric J. Robinson, Damien Sojoyner, and Kelley Robin D G., Black Marxism the Making of the Black Radical Tradition (S.l.: Penguin Books, 2021).<br><br>
+		Hilary Sample, Maintenance Architecture (MIT Press, 2018).<br><br>
+		Noam Scheiber, “Architects at a Prominent New York Firm Drop Their Unionization Bid.,” The New York Times, February 4, 2022, https://www.nytimes.com/2022/02/04/business/economy/shop-architects-union.html.<br><br>
+		Part I Architectural Assistant – the Pay 100: UK Architecture Salary Advocate.” The Pay 100 Architecture Salary Advocate. Accessed June 1, 2023. https://thepay100.org/survey-results/results-1/. <br><br>
+
+	</main>
+    
+	
+      <footer class="footer"><a href='#header'>Go to the beginning.</a> <br> This website was designed by <a href="https://www.instagram.com/n.vh/"> Nigel Van Ha, a masters of architecture student at princeton university, who can be reached at qv3527 (at) princeton (dot) edu</footer>
+</div>
+</body>
+</html>

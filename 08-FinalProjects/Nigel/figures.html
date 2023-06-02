@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Architecture's Labor</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+</head>
+<style type="text/css">
+	/* grid container */
+	.right-sidebar-grid {
+	    display:grid;
+	    grid-template-areas:
+	        'header'
+	        'main-content'
+	        'right-sidebar'
+	        'footer';
+	}
+	a { text-decoration: none; 
+
+		}
+	a:link, a:visited {
+    		color: blue;
+		}
+	sup{
+		color: red;
+	}
+	/* general column padding */
+	.right-sidebar-grid > * {
+	}
+
+	/* assign columns to grid areas */
+	.right-sidebar-grid > .header {
+	    grid-area:header;
+	    padding-bottom: 150px;
+	}
+	.right-sidebar-grid > .main-content {
+	    grid-area:main-content;
+	    background:#fff;
+	    text-align: left;
+	    padding: 100px;
+	}
+	.right-sidebar-grid > .right-sidebar {
+	    grid-area:right-sidebar;
+	    background:#f5d55f;
+	}
+	.right-sidebar-grid > .footer {
+	    grid-area:footer;
+	    background: red;
+	}
+
+	/* tablet breakpoint */
+	@media (min-width:768px) {
+	    .right-sidebar-grid {
+	        grid-template-columns:repeat(3, 1fr);
+	        grid-template-areas:
+	            'header header header'
+	            'main-content main-content main-content'
+	            'footer footer footer';
+	    }
+	}
+
+	.section{
+		height: 800px;
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 20px;
+	}
+	.floating-container-left{
+		text-align: center;
+		width: 70%;
+		padding: 100px;
+		float:left;
+
+	}
+	.floating-content-left{
+		text-align: center;
+		background-color: rgba(255, 255, 255, .92);
+		margin-bottom: 50px;
+		color: black;
+		text-align: justify;
+		padding: 20px;
+		outline: 1px dashed blue;
+
+	}
+	.floating-container-right{
+		text-align: center;
+		width: 30%;
+		padding: 50px;
+		padding-top: 100px;
+		padding-right: 100px;
+		float:left;
+		text-align: justify;
+		paddding-top:40vh;
+	}
+	.floating-content-right{
+		text-align: center;
+		background-color: white;
+		margin-bottom: 20px;
+		color: black;
+		text-align: left;
+		padding: 20px;
+		font-size: 10pt;
+		outline: 1px dashed blue;
+
+	}
+	.parallax {
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 90vh;
+		padding-top:40vh;
+		text-align: justify;
+		min-height: 200vh;
+
+	}
+	#parallax0{
+
+	}
+	#parallax1{
+		background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/streams/2013/April/130423/6C7070829-pb-130423-louvre-cleaning-jsa-605p.jpg");
+	}
+	#parallax2{
+		background-image: url("img/Logo1.png");
+	}
+	#parallax3{
+		background-image:url('https://jadrafting.com/wp-content/uploads/2014/09/Construction-Document1-e1411656170860.jpg');
+	}
+	.header-column{
+		 float: left;
+ 		 width: 25%;
+ 		 text-align: center;
+		}
+	#title{
+		text-align: center;
+		font-family: "Akzidenz-Grotesk Next", sans-serif;	
+		font-size: 25px;
+		font-weight: 400;
+		margin-bottom: 50px;
+		color: blue;
+		padding-top: 50px;
+		}
+	.logo-container{
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		}
+	.logo {
+        height: 200px;
+        width: 300px;
+        position: relative;
+        margin-left: 40vw;
+        margin-top: 40vh;
+    }
+    .logo .logo2{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: white;
+    }
+    .logo:hover .logo2 {
+        display: inline;
+    }
+    .sticky {
+	  position: -webkit-sticky;
+	  position: sticky;
+	  top: 0;
+	  background-color: #666;
+	  padding: 40px;
+	  font-size: 25px;
+	}
+	img{
+		width: 100%;
+	}
+</style>
+<body id="logo">
+	<div class="right-sidebar-grid">
+    <header class="header" id="header">
+    		<div id="title">
+    			Designing Laborers <br> Legal Representations of Architectural Labor and Acknowledgements of Labor by the Built Environment in the UK and Sweden since 2002 </div>
+    			
+    		<div class="header-column"><a href="index.html">home</a></div>
+    		<div class="header-column"><a href="index.htm#lparallax0">text</a></div>
+    		<div class="header-column"><a href="dataset.html">dataset</a></div>
+    		<div class="header-column"><a href="bibliography.html">bibliography</a></div>
+    	</header>
+    <main class="main-content">
+    	<div>Salaries of Architectural Associates in the UK compared to Living Wage</div>
+    	<img src='img/UKMap.png'>
+    	<div>Salaries of Architectural Associates in the London compared to Living Wage</div>
+    	<img src="img/LondonMap.png">
+    	<div>Building Sector Trade Unions in London</div>
+    	<img src="img/UnionMaps.jpg">
+    	<div>The Path of Argument in Volume I of Marx's <i>Capital</i>, David Harvey.</div>
+    	<img src="https://precariousimagination.files.wordpress.com/2016/01/the-path-of-argument-in-vol-1-of-marxs-capital-harvey-2010-p109.png?w=880">
+
+	</main>
+    
+	
+     <footer class="footer"><a href='#header'>Go to the beginning.</a> <br> This website was designed by <a href="https://www.instagram.com/n.vh/"> Nigel Van Ha, a masters of architecture student at princeton university, who can be reached at qv3527 (at) princeton (dot) edu</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Architecture's Labor</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+</head>
+<style type="text/css">
+	/* grid container */
+	.right-sidebar-grid {
+	    display:grid;
+	    grid-template-areas:
+	        'header'
+	        'main-content'
+	        'right-sidebar'
+	        'footer';
+	}
+	a { text-decoration: none; 
+
+		}
+	a:link, a:visited {
+    		color: blue;
+		}
+	sup{
+		color: red;
+	}
+	/* general column padding */
+	.right-sidebar-grid > * {
+	}
+
+	/* assign columns to grid areas */
+	.right-sidebar-grid > .header {
+	    grid-area:header;
+	    padding-bottom: 150px;
+	}
+	.right-sidebar-grid > .main-content {
+	    grid-area:main-content;
+	    background:#fff;
+	}
+	.right-sidebar-grid > .right-sidebar {
+	    grid-area:right-sidebar;
+	    background:#f5d55f;
+	}
+	.right-sidebar-grid > .footer {
+	    grid-area:footer;
+	    background:red;
+	}
+
+	/* tablet breakpoint */
+	@media (min-width:768px) {
+	    .right-sidebar-grid {
+	        grid-template-columns:repeat(3, 1fr);
+	        grid-template-areas:
+	            'header header header'
+	            'main-content main-content main-content'
+	            'footer footer footer';
+	    }
+	}
+
+	.section{
+		height: 800px;
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 20px;
+	}
+	.floating-container-left{
+		text-align: center;
+		width: 70%;
+		padding: 100px;
+		float:left;
+
+	}
+	.floating-content-left{
+		text-align: center;
+		background-color: rgba(255, 255, 255, .92);
+		margin-bottom: 50px;
+		color: black;
+		text-align: justify;
+		padding: 20px;
+		outline: 1px dashed blue;
+
+	}
+	.floating-container-right{
+		text-align: center;
+		width: 30%;
+		padding: 50px;
+		padding-top: 100px;
+		padding-right: 100px;
+		float:left;
+		text-align: justify;
+		paddding-top:40vh;
+	}
+	.floating-content-right{
+		text-align: center;
+		background-color: white;
+		margin-bottom: 20px;
+		color: black;
+		text-align: left;
+		padding: 20px;
+		font-size: 10pt;
+		outline: 1px dashed blue;
+
+	}
+	.parallax {
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 90vh;
+		padding-top:40vh;
+		text-align: justify;
+		min-height: 200vh;
+
+	}
+	#parallax0{
+
+	}
+	#parallax1{
+		background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/streams/2013/April/130423/6C7070829-pb-130423-louvre-cleaning-jsa-605p.jpg");
+	}
+	#parallax2{
+		background-image: url("img/Logo1.png");
+	}
+	#parallax3{
+		background-image:url('https://jadrafting.com/wp-content/uploads/2014/09/Construction-Document1-e1411656170860.jpg');
+	}
+	#parallax4{
+		background-image: url('img/UKMap.png');
+		background-size: contain;
+	}
+	.header-column{
+		 float: left;
+ 		 width: 25%;
+ 		 text-align: center;
+		}
+	#title{
+		text-align: center;
+		font-family: "Akzidenz-Grotesk Next", sans-serif;	
+		font-size: 25px;
+		font-weight: 400;
+		margin-bottom: 50px;
+		color: blue;
+		padding-top: 50px;
+		}
+	.logo-container{
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		}
+	.logo {
+        height: 200px;
+        width: 300px;
+        position: relative;
+        margin-left: 40vw;
+        margin-top: 40vh;
+    }
+    .logo .logo2{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: white;
+    }
+    .logo:hover .logo2 {
+        display: inline;
+    }
+    .sticky {
+	  position: -webkit-sticky;
+	  position: sticky;
+	  top: 0;
+	  background-color: #666;
+	  padding: 40px;
+	  font-size: 25px;
+	}
+</style>
+<body id="logo">
+	<div class='logo-container'>
+    		<div class='logo'>
+    			<a href='#title'><img src="img/Logo1.png" alt="Card Back" height="200px">
+       			<img src="img/Logo2.png" class="logo2" alt="Card Front" height="200px">
+       		</a>
+    		</div>
+    </div>
+	<div class="right-sidebar-grid">
+    <header class="header" id="header">
+    		<div id="title">
+    			Designing Laborers <br> Legal Representations of Architectural Labor and Acknowledgements of Labor by the Built Environment in the UK and Sweden since 2002 </div>
+    			
+    		<div class="header-column"><a href="index.html">home</a></div>
+    		<div class="header-column"><a href="#parallax0">text</a></div>
+    		<div class="header-column"><a href="figures.html">figures</a></div>
+    		<div class="header-column"><a href="bibliography.html">bibliography</a></div>
+    	</header>
+    <main class="main-content">
+    	<div class="parallax" id="parallax0">
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					<i>In 2009, the Louvre celebrated the twentieth anniversary of the opening of the all-glass Pyramid designed by I.M. Pei. As part of the celebration, the museum showcased its ‘alpinists’—mountain climbers trained as window washers—washing its glass walls. . . The solution was to hire mountain climbers to clean, as opposed to teaching window washers how to climb.<a href="bibliography.html"></i><sup>1</sup></a>
+	
+				</div>
+			</div>
+			<div class="floating-container-right">
+				<div class="floating-content-right">
+					<sup>1</sup> Hilary Sample, <i>Maintenance Architecture</i> (MIT Press, 2018), 61.
+					<br><br>	
+					(see full bibliography <a href="bibliography.html">here</a>)
+				</div>
+			</div>
+		</div>
+		<div class="parallax" id="parallax1">
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					Two groups are largely erased in this description of the cleaning process of I.M. Pei’s Pyramid at the Louvre found above: the architectural designers who worked for Pei in the design of the famous Pyramid and the maintenance workers who labor to care for the rest of the Pyramid’s functions and spaces. As a result, the labor of the trained architectural designer and the trained maintenance worker are replaced instead by the renowned principal of an internationally practicing architecture firm and extreme mountain climbing athletes whose alpine expertise is necessary for the care of the architecturally significant part building. Such an erasure demonstrates a general tendency of architectural discourse to overlook the wage-laborers which design, construct, and maintain its buildings. Here, these two forms of labor—waged design work and waged construction and maintenance work—will become central and connected, recognized as two qualitatively differentiated yet interrelated forms of the labor of architecture. Through an investigation of the dialectical relationship between the labor done by architectural designers (drawings the construction documents for the Louvre’s Pyramid) and the labor prescribed and determined by those same designers (the construction and maintenance of the Louvre’s Pyramid), a dialectic between the material labor and represented labor will emerge, to which this paper will argue the creation of architectural workers unions will represent a unified synthesis. 
+				</div>
+			</div>
+		</div>
+		<div class="parallax" id="parallax2">
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					Architectural designers have a unique dual relationship to labor and its representations: on one hand, designers are generally wage-laborers themselves, working to produce designs, drawings, and buildings for their employers—principals and owners of their firms, who represent the multi-faceted demands of clients, interest groups, and building users; on the other hand, through the direct products of their labor (drawings and models), architectural designers prescribe both the labor products and labor conditions of other wage-laborers—construction workers, building maintenance workers, consultants, building inhabitants, and many others. Attention to each of these poles of architectural labor has seen a marked increase in recent years, as interest in conceptualizing architectural designers’ role as laborers has developed into a political movement in the United States and United Kingdom in the past years, and as a focus on the intersections of space and labor histories has been a growing subdiscipline of architectural history in the past few decades. Evidenced by a heavily publicized (though ultimately failed) unionization campaign at New York City’s SHoP Architects,<a href="bibliography.html"><sup>2</sup></a>a  the 2019 founding of trade union United Voices of the World–Section of Architectural Workers (UVW-SAW) in the UK,<sup>3</sup>  and the growing programing of platforms such as the Architecture Lobby and Failed Architecture, a political movement is currently coalescing around architects’ status as laborers.<sup>4</sup> Simultaneously, the conditions of labor as described in the built environment has been a growing disciplinary subject within architectural history for the past few decades with scholars such as Meredith TenHoor and Sarah Lynn Lopez each interrogating the intersections between the built environment and laboring bodies.<sup>5</sup> 			
+				</div>
+			</div>
+
+
+		<div class="floating-container-right">
+				<div class="floating-content-right">
+  					<sup>2</sup> Noam Scheiber, “Architects at a Prominent New York Firm Drop Their Unionization Bid.,” <i>The New York Times</i>, February 4, 2022, <a href="https://www.nytimes.com/2022/02/04/business/economy/shop-architects-union.html">https://www.nytimes.com/2022/02/04/busi ness/economy/shop-architects-union.html.</a> 	<br><br>			
+  					<sup>3</sup> For more, see UVW-SAW’s website: <a href='https://uvw-saw.org.uk/about/')> https://uvw-saw.org.uk/about/ </a> <br><br>
+  					<sup>4</sup> For one example of an extensive series on contemporary architectural labor organization see: Marisa Cortright, “Death to the Calling: A Job in Architecture Is Still a Job,” Failed Architecture, accessed June 1, 2023, <a href='https://failedarchitecture.com/death-to-the-calling-a-job-in-architecture-is-still-a-job/'>https://failedarchitecture.com/death-to-the-calling-a-job-in-architecture-is-still-a-job/</a>.<br><br>
+  					<sup>5</sup> Sarah Lynn Lopez, “The Remittance House: Architecture of Migration in Rural Mexico.” <i>Buildings & Landscapes: Journal of the Vernacular Architecture </i> Forum 17, no. 2 (2010): 33–52. <a href='http://www.jstor.org/stable/20839348'>http://www.jstor.org/stable/20839348. </a>
+  					<br><br>	
+					(see full bibliography <a href="bibliography.html">here</a>)
+  				</div>
+			</div>
+		</div>
+		<div class="parallax" id="parallax2">
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					As architecture exists between these two poles of capitalist production, this interrogation into the analytical workings of contemporary architectural practice and its two-sided relationship to labor will begin with an analysis of the dialectical method found in the work of Karl Marx. Built upon an inversion of Hegel’s dialectical method, the historical materialism of Marx’s Capital: A Critique of Political Economy deploys a materialist dialectic as its foundational argumentative unit, tracing the internal contradictions of the capitalist mode of production through their many sublimations.<sup>6</sup> Throughout the first volume of Capital, Marx locates oppositions and contradictions within the capitalist form of production—use-value/exchange-value, equivalent form/relative form, capital/labor, etc.—and follows these analytical oppositions through their capitalist syntheses. A fundamental dialectical relationship which Marx locates within his study of the capitalist mode of production is that between production and consumption. As he writes in the Grundrisse, the collected notebooks which were later transformed into Capital, “the immediate unity in which production coincides with consumption and consumption with production leave their immediate duality in tact.”<sup>7</sup> Appearing in the introduction to the Grundrisse, the dialectic of production and consumption which we have found within the labor of architectural designers is thus fundamental in Marx’s conception of the internal tensions of the capitalist social form as a whole. The importance of the dialectical method has been affirmed many times since the publishing of Capital, often in critiques or expansions of Marx’s ideas. In Social Reproduction Theory’s expansion of Marx’s concept of labor outside of the wage-labor relationship, the dialectical method is used to interrogate Marx’s lack of attention to other possible generators of surplus value, while in the tradition of Racial Capitalism, the dialectical tradition is leveraged to understand the historical and analytical interdependence of race and the capitalist social form.<sup>8,9</sup> <br> <br>
+
+					The dialectical method not only allows Marx and others in the Marxist lineage to locate internal contradictions within the capitalist system, but Marx also utilizes a rigorously dialectical form of argument within the text of Capital. As a result, the dialectic plays two central roles in Marx’s understanding of capitalist forms of production: it is a central mechanism which sublimates the contradictions within the capitalism form, and it also provides a method and process through which to understand these contradictions and sublimations. Returning to the Grundrisse and the dialectic of production and consumption, we must note that production and consumption do not serve as a point of origin in Capital as they do in the notebooks. While production and consumption play important roles in the transformed form of Capital, the final text was reorganized to represent the dialectical method in its form as well as its insights. While no meta-theoretical text on Marx’s material dialectic exists from the author himself,<sup>10</sup> Marx has written on the importance of the dialectical structure of argumentation in Capital explicitly, writing that the demonstration of the dialectical method is fundamental enough to Capital that the resulting difficulty of the text is worth the formal representation of the dialectical method.<sup>11</sup>  Additionally, geographer David Harvey has illustrated that the dialectic is not only a foundational unit of argument in Capital but structures the larger argument entirely too (Figure 1). The dialect thus has both a material and representational role in Marxist theory. Architectural labor and Marx’s dialectical method share an imperative to synthesize material and representational issues. Marx’s dialectical method also, importantly, acts as a way of uniting things to produce an understanding of an integrated totality and a more total understanding. 
+				</div>
+			</div>
+			<div class="floating-container-right">
+				<div class="floating-content-right">
+					<sup>6</sup>	  Louis Althusser, “On the Materialist Dialectic,” essay, in <i>For Marx</i> (London, UK: Verso, 2010), 161–218.
+					<br><br>
+					<sup>7</sup>	Karl Marx, <i>Grundrisse.</i> London etc.: Macmillan, 1972, 91.
+					<br><br>
+					<sup>8</sup>	  Tithi Bhattacharya, <i>Social Reproduction Theory: Remapping Class, Recentering Oppression</i> (London, UK: Pluto Press, 2017).
+					<br><br>
+					<sup>9</sup>	Cedric J. Robinson, Damien Sojoyner, and Kelley Robin D G., <i>Black Marxism the Making of the Black Radical Tradition</i> (S.l.: Penguin Books, 2021).
+					<br><br>
+					<sup>10</sup>	  Althusser, 168.
+					<br><br>
+					<sup>11</sup>	Karl Marx, “Postface to the Second Edition,” in <i>Capital: A Critique of Political Economy</i> (London: Penguin Classics, 1990), 94–103.
+					<br><br>	
+					(see full bibliography <a href="bibliography.html">here</a>)
+				</div>
+			</div>
+		</div>
+		<div class="parallax" id="parallax3">
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					As previously mentioned, the opposition between the production and consumption of labor power exists across professions jobs, and acts of labor, and yet, the architectural designer’s position between these poles is both particularly mediative and particularly material, as the primary physical products of their labor, construction drawings, specify the material conditions of both laboring inhabitants of the built environment and construction and custodial workers who build and maintain that environment. That architects produce drawings as their only product, rather that buildings, is most commonly attributed to Robin Evans’ seminal essay "Translations from Drawing to Building,"" and a look at this situation through the subject of the construction drawing allows for uncover another duality imbedded within architectural labor.<sup>12</sup> That is, construction drawings—the commodity produced by the labor power of the architectural designer—is both a materialization of labor and the representation of labor; reifying the labor of the architect and representing the labor of the construction worker. Contemporary reckoning with the issue of prescribed labor in architecture often looks to its lack of presence in these drawings as a major issue, explaining that architects produce, on top of drawings, conditions for labor and that if those are not represented in the drawings, they make then the labor conditions will be ill-considered and, likely, problematic. In Meredith Tenhoor’s essay on the drawings and designs of food systems in 1960s France, “Labor in the Logistical Drawing”, the author argues for a connection between the drawing as a material and representational object, arguing for the representation of the laborers materially implicated in systems appearing in logistical drawings.<sup>13</sup> While such an argument for the representation of labor within architectural drawings begins to resolve the tension between the material and representational status of the construction drawing similarly to Marx’s dialectical unity of form and content in Capital, it ignores the status of architectural designers as laborers themselves. To faithfully reflect the complex entanglement of architecture and labor, both oppositions should be addressed. Thus, the dialectical mechanisms of architectural labor expands beyond the generalized dialectic of production and consumption of labor power to include specific oppositions of the material labor and labor representation, yet both remain fundamental to architectural labors’ problematics. <br><br>
+					Peggy Deamer is a contemporary architectural historian at the front of contemporary discussions around architectural labor practice and the need for disciplinary acknowledgement of architects as laborers. In her chapter titled “Work,” Deamer discusses two dialectics involving labor: between art and labor, and between work and play.<sup>14</sup> In discussing the relationship between art and labor Deamer diagnoses the architectural profession’s classification of their work as creative work as opposed to labor as ahistorical and analytically flawed, citing a tradition of theoretical, political, and historical analysis on the interrelation of art and labor. She describes theories which argue that work should be a model for art (citing Walter Benjamin’s “Work of Art in the Age of Mechanical Reproduction”) in contrast to those which argue that art shapes the logics of work (citing Jacques Ranciere’s The Politics of Aesthetics: The Distribution of the Sensible). Within these two lineages, we may read the dual representation and material impulses of architectural labor: while Ranciere’s representational perspective discusses  importation of social, political, and cultural phenomena (such as race and gender) into acts and structures of labor, Deamer’s invocation of the Frankfurt School, Relational Aesthetics, and the Russian Constructivist locates labor as the product of material actions, each of which may accumulate into a site of intervention, opportunity, or influence. That is, work and workers operate within a productive landscape, shaping social practices as conceptually distant for the workplace as art. In concluding her chapter, Deamer invokes the reaches of work as a productive landscape towards yet another sphere: politics. She argues for alternative organizations of architectural workers from the current, exploitative model. 
+
+				</div>
+			</div>
+			<div class="floating-container-right">
+				<div class="floating-content-right">
+					<sup>12</sup>	  Robin Evans, “Translations from Drawing to Building.” <i>AA Files,</i> no. 12 (1986): 3–18. <a href='http://www.jstor.org/stable/29543512'> http://www.jstor.org/stable/29543512</a>.
+					<br><br>
+					<sup>13</sup>	Meredith TenHoor, “Labor in the Logistical Drawing.” Log, no. 34 (2015): 139–42. <a href="http://www.jstor.org/stable/43630932">http://www.jstor.org/stable/43630932.</a> 
+					<br><br>
+					<sup>14</sup>
+					Peggy Deamer, “Work,” in <i>The Architect as Worker: Immaterial Labor, the Creative Class,and the Politics of Design,</i> edited by Peggy Deamer (London: Bloomsbury Publishing Plc, 2015), pp. 61-81.
+
+					<br><br>
+					<sup>15</sup>	Cedric J. Robinson, Damien Sojoyner, and Kelley Robin D G., <i>Black Marxism the Making of the Black Radical Tradition</i> (S.l.: Penguin Books, 2021).
+					<br><br>	
+					(see full bibliography <a href="bibliography.html">here</a>)
+				</div>
+			</div>
+		</div>
+		<div class="parallax" id="parallax4">
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					We can bolster Deamer’s philosophical and historical arguments by turning to contemporary strong traditions of union organization found across industries of both creative and manual labor. If architectural laborers often ignore both their status as laborers (on the grounds that they are creatives) and as purchasers of labor power (ignoring the labor inscribed in their drawings), a look at the labor relations found at these two poles might be illuminating. Currently, the architectural profession underpays their design laborers as has been shown by recent salary transparency initiatives.<sup>15</sup> In fact, when the 100 highest architectural assistant salaries collected by the Pay 100 are analyzed, plotted, and compared to the UK and London’s living wage as reported by the living wage foundation, it becomes evident that architectural designers are denied a livable wage across the UK (see Figures 2 and 3).<sup>16</sup>  Such numbers still neglect to account for unpaid hours and overtime hours found regularly in the field.<sup>17</sup> While Deamer has written on the presence of creative unions in the aforementioned essay, many other sources on the topic are available, discussing collective bargaining unions across creative sectors as disparate as screenwriters , artists, and orchestra musicians.<sup>18,19</sup>   Similar can be said about the other side of architecture’s labor issue: construction and maintenance. In London, building-sector unions remain strong with high enrollment numbers, while architectural unions exist as just recently revived phenomena within the past five years (see Figure 4). To return to the dual questions of production versus consumption and material versus representation which were found in architectural labor and founded in Marx’s dialectic, a strong architectural trade union represents a potential synthesis of each of these oppositions. An architectural designer’s union would acknowledge the architectural designer as a laborer, ensuring legal representation through collective bargaining, while simultaneously creating a network of solidarity between the unions of architectural designers and the laborers which architectural designers prescribe both work and working conditions for. The union is simultaneously a material and representational body which responds to this dual quality of architectural labor—determining its material conditions through legal and cultural representations of labor.
+				</div>
+			</div>
+			<div class="floating-container-right">
+				<div class="floating-content-right">
+					<sup>16</sup>	  Living Wage Foundation, accessed June 1, 2023, https://www.livingwage.org.uk/what-real-living-wage.
+					<br><br>
+					<sup>17</sup>	Alan Jones, “RIBA President’s Initial Response to the Future Architects Front Open Letter from Students and Architectural Assistants,” RIBA, accessed June 1, 2023, https://www.architecture.com/knowledge-and-resources/knowledge-landing-page/riba-responds-to-future-architects-front-open-letter.
+					<br><br>
+					<sup>18</sup>
+					Richard Maxwell, Mark Banks, and Kate Oakley, “UK Art Wokers, Class, and the Myth of Mobility,” essay, in <i>Routledge Companion to Media and Labor</i> (New York, NY: Routledge, 2015), 170–80.
+
+					<br><br>
+					<sup>19</sup>	Cedric J. Robinson, Damien Sojoyner, and Kelley Robin D G., <i>Clair Brown et al., “Symphony Musicians and Symphony Orchestras,” essay, in <i>Labor in the Era of Globalization</i> (New York: Cambridge University Press, 2010), 264–94.
+					<br><br>	
+					(see full bibliography <a href="bibliography.html">here</a>)
+				</div>
+			</div>
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+					<img src="img/LondonMap.png" width="100%">
+					<img src="img/UnionMaps.jpg" width="100%">
+				</div>
+			</div>
+			<div class="floating-container-left">
+				<div class="floating-content-left">
+						By turning to the specificities of labor practices found on either side of architectural labor’s material and representational chain, the contemporary contradictions of the wage-labor of architectural designers becomes even clearer. We can understand the documents that accompany the union to be viable material and representational tools to produce an understanding of the positioning of architectural laborers within these representative and material chains of production and consumption. If we revisit the dialectical method and remember the imperative it presents to see whole systems as complex and to act as a unified way of seeing, we might understand how the union can act in the same way by representing the labor of architects and the labor that they prescribe through the same material objects. 
+					</div>
+			</div>
+		</div>
+		</div>
+
+	</main>
+    
+	
+    <footer class="footer"><a href='#header'>Go to the beginning.</a> <br> This website was designed by <a href="https://www.instagram.com/n.vh/" color: red> Nigel Van Ha, </a> a masters of architecture student at princeton university, who can be reached at qv3527 (at) princeton (dot) edu</footer>
+</div>
+</body>
+</html>
